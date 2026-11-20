@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+
+dist/_qa/
+artifacts/
+*.tar.gz
+.openai/
+.env
+.env.*
+!.env.example
+.vercel/
+*.log
+*.zip
