@@ -1,6 +1,5 @@
 __pycache__/
 *.pyc
-
 dist/_qa/
 artifacts/
 *.tar.gz

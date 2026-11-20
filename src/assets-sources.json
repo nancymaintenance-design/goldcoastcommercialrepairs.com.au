@@ -1,0 +1,87 @@
+[
+  {
+    "key": "hotel",
+    "photo_id": "photo-1699086062891-d489d4509330",
+    "url": "https://images.unsplash.com/photo-1699086062891-d489d4509330?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1Mzc1fDB8MXxzZWFyY2h8Mnx8R29sZCUyMENvYXN0JTIwc3dpbW1pbmclMjBwb29sJTIwcmVzb3J0JTIwc3Vubnl8ZW58MHwwfHx8MTc5NTE1MjcwNHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Nico Smit",
+    "photographer_url": "https://unsplash.com/@nicosmit99?utm_source=wpvibe&utm_medium=referral",
+    "description": "Hotel pool deck",
+    "purpose": "Illustrative stock photo only; not an Ellis project or a verified Gold Coast location.",
+    "filename": "sector-hotel.jpg",
+    "dimensions": [
+      1080,
+      608
+    ],
+    "format": "JPEG",
+    "size_bytes": 195488,
+    "status": "downloaded"
+  },
+  {
+    "key": "hospitality",
+    "photo_id": "photo-1759050475187-674550fa911e",
+    "url": "https://images.unsplash.com/photo-1759050475187-674550fa911e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1Mzc1fDB8MXxzZWFyY2h8MXx8b3V0ZG9vciUyMGNhZmUlMjB0ZXJyYWNlJTIwc3Vuc2hpbmV8ZW58MHwwfHx8MTc5NTE1MjcwNHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Johan Mouchet",
+    "photographer_url": "https://unsplash.com/@johanmouchet?utm_source=wpvibe&utm_medium=referral",
+    "description": "People enjoying lunch at an outdoor cafe under umbrellas",
+    "purpose": "Illustrative stock photo only; not an Ellis project or a verified Gold Coast location.",
+    "filename": "sector-hospitality.jpg",
+    "dimensions": [
+      1080,
+      720
+    ],
+    "format": "JPEG",
+    "size_bytes": 249467,
+    "status": "downloaded"
+  },
+  {
+    "key": "retail",
+    "photo_id": "photo-1781799714723-e0c5cf3de393",
+    "url": "https://images.unsplash.com/photo-1781799714723-e0c5cf3de393?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1Mzc1fDB8MXxzZWFyY2h8MXx8c2hvcCUyMGZyb250JTIwc3RyZWV0JTIwcmV0YWlsJTIwYXVzdHJhbGlhfGVufDB8MHx8fDE3OTUxNTI2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "ANNIE HATUANH",
+    "photographer_url": "https://unsplash.com/@anniehatuanh?utm_source=wpvibe&utm_medium=referral",
+    "description": "Old brick buildings and shops line a sunny street",
+    "purpose": "Illustrative stock photo only; not an Ellis project or a verified Gold Coast location.",
+    "filename": "sector-retail.jpg",
+    "dimensions": [
+      1080,
+      608
+    ],
+    "format": "JPEG",
+    "size_bytes": 174002,
+    "status": "downloaded"
+  },
+  {
+    "key": "office",
+    "photo_id": "photo-1497215842964-222b430dc094",
+    "url": "https://images.unsplash.com/photo-1497215842964-222b430dc094?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1Mzc1fDB8MXxzZWFyY2h8MXx8YnJpZ2h0JTIwbW9kZXJuJTIwb2ZmaWNlJTIwd29ya3NwYWNlfGVufDB8MHx8fDE3OTUxNTI3MDV8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Alesia Kazantceva",
+    "photographer_url": "https://unsplash.com/@alesiaskaz?utm_source=wpvibe&utm_medium=referral",
+    "description": "Bright office interior",
+    "purpose": "Illustrative stock photo only; not an Ellis project or a verified Gold Coast location.",
+    "filename": "sector-office.jpg",
+    "dimensions": [
+      1080,
+      720
+    ],
+    "format": "JPEG",
+    "size_bytes": 84244,
+    "status": "downloaded"
+  },
+  {
+    "key": "industrial",
+    "photo_id": "photo-1759310347467-578dfd846229",
+    "url": "https://images.unsplash.com/photo-1759310347467-578dfd846229?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1Mzc1fDB8MXxzZWFyY2h8Mnx8d2FyZWhvdXNlJTIwaW5kdXN0cmlhbCUyMGJ1aWxkaW5nJTIwZXh0ZXJpb3J8ZW58MHwwfHx8MTc5NTE1MjY2OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "photographer": "Mathias Reding",
+    "photographer_url": "https://unsplash.com/@matreding?utm_source=wpvibe&utm_medium=referral",
+    "description": "Large industrial warehouse with blue gates and road",
+    "purpose": "Illustrative stock photo only; not an Ellis project or a verified Gold Coast location.",
+    "filename": "sector-industrial.jpg",
+    "dimensions": [
+      1080,
+      720
+    ],
+    "format": "JPEG",
+    "size_bytes": 146492,
+    "status": "downloaded"
+  }
+]

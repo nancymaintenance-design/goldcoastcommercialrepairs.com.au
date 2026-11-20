@@ -1,0 +1,1196 @@
+{
+  "services": [
+    {
+      "slug": "building-maintenance",
+      "title": {
+        "en": "Building & general maintenance",
+        "zh": "建筑与日常维护"
+      },
+      "short": {
+        "en": "Practical repairs across occupied commercial buildings.",
+        "zh": "处理在用商业建筑的日常维修。"
+      },
+      "intro": {
+        "en": "We bring everyday building repairs into one clear scope: damaged walls and ceilings, loose fittings, door hardware and fixed joinery. We agree access with your site manager and organise the work around the areas your tenants, staff and guests need to keep using.",
+        "zh": "我们把墙面吊顶破损、固定件松动、门五金及固定木作等日常维修整理成明确范围，与现场负责人确认进场时间，并按租户、员工和住客的通行需求安排施工。"
+      },
+      "items": {
+        "en": [
+          "Wall, ceiling and plaster repairs with finish matching.",
+          "Door furniture, fixed joinery and minor building defects.",
+          "Grouped maintenance visits for an agreed defect list."
+        ],
+        "zh": [
+          "墙面、吊顶和石膏板修补，核对现有饰面。",
+          "门五金、固定木作与建筑日常缺陷处理。",
+          "按确认的缺陷清单集中安排维护工作。"
+        ]
+      },
+      "process": {
+        "en": [
+          "We inspect the defect list and separate repair work from larger alterations.",
+          "We confirm access, work zones and protection for nearby finishes.",
+          "We record completed items, photos and any further work requiring approval."
+        ],
+        "zh": [
+          "我们检查缺陷清单，区分日常维修与较大改造。",
+          "我们确认进场、施工区域及周边成品保护。",
+          "我们整理完工项目、照片及需要另行确认的后续工作。"
+        ]
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can you deal with several small repairs together?",
+            "zh": "多项小维修可以一起安排吗？"
+          },
+          "a": {
+            "en": "Yes. We group the agreed items into a practical work plan, check materials and access, and identify anything that needs a separate visit or a different work scope before we start.",
+            "zh": "可以。我们把确认的项目合并安排，核对材料和进场条件，并在施工前列明需要另一次进场或单独报价的工作。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "roofing-waterproofing",
+      "title": {
+        "en": "Roofing & waterproofing",
+        "zh": "屋顶与防水"
+      },
+      "short": {
+        "en": "Roof leaks, gutters, flashings and building water ingress.",
+        "zh": "处理屋顶漏水、天沟、泛水及建筑渗水。"
+      },
+      "intro": {
+        "en": "We investigate where water enters and how it travels through the building before defining the repair. Our scope can include commercial roof repairs, box gutters, flashings, penetrations and waterproofing details. For coastal properties, we check the existing material, exposed fixings and signs of salt-related deterioration.",
+        "zh": "我们先检查进水位置及水在建筑中的路径，再确定修复范围。工作可涉及商业屋面、箱形天沟、泛水、穿屋面节点及防水收口；海边物业同时核对现有材料、外露固定件和盐雾环境下的损耗。"
+      },
+      "items": {
+        "en": [
+          "Roof sheets, flashings, penetrations and localised leak repairs.",
+          "Box gutters, outlets and roof drainage defects.",
+          "Balcony, terrace and building waterproofing repairs within the agreed scope."
+        ],
+        "zh": [
+          "屋面板、泛水、穿屋面节点及局部漏水修复。",
+          "箱形天沟、出水口和屋面排水缺陷处理。",
+          "按确认范围修复阳台、露台及建筑防水。"
+        ]
+      },
+      "process": {
+        "en": [
+          "We trace the reported leak and document accessible roof and drainage conditions.",
+          "We confirm repair details, compatible materials and roof access arrangements.",
+          "We check the completed work and record the treated areas and follow-up observations."
+        ],
+        "zh": [
+          "我们追查漏水现象，记录可检查的屋面与排水状况。",
+          "我们确认修复节点、材料匹配和屋面进场安排。",
+          "我们检查完工部位，记录处理范围及后续观察事项。"
+        ]
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Does a leaking commercial roof always need replacing?",
+            "zh": "商业屋顶漏水一定要全部更换吗？"
+          },
+          "a": {
+            "en": "We assess the roof condition, the leak source and the extent of deterioration first. We then set out whether a local repair, a wider repair scope or replacement addresses the problem, with the relevant access and material requirements.",
+            "zh": "我们先检查屋面状况、漏水源头和损耗范围，再明确局部修补、扩大修复或更换的处理方案，并列出相应材料与进场要求。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "electrical-lighting",
+      "title": {
+        "en": "Electrical & lighting",
+        "zh": "电气与照明"
+      },
+      "short": {
+        "en": "Lighting, fittings and electrical maintenance for working premises.",
+        "zh": "为营业中的商业场所安排电气与照明维护。"
+      },
+      "intro": {
+        "en": "We plan commercial electrical and lighting work around how each area is used. We identify affected fittings and circuits, confirm the required isolation and coordinate access with your manager. Outdoor and coastal lighting needs a check of the fitting specification, exposure and mounting condition.",
+        "zh": "我们根据各区域的使用方式安排商业电气和照明工作，核对相关灯具及回路、确认断电范围，并与物业负责人协调进场。室外及海边照明同时检查灯具规格、暴露环境和安装固定状况。"
+      },
+      "items": {
+        "en": [
+          "Interior, entry, car park and external lighting maintenance.",
+          "Fault investigation and replacement of agreed electrical fittings.",
+          "Lighting upgrades with existing controls and site use considered."
+        ],
+        "zh": [
+          "室内、入口、停车区与室外照明维护。",
+          "故障排查及确认范围内的电气配件更换。",
+          "结合现有控制方式和现场用途安排照明升级。"
+        ]
+      },
+      "process": {
+        "en": [
+          "We review the fault, existing equipment and the areas affected by the work.",
+          "We agree isolation periods and coordinate access with occupants.",
+          "We test the completed work and provide the relevant handover records."
+        ],
+        "zh": [
+          "我们核查故障、现有设备及施工影响范围。",
+          "我们确认断电时段，并协调使用人员的进场安排。",
+          "我们完成相应检查测试，提供适用的交付记录。"
+        ]
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can lighting work be arranged around trading hours?",
+            "zh": "照明维护可以配合营业时间吗？"
+          },
+          "a": {
+            "en": "We discuss your opening hours, access restrictions and any required power interruption when preparing the scope. We can then plan the sequence and confirm available attendance times before booking the work.",
+            "zh": "我们在确认范围时了解营业时间、进场限制及停电需求，再安排施工顺序，并在预约前确认可安排的时间。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "plumbing-drainage-gas",
+      "title": {
+        "en": "Plumbing, drainage & gas",
+        "zh": "水管、排水与燃气"
+      },
+      "short": {
+        "en": "Leaks, hot water, drainage and agreed gas service work.",
+        "zh": "处理漏水、热水、排水及确认范围内的燃气服务。"
+      },
+      "intro": {
+        "en": "We investigate plumbing faults and define the affected service before arranging repairs. We cover agreed work to water supply, hot water, sanitary plumbing, drainage and gas systems, with clear separation between the immediate fault and any wider replacement work. We coordinate shutdowns with the people using the building.",
+        "zh": "我们先排查水管故障并确认受影响的系统，再安排维修。范围包括已确认的供水、热水、卫生设施、排水及燃气工作，并区分当前故障处理与较大更换项目；涉及停水或停机时，我们与使用方协调。"
+      },
+      "items": {
+        "en": [
+          "Leaking fittings, water supply and hot water issues.",
+          "Blocked or damaged drainage and recurring overflow investigation.",
+          "Gas service and equipment work defined for the specific premises."
+        ],
+        "zh": [
+          "漏水配件、供水和热水问题处理。",
+          "排水堵塞、损坏及反复溢流排查。",
+          "按具体场所确认燃气管路与设备工作范围。"
+        ]
+      },
+      "process": {
+        "en": [
+          "We identify the affected service, symptoms and accessible pipework.",
+          "We confirm shutdowns, access, investigation and repair allowances.",
+          "We check operation after the work and document the completed scope."
+        ],
+        "zh": [
+          "我们核对受影响系统、故障表现和可检查管线。",
+          "我们确认停用时段、进场条件及排查维修范围。",
+          "我们检查修复后的运行情况并记录完工内容。"
+        ]
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "What information helps you quote a drainage problem?",
+            "zh": "排水问题询价需要提供哪些资料？"
+          },
+          "a": {
+            "en": "We use the property address, the affected fixtures or area, when the problem occurs and any available photos to plan the investigation. If the cause is concealed, we explain the investigation scope before quoting the final repair.",
+            "zh": "我们根据物业地址、受影响设施或区域、故障发生时间及现有照片安排排查。对于隐藏故障，我们先明确排查范围，再确定最终修复报价。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "hvac-building-systems",
+      "title": {
+        "en": "HVAC & building systems",
+        "zh": "空调与楼宇设备"
+      },
+      "short": {
+        "en": "Comfort, equipment access and maintenance scheduling.",
+        "zh": "安排空调、设备及楼宇系统维护。"
+      },
+      "intro": {
+        "en": "We organise air conditioning and building equipment maintenance around occupancy, operating hours and equipment access. We check the reported symptoms, available maintenance records and affected zones. We define the work on filters, drainage, controls or equipment before arranging any wider component replacement.",
+        "zh": "我们根据入住情况、运营时间及设备位置安排空调与楼宇设备维护，核对故障表现、现有维护记录和受影响区域，先确认过滤、排水、控制或设备相关工作，再安排需要另行确认的部件更换。"
+      },
+      "items": {
+        "en": [
+          "Commercial air conditioning service and fault investigation.",
+          "Condensate drainage, accessible filters and control issues.",
+          "Equipment access and planned maintenance coordination."
+        ],
+        "zh": [
+          "商业空调保养与故障排查。",
+          "冷凝水排水、可检修滤网及控制问题处理。",
+          "设备检修通道与计划性维护协调。"
+        ]
+      },
+      "process": {
+        "en": [
+          "We review equipment details, symptoms and the areas served.",
+          "We agree shutdown windows and access to indoor or rooftop equipment.",
+          "We check the agreed work and record service findings and further actions."
+        ],
+        "zh": [
+          "我们核对设备资料、故障表现及服务区域。",
+          "我们确认停机窗口和室内或屋顶设备的进场条件。",
+          "我们检查已完成工作，记录保养发现及后续事项。"
+        ]
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can you plan work across several occupied areas?",
+            "zh": "可以协调多个仍在使用的区域吗？"
+          },
+          "a": {
+            "en": "We map the affected zones with your manager and agree a sequence. Where the system allows, we plan separate work areas and confirm which spaces or equipment need to be unavailable during each stage.",
+            "zh": "我们与负责人梳理受影响区域并确定顺序。在系统条件允许的情况下，我们分区安排，并明确每阶段需要暂停使用的空间或设备。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "fire-security-access",
+      "title": {
+        "en": "Fire, security & access",
+        "zh": "消防、安防与门禁"
+      },
+      "short": {
+        "en": "Defined maintenance for building protection and access systems.",
+        "zh": "按明确范围维护建筑防护与出入系统。"
+      },
+      "intro": {
+        "en": "We organise agreed work to fire protection, security and access systems with the site manager and relevant service providers. We identify the equipment involved, review existing records and coordinate any isolation or access restrictions. Inspection, repair and certification are recorded as separate parts of the scope.",
+        "zh": "我们与现场负责人及相关服务方协调消防、安防与门禁工作，核对设备、现有记录及停用要求。检查、维修与认证分别列明范围，确保现场清楚每项工作的安排与交付内容。"
+      },
+      "items": {
+        "en": [
+          "Fire doors, associated hardware and agreed rectification items.",
+          "Access control, locks and security equipment maintenance.",
+          "Coordination of inspection, servicing and required records."
+        ],
+        "zh": [
+          "消防门、相关五金及确认的整改项目。",
+          "门禁、锁具和安防设备维护。",
+          "检查、保养及相应记录的进场协调。"
+        ]
+      },
+      "process": {
+        "en": [
+          "We confirm the equipment, reported defect and existing service information.",
+          "We agree access, temporary arrangements and required system coordination.",
+          "We document the completed work and hand over the relevant service records."
+        ],
+        "zh": [
+          "我们确认设备、故障及现有服务资料。",
+          "我们安排进场、临时通行方式及系统配合事项。",
+          "我们记录完工内容并交付相应服务资料。"
+        ]
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can you include fire door repairs in a maintenance visit?",
+            "zh": "消防门维修可以纳入一次维护安排吗？"
+          },
+          "a": {
+            "en": "We review the door, hardware, defect report and required work first. We then confirm the appropriate repair scope and documentation, and coordinate any separate inspection or service attendance that the work requires.",
+            "zh": "我们先核对门体、五金、缺陷记录及所需工作，再确认合适的修复范围与资料，并协调项目所需的单独检查或服务进场。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "landscaping-irrigation",
+      "title": {
+        "en": "Landscaping & irrigation",
+        "zh": "园林绿化与灌溉"
+      },
+      "short": {
+        "en": "Grounds care for entrances, courtyards and shared outdoor areas.",
+        "zh": "维护入口、庭院及共享户外区域。"
+      },
+      "intro": {
+        "en": "We maintain the outdoor areas that guests, customers and staff use every day. We assess planted areas, irrigation, pathways and access needs, then organise a practical scope for grounds care and repairs. For resort and shared properties, we coordinate work around pedestrian routes and facility use.",
+        "zh": "我们维护住客、顾客和员工每天使用的户外空间，检查种植区、灌溉、步道及通行需求，再安排园林养护和修复范围。度假与共同物业的工作配合行人路线和设施开放时间进行。"
+      },
+      "items": {
+        "en": [
+          "Commercial garden, lawn and planted-area maintenance.",
+          "Irrigation checks, leaks and agreed system repairs.",
+          "Courtyard presentation, garden edges and outdoor access areas."
+        ],
+        "zh": [
+          "商业花园、草坪及种植区养护。",
+          "灌溉检查、漏水及确认范围内的系统维修。",
+          "庭院环境、花池边界及户外通行区域维护。"
+        ]
+      },
+      "process": {
+        "en": [
+          "We inspect the grounds and agree presentation and repair priorities.",
+          "We confirm watering arrangements, equipment access and pedestrian separation.",
+          "We remove agreed waste and record completed grounds and irrigation work."
+        ],
+        "zh": [
+          "我们检查场地并确认环境与修复优先顺序。",
+          "我们核对用水安排、设备进场及行人分流。",
+          "我们清理约定的绿化废物，记录养护及灌溉工作。"
+        ]
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can grounds work be included in a regular maintenance plan?",
+            "zh": "园林工作可以纳入定期维护吗？"
+          },
+          "a": {
+            "en": "We can set a visit scope around the property, planting, irrigation and use of outdoor areas. We agree the tasks and frequency with your manager and keep repairs or larger landscape changes clearly itemised.",
+            "zh": "我们根据物业、植物、灌溉及户外使用情况制定进场范围，与负责人确认项目和频次，并将维修及较大景观改造单独列明。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "signage-wayfinding",
+      "title": {
+        "en": "Signage & wayfinding",
+        "zh": "标识与导向"
+      },
+      "short": {
+        "en": "Clear, maintained signs for visitors, tenants and deliveries.",
+        "zh": "维护访客、租户与送货人员使用的标识。"
+      },
+      "intro": {
+        "en": "We inspect, repair and organise replacement of agreed commercial signs and wayfinding elements. We check the surface, fixings, visibility and installation access, then match the work to your existing brand and building requirements. Electrical signage and major changes are separately defined in the scope.",
+        "zh": "我们检查、维修并安排更换已确认的商业招牌和导向标识，核对基面、固定件、可视性及安装条件，并配合现有品牌与建筑要求。涉及通电招牌或较大改动时，工作范围单独列明。"
+      },
+      "items": {
+        "en": [
+          "Entry, tenancy, directory and directional signage.",
+          "Sign faces, mounting hardware and localised presentation repairs.",
+          "Car park, loading and pedestrian wayfinding updates."
+        ],
+        "zh": [
+          "入口、租户、楼层目录与方向标识。",
+          "标识面板、安装五金及局部外观维修。",
+          "停车、装卸及行人导向更新。"
+        ]
+      },
+      "process": {
+        "en": [
+          "We confirm sign content, dimensions, location and existing condition.",
+          "We review materials, mounting details and safe access arrangements.",
+          "We check installation, visibility and the agreed finished appearance."
+        ],
+        "zh": [
+          "我们确认标识内容、尺寸、位置及现有状况。",
+          "我们核对材料、固定方式及进场安排。",
+          "我们检查安装、可视性和约定的完成效果。"
+        ]
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can you match existing signs?",
+            "zh": "可以配合现有标识风格吗？"
+          },
+          "a": {
+            "en": "We work from your existing artwork, brand files and site measurements. We confirm the proposed material, colour and finish before ordering or installing replacements.",
+            "zh": "我们根据现有设计文件、品牌资料和现场尺寸安排，订料或安装前确认材料、颜色与饰面。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "facade-high-access-cleaning",
+      "title": {
+        "en": "Façade & high-access cleaning",
+        "zh": "外立面与高位清洁"
+      },
+      "short": {
+        "en": "Planned cleaning for façades and difficult-to-reach areas.",
+        "zh": "安排外立面及不易到达部位的清洁。"
+      },
+      "intro": {
+        "en": "We plan façade and high-access cleaning around the building material, soiling and access method. We assess adjacent windows, coatings, landscaping and pedestrian routes before agreeing the cleaning approach. On coastal buildings, sheltered surfaces can need particular attention because normal rainfall may not wash them.",
+        "zh": "我们根据建筑材料、污渍和到达方式安排外立面与高位清洁，先核对周边玻璃、涂层、绿化及人行路线，再确认清洁方案。海边建筑中雨水难以冲洗的遮蔽部位，会纳入重点检查。"
+      },
+      "items": {
+        "en": [
+          "External walls, cladding and agreed high-level surfaces.",
+          "Sheltered façade areas with accumulated salt, dirt or staining.",
+          "Access planning, protection and cleaning-water control."
+        ],
+        "zh": [
+          "外墙、覆层及确认的高位表面。",
+          "积盐、积尘或出现污渍的遮蔽外立面部位。",
+          "高位进场、周边保护及清洁用水管理。"
+        ]
+      },
+      "process": {
+        "en": [
+          "We identify surface materials, condition and access constraints.",
+          "We agree the cleaning method, test areas and protection arrangements.",
+          "We review the cleaned areas and record any defects revealed during cleaning."
+        ],
+        "zh": [
+          "我们识别基材、表面状况及进场限制。",
+          "我们确认清洁方法、试洗部位与保护安排。",
+          "我们检查清洁区域，并记录清洁中发现的缺陷。"
+        ]
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Do all exterior surfaces need pressure washing?",
+            "zh": "所有外墙都适合高压清洗吗？"
+          },
+          "a": {
+            "en": "We choose the method after checking the material, coating, joints and condition. We agree the appropriate pressure, cleaning product and protection for the specific surface, with a test area where needed.",
+            "zh": "我们检查材料、涂层、接缝和现状后选择方法，针对具体表面确认压力、清洁产品及保护措施，必要时先做局部试洗。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "cleaning-waste-hygiene",
+      "title": {
+        "en": "Cleaning, waste & hygiene",
+        "zh": "清洁、废物与卫生"
+      },
+      "short": {
+        "en": "Agreed cleaning and waste handling for commercial sites.",
+        "zh": "安排商业场所清洁及废物处理。"
+      },
+      "intro": {
+        "en": "We define cleaning and waste work by the area, material and operating requirements of the premises. We coordinate access to shared spaces, amenities and service areas, and identify the waste stream before arranging removal. Routine cleaning and specialist contamination work are quoted as distinct scopes.",
+        "zh": "我们按场所区域、材料和运营要求明确清洁与废物处理范围，协调公共空间、卫生间和后勤区域的进场，并在清运前核对废物种类。日常清洁与特殊污染处理分别列明工作范围。"
+      },
+      "items": {
+        "en": [
+          "Shared-area, amenity and agreed commercial cleaning.",
+          "Post-maintenance clean-up and work-area presentation.",
+          "Waste collection, segregation and removal within the agreed scope."
+        ],
+        "zh": [
+          "公共区域、卫生设施及确认的商业清洁。",
+          "维修后清场与施工区域恢复。",
+          "按确认范围分类、收集和清运废物。"
+        ]
+      },
+      "process": {
+        "en": [
+          "We confirm the cleaning areas, site rules and waste types.",
+          "We agree products, equipment, storage and collection access.",
+          "We check the completed areas and record agreed waste and cleaning tasks."
+        ],
+        "zh": [
+          "我们确认清洁区域、场所要求和废物类型。",
+          "我们核对产品、设备、暂存及收运条件。",
+          "我们检查完成区域，记录清洁与废物处理项目。"
+        ]
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Is waste removal included in every repair?",
+            "zh": "每项维修都包含垃圾清运吗？"
+          },
+          "a": {
+            "en": "We state the waste allowance in the quote. We identify the expected materials and quantities, access and disposal needs, so the agreed clean-up and any separate removal work are clear before the job.",
+            "zh": "我们在报价中列明废物处理范围，核对预计材料、数量、进出条件及处置需求，在施工前明确清场内容和需要单独安排的清运。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "car-parks-external-works",
+      "title": {
+        "en": "Car parks & external works",
+        "zh": "停车场与室外工程"
+      },
+      "short": {
+        "en": "Repairs to the outdoor areas that keep a site moving.",
+        "zh": "维护商业场所的室外通行与停车区域。"
+      },
+      "intro": {
+        "en": "We assess defects in car parks, paved areas and external access routes, then plan the work around vehicles, deliveries and pedestrians. We define the repair area, surface build-up and drainage connections before selecting materials. Larger drainage redesign or structural work is identified separately in the scope.",
+        "zh": "我们检查停车场、铺装及室外通道缺陷，按车辆、送货和行人的使用安排施工。在选择材料前确认修复面积、基层及排水连接；涉及较大排水改造或结构工作的项目单独列明。"
+      },
+      "items": {
+        "en": [
+          "Localised paving, concrete and surface repairs.",
+          "Bollards, wheel stops and agreed external fixtures.",
+          "Drainage defects and access-area improvements."
+        ],
+        "zh": [
+          "局部铺装、混凝土和表面修复。",
+          "防撞柱、车轮挡块及确认的室外固定设施。",
+          "排水缺陷处理与通行区域改善。"
+        ]
+      },
+      "process": {
+        "en": [
+          "We inspect the surface defects, falls and affected traffic routes.",
+          "We confirm staging, materials, closure periods and delivery access.",
+          "We check the repaired area and confirm when it can return to use."
+        ],
+        "zh": [
+          "我们检查表面缺陷、坡度及受影响通行路线。",
+          "我们确认分区、材料、封闭时段和送货通道。",
+          "我们检查修复区域并确认恢复使用的安排。"
+        ]
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can you repair one area while the rest of the car park stays in use?",
+            "zh": "维修期间停车场其他区域可以继续使用吗？"
+          },
+          "a": {
+            "en": "We assess the access layout, repair method and curing requirements with your manager. Where practical, we agree staged work zones and clear alternative routes before attendance.",
+            "zh": "我们与负责人核对通行布局、修复方法和材料养护要求，在可行时安排分区施工，并在进场前明确替代路线。"
+          }
+        }
+      ]
+    },
+    {
+      "slug": "fit-outs-make-good",
+      "title": {
+        "en": "Fit-outs & make-good",
+        "zh": "装修改造与退租恢复"
+      },
+      "short": {
+        "en": "Defined alterations, refreshes and end-of-lease works.",
+        "zh": "明确安排商业改造、翻新和退租恢复。"
+      },
+      "intro": {
+        "en": "We turn a commercial fit-out or make-good brief into an itemised scope. We review existing finishes, tenancy requirements and access, then coordinate strip-out, repairs and reinstatement as agreed. We separate retained elements from removals so your manager can review the work before it starts.",
+        "zh": "我们把商业装修或退租恢复要求整理成逐项范围，核对现有饰面、租赁要求和进场条件，再协调已确认的拆除、维修与恢复。保留和拆除项目分别标清，方便负责人在开工前确认。"
+      },
+      "items": {
+        "en": [
+          "Office and retail alterations, partitions and interior repairs.",
+          "Painting, finishes and agreed tenancy reinstatement.",
+          "Strip-out coordination and make-good defect lists."
+        ],
+        "zh": [
+          "办公室、零售空间改造、隔断与室内维修。",
+          "刷漆、饰面和确认的租赁区域恢复。",
+          "拆除协调与退租恢复缺陷清单。"
+        ]
+      },
+      "process": {
+        "en": [
+          "We review the brief, lease-related scope and existing condition records.",
+          "We confirm finishes, access, staging and waste arrangements.",
+          "We check the agreed items with your nominated representative and record completion."
+        ],
+        "zh": [
+          "我们核对需求、租赁相关范围及现状记录。",
+          "我们确认饰面、进场、分段安排及废物处理。",
+          "我们与指定负责人核对项目并记录完工情况。"
+        ]
+      },
+      "faq": [
+        {
+          "q": {
+            "en": "Can you quote from a landlord's make-good list?",
+            "zh": "可以按房东的退租恢复清单报价吗？"
+          },
+          "a": {
+            "en": "Yes. We review the list alongside site conditions and available plans or photos, clarify ambiguous items and produce an itemised scope. Any change to the agreed work is confirmed before it is carried out.",
+            "zh": "可以。我们结合现场、现有图纸或照片核对清单，明确含糊项目并整理逐项范围；已确认工作如需变化，会在实施前再次确认。"
+          }
+        }
+      ]
+    }
+  ],
+  "sectors": [
+    {
+      "slug": "hotels-resorts",
+      "title": {
+        "en": "Hotels & resorts",
+        "zh": "酒店与度假村"
+      },
+      "short": {
+        "en": "Maintenance planned around guest areas and daily operations.",
+        "zh": "配合住客区域与日常运营安排维护。"
+      },
+      "intro": {
+        "en": "We organise repairs across guest rooms, reception areas, shared facilities and back-of-house spaces. We agree work zones and attendance with your manager so the scope reflects room access, guest movement and the facilities that need to stay available.",
+        "zh": "我们安排客房、接待区、共享设施和后勤空间的维修，与负责人确认施工区域和时间，让工作配合房间进出、住客通行及需要保持开放的设施。"
+      },
+      "needs": {
+        "en": [
+          "Room and common-area defects grouped into an agreed work list.",
+          "Roof leaks, drainage and equipment issues prioritised by the affected area.",
+          "Staged attendance, protection and clear completion records."
+        ],
+        "zh": [
+          "将客房与公共区域缺陷整理成确认的工作清单。",
+          "按受影响区域安排屋顶漏水、排水及设备问题。",
+          "分段进场、成品保护及清晰的完工记录。"
+        ]
+      },
+      "serviceSlugs": [
+        "building-maintenance",
+        "hvac-building-systems",
+        "roofing-waterproofing"
+      ]
+    },
+    {
+      "slug": "apartments-body-corporate",
+      "title": {
+        "en": "Apartments & body corporate",
+        "zh": "公寓与共同物业"
+      },
+      "short": {
+        "en": "Shared-area repairs with clear access and reporting.",
+        "zh": "清楚安排公共区域维修、进场与记录。"
+      },
+      "intro": {
+        "en": "We work to the scope approved by your body corporate or property representative. We coordinate common-area access, resident notices and contractor attendance, then document what was completed. We identify the relevant building areas and boundaries when defining the job.",
+        "zh": "我们按业主委员会或物业代表确认的范围施工，协调公共区域进场、住户通知及施工人员安排，并记录完工内容。确认项目时，我们核对相关建筑区域及工作边界。"
+      },
+      "needs": {
+        "en": [
+          "Common doors, walls, external areas and shared facilities.",
+          "Roof, balcony and façade issues scoped to the affected building elements.",
+          "Clear defect lists, access coordination and photo records."
+        ],
+        "zh": [
+          "公共门、墙面、室外区域与共享设施。",
+          "按受影响构件确认屋顶、阳台及外立面问题。",
+          "明确缺陷清单、进场协调和照片记录。"
+        ]
+      },
+      "serviceSlugs": [
+        "building-maintenance",
+        "roofing-waterproofing",
+        "facade-high-access-cleaning"
+      ]
+    },
+    {
+      "slug": "restaurants-cafes",
+      "title": {
+        "en": "Restaurants & cafés",
+        "zh": "餐厅与咖啡馆"
+      },
+      "short": {
+        "en": "Repairs coordinated with service hours and customer access.",
+        "zh": "维修配合营业时间与顾客通行。"
+      },
+      "intro": {
+        "en": "We plan maintenance for dining areas, amenities, entrances and back-of-house spaces around the way your venue operates. We confirm work zones, services affected and clean-up requirements before attendance, and separate routine repairs from larger changes to the premises.",
+        "zh": "我们按门店运营方式安排用餐区、卫生间、入口及后勤空间维护，进场前确认施工区域、受影响系统和清场要求，并区分日常维修与较大场所改造。"
+      },
+      "needs": {
+        "en": [
+          "Water, drainage, hot water and agreed gas-related work.",
+          "Lighting, doors, surfaces and outdoor dining-area repairs.",
+          "Access and shutdown planning around preparation and service."
+        ],
+        "zh": [
+          "供水、排水、热水及确认的燃气相关工作。",
+          "照明、门、表面及户外用餐区维修。",
+          "配合备餐和营业安排进场与系统停用。"
+        ]
+      },
+      "serviceSlugs": [
+        "plumbing-drainage-gas",
+        "electrical-lighting",
+        "cleaning-waste-hygiene"
+      ]
+    },
+    {
+      "slug": "retail-shopping-centres",
+      "title": {
+        "en": "Retail & shopping centres",
+        "zh": "零售与购物中心"
+      },
+      "short": {
+        "en": "Shopfront, tenancy and shared-area maintenance.",
+        "zh": "维护店面、租赁区域与公共空间。"
+      },
+      "intro": {
+        "en": "We coordinate retail maintenance with shop operators and centre management. We establish the repair area, delivery access and any trading restrictions, then organise work to shopfronts, fittings, signs and shared areas. Handover records identify the completed items and any outstanding decisions.",
+        "zh": "我们与店铺经营者及商场管理方协调维护，明确维修区域、材料进场及营业限制，再安排店面、配件、招牌和公共区域工作。交付记录列明完工项目及尚待确认事项。"
+      },
+      "needs": {
+        "en": [
+          "Entry doors, interior finishes and lighting faults.",
+          "Directional signs, tenancy signs and external presentation.",
+          "Staged works and clear coordination with centre access rules."
+        ],
+        "zh": [
+          "入口门、室内饰面与照明故障处理。",
+          "导向、租户招牌及外部环境维护。",
+          "分段施工，并配合商场进场要求。"
+        ]
+      },
+      "serviceSlugs": [
+        "building-maintenance",
+        "signage-wayfinding",
+        "electrical-lighting"
+      ]
+    },
+    {
+      "slug": "offices-mixed-use",
+      "title": {
+        "en": "Offices & mixed-use buildings",
+        "zh": "办公室与综合商业楼"
+      },
+      "short": {
+        "en": "Practical maintenance for tenants and shared facilities.",
+        "zh": "为租户与共享设施安排日常维护。"
+      },
+      "intro": {
+        "en": "We arrange repairs and alterations across offices, reception areas, amenities and shared building spaces. We agree the works with the nominated property or tenancy representative, identify services that need to be interrupted and plan around occupied work areas.",
+        "zh": "我们安排办公室、接待区、卫生设施及共享空间的维修与改造，向指定物业或租户代表确认范围，列明需要暂停的系统，并配合仍在使用的办公区域。"
+      },
+      "needs": {
+        "en": [
+          "Walls, ceilings, doors and fixed joinery repairs.",
+          "Lighting, air conditioning and amenity maintenance.",
+          "Office alterations, tenancy refreshes and make-good work."
+        ],
+        "zh": [
+          "墙面、吊顶、门及固定木作维修。",
+          "照明、空调和卫生设施维护。",
+          "办公空间改造、租赁区域翻新及退租恢复。"
+        ]
+      },
+      "serviceSlugs": [
+        "building-maintenance",
+        "hvac-building-systems",
+        "fit-outs-make-good"
+      ]
+    },
+    {
+      "slug": "warehouses-logistics",
+      "title": {
+        "en": "Warehouses & logistics",
+        "zh": "仓库与物流场所"
+      },
+      "short": {
+        "en": "Maintenance coordinated with deliveries and warehouse access.",
+        "zh": "维护配合送货及仓库通行。"
+      },
+      "intro": {
+        "en": "We plan building repairs around loading movements, storage areas and the access requirements of your site. We review roof, drainage, lighting and external defects with the manager, then agree work zones and the sequence needed to keep the scope clear.",
+        "zh": "我们结合装卸、储存区域和场所通行要求安排建筑维修，与负责人核对屋顶、排水、照明及室外缺陷，再明确施工区域与执行顺序。"
+      },
+      "needs": {
+        "en": [
+          "Commercial roof leaks, gutters and external drainage.",
+          "Lighting, doors and building fabric defects.",
+          "Car park, loading-area and access-route repairs."
+        ],
+        "zh": [
+          "商业屋顶漏水、天沟及室外排水。",
+          "照明、门和建筑本体缺陷。",
+          "停车、装卸与通行区域修复。"
+        ]
+      },
+      "serviceSlugs": [
+        "roofing-waterproofing",
+        "electrical-lighting",
+        "car-parks-external-works"
+      ]
+    },
+    {
+      "slug": "workshops-industrial",
+      "title": {
+        "en": "Workshops & industrial properties",
+        "zh": "工场与工业物业"
+      },
+      "short": {
+        "en": "Building and external maintenance around site operations.",
+        "zh": "配合现场作业维护建筑与室外区域。"
+      },
+      "intro": {
+        "en": "We scope building maintenance around your operating areas, site induction and equipment movements. We focus on the agreed building, services and external works, identify shutdown or access needs and record the completed repairs for your property team.",
+        "zh": "我们结合生产作业区、现场进场要求和设备移动安排建筑维护，明确建筑、设施及室外工程范围，核对停用或通行需求，并为物业团队记录完工内容。"
+      },
+      "needs": {
+        "en": [
+          "Roof, cladding and general building repairs.",
+          "Agreed plumbing, lighting and service-area maintenance.",
+          "External surfaces, access fixtures and drainage defects."
+        ],
+        "zh": [
+          "屋面、覆层和建筑日常维修。",
+          "确认范围内的水管、照明及后勤区域维护。",
+          "室外地面、通行设施和排水缺陷处理。"
+        ]
+      },
+      "serviceSlugs": [
+        "building-maintenance",
+        "plumbing-drainage-gas",
+        "car-parks-external-works"
+      ]
+    },
+    {
+      "slug": "education-healthcare-community",
+      "title": {
+        "en": "Education, healthcare & community",
+        "zh": "教育、医疗与社区设施"
+      },
+      "short": {
+        "en": "Defined work zones, access arrangements and handover.",
+        "zh": "明确施工分区、进场安排和交付。"
+      },
+      "intro": {
+        "en": "We coordinate maintenance with the nominated facility manager and the site's operating requirements. We confirm occupied areas, access restrictions, cleaning needs and the agreed work before attendance, with particular attention to keeping work zones separate from everyday use.",
+        "zh": "我们与指定设施负责人按场所运营要求协调维护，进场前确认使用区域、通行限制、清洁要求及工作范围，并重点安排施工区域与日常使用空间的分隔。"
+      },
+      "needs": {
+        "en": [
+          "Room, amenity, door and common-area repairs.",
+          "Lighting, access systems and agreed facility maintenance.",
+          "Grounds, pathways and clean completion of work areas."
+        ],
+        "zh": [
+          "房间、卫生设施、门和公共区域维修。",
+          "照明、门禁及确认的设施维护。",
+          "园林、步道及施工区域清洁交付。"
+        ]
+      },
+      "serviceSlugs": [
+        "building-maintenance",
+        "fire-security-access",
+        "landscaping-irrigation"
+      ]
+    }
+  ],
+  "articles": [
+    {
+      "slug": "salt-air-coastal-building-maintenance",
+      "title": {
+        "en": "Salt air and coastal building maintenance",
+        "zh": "海盐环境下的商业建筑维护"
+      },
+      "category": {
+        "en": "Coastal care",
+        "zh": "海滨维护"
+      },
+      "summary": {
+        "en": "How we scope cleaning and repairs on exposed and sheltered building surfaces.",
+        "zh": "我们如何核对外露与遮蔽建筑表面的清洁及维修范围。"
+      },
+      "body": {
+        "en": [
+          "On a coastal property, we look at exposure as well as the age of the building. We check sheltered cladding, eaves, fixings and gutters for accumulated material, coating damage and visible deterioration. A surface under an overhang can behave differently from one that is regularly washed by rain.",
+          "COLORBOND's maintenance guidance distinguishes rain-washed surfaces from sheltered areas. It calls for fresh-water washing of unwashed areas at least every six months, and more frequently where marine salt spray is prevalent. We use the instructions for the actual installed material when defining a maintenance scope.",
+          "We document the location and condition, agree the cleaning method and access, and identify repairs separately. After the work, we provide a record of the treated areas and the items that need further attention. We select cleaning products and repair details for the material and condition of each façade or roof."
+        ],
+        "zh": [
+          "海边物业维护中，我们既看建筑年限，也核对暴露环境。我们检查遮蔽覆层、檐口、固定件和天沟的积存物、涂层损坏及可见损耗。挑檐下的表面，与经常被雨水冲洗的表面，可能需要不同安排。",
+          "COLORBOND的维护说明区分了雨水能够冲洗和难以冲洗的部位，提出后者至少每六个月用清水清洗，海盐喷雾明显的地区需要更频繁。我们根据现场实际安装材料的维护要求确定范围。",
+          "我们记录部位与状况，确认清洁方法和进场方式，并把维修单独列明。工作完成后，我们提供处理区域及后续事项记录；不同外墙或屋面按各自材料和状态选择方法。"
+        ]
+      },
+      "serviceSlugs": [
+        "facade-high-access-cleaning",
+        "roofing-waterproofing"
+      ],
+      "sourceUrls": [
+        "https://colorbond.com/why-colorbond-steel/maintenance"
+      ]
+    },
+    {
+      "slug": "storm-season-roofs-gutters",
+      "title": {
+        "en": "Preparing commercial roofs and gutters for storm season",
+        "zh": "暴雨季前的商业屋顶与天沟维护"
+      },
+      "category": {
+        "en": "Roofs & drainage",
+        "zh": "屋顶与排水"
+      },
+      "summary": {
+        "en": "A practical scope for roof defects, outlets and the path rainwater takes.",
+        "zh": "从屋面缺陷、出水口到雨水路径明确维护范围。"
+      },
+      "body": {
+        "en": [
+          "The City of Gold Coast notes that severe weather can occur throughout the year, with storms most common in spring and summer. We therefore plan roof and drainage maintenance around the building's condition and operating needs, rather than treating it as a single annual job.",
+          "We check reported leaks, visible roof defects, flashings, box gutters and accessible outlets. We also consider where the water goes next: an outlet problem and a downstream drainage problem can require different work. We distinguish clearing accumulated debris from repairing damaged components.",
+          "We agree roof access, protection for occupied areas and any weather-dependent stages before attendance. The handover records the areas inspected and repaired, with photos and any remaining investigation. A previous leak location becomes part of the next inspection record."
+        ],
+        "zh": [
+          "黄金海岸市政府指出，恶劣天气全年都可能出现，春夏的暴风雨更常见。因此我们结合建筑现状和运营需要安排屋面与排水维护，并按具体问题确定频次。",
+          "我们核对已有漏水记录、可见屋面缺陷、泛水、箱形天沟和可检查出水口，也检查雨水接下来流向何处。出水口问题与下游排水问题可能需要不同处理；清理积存物和修复损坏部件分别列明。",
+          "进场前我们确认屋面到达方式、使用区域保护及受天气影响的工序。交付记录包括检查和修复部位、照片及尚需排查的事项，已有漏水位置也会成为后续检查依据。"
+        ]
+      },
+      "serviceSlugs": [
+        "roofing-waterproofing",
+        "plumbing-drainage-gas"
+      ],
+      "sourceUrls": [
+        "https://www.goldcoast.qld.gov.au/Services/Emergencies-disasters-outages/Get-Ready/Get-ready-Severe-weather",
+        "https://www.goldcoast.qld.gov.au/Environment-sustainability/Protecting-our-environment/Managing-our-waterways/Managing-stormwater"
+      ]
+    },
+    {
+      "slug": "hotel-maintenance-between-guest-stays",
+      "title": {
+        "en": "Planning hotel maintenance between guest stays",
+        "zh": "配合住客入住安排酒店维护"
+      },
+      "category": {
+        "en": "Hotels & resorts",
+        "zh": "酒店与度假村"
+      },
+      "summary": {
+        "en": "How we turn a room-access window into a clear maintenance plan.",
+        "zh": "我们如何把房间可进场时间转化为明确的维护安排。"
+      },
+      "body": {
+        "en": [
+          "We start with the areas available for work and the date they need to return to use. For rooms, reception and shared facilities, we ask the nominated manager to confirm access, nearby occupancy and any tasks that affect power, water or air conditioning.",
+          "We then separate short repairs from work that needs drying, curing, isolation or a return visit. Wall finishes, sealants, coatings and replacement parts each have their own requirements. We confirm materials and the work sequence before agreeing the attendance window.",
+          "At handover, we record what has been completed and any restrictions that remain before the area can reopen. For a larger defect list, we can agree staged work by room, level or shared area, keeping the scope and next actions visible to the manager."
+        ],
+        "zh": [
+          "我们先确认哪些区域可以施工，以及何时需要恢复使用。针对客房、接待区和公共设施，我们与指定负责人核对进场条件、周边入住情况，以及是否涉及停电、停水或空调停机。",
+          "随后我们区分可短时完成的维修，与需要干燥、养护、停用或再次进场的工作。墙面饰面、密封材料、涂层和更换部件各有要求，我们先确认材料和顺序，再确定进场时间窗口。",
+          "交付时，我们记录已完成内容及区域重新开放前仍需满足的条件。面对较长的缺陷清单，我们可以按房间、楼层或公共区域分段安排，让负责人清楚每段范围和下一步。"
+        ]
+      },
+      "serviceSlugs": [
+        "building-maintenance",
+        "hvac-building-systems"
+      ],
+      "sourceUrls": [
+        "https://corporate.experiencegoldcoast.com/what-we-do/visitor-economy"
+      ]
+    },
+    {
+      "slug": "body-corporate-common-area-repairs",
+      "title": {
+        "en": "A clear scope for body corporate repairs",
+        "zh": "共同物业维修如何明确范围"
+      },
+      "category": {
+        "en": "Property management",
+        "zh": "物业管理"
+      },
+      "summary": {
+        "en": "Defect lists, approved work areas and useful completion records.",
+        "zh": "将缺陷清单、确认区域和完工记录衔接起来。"
+      },
+      "body": {
+        "en": [
+          "We begin a body corporate maintenance job with the approved work area and the nominated representative. Queensland's guidance explains that maintenance responsibilities depend on the subdivision plan and boundaries. We use the information provided for the property to define the job, rather than assuming every balcony, door or surface has the same ownership arrangement.",
+          "A useful defect list identifies the location, symptom and access requirement for each item. We group related repairs, note where investigation is needed and distinguish the immediate work from wider improvements. This gives the manager a scope that can be reviewed and approved.",
+          "We coordinate access to shared spaces and any resident notices through the property representative. At completion, we provide photos and a list of the work carried out, together with remaining items that require a separate decision or attendance."
+        ],
+        "zh": [
+          "共同物业维护开始前，我们先确认获批施工区域与指定代表。昆士兰政府说明，维护责任与分层计划和边界有关。我们使用该物业提供的资料定义工作，并逐项核对阳台、门或表面的具体范围。",
+          "实用的缺陷清单会列出每项位置、现象和进场要求。我们归并相关维修，标注仍需排查的项目，并区分当前处理与较大改善工程，方便负责人审核确认。",
+          "我们通过物业代表协调公共空间进场和住户通知。完工后提供照片与工作清单，并列明需要另行决定或再次进场的事项。"
+        ]
+      },
+      "serviceSlugs": [
+        "building-maintenance",
+        "facade-high-access-cleaning"
+      ],
+      "sourceUrls": [
+        "https://www.qld.gov.au/housing/body-corporate/maintenance/format-plan/building",
+        "https://www.qld.gov.au/housing/body-corporate/maintenance/responsibilities"
+      ]
+    },
+    {
+      "slug": "outdoor-dining-paving-drainage",
+      "title": {
+        "en": "Maintaining outdoor dining areas",
+        "zh": "户外餐饮区的铺装与排水维护"
+      },
+      "category": {
+        "en": "Outdoor areas",
+        "zh": "户外区域"
+      },
+      "summary": {
+        "en": "Paving, access, drainage and presentation considered together.",
+        "zh": "同时核对铺装、通行、排水与场地外观。"
+      },
+      "body": {
+        "en": [
+          "We assess an outdoor dining area as a working part of the venue. We check the agreed paving, doors, fixtures and drainage points, and ask how tables, deliveries and customer routes use the space. The scope should explain both the repair and the area that needs to be unavailable.",
+          "Gold Coast's stormwater guidance identifies runoff from roofs, car parks and other surfaces as part of the local drainage system. Where water collects around a commercial outdoor area, we inspect the accessible drainage route and surface condition before defining the repair. Cleaning, local surface repairs and drainage alterations are separate tasks.",
+          "We confirm materials, curing or drying requirements and the sequence with the venue manager. Cleaning water and waste handling are included in the planning. We finish with a record of completed work and the agreed arrangements for returning the area to use."
+        ],
+        "zh": [
+          "我们把户外用餐区视为门店正在运营的一部分，检查已确认的铺装、门、固定设施和排水点，并了解桌椅、送货及顾客路线如何使用空间。工作范围同时说明修复内容和需要暂停使用的区域。",
+          "黄金海岸的雨水管理资料将屋顶、停车场等表面的径流纳入排水系统。商业户外区域出现积水时，我们先检查可到达的排水路径和地面现状，再定义修复；清洁、局部地面维修和排水改造分别安排。",
+          "我们与门店负责人确认材料、养护或干燥要求及执行顺序，同时安排清洁用水和废物处理。完工时提供工作记录，并明确场地恢复使用的安排。"
+        ]
+      },
+      "serviceSlugs": [
+        "car-parks-external-works",
+        "plumbing-drainage-gas"
+      ],
+      "sourceUrls": [
+        "https://www.goldcoast.qld.gov.au/Environment-sustainability/Protecting-our-environment/Managing-our-waterways/Managing-stormwater",
+        "https://www.goldcoast.qld.gov.au/Services/Report-pay-apply/Report-a-problem/Report-a-problem-Pollution"
+      ]
+    },
+    {
+      "slug": "tracking-commercial-water-ingress",
+      "title": {
+        "en": "Tracking water ingress in commercial buildings",
+        "zh": "商业建筑渗水如何定位"
+      },
+      "category": {
+        "en": "Building repairs",
+        "zh": "建筑维修"
+      },
+      "summary": {
+        "en": "How we connect the reported stain with the building areas that need investigation.",
+        "zh": "我们如何从渗水现象梳理需要检查的建筑部位。"
+      },
+      "body": {
+        "en": [
+          "We start with the location, timing and pattern of the reported water ingress. We ask which rooms or surfaces are affected, whether the issue appears with rain or equipment use, and what repairs have already been attempted. Photos and a short history help us plan the inspection.",
+          "We inspect the accessible building elements relevant to the symptoms, which may include roofing, flashings, balcony details, external joints or plumbing. We define any testing or opening-up separately before proceeding. We use the findings to explain the repair location, method and extent.",
+          "We record the treated areas and the conditions under which the problem was observed. Where follow-up observation is part of the work, we set that out in the handover. Gold Coast rainfall varies across the year, so we connect any post-repair checks to the reported conditions and keep the observations with the property's maintenance record."
+        ],
+        "zh": [
+          "我们先核对渗水位置、发生时间和表现，了解受影响房间或表面、是否随降雨或设备使用出现，以及之前做过哪些维修。照片和简要历史记录有助于安排检查。",
+          "我们按现象检查可到达的相关构件，可能涉及屋面、泛水、阳台节点、外墙接缝或水管。需要测试或拆开检查时，我们先单独确认范围。修复方案依据检查结果确定。",
+          "我们记录处理部位和出现问题时的条件，如需要后续观察，会在交付中明确。黄金海岸降雨随季节变化，我们交付已完成的维修及其核查记录，同时说明后续观察安排。"
+        ]
+      },
+      "serviceSlugs": [
+        "roofing-waterproofing",
+        "building-maintenance"
+      ],
+      "sourceUrls": [
+        "https://www.bom.gov.au/climate/averages/tables/cw_040764.shtml",
+        "https://www.goldcoast.qld.gov.au/Services/Emergencies-disasters-outages/Get-Ready/Get-ready-Severe-weather"
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": {
+        "en": "What types of commercial properties do you maintain?",
+        "zh": "我们维护哪些商业物业？"
+      },
+      "a": {
+        "en": "We organise maintenance for hotels and resorts, apartments and common areas, hospitality venues, retail premises, offices, warehouses, industrial properties and community facilities. We confirm the specific work and access requirements for each site.",
+        "zh": "我们安排酒店与度假村、公寓及公共区域、餐饮、零售、办公室、仓库、工业物业和社区设施的维护，并逐个场所确认具体工作及进场要求。"
+      },
+      "category": "scope"
+    },
+    {
+      "q": {
+        "en": "Can we combine several maintenance jobs in one enquiry?",
+        "zh": "多个维护项目可以一次询价吗？"
+      },
+      "a": {
+        "en": "Yes. We review your defect list, group related work and identify the materials and access needed. We then set out which tasks can be completed together and which need separate attendance or investigation.",
+        "zh": "可以。我们核对缺陷清单，归并相关工作，确认材料和进场条件，并列明可一起完成、需要单独进场或进一步排查的项目。"
+      },
+      "category": "scope"
+    },
+    {
+      "q": {
+        "en": "Can repairs be planned around our opening hours?",
+        "zh": "可以配合营业时间安排维修吗？"
+      },
+      "a": {
+        "en": "We discuss your opening hours, busy periods and access restrictions before booking. We agree the work sequence and confirm available attendance times, including any period when an area or service needs to be unavailable.",
+        "zh": "我们在预约前了解营业时间、繁忙时段和通行限制，确认工作顺序与可安排时间，并明确区域或系统需要暂停使用的时段。"
+      },
+      "category": "planning"
+    },
+    {
+      "q": {
+        "en": "Do you coordinate with property and body corporate managers?",
+        "zh": "会与物业及业主委员会负责人协调吗？"
+      },
+      "a": {
+        "en": "We work with your nominated representative to confirm the approved scope, site access and communication arrangements. We record the work completed and identify any additional items that need a separate decision.",
+        "zh": "我们与指定代表确认已批准范围、现场进出及沟通安排，记录完工内容，并列明需要单独决定的追加事项。"
+      },
+      "category": "planning"
+    },
+    {
+      "q": {
+        "en": "What do you need to prepare a quote?",
+        "zh": "准备报价需要哪些资料？"
+      },
+      "a": {
+        "en": "We use the property address, type of premises, a description of the issue and any available photos or defect list. We also ask about access, operating hours and the person approving the work. We confirm where a site inspection or investigation is needed.",
+        "zh": "我们需要物业地址、场所类型、问题描述，以及现有照片或缺陷清单；同时核对进场条件、运营时间和确认工作的负责人，再说明是否需要现场检查或排查。"
+      },
+      "category": "planning"
+    },
+    {
+      "q": {
+        "en": "How do you handle changes to the work scope?",
+        "zh": "施工范围有变化时如何处理？"
+      },
+      "a": {
+        "en": "We record the additional issue, explain the proposed work and confirm any effect on price, materials or timing before proceeding with that change. The completion record distinguishes the original scope from approved additions.",
+        "zh": "我们记录新增问题，说明处理内容，并在执行变更前确认对价格、材料和时间的影响；完工记录区分原范围和已确认的追加工作。"
+      },
+      "category": "scope"
+    },
+    {
+      "q": {
+        "en": "Can you provide photos and a completion summary?",
+        "zh": "可以提供完工照片和摘要吗？"
+      },
+      "a": {
+        "en": "We include agreed photos and a summary of completed work in the handover. We identify treated areas, relevant service records and any items requiring further approval or attendance.",
+        "zh": "我们在交付中提供约定的照片和完工摘要，列明处理区域、相关服务记录，以及需要再次确认或进场的事项。"
+      },
+      "category": "scope"
+    },
+    {
+      "q": {
+        "en": "How does salt air affect the maintenance scope?",
+        "zh": "海盐环境会如何影响维护范围？"
+      },
+      "a": {
+        "en": "We check exposed and sheltered surfaces, the installed materials, fixings and visible deterioration. We use the relevant product guidance to define cleaning and repairs, and distinguish surface maintenance from component replacement.",
+        "zh": "我们检查外露与遮蔽表面、现有材料、固定件及可见损耗，结合相应产品要求定义清洁和维修，并区分表面维护与部件更换。"
+      },
+      "category": "coastal"
+    },
+    {
+      "q": {
+        "en": "Can you plan roof and drainage maintenance before storm season?",
+        "zh": "可以在暴雨季前安排屋顶与排水维护吗？"
+      },
+      "a": {
+        "en": "We review previous leaks, roof and gutter condition and accessible drainage points, then agree a scope and attendance window. We include any access constraints and weather-dependent work stages in the plan.",
+        "zh": "我们核对既往漏水、屋面与天沟现状及可检查排水点，再确认范围和进场窗口，并将到达限制及受天气影响的工序纳入安排。"
+      },
+      "category": "coastal"
+    },
+    {
+      "q": {
+        "en": "Which Gold Coast areas can we enquire about?",
+        "zh": "黄金海岸哪些区域可以询价？"
+      },
+      "a": {
+        "en": "We take enquiries for Gold Coast commercial properties, including coastal, central and northern business areas. We confirm attendance for your address, the work required and site access when preparing the scope.",
+        "zh": "我们接受黄金海岸商业物业询价，涵盖海滨、中心及北部商业区域；准备范围时，我们按具体地址、工作内容和现场条件确认进场安排。"
+      },
+      "category": "planning"
+    }
+  ]
+}

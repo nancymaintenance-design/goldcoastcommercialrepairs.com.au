@@ -1,0 +1,88 @@
+[
+  {
+    "family": "DM Sans",
+    "weight": 400,
+    "style": "normal",
+    "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAopxhTg.ttf",
+    "filename": "dm-sans-400.ttf",
+    "provider": "Google Fonts",
+    "css_source": "Google Fonts response saved in research/fonts.css",
+    "size_bytes": 48280
+  },
+  {
+    "family": "DM Sans",
+    "weight": 600,
+    "style": "normal",
+    "url": "https://fonts.gstatic.com/s/dmsans/v17/rP2tp2ywxg089UriI5-g4vlH9VoD8CmcqZG40F9JadbnoEwAfJthTg.ttf",
+    "filename": "dm-sans-600.ttf",
+    "provider": "Google Fonts",
+    "css_source": "Google Fonts response saved in research/fonts.css",
+    "size_bytes": 48280
+  },
+  {
+    "family": "Manrope",
+    "weight": 600,
+    "style": "normal",
+    "url": "https://fonts.gstatic.com/s/manrope/v23/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk4jE-_F.ttf",
+    "filename": "manrope-600.ttf",
+    "provider": "Google Fonts",
+    "css_source": "Google Fonts response saved in research/fonts.css",
+    "size_bytes": 96348
+  },
+  {
+    "family": "Manrope",
+    "weight": 800,
+    "style": "normal",
+    "url": "https://fonts.gstatic.com/s/manrope/v23/xn7_YHE41ni1AdIRqAuZuw1Bx9mbZk59E-_F.ttf",
+    "filename": "manrope-800.ttf",
+    "provider": "Google Fonts",
+    "css_source": "Google Fonts response saved in research/fonts.css",
+    "size_bytes": 96816
+  },
+  {
+    "family": "Instrument Serif",
+    "weight": 400,
+    "style": "italic",
+    "url": "https://fonts.gstatic.com/s/instrumentserif/v5/jizHRFtNs2ka5fXjeivQ4LroWlx-6zATiw.ttf",
+    "filename": "instrument-serif-italic.ttf",
+    "provider": "Google Fonts",
+    "css_source": "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@1&display=swap",
+    "size_bytes": 64208
+  },
+  {
+    "family": "Bowlby One SC",
+    "css_family": "Surf Display",
+    "weight": 400,
+    "style": "normal",
+    "url": "https://fonts.gstatic.com/s/bowlbyonesc/v27/DtVlJxerQqQm37tzN3wMug9Pzgg.ttf",
+    "filename": "surf-display.ttf",
+    "provider": "Google Fonts",
+    "css_source": "https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap",
+    "size_bytes": 54152
+  },
+  {
+    "family": "Noto Sans SC",
+    "weight": "100 900",
+    "style": "normal",
+    "url": "https://fonts.gstatic.com/l/font?kit=k3kXo84MPvpLmixcA63oeALhLJBk_ux-c08amfM-PWjf4hBrd5TxfdPUoa5SxyDpuoutJriIfYuqokMx7Xz4YZDpOfamUnmQPrhlZcE_ucq7eBLFGxIjVVGs0zX76vh_KG73oO4-QTThnbt3r-5Md72CmBHLoUg5uPkxbbNwb1b6WRiL-EclBPSCpE1YlkeBDHsgjXKQZQCUMqm18kj4HFHLoZgL_8FyvflV6xrUv6Gwj91xKTDHZloEytR0uLP0VPqwkAI8ceDtRarEzGGu_TaPj1fmiv6y6ttrDK7I7EA4lOXLG-q8sBpkOUWsW3E4cJUptdHFaEtgg8sc7uJvzzmo_RnpQ88W5Qs15lW6N5up5koZN9_W3ppPW7XO0q-eVxnXsVPzB2T3YUIk7iFxAtIX27XkcVrakVyEbT0N9XX_NIsk0TrIDZPkYbyNv1Y2Glbm3ZNnb0BWegye1-tcHPLNqJr4Bsm_j_-rm4p35Ky8eq5VfniPZT0-Bi5kqrNKYhxes-hZ4jPN69ZF5OnUKLHeqMY45iWqVPUGNjSoHigYtuNaPQzFMH61gn1IqD9dk9_51l6fRtaKwXQpy3d5ztqMg7cQMiFmcKd07CZltYIRh8eDr8DoDmo8L_PqXe-0sUkkGozBBCqS_4v8C4l2pJj7mTj_5S8NBsDwzpQzJt7k-IUXdV0hLfnL5laDclw5dEO774X-dIvux-1UMawoRpUo6Nvjgs44udUG7JH-CkQMUtWjit0E6ltNTOMQ3hRwwFQfMv18m2GS75hwVN9m9RpCtgOulmvGThcrNzWW5kLt4pP3irEXW0UZp96RM-LtdOgHHomgsTZ97_eVHnPhMEh_yYaM6Y6LqOkUsIvEj87pK1bDnxcpGe5gBjhLP9wrCvAJg4Y9R8J-eU21n6LDDweKQFLZsQcD-g_vISaQ5R5NP4z-DkBd-PVvScQzmji1ELP487Tgj6xC18LaQ8ug8xjuORxxGHiZa36lbJuIICWrTyz1o3KR17yvXJBpaU6r0dxTFsDzN2CKbi4RuilGlZ9mN7LIQjw6UZHSIkVfHxtyQCInp0U2Lkf-y4U1WdXpKT9sc3fXa8KfzrAJYPe-el5fVLS7Ly-yoItg1VPkOs7NotcRsQd9sltCb2quHN3bq8dk0sI-hubwrpWPXvuYU_d7PsqUMON4uhsUIvhAWTQ-DBUAAJxKCBwvGuzYk4iYc9UkumVYG9vO4k6sniXOQYbCs4KVt9vAY8pLlcMIxfqFgSCGw78hOAS_y7LizLsxT5hU4oBF3Lwv9ZyqWFgVDGcXy3IqLb_WWULBoALtphKaNqMvkG2b-SPSy0ipXmU2WVX7Wnc5RbZHYyV7L3ZVZC0RD98SsHiRtW2rEyXFKTr-Md1w-I8ROZXjQmy6ztrA-pyL2kV3KEnoD7wk3cUUFe6baFT2EVRpGTLFi339jPm9gF55PKGcxEgNyaXGw1siefgNB_1uEw5BeH9Q8-PJAu-_sKYctjW-1cElPpVtKdFZpifR6nmlJYs8oMfYz4EP2cJBO39slIjxnM2Le-3GwgwR85m4T4b76GoSGefI-e9XUtHFdjKhKOBiL_F2XAMI5NfCSdKRrTdeH8suo4MxAFdxjk6prd0HlPC6D00bkFtA9eyE-AZNi4cgCSW4fOxMigo2dftyJYj1x0ZTk8x9f7-Fb1FtlThm7EVMoqegPR3Thxqb8H7ocpcGAdmsgGBQWboF3b2XDtY6sluAb2LzfFBYf_913-hSyJ1-b_ut3QLaCL4__qKB5mWSDZ5GA0Ws2Sje3rjObjqSpggyD-ulpKwDM0N1Kwkm_jaDJycwk7PVn25Qab7Uttw3u9Onw6etYGP0yx6_6lgScO4q25cFIDAS0Acnfu7_J5Y1gscwGBBuJ9_2Tkbikewz2zU7WMCa5zQDsnR-Jzse6POFpoh_hZcK-h1XBS5vBEaDUyjoXlU88EcHT7PCezgwZOrGt4LtUbrZ92Mym_wnQBQr28CkmkIqiiY75v4PgkhBrlyWRwIrMT-pQZCW0gImPjxw8AcFeKdmryOygHCnqgJTY1jfhVRA1EePRXykAnBDaXjlILM76ldNmTh2igSLhd5JavlR4zXrcAd49Vj3hXQkIy6JffkI0SQK5AEzikqKMy14LRFmBsS66EmiXCcJcqrElc71d8ICvVDOD7gyS35MUsE7tQeJPXn9RPr2DZKdNMPcrNsjg9C3oMvmZcQlAOGgX8tALwdBzkQtBPrk87RzeQDg0daOS4J3fvY7VHgu__-mtUHws-6BM4RqOGtP-W9T2Cfe7GtOeXSsISn2D8WZBv3aE_r8yQydus-NFSyGk4h0QjXLFKTKMFS_fTpHQV-ESBO2w0-eiXr5SU_Ia0imoRLAR110yt_0MilRL8QF0Oa10gT2jmPw-X9xx02UiJOALCCiKiq5WBZSYF92i2Sb0LmFBFypgibjKLU6PghoNaj9czLzIeayw_cYCT2YU1txl8j6jUy7FVaXKC0TyyxsUW09DawSN_XK_W_tvnqd0c2xYdnA0sUMKHy5HxbZUSZ8lBSOIPo9jKG70Be979eJ2xbP1rsnMcRsGjdeadXgViA7W7BIpE8gAuhflcsQTnUC-T8g5pT4LP294nyDeFdpilmOk6EMfKvONUvsCIMVu276PRArD72k7gVIVDcBOKm_oe8DeLeSZjBQlboV91MkeBkKEogJ29Zj4BDLF9S79pFBWg&skey=cf0bb10b5602fdc3&v=v41",
+    "filename": "noto-sans-sc-subset-400-800.woff2",
+    "provider": "Google Fonts",
+    "css_source": "https://fonts.googleapis.com/css2?family=Noto+Sans+SC%3Awght%40400..800&display=swap&text=%E3%80%81%E3%80%82%E4%B8%80%E4%B8%8A%E4%B8%8B%E4%B8%8D%E4%B8%8E%E4%B8%93%E4%B8%9A%E4%B8%9C%E4%B8%AA%E4%B8%AD%E4%B8%B4%E4%B8%BA%E4%B8%BB%E4%B9%88%E4%B9%89%E4%B9%8B%E4%B9%90%E4%B9%9F%E4%BA%86%E4%BA%8B%E4%BA%8C%E4%BA%8E%E4%BA%94%E4%BA%9B%E4%BA%A4%E4%BA%A7%E4%BA%AB%E4%BA%BA%E4%BB%80%E4%BB%85%E4%BB%8D%E4%BB%8E%E4%BB%93%E4%BB%96%E4%BB%98%E4%BB%A3%E4%BB%A5%E4%BB%AC%E4%BB%B6%E4%BB%B7%E4%BB%BB%E4%BB%BD%E4%BC%98%E4%BC%9A%E4%BC%9E%E4%BD%8D%E4%BD%8F%E4%BD%93%E4%BD%95%E4%BD%9C%E4%BD%A0%E4%BD%BF%E4%BE%8B%E4%BE%9B%E4%BE%9D%E4%BE%BF%E4%BF%9D%E4%BF%A1%E4%BF%AE%E4%BF%B1%E5%81%87%E5%81%9A%E5%81%9C%E5%82%A8%E5%85%81%E5%85%88%E5%85%89%E5%85%A5%E5%85%A8%E5%85%AB%E5%85%AC%E5%85%AD%E5%85%B0%E5%85%B1%E5%85%B3%E5%85%B6%E5%85%B7%E5%85%BB%E5%86%85%E5%86%8D%E5%86%99%E5%86%B2%E5%86%B3%E5%86%B5%E5%86%B7%E5%87%86%E5%87%9D%E5%87%BA%E5%88%86%E5%88%87%E5%88%92%E5%88%97%E5%88%AB%E5%88%B0%E5%88%B6%E5%88%B7%E5%89%8D%E5%8A%9B%E5%8A%9E%E5%8A%A0%E5%8A%A1%E5%8A%A3%E5%8A%A8%E5%8A%A9%E5%8B%A4%E5%8C%85%E5%8C%96%E5%8C%97%E5%8C%B9%E5%8C%BA%E5%8C%BB%E5%8D%81%E5%8D%87%E5%8D%8F%E5%8D%95%E5%8D%AB%E5%8D%B8%E5%8E%85%E5%8E%86%E5%8E%8B%E5%8E%9F%E5%8F%82%E5%8F%8A%E5%8F%8D%E5%8F%91%E5%8F%97%E5%8F%98%E5%8F%A3%E5%8F%A6%E5%8F%AF%E5%8F%B0%E5%8F%B2%E5%90%84%E5%90%88%E5%90%8A%E5%90%8C%E5%90%8D%E5%90%8E%E5%90%91%E5%90%97%E5%90%A6%E5%90%AB%E5%90%AF%E5%91%8A%E5%91%98%E5%91%A8%E5%92%8C%E5%92%96%E5%93%81%E5%93%8D%E5%93%AA%E5%94%AE%E5%95%86%E5%95%A1%E5%96%84%E5%96%B7%E5%99%A8%E5%9B%9E%E5%9B%A0%E5%9B%A2%E5%9B%AD%E5%9B%B4%E5%9B%BA%E5%9B%BE%E5%9C%9F%E5%9C%A8%E5%9C%B0%E5%9C%BA%E5%9C%BE%E5%9D%80%E5%9D%8F%E5%9D%97%E5%9D%A1%E5%9D%AA%E5%9E%83%E5%9E%8B%E5%9F%9F%E5%9F%BA%E5%A0%B5%E5%A1%9E%E5%A1%AB%E5%A2%83%E5%A2%99%E5%A2%9E%E5%A3%AB%E5%A4%84%E5%A4%87%E5%A4%8D%E5%A4%8F%E5%A4%96%E5%A4%9A%E5%A4%9F%E5%A4%A7%E5%A4%A9%E5%A4%B4%E5%A5%8F%E5%A5%BD%E5%A6%82%E5%A7%8B%E5%A7%93%E5%A7%94%E5%AD%98%E5%AD%A3%E5%AE%87%E5%AE%89%E5%AE%8C%E5%AE%9A%E5%AE%9E%E5%AE%A1%E5%AE%A2%E5%AE%A4%E5%AE%B9%E5%AF%86%E5%AF%93%E5%AF%9F%E5%AF%B8%E5%AF%B9%E5%AF%BC%E5%B0%81%E5%B0%86%E5%B0%8F%E5%B0%91%E5%B0%98%E5%B0%9A%E5%B0%BA%E5%B1%80%E5%B1%82%E5%B1%8B%E5%B1%91%E5%B1%95%E5%B2%B8%E5%B7%A5%E5%B7%B2%E5%B8%82%E5%B8%83%E5%B8%B8%E5%B9%B2%E5%B9%B4%E5%B9%B6%E5%BA%8F%E5%BA%93%E5%BA%94%E5%BA%97%E5%BA%9C%E5%BA%9F%E5%BA%A6%E5%BA%AD%E5%BB%BA%E5%BC%80%E5%BC%8F%E5%BC%A0%E5%BD%92%E5%BD%93%E5%BD%95%E5%BD%A2%E5%BD%B1%E5%BE%80%E5%BE%84%E5%BE%85%E5%BF%83%E5%BF%85%E5%BF%99%E5%BF%AB%E6%80%81%E6%80%A7%E6%81%A2%E6%81%AF%E6%81%B6%E6%83%85%E6%83%B3%E6%88%90%E6%88%91%E6%88%96%E6%88%B7%E6%88%BF%E6%89%80%E6%89%A7%E6%89%A9%E6%89%B9%E6%89%BE%E6%8A%8A%E6%8A%A4%E6%8A%A5%E6%8B%86%E6%8B%9B%E6%8B%A9%E6%8B%AC%E6%8C%81%E6%8C%87%E6%8C%89%E6%8C%91%E6%8C%A1%E6%8D%9F%E6%8D%A2%E6%8D%AE%E6%8E%92%E6%8E%A2%E6%8E%A5%E6%8E%A7%E6%8E%AA%E6%8F%8F%E6%8F%90%E6%90%9C%E6%91%84%E6%91%98%E6%92%9E%E6%94%B6%E6%94%B9%E6%94%BE%E6%94%BF%E6%95%85%E6%95%88%E6%95%99%E6%95%B0%E6%95%B4%E6%96%87%E6%96%99%E6%96%AD%E6%96%B0%E6%96%B9%E6%96%BD%E6%97%A0%E6%97%A2%E6%97%A5%E6%97%A9%E6%97%B6%E6%98%86%E6%98%8E%E6%98%93%E6%98%A5%E6%98%AF%E6%98%BE%E6%99%92%E6%99%9A%E6%99%AF%E6%99%B0%E6%9A%82%E6%9A%B4%E6%9B%B4%E6%9B%BF%E6%9C%80%E6%9C%88%E6%9C%89%E6%9C%8D%E6%9C%9B%E6%9C%9F%E6%9C%A8%E6%9C%AA%E6%9C%AC%E6%9C%BA%E6%9D%90%E6%9D%91%E6%9D%A1%E6%9D%A5%E6%9D%AF%E6%9D%BE%E6%9D%BF%E6%9E%84%E6%9E%97%E6%9E%9C%E6%9F%93%E6%9F%A5%E6%9F%B1%E6%A0%87%E6%A0%B8%E6%A0%B9%E6%A0%BC%E6%A1%88%E6%A1%8C%E6%A2%B3%E6%A3%80%E6%A4%85%E6%A4%8D%E6%A5%9A%E6%A5%BC%E6%AA%90%E6%AC%A1%E6%AD%A3%E6%AD%A4%E6%AD%A5%E6%AE%8A%E6%AE%B5%E6%AF%8F%E6%B0%94%E6%B0%B4%E6%B1%82%E6%B1%A0%E6%B1%A1%E6%B2%99%E6%B2%9F%E6%B3%95%E6%B3%9B%E6%B3%A8%E6%B3%B3%E6%B4%81%E6%B4%97%E6%B4%BB%E6%B5%81%E6%B5%8B%E6%B5%8F%E6%B5%AA%E6%B5%B7%E6%B6%82%E6%B6%88%E6%B6%89%E6%B6%B5%E6%B7%B7%E6%B8%85%E6%B8%8D%E6%B8%97%E6%B8%B8%E6%BA%89%E6%BA%90%E6%BA%A2%E6%BB%9A%E6%BB%A1%E6%BB%A4%E6%BB%A8%E6%BB%A9%E6%BC%86%E6%BC%8F%E7%81%8C%E7%81%AF%E7%82%B9%E7%83%AD%E7%85%A7%E7%87%83%E7%87%A5%E7%89%87%E7%89%8C%E7%89%A9%E7%89%B9%E7%8A%B6%E7%8B%AC%E7%8E%AF%E7%8E%B0%E7%8E%BB%E7%90%86%E7%92%83%E7%94%9F%E7%94%A8%E7%94%B5%E7%95%8C%E7%95%99%E7%96%97%E7%99%BD%E7%9A%84%E7%9B%90%E7%9B%96%E7%9B%AE%E7%9B%B8%E7%9C%8B%E7%9F%A5%E7%9F%AD%E7%9F%B3%E7%A0%B4%E7%A1%AE%E7%A4%BA%E7%A4%BE%E7%A6%81%E7%A7%8D%E7%A7%9F%E7%A7%AF%E7%A7%BB%E7%A8%8B%E7%A8%BF%E7%A9%BA%E7%A9%BF%E7%AA%97%E7%AB%8B%E7%AB%A0%E7%AC%94%E7%AC%AC%E7%AD%89%E7%AD%91%E7%AD%94%E7%AD%9B%E7%AE%80%E7%AE%A1%E7%AE%B1%E7%B1%BB%E7%B3%8A%E7%B3%BB%E7%B4%A2%E7%B9%81%E7%BA%A6%E7%BA%A7%E7%BA%B3%E7%BA%B8%E7%BA%B9%E7%BA%BF%E7%BB%84%E7%BB%86%E7%BB%87%E7%BB%88%E7%BB%8F%E7%BB%93%E7%BB%95%E7%BB%99%E7%BB%9F%E7%BB%A7%E7%BB%AD%E7%BB%B4%E7%BB%BC%E7%BB%BF%E7%BC%9D%E7%BC%BA%E7%BD%91%E7%BD%AE%E7%BF%BB%E8%80%83%E8%80%85%E8%80%97%E8%81%94%E8%82%B2%E8%83%8C%E8%83%BD%E8%84%9A%E8%86%8F%E8%87%AA%E8%87%B3%E8%87%B4%E8%88%AA%E8%89%AF%E8%89%B2%E8%8A%82%E8%8A%B1%E8%8C%83%E8%8D%89%E8%8E%B7%E8%8F%9C%E8%90%A5%E8%94%BD%E8%97%8F%E8%A1%8C%E8%A1%94%E8%A1%A5%E8%A1%A8%E8%A2%AB%E8%A3%85%E8%A6%81%E8%A6%86%E8%A7%81%E8%A7%82%E8%A7%84%E8%A7%86%E8%A7%88%E8%A7%89%E8%A7%A3%E8%AE%A1%E8%AE%A2%E8%AE%A4%E8%AE%A9%E8%AE%AF%E8%AE%B0%E8%AE%B8%E8%AE%BA%E8%AE%BE%E8%AE%BF%E8%AF%81%E8%AF%86%E8%AF%89%E8%AF%95%E8%AF%9D%E8%AF%A2%E8%AF%A5%E8%AF%B4%E8%AF%BB%E8%B0%83%E8%B1%A1%E8%B4%9F%E8%B4%A3%E8%B4%A7%E8%B4%AD%E8%B5%81%E8%B5%84%E8%B5%B7%E8%B6%85%E8%B6%B3%E8%B7%9F%E8%B7%AF%E8%B7%B3%E8%BD%A6%E8%BD%AC%E8%BD%AE%E8%BD%BD%E8%BE%83%E8%BE%86%E8%BE%B9%E8%BE%BE%E8%BF%87%E8%BF%90%E8%BF%94%E8%BF%98%E8%BF%99%E8%BF%9B%E8%BF%9E%E8%BF%B0%E8%BF%BD%E9%80%80%E9%80%81%E9%80%82%E9%80%89%E9%80%90%E9%80%94%E9%80%9A%E9%80%A0%E9%81%93%E9%81%AE%E9%82%AE%E9%83%A8%E9%83%BD%E9%85%8D%E9%85%92%E9%87%8D%E9%87%8F%E9%87%91%E9%92%88%E9%93%BA%E9%94%81%E9%95%BF%E9%97%A8%E9%97%AD%E9%97%AE%E9%97%B4%E9%97%BB%E9%98%85%E9%98%9F%E9%98%B2%E9%98%B3%E9%98%B6%E9%99%85%E9%99%8D%E9%99%90%E9%99%A2%E9%99%A4%E9%99%B7%E9%9A%8F%E9%9A%90%E9%9A%94%E9%9A%9C%E9%9A%BE%E9%9B%86%E9%9B%A8%E9%9B%B6%E9%9B%BE%E9%9C%80%E9%9C%B2%E9%9D%A2%E9%A1%B5%E9%A1%B6%E9%A1%B9%E9%A1%BA%E9%A1%BE%E9%A2%84%E9%A2%91%E9%A2%98%E9%A2%9C%E9%A3%8E%E9%A4%90%E9%A5%AE%E9%A5%B0%E9%A6%86%E9%A6%96%E9%AA%A4%E9%AB%98%E9%BB%84%EF%BC%88%EF%BC%89%EF%BC%8C%EF%BC%9A%EF%BC%9B%EF%BC%9F",
+    "size_bytes": 196904,
+    "subset_character_count": 675,
+    "subset_inputs": [
+      "src/content.json",
+      "build.py",
+      "src/home_v2.py"
+    ],
+    "subset_characters": "、。一上下不与专业东个中临为主么义之乐也了事二于五些交产享人什仅仍从仓他付代以们件价任份优会伞位住体何作你使例供依便保信修俱假做停储允先光入全八公六兰共关其具养内再写冲决况冷准凝出分切划列别到制刷前力办加务劣动助勤包化北匹区医十升协单卫卸厅历压原参及反发受变口另可台史各合吊同名后向吗否含启告员周和咖品响哪售商啡善喷器回因团园围固图土在地场圾址坏块坡坪垃型域基堵塞填境墙增士处备复夏外多够大天头奏好如始姓委存季宇安完定实审客室容密寓察寸对导封将小少尘尚尺局层屋屑展岸工已市布常干年并序库应店府废度庭建开式张归当录形影往径待心必忙快态性恢息恶情想成我或户房所执扩批找把护报拆招择括持指按挑挡损换据排探接控措描提搜摄摘撞收改放政故效教数整文料断新方施无既日早时昆明易春是显晒晚景晰暂暴更替最月有服望期木未本机材村条来杯松板构林果染查柱标核根格案桌梳检椅植楚楼檐次正此步殊段每气水求池污沙沟法泛注泳洁洗活流测浏浪海涂消涉涵混清渍渗游溉源溢滚满滤滨滩漆漏灌灯点热照燃燥片牌物特状独环现玻理璃生用电界留疗白的盐盖目相看知短石破确示社禁种租积移程稿空穿窗立章笔第等筑答筛简管箱类糊系索繁约级纳纸纹线组细织终经结绕给统继续维综绿缝缺网置翻考者耗联育背能脚膏自至致航良色节花范草获菜营蔽藏行衔补表被装要覆见观规视览觉解计订认让讯记许论设访证识诉试话询该说读调象负责货购赁资起超足跟路跳车转轮载较辆边达过运返还这进连述追退送适选逐途通造道遮邮部都配酒重量金针铺锁长门闭问间闻阅队防阳阶际降限院除陷随隐隔障难集雨零雾需露面页顶项顺顾预频题颜风餐饮饰馆首骤高黄（），：；？",
+    "variable_axes": [
+      {
+        "tag": "wght",
+        "min": 100.0,
+        "max": 900.0
+      }
+    ],
+    "requested_css_weight_range": "400 800"
+  }
+]
