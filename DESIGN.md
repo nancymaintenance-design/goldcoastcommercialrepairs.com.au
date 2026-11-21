@@ -97,3 +97,7 @@ Property details use a photographic cover and an aqua navigation bar. The editor
 Coast Notes articles use a pink jacket, an article-only contents rail, a field note and a photographic spread. The comparison and next chapter share the cream reading surface. Illustration and short takeaways break up the article, and related guides include subject-specific thumbnails.
 
 All three share the main site navigation and a compact pink detail footer. The service and news opening buttons lead to the body. The enquiry action carries the corresponding service, property type or article. Professional references and source URLs remain in internal records.
+
+## Homepage service headline
+
+The latest homepage revision moves the Gold Coast location into the small ELLIS badge. The H1 uses two service-led lines in yellow and pink, with the existing coast photograph, orange service label and poster entrance motion.

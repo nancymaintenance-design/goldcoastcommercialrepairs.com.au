@@ -2,10 +2,9 @@
 
 def render(lang, data, tr, e, val, url, img, a, button_link, service_row, sector_card, article_card, faq_items, process, cta):
     def t(en, zh): return tr(en, zh, lang)
-    stripe_words = t('SUN. SURF. SERVICE.', '商业。地产。专业维护。')
+    stripe_words = t('BUSINESS. PROPERTY. PROFESSIONAL MAINTENANCE.', '商业。地产。专业维护。')
     loop = ''.join(f'<span>{stripe_words}</span><span aria-hidden="true">✳</span>' for _ in range(4))
     work_loop = ''.join(f'<span>{t("BUILDINGS / SYSTEMS / OUTDOORS", "建筑 / 设备 / 室外空间")}</span><span aria-hidden="true">✳</span>' for _ in range(3))
-    hero_city = '<span>GOLD</span><span>COAST</span>' if lang == 'en' else '<span>黄金</span><span>海岸</span>'
     wave = '<svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0,58 C180,140 300,-20 510,52 C720,125 810,8 1015,50 C1220,100 1290,20 1440,60 L1440,120 L0,120 Z"/></svg>'
     service_by_slug = {item['slug']: item for item in data['services']}
     faq_by_id = {item['id']: item for item in data['faqs']}
@@ -24,8 +23,10 @@ def render(lang, data, tr, e, val, url, img, a, button_link, service_row, sector
         <div class="hero-scene">{img('coast-hero.webp',t('Sunny Gold Coast shoreline with beach club, striped umbrellas and adult holidaymakers','阳光下的黄金海岸、沙滩俱乐部、条纹遮阳伞与成年游客的设计配图'),'',True)}</div>
         <div class="hero-shade" aria-hidden="true"></div>
         <div class="hero-copy">
-          <p class="eyebrow hero-eyebrow">{t('ELLIS / COMMERCIAL PROPERTY CARE','ELLIS / 商业物业维护')}</p>
-          <h1><span class="hero-city">{hero_city}</span><span class="hero-service">{t('COMMERCIAL PROPERTY<br>MAINTENANCE.','商业物业<br>维修与维护。')}</span></h1>
+          <p class="eyebrow hero-eyebrow">ELLIS / GOLD COAST<br>{t('COMMERCIAL PROPERTY CARE','黄金海岸商业物业服务')}</p>
+          <h1 class="hero-city hero-headline"><span>{t('COMMERCIAL REPAIRS','商业维修')}</span>
+            <span>{t('PROPERTY MAINTENANCE','物业维护')}</span></h1>
+          <p class="hero-service">{t('HOTELS · SHOPS · OFFICES','酒店 · 商铺 · 办公室')}<br>{t('DAY-TO-DAY REPAIRS · FACILITY FIXES · PLANNED MAINTENANCE','日常维修 · 设施修补 · 计划维护')}</p>
           <div class="hero-actions">{button_link('/contact/',t('LET’S PLAN THE WORK','安排物业维护'),lang)}{a('/services/',t('EXPLORE SERVICES','浏览服务内容'),lang,'hero-service-link')}</div>
         </div>
         <div class="hero-sun" aria-hidden="true"><div class="sun-rays"></div><div class="sun-lettering">SUN<br>SURF<br>SERVICE</div></div>

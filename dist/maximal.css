@@ -41,3 +41,40 @@ html.motion-paused *,html.motion-paused *:before,html.motion-paused *:after{anim
 
 :root{--body:'DM Sans','Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif}
 html[lang=zh-CN] body.maximal #main h1:not(:where(.gc-v4 *)),html[lang=zh-CN] body.maximal #main h2:not(:where(.gc-v4 *)){font-weight:900}html[lang=zh-CN] body.maximal #main h1 em,html[lang=zh-CN] body.maximal #main h2 em{font-weight:900}
+
+/* Homepage service headline: two poster lines, with the location in the badge. */
+body.maximal .hero h1.hero-headline {
+  font-size: clamp(36px, 5.3vw, 104px);
+  line-height: .96;
+  letter-spacing: -.055em;
+  margin: 0 0 clamp(20px, 2.4vw, 40px);
+  transform: rotate(-2deg);
+  white-space: nowrap;
+}
+body.maximal .hero-headline > span:last-child {
+  padding-left: 0;
+}
+html[lang=zh-CN] body.maximal .hero h1.hero-headline {
+  font-size: clamp(74px, 11.4vw, 187px);
+  line-height: .99;
+  letter-spacing: -.055em;
+}
+body.maximal .hero-copy .hero-eyebrow {
+  line-height: 1.43;
+  box-shadow: 3px 3px 0 var(--gc-ink);
+}
+body.maximal .hero-copy p.hero-service {
+  max-width: 100%;
+  font-size: clamp(12px, 1.16vw, 20px);
+  line-height: 1.35;
+  margin: 0;
+}
+@media (max-width: 760px) {
+  body.maximal .hero h1.hero-headline {
+    font-size: clamp(19px, 6.2vw, 48px);
+    line-height: 1.04;
+  }
+  html[lang=zh-CN] body.maximal .hero h1.hero-headline {
+    font-size: clamp(45px, 20.5vw, 128px);
+  }
+}
