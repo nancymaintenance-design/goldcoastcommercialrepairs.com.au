@@ -83,5 +83,74 @@
     "format": "JPEG",
     "size_bytes": 146492,
     "status": "downloaded"
+  },
+  {
+    "key": "workshop",
+    "photo_id": "30990849",
+    "url": "https://images.pexels.com/photos/30990849/pexels-photo-30990849.jpeg?auto=compress&cs=tinysrgb&w=1080",
+    "source_url": "https://www.pexels.com/photo/spacious-industrial-interior-of-modern-factory-workshop-30990849/",
+    "photographer": "Jhonny' Mages",
+    "provider": "Pexels",
+    "description": "Industrial workshop interior with machinery and open work aisles",
+    "purpose": "Illustrative stock photo only; not an Ellis project or a verified Gold Coast location.",
+    "filename": "sector-workshop.jpg",
+    "dimensions": [
+      1080,
+      720
+    ],
+    "format": "JPEG",
+    "size_bytes": 169923,
+    "status": "downloaded"
+  },
+  {
+    "key": "healthcare",
+    "photo_id": "8459996",
+    "url": "https://images.pexels.com/photos/8459996/pexels-photo-8459996.jpeg?auto=compress&cs=tinysrgb&w=1080",
+    "source_url": "https://www.pexels.com/photo/waiting-room-in-a-hospital-8459996/",
+    "photographer": "Los Muertos Crew",
+    "provider": "Pexels",
+    "description": "Bright healthcare reception and waiting area",
+    "purpose": "Illustrative stock photo only; not an Ellis project or a verified Gold Coast location.",
+    "filename": "sector-healthcare.jpg",
+    "dimensions": [
+      1080,
+      720
+    ],
+    "format": "JPEG",
+    "size_bytes": 60147,
+    "status": "downloaded"
+  },
+  {
+    "filename": "coastal-resort-editorial.png",
+    "kind": "AI-generated editorial brand image",
+    "source": "Generated for this requested design pack on 2026-11-21",
+    "purpose": "Illustrative coastal resort environment; adults incidental; not an actual Ellis project or verified real property.",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "size_bytes": 2899890
+  },
+  {
+    "filename": "coastal-maintenance-editorial.png",
+    "kind": "AI-generated editorial illustration",
+    "created": "2026-11-21",
+    "purpose": "Illustrative commercial maintenance environment, not an actual Ellis job, employee photograph or precise technical diagram.",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "size_bytes": 2574045
+  },
+  {
+    "filename": "coastal-roof-editorial.png",
+    "kind": "AI-generated editorial illustration",
+    "created": "2026-11-21",
+    "purpose": "Illustrative commercial maintenance environment, not an actual Ellis job, employee photograph or precise technical diagram.",
+    "dimensions": [
+      1672,
+      941
+    ],
+    "size_bytes": 2256429
   }
 ]

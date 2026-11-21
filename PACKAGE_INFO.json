@@ -1,0 +1,23 @@
+{
+  "package": "gold-coast-v3-complete",
+  "exported_at": "2026-11-21T08:28:34.691642+08:00",
+  "source_commit": "6fcfb40d7ef05754c47f7e906488a0d55afdee36",
+  "content_version": "V2 approved homepage + V3 shared finale",
+  "html_pages": 69,
+  "local_url_references_checked": 2355,
+  "language_routes": [
+    "/",
+    "/zh/"
+  ],
+  "runtime": "Python 3 for local serving and optional HTML generation; no frontend package install needed",
+  "locked_asset_sha256": {
+    "src/home_v2.py": "339fc818ca1052391192ef641bf16a3f1f83e0c93ebef41d5c70c4375f4f342f",
+    "dist/assets/coast-hero.webp": "ab020b292e29948d7737d13181619be3aeafe0d1c7636502a18f963224ecf0cf",
+    "src/assets/coast-hero-original.png": "e218fd9cd4edddcaa3323cecd7d4470c17c86e117fb8bf4ed642aaac44a8a8bf"
+  },
+  "excluded_from_export": [
+    "docs/gold-coast-footer-mobile-v3.jpg",
+    "docs/gold-coast-footer-v3.jpg",
+    "docs/gold-coast-v2-desktop.jpg"
+  ]
+}

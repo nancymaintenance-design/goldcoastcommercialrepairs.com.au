@@ -5,3 +5,13 @@
   font-display: swap;
   src: url('/assets/noto-sans-sc-subset-400-800.woff2') format('woff2');
 }
+
+/* V4 glyph additions */
+@font-face {
+  font-family: "Noto Sans SC";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/assets/noto-sans-sc-v4-additions.woff2") format("woff2");
+  unicode-range: U+4E09, U+4E92, U+4F38, U+501F, U+5145, U+514D, U+51CF, U+51E0, U+526A, U+5382, U+53CC, U+5427, U+54A8, U+56F0, U+5747, U+57CB, U+5802, U+58F3, U+5C1D, U+5C31, U+5C97, U+5E2E, U+5E73, U+5F04, U+5F15, U+5F88, U+5F8B, U+5FD7, U+61C2, U+626C, U+6270, U+627F, U+6280, U+62DF, U+62FF, U+65C1, U+666E, U+671D, U+672F, U+675F, U+680B, U+6863, U+68B0, U+68DA, U+6B62, U+6C89, U+6CB9, U+6E29, U+6EF4, U+706D, U+7136, U+7262, U+758F, U+75C7, U+767B, U+771F, U+7740, U+780C, U+7A33, U+7B26, U+7D2F, U+800C, U+820C, U+8212, U+82AF, U+8377, U+886C, U+88C2, U+8D34, U+8EAB, U+8F68, U+8F93, U+9057, U+91CC, U+9274, U+94F0, U+94FE, U+9500, U+952E, U+963B, U+9648, U+9669, U+9699, U+9760, U+97F3, U+9A6C, U+9ED8;
+}

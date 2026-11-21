@@ -1,0 +1,38 @@
+﻿黄金海岸商业维护网站 — 完整交接包 V3
+更新日期：2026-11-21（Asia/Singapore）
+
+这是已确认的 V2 首页主体 + 最新 V3 末段询价区和共享页脚。
+
+使用顺序
+1. 完整解压 gold-coast-v3-complete.zip，进入 gold-coast-v3 文件夹。
+2. 在 Codex 中打开这个文件夹，把 CODEX_PROMPT.txt 的全部内容发给它。
+3. 网站现成页面位于 dist。请通过本地 HTTP 服务打开，避免直接双击 HTML 导致以 / 开头的图片、字体、样式和页面链接失效。
+
+Windows 本地预览
+有 Python 3 时，可双击 PREVIEW_WINDOWS.bat。
+随后打开：http://127.0.0.1:8000/ 或 http://127.0.0.1:8000/zh/
+也可以在项目目录终端运行：
+python -m http.server 8000 --bind 127.0.0.1 --directory dist
+Windows 若只有 py 启动器，改用：
+py -3 -m http.server 8000 --bind 127.0.0.1 --directory dist
+macOS/Linux 若使用 python3，就把 python 换为 python3。
+8000 端口被占用时，把端口号换为 8001，并打开对应地址。
+关闭服务窗口或按 Ctrl+C 即可停止预览。
+
+主要文件
+DESIGN.md：当前视觉规范与 V3 设计说明。
+CODEX_HANDOFF.md：完整业务与开发交接。
+CODEX_PROMPT.txt：本次接手、运行、核对与交付 prompt。
+docs/FOOTER_V3_PROMPT.md：尾部继续修改的专项 prompt。
+src/home_v2.py：已经认可的首页首屏与主体。
+src/footer_v3.py：新版询价区与共享页脚。
+src/content.json：中英文内容。
+build.py：静态页面生成器。
+dist/：69 个已生成 HTML，以及样式、脚本、图片和字体。
+PACKAGE_INFO.json / PACKAGE_MANIFEST.json：包的版本信息与完整性记录。
+
+注意
+项目内已有完整运行所需图片和字体。浏览器验收截图未单独收录；设计以实际 HTML/CSS 为准。
+修改模板或内容后运行 python build.py。CSS、JS、图片和字体文件直接保存在 dist 对应路径，生成器不会替你重写它们。
+当前询价表单生成本地草稿，不会发送邮件或上传照片；待确认实际接收端后再接通。
+首页 H1 和主视觉已认可，本轮保持原样。首次接手以本地预览与实际问题修复为主。

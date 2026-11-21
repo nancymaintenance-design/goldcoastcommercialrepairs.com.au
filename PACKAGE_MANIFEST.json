@@ -1,0 +1,557 @@
+[
+  {
+    "path": ".gitignore",
+    "bytes": 49,
+    "sha256": "e63550fc5b3cad504c6a2f73d1085771488c1c56577a307dc3503227cfffaeab"
+  },
+  {
+    "path": ".openai/hosting.json",
+    "bytes": 106,
+    "sha256": "45dbb3a49548c99ead28d7fe05610c0f74dd30a2a842b5f3a95c972bb8cde55b"
+  },
+  {
+    "path": "CODEX_HANDOFF.md",
+    "bytes": 17380,
+    "sha256": "41918cdc585a6f67e22669e562e9884864a63bcf0be6fcdb3074165c772af8e2"
+  },
+  {
+    "path": "CODEX_PROMPT.txt",
+    "bytes": 2665,
+    "sha256": "41712491c88d3de27a7e1c73716b0411053bc8394d58b02b61b53fe3dc54e99f"
+  },
+  {
+    "path": "DESIGN.md",
+    "bytes": 8074,
+    "sha256": "b01fd62b88a1726802b98f25616a2affc01cc1a72f7dfdb257900e6412233d90"
+  },
+  {
+    "path": "PACKAGE_INFO.json",
+    "bytes": 923,
+    "sha256": "6f2bce4b49263e2ce6ac4878c16b973b107e81704be179eddb9594aa898380b5"
+  },
+  {
+    "path": "PREVIEW_WINDOWS.bat",
+    "bytes": 525,
+    "sha256": "8ad3335c417c266acfe50dc564f821650cc1ea576837b448cb587335ee0051d9"
+  },
+  {
+    "path": "README.md",
+    "bytes": 11046,
+    "sha256": "f40ee06aff6e625be4223b45116bf2b84427ef41b692497d4ac007a77dead3b1"
+  },
+  {
+    "path": "START_HERE_ZH.txt",
+    "bytes": 2181,
+    "sha256": "05dd2b8e044151c468e97cfae372a06e9e0cd65153cf69749de43145035155ee"
+  },
+  {
+    "path": "build.py",
+    "bytes": 31569,
+    "sha256": "0597af44cf2e4c18fe72c22b8b29498de0d54856316f5685d35513fdb73ce13c"
+  },
+  {
+    "path": "dist/404.html",
+    "bytes": 1937,
+    "sha256": "90a4a5092f6e7969d8463bb249b68fe3ccf285a33cad1b70ecce8dc485de3efc"
+  },
+  {
+    "path": "dist/about/index.html",
+    "bytes": 9646,
+    "sha256": "db9cf449dbff60c2894d95b3e0ec00f503c84ad64e3e15e264a5745957fe609e"
+  },
+  {
+    "path": "dist/app.js",
+    "bytes": 16581,
+    "sha256": "ebc7e4d302a70bb2552a10194f5c0f4d3ec6496c728b6b3a12cb08692707381a"
+  },
+  {
+    "path": "dist/assets/coast-hero.webp",
+    "bytes": 378584,
+    "sha256": "ab020b292e29948d7737d13181619be3aeafe0d1c7636502a18f963224ecf0cf"
+  },
+  {
+    "path": "dist/assets/dm-sans-400.ttf",
+    "bytes": 48280,
+    "sha256": "b0ae3e89a7d3ef2b1838bb4b1ceb0b17cc3435af061eee809d76aa623ff116e9"
+  },
+  {
+    "path": "dist/assets/dm-sans-600.ttf",
+    "bytes": 48280,
+    "sha256": "b79a2ea7a38f33fd96a282fadb9ce97626bb0724a44d21075859f0e50239993a"
+  },
+  {
+    "path": "dist/assets/favicon.svg",
+    "bytes": 282,
+    "sha256": "de062cd027d88ef40bfedf2e466a479b15a42130f2e1a5654238556ce383945a"
+  },
+  {
+    "path": "dist/assets/instrument-serif-italic.ttf",
+    "bytes": 64208,
+    "sha256": "fecf4861d5202405b8bd45c683858b6870642a026784fe0dbf88ff55dedee8a0"
+  },
+  {
+    "path": "dist/assets/manrope-600.ttf",
+    "bytes": 96348,
+    "sha256": "68ed4be49ec7d32f07b42f9232dc01ca1df7a77be1d9b0731aac74db58235f34"
+  },
+  {
+    "path": "dist/assets/manrope-800.ttf",
+    "bytes": 96816,
+    "sha256": "a8291b05b2732801abdbbb6d06866c57431c3b990638462423e692151b5e0895"
+  },
+  {
+    "path": "dist/assets/noto-sans-sc-subset-400-800.woff2",
+    "bytes": 196788,
+    "sha256": "b9def143978ad1fdb750b0ccf27062286791fd84e8f393bfcbbbca932876b72c"
+  },
+  {
+    "path": "dist/assets/sector-hospitality.jpg",
+    "bytes": 249467,
+    "sha256": "5b1a5951d49c7a2a682416a7ffdb1a6997c04eea892163c709d602328cc81222"
+  },
+  {
+    "path": "dist/assets/sector-hotel.jpg",
+    "bytes": 195488,
+    "sha256": "b68559eff1f8a194f4d05b175296edf7ca8e357754fd57b5f30cff95ba5a0754"
+  },
+  {
+    "path": "dist/assets/sector-industrial.jpg",
+    "bytes": 146492,
+    "sha256": "4b2a6a1a7debbe819ac0c412860b1fcd4640ec78b3e8319471a035c21e19b145"
+  },
+  {
+    "path": "dist/assets/sector-office.jpg",
+    "bytes": 84244,
+    "sha256": "d7f30057303d02b3c9e367a4bc287c6af2873e9c75423e51cf2ef1f3dff21a3a"
+  },
+  {
+    "path": "dist/assets/sector-retail.jpg",
+    "bytes": 174002,
+    "sha256": "8b3b307c2a4f5a6644a71194f970811391012c664ddc90f03737d099a963f2cd"
+  },
+  {
+    "path": "dist/assets/surf-display.ttf",
+    "bytes": 54152,
+    "sha256": "829cbc8a205afa5449effe936f797e3b25782e35c9ac2efb232b142fd6e5a4c9"
+  },
+  {
+    "path": "dist/chinese-font.css",
+    "bytes": 187,
+    "sha256": "6292c7198a0a87ad9baf75dbcb55c00bbd64d5507e45598b40891bc28155fcfd"
+  },
+  {
+    "path": "dist/contact/index.html",
+    "bytes": 9043,
+    "sha256": "2bce44249886eb6344da914163de5e583ef9fc3eb8050f721843e729f25b7a94"
+  },
+  {
+    "path": "dist/faq/index.html",
+    "bytes": 12305,
+    "sha256": "ed625e9e0c70423654010cc3e3b6bfc1d26bc6cfd7f0fb3feeb0ee4126c85275"
+  },
+  {
+    "path": "dist/fonts.css",
+    "bytes": 840,
+    "sha256": "08a65d031c455c1ef560eb34ad88fa054caa345a6dbeb0f2ccf72077021644a4"
+  },
+  {
+    "path": "dist/footer.css",
+    "bytes": 13615,
+    "sha256": "b4f3f37c9244d40deb4c9b783c9d4b8011065c4a38399e222e3f32d1658b1517"
+  },
+  {
+    "path": "dist/image-credits/index.html",
+    "bytes": 5271,
+    "sha256": "21f054764b887757c91e95a8db9b16815e51289993bc7165eb20787049305754"
+  },
+  {
+    "path": "dist/index.html",
+    "bytes": 26829,
+    "sha256": "e6180796c4d18c007c9644e354d53702864ccb55156f65373054d1378f4da675"
+  },
+  {
+    "path": "dist/interiors.css",
+    "bytes": 51949,
+    "sha256": "fac1a214bda1bceaf339e2ee16bd996c1c0b3d9f3ad63cba3436ae9086441516"
+  },
+  {
+    "path": "dist/maximal.css",
+    "bytes": 43741,
+    "sha256": "7fdca533afd672a2d8e7cb8ece105d101f5706018c970409fce77e60e9ed61fa"
+  },
+  {
+    "path": "dist/motion.js",
+    "bytes": 14814,
+    "sha256": "83affba3cb8a36d2c1a235e1e1e1abeff69aac9462191fbfecfdb80445fba243"
+  },
+  {
+    "path": "dist/news/body-corporate-common-area-repairs/index.html",
+    "bytes": 9246,
+    "sha256": "9081f79d2267b6b155d6bbc579ff05afa96a476128e824bcdca5dfcac5f336e5"
+  },
+  {
+    "path": "dist/news/hotel-maintenance-between-guest-stays/index.html",
+    "bytes": 8984,
+    "sha256": "97dfd47e0e0b812a9dd691189d46471d9a06bb4167d2bb04162de5b108205c09"
+  },
+  {
+    "path": "dist/news/index.html",
+    "bytes": 11202,
+    "sha256": "a7415fcb093bd1f1e4d98c6cf05151bbabd8082487d910e9deeb6eaf92dd717b"
+  },
+  {
+    "path": "dist/news/outdoor-dining-paving-drainage/index.html",
+    "bytes": 9280,
+    "sha256": "9d5cf92321e612da86a390cb9898f64b940f99378af797f4aaa669cf6118ca5c"
+  },
+  {
+    "path": "dist/news/salt-air-coastal-building-maintenance/index.html",
+    "bytes": 9138,
+    "sha256": "3e4a0258f8e53898e1de4bf17b9e889f55f59ba5401d361c33d67ec76fc73dbf"
+  },
+  {
+    "path": "dist/news/storm-season-roofs-gutters/index.html",
+    "bytes": 9323,
+    "sha256": "6d29bb90d6aaaf4e7f094df295fdea5e23155bf9171663339c541099d1b1dcdf"
+  },
+  {
+    "path": "dist/news/tracking-commercial-water-ingress/index.html",
+    "bytes": 9338,
+    "sha256": "58e89de6d96f02f9ef70a48a83914862734ff63cdc8d98838149212ca97f60b6"
+  },
+  {
+    "path": "dist/robots.txt",
+    "bytes": 26,
+    "sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1"
+  },
+  {
+    "path": "dist/sectors/apartments-body-corporate/index.html",
+    "bytes": 9322,
+    "sha256": "c761da5f3a038669078579a42f40973ee1d01d7bc4a6276b7ce03790fc0c5990"
+  },
+  {
+    "path": "dist/sectors/education-healthcare-community/index.html",
+    "bytes": 9329,
+    "sha256": "e6cbff1e4402577e530ba6561a6f8822f74a497043cc506799ca4d710ea2f3a3"
+  },
+  {
+    "path": "dist/sectors/hotels-resorts/index.html",
+    "bytes": 9236,
+    "sha256": "9c83d61f6437aecc83c49477b51294b5b7adfab4a9e5827384d618d956b0d83c"
+  },
+  {
+    "path": "dist/sectors/index.html",
+    "bytes": 12139,
+    "sha256": "ae1e253bfa4aa4efe93ae22422a975df9e2d3165dc24da89ac334fb17b7df725"
+  },
+  {
+    "path": "dist/sectors/offices-mixed-use/index.html",
+    "bytes": 9246,
+    "sha256": "b0b5d3725f14f71995d1fcc6df30e7fbd4b0a3242f13d5852698ca19a75e47b8"
+  },
+  {
+    "path": "dist/sectors/restaurants-cafes/index.html",
+    "bytes": 9255,
+    "sha256": "b4dd28be470a3f728d6d544871bfec9e298579e1f278e879f5a6b3518a74dc86"
+  },
+  {
+    "path": "dist/sectors/retail-shopping-centres/index.html",
+    "bytes": 9284,
+    "sha256": "a63fc72d1d337d6da151fcc35a38d9abc536f97472755c8be730bf032453cebd"
+  },
+  {
+    "path": "dist/sectors/warehouses-logistics/index.html",
+    "bytes": 9230,
+    "sha256": "597c3020116c7c18b1f95d68012d711b8888ae7e5affdbc4e86aa2cf12518818"
+  },
+  {
+    "path": "dist/sectors/workshops-industrial/index.html",
+    "bytes": 9276,
+    "sha256": "02f0e18e0da73717bb195479d9235765a402660a22cf2c1704bef8493a3ba354"
+  },
+  {
+    "path": "dist/services/building-maintenance/index.html",
+    "bytes": 9387,
+    "sha256": "2eba9b50a9281e0d869cdac76ad30325cafb9d93088497be02f87cbe09734231"
+  },
+  {
+    "path": "dist/services/car-parks-external-works/index.html",
+    "bytes": 9526,
+    "sha256": "d5c41c9c8930461ed31de590ecd3c1e2d723ed395dd65f7c4011778fdd7bdb8b"
+  },
+  {
+    "path": "dist/services/cleaning-waste-hygiene/index.html",
+    "bytes": 9524,
+    "sha256": "43507cc4cc384f0e30274f7d220fccd20ce10f9ab714ffcb91ae4a07ddbb0073"
+  },
+  {
+    "path": "dist/services/electrical-lighting/index.html",
+    "bytes": 9553,
+    "sha256": "51a84ad18b817c946dd2c7cd8eede7c33c5e3f37a802df152ce44e8f715fad48"
+  },
+  {
+    "path": "dist/services/facade-high-access-cleaning/index.html",
+    "bytes": 9610,
+    "sha256": "ce4b055966af91db45819e07fc36ce94f1d9ff6759fb2c3cf25ca52c367f4b06"
+  },
+  {
+    "path": "dist/services/fire-security-access/index.html",
+    "bytes": 9593,
+    "sha256": "659361365bbdd371f8226d7f3d6a2fe906f8e37f16738aa82bf62f92468aa0fb"
+  },
+  {
+    "path": "dist/services/fit-outs-make-good/index.html",
+    "bytes": 9418,
+    "sha256": "37ef7f8d2ca70d54e6c773eda8505818f6f32beba31a04609e032113e9cac59f"
+  },
+  {
+    "path": "dist/services/hvac-building-systems/index.html",
+    "bytes": 9515,
+    "sha256": "03a8a2a35fb3d56ec8d13f9fa5b5722815b93ff9dd3260785d70ae74221fe38b"
+  },
+  {
+    "path": "dist/services/index.html",
+    "bytes": 11841,
+    "sha256": "cc55d57e1b09b7961161ba464f6b245fa5058e8502efda392fabb4d46354cac1"
+  },
+  {
+    "path": "dist/services/landscaping-irrigation/index.html",
+    "bytes": 9578,
+    "sha256": "c5ae27a9fcc885ca44aaf75ed972a8aacab1530ca9cde3355850ef0b06aeeeb8"
+  },
+  {
+    "path": "dist/services/plumbing-drainage-gas/index.html",
+    "bytes": 9576,
+    "sha256": "a89bb959ba3f51b579d6bd6e32f29acfaeb8f9803655b15fc067c85b8956784b"
+  },
+  {
+    "path": "dist/services/roofing-waterproofing/index.html",
+    "bytes": 9554,
+    "sha256": "d0ff51beff06e0e9fa01c4fc99284cb45cdc9f4d43be3faa3016c113c1776eeb"
+  },
+  {
+    "path": "dist/services/signage-wayfinding/index.html",
+    "bytes": 9474,
+    "sha256": "130700e31dc4e226e8c4c65a0b682a56b5bca0fba7db72d10b9a87b0abad279f"
+  },
+  {
+    "path": "dist/style.css",
+    "bytes": 34144,
+    "sha256": "49f8bad3b6276e20cc82030e6e28b0ee1ad5ccc01e90b30d302c8590ae56b589"
+  },
+  {
+    "path": "dist/surf-font.css",
+    "bytes": 169,
+    "sha256": "8811a552515e447f0c3f0a501bfd3894395225ffda90864b9974c2db21a52367"
+  },
+  {
+    "path": "dist/zh/about/index.html",
+    "bytes": 9585,
+    "sha256": "37ba40c7d47f666a4120b02298b5ce39abae88d1bf6841431e4ca0888dd6e216"
+  },
+  {
+    "path": "dist/zh/contact/index.html",
+    "bytes": 8954,
+    "sha256": "4e0ecfa6ee3dba2bf0a90a80f595b773375ba4c32175b51ea83cbc5fd783cf04"
+  },
+  {
+    "path": "dist/zh/faq/index.html",
+    "bytes": 11741,
+    "sha256": "7b2d1c789842a89b043068029460f19d8ff8dfb453caaf4ecbed3459f95e8ccc"
+  },
+  {
+    "path": "dist/zh/image-credits/index.html",
+    "bytes": 5327,
+    "sha256": "2fb2adbe583bd9b94bccdbac9e9c9bb486cee2262acc5a6f444e2f4b164b924e"
+  },
+  {
+    "path": "dist/zh/index.html",
+    "bytes": 26332,
+    "sha256": "7360fc4c299ca7b80862b9ddacb5a68cb1dcfa364b119f62a6fa704196a6bb21"
+  },
+  {
+    "path": "dist/zh/news/body-corporate-common-area-repairs/index.html",
+    "bytes": 8973,
+    "sha256": "e2ffbe6a89f55c29b994289a3252c2461f078d82791720bf54ff5c5ce5ceab6d"
+  },
+  {
+    "path": "dist/zh/news/hotel-maintenance-between-guest-stays/index.html",
+    "bytes": 8939,
+    "sha256": "eb034f998c4a6620bb5540b3179ab3a5a357c25264b2d94573704172b974b76f"
+  },
+  {
+    "path": "dist/zh/news/index.html",
+    "bytes": 11068,
+    "sha256": "e81f52b039f573f314181c1f344d1d07abe5e2a544b566680918180084f84a24"
+  },
+  {
+    "path": "dist/zh/news/outdoor-dining-paving-drainage/index.html",
+    "bytes": 9141,
+    "sha256": "52c8e058f09a5bedb0036405c052a87387a495b28e7301b929c717cc9ae6e98b"
+  },
+  {
+    "path": "dist/zh/news/salt-air-coastal-building-maintenance/index.html",
+    "bytes": 8934,
+    "sha256": "f112125d9db49c674ba81dd5bb1abd22281cad1fb89995bd8be3c88d9b104654"
+  },
+  {
+    "path": "dist/zh/news/storm-season-roofs-gutters/index.html",
+    "bytes": 9125,
+    "sha256": "5e570a289c2c5210aba95ffe7ac0bdc46bc4079c42fcb5ee1a4c57324e689064"
+  },
+  {
+    "path": "dist/zh/news/tracking-commercial-water-ingress/index.html",
+    "bytes": 9008,
+    "sha256": "65a4edf032a5ec982a61d917f8afae18ee1992c3e08354281807201ec349c723"
+  },
+  {
+    "path": "dist/zh/sectors/apartments-body-corporate/index.html",
+    "bytes": 9282,
+    "sha256": "cfe0ae584fd0e869dcb9f76496c671168cf4f9ba8cbb5024b933a9f27689e3a7"
+  },
+  {
+    "path": "dist/zh/sectors/education-healthcare-community/index.html",
+    "bytes": 9280,
+    "sha256": "c55f548329b3672e9e1468c6e74ef74316bde89978b37fab02df4d6bb53b6bfb"
+  },
+  {
+    "path": "dist/zh/sectors/hotels-resorts/index.html",
+    "bytes": 9206,
+    "sha256": "c46f4d91fff8a99ef0b6bcf28711d2ec1c764a29c0f3202637596ec382c8b6ba"
+  },
+  {
+    "path": "dist/zh/sectors/index.html",
+    "bytes": 11916,
+    "sha256": "98789c8147bf756506b7df59e0848a34209ba4a06607bbd969914023f7c1c4b3"
+  },
+  {
+    "path": "dist/zh/sectors/offices-mixed-use/index.html",
+    "bytes": 9219,
+    "sha256": "5eed7cb9f099492ac4de2012f61c5e3462348a6d26df65075a72b75d574781b8"
+  },
+  {
+    "path": "dist/zh/sectors/restaurants-cafes/index.html",
+    "bytes": 9200,
+    "sha256": "031c6bd1b9c781e6449767ddbcd98a37da7ef2a8fa70e109d59f8548d311ba7d"
+  },
+  {
+    "path": "dist/zh/sectors/retail-shopping-centres/index.html",
+    "bytes": 9223,
+    "sha256": "71f8855cc8a9f2c628f199f3147d31a16ccb9085d7a5cda1d411152e309422e2"
+  },
+  {
+    "path": "dist/zh/sectors/warehouses-logistics/index.html",
+    "bytes": 9144,
+    "sha256": "caef9d1d446970b9635fe701b87651a9abaca6e68c6a8e665d61049027a024a2"
+  },
+  {
+    "path": "dist/zh/sectors/workshops-industrial/index.html",
+    "bytes": 9235,
+    "sha256": "46a00a74e90bd6b46a0a9fabeee554c60c1918f5bc98fd0d6d64c91703ee697b"
+  },
+  {
+    "path": "dist/zh/services/building-maintenance/index.html",
+    "bytes": 9282,
+    "sha256": "c534b8ef3d1bee4d866a7c117a04da6613ece3ee85eed84046afc51bf0ce579b"
+  },
+  {
+    "path": "dist/zh/services/car-parks-external-works/index.html",
+    "bytes": 9418,
+    "sha256": "99b4b2ddbbd915738127e15e515606ffcc4fa773467a4bd38884b476800a6239"
+  },
+  {
+    "path": "dist/zh/services/cleaning-waste-hygiene/index.html",
+    "bytes": 9396,
+    "sha256": "de4abe412c88afcdbe7a93957e7a4ab5692caaf4cec55e285b04efbefe8fe184"
+  },
+  {
+    "path": "dist/zh/services/electrical-lighting/index.html",
+    "bytes": 9404,
+    "sha256": "ad5c45e0ed3ae264194bf8dc4f79ff406b2384440c7d0597428a7d9f89846053"
+  },
+  {
+    "path": "dist/zh/services/facade-high-access-cleaning/index.html",
+    "bytes": 9425,
+    "sha256": "d4cb77117a9885dc38fbd81738f11c98ef5bd9a64929c4397bb41e5e0ed0b643"
+  },
+  {
+    "path": "dist/zh/services/fire-security-access/index.html",
+    "bytes": 9381,
+    "sha256": "24402675de65f02b3d3b84e86d7bb8d4ce94c9afe7046293cd648e10caca77b8"
+  },
+  {
+    "path": "dist/zh/services/fit-outs-make-good/index.html",
+    "bytes": 9331,
+    "sha256": "577a1013b8f22884ec1f6d068e63c41e93e2873bbda34f73dda40279d2a55e0a"
+  },
+  {
+    "path": "dist/zh/services/hvac-building-systems/index.html",
+    "bytes": 9418,
+    "sha256": "cdf80857d433cff168633fbfc659ccb200480482bb5c41d6e5145dc96a7eef80"
+  },
+  {
+    "path": "dist/zh/services/index.html",
+    "bytes": 11665,
+    "sha256": "4ea7fbcefe309ef9034101b231b0b4af9fd69e608725ddba645b68eb8ac52821"
+  },
+  {
+    "path": "dist/zh/services/landscaping-irrigation/index.html",
+    "bytes": 9414,
+    "sha256": "54d11e2d16907aa821bfc7b491bf1394236306ebd3bcb3c5d9fd3de6dca63768"
+  },
+  {
+    "path": "dist/zh/services/plumbing-drainage-gas/index.html",
+    "bytes": 9493,
+    "sha256": "cc3e7accce95961eec3578e8a64a97edd016248e817874a55c436a64feef6660"
+  },
+  {
+    "path": "dist/zh/services/roofing-waterproofing/index.html",
+    "bytes": 9376,
+    "sha256": "80ef662cd5f33ea1c6960acc23a3135b955c9dae460e02dda5415208f4c8e5b5"
+  },
+  {
+    "path": "dist/zh/services/signage-wayfinding/index.html",
+    "bytes": 9329,
+    "sha256": "f198f944d51120bbcd2d6797d63449f562ca5ca2b056a4fde52345b4ebd7b8dc"
+  },
+  {
+    "path": "docs/FOOTER_V3_PROMPT.md",
+    "bytes": 2821,
+    "sha256": "81840ee051b3db47bf7e0bd05f980ca82e9680562a5e0c674663d5a67094e5fb"
+  },
+  {
+    "path": "premium-audit.json",
+    "bytes": 238,
+    "sha256": "471d80cde87b9854d10dda9ac854cc078c3f8f875c5804a708f29b9b674bc29a"
+  },
+  {
+    "path": "src/assets/coast-hero-original.png",
+    "bytes": 2892276,
+    "sha256": "e218fd9cd4edddcaa3323cecd7d4470c17c86e117fb8bf4ed642aaac44a8a8bf"
+  },
+  {
+    "path": "src/assets-sources.json",
+    "bytes": 4044,
+    "sha256": "5cba5ab82e6a305f03a93d2707dcd9c1dea3805715700b1f0938dbfbeece646c"
+  },
+  {
+    "path": "src/content.json",
+    "bytes": 64374,
+    "sha256": "982aa38981f21cba9a380ced147a1b0fd37d6ec23edeff1b0d19077f287bb440"
+  },
+  {
+    "path": "src/font-sources.json",
+    "bytes": 13983,
+    "sha256": "9bc6a5c7a6cc946a68a4092d6a9abab0191e71c09b9cca52f916dc7fc20f7cc8"
+  },
+  {
+    "path": "src/footer_v3.py",
+    "bytes": 4725,
+    "sha256": "fe220b6ee74a1b762ddd00686a16a6c3b54684f417f648e7351a2f4385822017"
+  },
+  {
+    "path": "src/home_v2.py",
+    "bytes": 9439,
+    "sha256": "339fc818ca1052391192ef641bf16a3f1f83e0c93ebef41d5c70c4375f4f342f"
+  }
+]

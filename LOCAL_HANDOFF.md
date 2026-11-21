@@ -1,4 +1,6 @@
-# Gold Coast V2 本地交付 · 2026-11-20
+# Gold Coast 本地交付
+
+2026-11-21 已在现有仓库接入 V3 询价区和共享页脚。当前预览用 `python -m http.server 8000 --bind 127.0.0.1 --directory dist`，打开 <http://127.0.0.1:8000/> 或 <http://127.0.0.1:8000/zh/>。下面的 8765 端口说明和上传记录对应此前 V2 交付。`PACKAGE_INFO.json` 和 `PACKAGE_MANIFEST.json` 记录原始 V3 导出包，文件哈希以导出时为准。
 
 本项目接续用户提供的 `E:/Download/gold-coast-v2.zip`，保留 Python 静态生成器、V2 视觉、本地字体、素材和原有交互。正式维护位置为 `E:/Ellis-Services/Gold Coast Commercial Maintenance/source`。
 

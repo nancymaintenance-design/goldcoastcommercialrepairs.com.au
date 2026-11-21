@@ -6,9 +6,9 @@ body.maximal:not(.page-home) #main {
   color: var(--gc-ink);
   overflow-x: clip;
 }
-body.maximal:not(.page-home) #main h1,
-body.maximal:not(.page-home) #main h2,
-body.maximal:not(.page-home) #main h3 {
+body.maximal:not(.page-home) #main h1:not(:where(.gc-v4 *)),
+body.maximal:not(.page-home) #main h2:not(:where(.gc-v4 *)),
+body.maximal:not(.page-home) #main h3:not(:where(.gc-v4 *)) {
   font-family: var(--gc-display);
   font-weight: 400;
   letter-spacing: -.025em;
@@ -1310,9 +1310,9 @@ body.maximal:not(.page-home) .sunset-disc {
   body.maximal:not(.page-home) #main .section {
     padding-block: 65px;
   }
-  body.maximal:not(.page-home) #main h1,
-  body.maximal:not(.page-home) #main h2,
-  body.maximal:not(.page-home) #main h3 {
+  body.maximal:not(.page-home) #main h1:not(:where(.gc-v4 *)),
+  body.maximal:not(.page-home) #main h2:not(:where(.gc-v4 *)),
+  body.maximal:not(.page-home) #main h3:not(:where(.gc-v4 *)) {
     overflow-wrap: anywhere;
     word-break: normal;
   }
@@ -1809,8 +1809,8 @@ body.maximal:not(.page-home):lang(zh-CN) .article-header h1 {
   line-height: 1.2;
   letter-spacing: -.025em;
 }
-body.maximal:not(.page-home):lang(zh-CN) #main h2,
-body.maximal:not(.page-home):lang(zh-CN) #main h3 {
+body.maximal:not(.page-home):lang(zh-CN) #main h2:not(:where(.gc-v4 *)),
+body.maximal:not(.page-home):lang(zh-CN) #main h3:not(:where(.gc-v4 *)) {
   font-weight: 800;
   line-height: 1.3;
 }
@@ -1835,4 +1835,50 @@ body.maximal:not(.page-home):lang(zh-CN) #main h3 {
   body.maximal:not(.page-home) #main .button:hover {
     transform: none;
   }
+}
+.content-work-modes {
+  color: var(--gc-ink);
+  background: var(--gc-paper);
+}
+
+.content-work-modes .process-list {
+  list-style: none;
+  padding-inline-start: 0;
+}
+
+.content-work-modes .process-list li {
+  border-top: 3px solid currentColor;
+  padding-top: 1rem;
+}
+
+.content-detail section + section,
+.article-body section + section,
+.content-related {
+  margin-block-start: 1.75rem;
+}
+
+.article-checklist {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  overflow-wrap: anywhere;
+  margin-block: 2rem;
+}
+
+.article-checklist caption {
+  font-weight: 800;
+  text-align: start;
+  margin-bottom: .6rem;
+}
+
+.article-checklist th,
+.article-checklist td {
+  border: 1px solid var(--gc-ink);
+  padding: .6rem;
+  text-align: start;
+  vertical-align: top;
+}
+
+.article-checklist th {
+  background: var(--gc-aqua);
 }

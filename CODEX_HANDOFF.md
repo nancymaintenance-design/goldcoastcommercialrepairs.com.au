@@ -1,7 +1,19 @@
-# 黄金海岸商业维护网站 — V2 设计与 Codex 交接
+# 黄金海岸商业维护网站 — V2主体与V3尾部交接
 
-更新日期：2026-11-20
-当前视觉版本：**V2 · 冲浪海报 × 海滩俱乐部 × 热带夏日**
+更新日期：2026-11-21
+当前视觉版本：**V2主体＋V3共享尾部 · 冲浪海报 × 海滩俱乐部 × 热带夏日**
+
+## 0. 当前任务：只完善V3尾部，锁定已认可首屏
+
+用户已认可首页H1，本轮只重做末段询价CTA和全站页脚。**锁定 `src/home_v2.py`、首页H1文字与排版、hero构图/裁切/动效、`dist/assets/coast-hero.webp` 和 `src/assets/coast-hero-original.png`。** 首页其他主体、业务内容与七大导航继续保持现状。
+
+V3采用泳池青询价区与三行 **BIG PLANS. / SMALL FIXES. / LET’S TALK.**，中文对应 **大到项目，/ 小到维修，/ 我们来安排。** 右侧为冲浪板形状的餐饮露台照片、条纹板与联系圆章；圆章外围文字旋转，中心联系文字保持直立，两处询价入口均进入同语言联系页。照片保持场景配图属性。
+
+暖黄与粉色海浪衔接粉色页脚，六块清晰导航招牌之下是一次巨幅ELLIS字标，随后保留预览说明和图片来源。旧询价卡片、黑色三列页脚和重复巨型字标不再追加。
+
+实现位于 `src/footer_v3.py` 与 `dist/footer.css`；`build.py` 的原 `cta()`、`footer()` 委托新模块，首页源文件无需修改。CSS最后加载 `footer.css`。继续使用现有 `data-reveal`、`data-tide`、`data-magnetic`、`data-tilt` 和动效状态类，不再建立第二套滚动监听器。
+
+手机端询价区上下排列，六项页脚导航采用两列，并保持文字、图片与点击区域互不遮挡。英语、中文、系统减少动态效果和用户暂停均需核对。**V3已完成本轮范围内的浏览器核对，详见第8节；旧V2记录单独保留。** 当前表单仍仅生成本地草稿。
 
 ## 1. 当前决定：V2 替代 V1
 
@@ -97,21 +109,24 @@ CSS 负责具体颜色与变换组合，`motion.js` 提供进度。装饰鼠标�
 
 | 文件 | 职责 |
 | --- | --- |
-| `DESIGN.md` | V2 设计方向与约束 |
+| `DESIGN.md` | V2主体、V3尾部及首屏锁定范围 |
 | `src/content.json` | 双语业务内容 |
 | `src/home_v2.py` | V2 首页结构，供 `build.py` 调用 |
+| `src/footer_v3.py` | V3共享询价CTA与页脚，由原生成器函数调用 |
 | `build.py` | 共享导航、内页、元数据与所有静态路由生成 |
 | `dist/style.css` | 保留的基础组件和响应式布局，不能单独代表 V2 |
 | `dist/maximal.css` | V2 统一色值、全局样式、首页和共用动效 |
 | `dist/interiors.css` | V2 服务、类型、新闻、FAQ、关于和联系等内页表现 |
+| `dist/footer.css` | V3尾部布局、旋转联系环、双语与手机适配 |
 | `dist/fonts.css` | 基础本地字体 |
 | `dist/surf-font.css`、`dist/chinese-font.css` | Bowlby One SC 与 Noto Sans SC 本地字体声明 |
 | `dist/app.js` | 基础交互与本地草稿 |
 | `dist/motion.js` | V2 动效控制器 |
 | `dist/assets/` | 本地图片、字体与图标 |
 | `src/assets-sources.json`、`src/font-sources.json` | 素材及字体来源记录 |
+| `docs/FOOTER_V3_PROMPT.md` | 限定V3尾部范围的中文继续开发提示词 |
 
-CSS 按 `style.css → surf-font.css → chinese-font.css → maximal.css → interiors.css` 加载；脚本按 `app.js → motion.js` 顺序延迟加载。普通内容页保留 `body.maximal`，首页另有 `page-home` 类。不要删掉后加载的覆盖层而让旧版视觉重新出现。
+CSS 按 `style.css → surf-font.css → chinese-font.css → maximal.css → interiors.css → footer.css` 加载；脚本按 `app.js → motion.js` 顺序延迟加载。普通内容页保留 `body.maximal`，首页另有 `page-home` 类。不要删掉后加载的覆盖层而让旧版视觉重新出现。
 
 执行 `python3 build.py` 生成全部 HTML；生成器不覆盖 CSS、JavaScript 和素材。修改页面结构应修改对应 Python 源文件，避免只改生成 HTML 而在下一次构建时丢失。
 
@@ -140,38 +155,36 @@ CSS 按 `style.css → surf-font.css → chinese-font.css → maximal.css → in
 
 V2 改版前，已操作验证桌面呈现、英中手机尺寸排版（390px 框架／375px 内容视口）、移动菜单打开与 Escape 关闭、服务分类、FAQ 检索展开、本地需求草稿生成。这些记录证明基础流程曾可用，**不能作为 V2 全部页面及动效已经通过浏览器验收的依据**。
 
-### 已完成的代表性浏览器验证
+### V2已有记录与V3当前状态
 
-**V2 已完成代表性桌面、移动与交互验证，实际观察记录见末节。** 这不代表覆盖了所有设备与操作系统；系统减少动态效果分支已实现，本轮浏览器实际操作验证了用户主动暂停。真实询价送达、正式域名和搜索引擎收录尚未配置或验证。
+**V3尾部于2026年11月21日完成本轮范围内的核对。** 英中桌面及手机页尾均已视检，380px手机内容视口无横向溢出。中文导航联系入口、环形联系入口均进入对应表单；暂停后旋转环停止、文字完整可见，恢复正常。另检查中文服务内页CTA和联系内页footer，并修复内页H2对新CTA字距、字重、行高的覆盖。69个正式页面的672个尾部链接均有效，重复ID为0。系统减少动态效果规则已静态核对，未模拟操作系统偏好切换。V2历史记录另见末节。当前中文字体为676字、196,788字节、100–900变量字重；69个正式页面的中文字符均已覆盖。真实询价送达、正式域名和搜索引擎收录尚未配置或验证。
 
-## 9. 直接交给 Codex 的继续开发 Prompt
+## 9. 直接交给 Codex 的V3尾部 Prompt
+
+同一提示词另存于 `docs/FOOTER_V3_PROMPT.md`，后续按本节限定范围继续。
 
 ```text
-你是我们 Ellis Services Group 黄金海岸商业维护网站的前端开发、内容与本地 SEO 负责人。
+你是我们 Ellis Services Group 黄金海岸商业维护网站的前端负责人。接续当前项目，只完善V3末段询价CTA和共享页脚。
 
-先读取 DESIGN.md、README.md、CODEX_HANDOFF.md、build.py、src/home_v2.py、src/content.json、dist/maximal.css、dist/interiors.css、dist/motion.js、dist/app.js 和素材来源，再拉起当前项目预览。理解现有路由、基础交互和 V2 样式加载顺序后继续工作。
+先读 DESIGN.md、README.md、CODEX_HANDOFF.md、src/footer_v3.py、dist/footer.css、build.py，以及现有motion.js的接口。拉起当前预览后，根据实际页面修复尾部；先保留已完成实现。
 
-本轮视觉基线是 V2：澳洲冲浪海报 × 海滩俱乐部 × 热带夏日。用户已经拒绝 V1 的安静度假杂志风，并明确要求不能像 Melbourne 商业站。不要恢复浅色左右分栏首屏、衬线斜体杂志排版，也不要使用电光蓝/荧光绿的建筑科技系统。以 DESIGN.md 和 maximal.css 的最新决策为准，不因为 style.css 中留有旧值就恢复旧设计。
-
-1. 保留首页、服务内容、商业类型、新闻、FAQ、关于我们、联系我们七项主导航；保留十二服务、八类物业、文章和双语路径关系。地区信息纳入现有页面，不增加第八个主导航。
-2. 使用深棕墨 #241611、日落橙 #FF642D、珊瑚粉 #FF90BF、泳池青 #33E1D3、日光黄 #FFE34D 和阅读纸色 #FFF8E8。英文海报字使用本地 Bowlby One SC（CSS名 Surf Display），正文 DM Sans；中文单独处理尺寸与断行。纸色只服务阅读，不重新主导全站气质。
-3. 保持 V2 全幅海岸、泳池、条纹伞与自然成年泳装游客的场景感；大海报字、硬描边、错位阴影、倾斜照片、海浪边界和交叉移动色带共同形成黄金海岸识别。服务、商业类型、新闻、FAQ、关于和联系内页都继续用 V2，不能只有首页更新。
-4. 继续完善首屏视差、海浪推进、太阳/遮阳伞旋转、移动色带、照片焦点变化、卡片倾斜和磁吸反馈。宽度>=1024px的商业类型可采用普通纵向滚动驱动横向pin；移动端保留原生滑动和前后按钮。不拦截滚轮，不隐藏正常鼠标，不影响阅读和导航。不要重复绑定app.js已有功能。
-5. 保留固定在角落的动效开关；用户暂停或系统减少动态效果时全部内容可见、自动效果停止、pin恢复正常流。验证开关、原生横向浏览和键盘操作。动效需要帮助展示内容；优先修复实际卡顿、遮挡或不可点击，不通过恢复V1弱化整个设计。
-6. 内容保持第一人称“我们”，说清处理范围、材料与方法、进场、报价影响和完工交付。英语与中文详情页都可以直接打开和刷新。场景图不能标成我们的完工项目，资质、评价、保险、保证和到场时间只采用公司确认资料。
-7. 读取已确认的黄金海岸资料后接入真实电话、邮箱、营业安排与询价接收端。当前表单仅生成本地草稿；接入后检查成功、失败和重复点击状态，实际送达后才显示已发送。不复制Melbourne收件地址或城市电话。
-8. 在375/390、768和1440宽度检查英中首屏、导航、服务列表、商业类型、新闻正文、FAQ、联系表单、pin起止及动画暂停。检查H1、按钮和横向集合是否溢出或遮挡。V2代表性桌面、移动端及交互检查已完成，具体范围见末节最终验证记录；在此基础上检查本轮修改及尚未覆盖的视口，不把代表性检查表述为全部设备或所有页面均已验收。
-9. 正式域名确定前保留预览noindex。正式上线配置单一canonical、对应hreflang、有效站点地图、真实404、统一斜杠规则和可抓取内链。结构化数据只反映实际页面与真实公司资料。
-10. 修改源模板后重新生成HTML，再检查路由、资源、脚本语法和所改交互。最终给出预览地址、V2改动与效果、实际完成的验证、未验证项、仍缺的运营资料及部署状态。延续V2独立风格，避免重新套回V1或Melbourne视觉。
+1. 锁定 src/home_v2.py、首页H1、hero构图/裁切/动效、dist/assets/coast-hero.webp、src/assets/coast-hero-original.png；其他主体、七大导航、服务内容与双语路径保持现状。此次范围只包含共享尾部及必要接入。
+2. 保持黄金海岸“冲浪海报×海滩俱乐部×热带夏日”方向。询价区使用泳池青大底，英文三行 BIG PLANS. / SMALL FIXES. / LET’S TALK.；中文为 大到项目，/ 小到维修，/ 我们来安排。右侧使用现有冲浪板形露台照片、条纹板和联系圆章。
+3. 圆章只让外围文字连续旋转，中心联系文字保持直立且易读。圆章和清晰文字链接都进入同语言/contact/。保留键盘焦点和触屏点击面积。
+4. 粉色页脚保留六块导航招牌、一次巨幅ELLIS字标、预览状态说明与图片来源。暖黄/粉色海浪衔接CTA与页脚，不恢复旧黑色三列页脚或重复宣传卡片。
+5. 修改源模板 src/footer_v3.py 与 dist/footer.css；build.py的cta()/footer()继续委托此模块。footer.css加载在interiors.css之后。样式限定coast-outro与shore-footer组件，不调整全局hero选择器。
+6. 复用 data-reveal、data-tide、data-magnetic、data-tilt 及现有motion.js；不新增滚动控制器。用户暂停或系统减少动态效果时，所有内容可见、持续旋转与滚动位移停止；后台页面暂停持续动画。
+7. 检查1440桌面、768平板、375/390手机的英中尾部。手机CTA上下排列，六项导航两列；大字不断到不可读、不越界，照片、圆章、导航、法律行及动效开关互不遮挡。验证两处联系入口、六个导航、ELLIS回首页与图片来源链接；核对暂停、恢复及系统减少动态效果。
+8. 保留原有内容、图库说明和本地询价草稿行为；不编造联系人、电话、客户、项目、响应时间或发送成功状态。当前预览noindex维持现状。
+9. 修改源模板后重新生成HTML，仅围绕尾部变化检查资源、链接及交互。分别报告实际通过、未验证和仍待修复的项目。旧V2检查是历史记录，当前V3结果以本轮实际操作为准。交付预览地址和简洁修改前后对照，明确首页H1及hero保持不变。
 ```
 
-
-## V2 final verification / 最终验证
+## V2 recorded verification — before Finale V3 / V3前验证记录
 
 - 69 deliverable HTML pages; 1,970 internal links and 256 local source references resolved. All normal pages retain seven navigation items and 34 EN/ZH route pairs.
 - Desktop browser: new full-bleed hero, poster service index, scroll-linked property collection (observed track advance to 786 px with sticky top at 82 px), Chinese FAQ layout, and no horizontal page overflow.
 - Mobile browser: English and Chinese homepages, service and contact layouts at a 380 px content viewport; page width matched the viewport. Chinese hero title stayed within the frame after Noto Sans SC loaded.
 - Mobile menu exposed all seven links and closed with Escape. Motion pause set motion-paused and stopped the sun animation. Service Systems filter showed 4 of 12 entries; Chinese FAQ search for 海盐 showed 1 of 10 entries.
-- New Chinese font: local Noto Sans SC, 196,904 bytes, variable 100–900, 675 required characters verified. Font source manifest records the official source.
+- Local Noto Sans SC supplied the Chinese glyphs during V2. The current V3 subset and coverage are recorded in section 8; the font source manifest records the official source.
 - Python generation, node --check for both JavaScript files, git diff --check, and frontend project strict audit passed (0 findings).
 - Persistent corner motion control remains reachable while scrolling. Contact remains a browser-local draft, with no actual delivery.

@@ -39,8 +39,18 @@ def run():
         if page.h1 != 1 or not page.noindex: errors.append(f'{rel}: H1/noindex')
         if rel != '404.html':
             if page.nav != 7: errors.append(f'{rel}: navigation {page.nav}')
-            if page.styles != ['/style.css','/surf-font.css','/chinese-font.css','/maximal.css','/interiors.css']: errors.append(f'{rel}: CSS order')
-            if [s.get('src') for s in page.scripts] != ['/app.js','/motion.js'] or not all('defer' in s for s in page.scripts): errors.append(f'{rel}: scripts')
+            parts = path.relative_to(DIST).parts
+            route = parts[1:] if parts[0] == 'zh' else parts
+            inner = len(route) == 3 and route[0] in {'services', 'sectors', 'news'}
+            styles = ['/style.css','/surf-font.css','/chinese-font.css','/maximal.css','/interiors.css']
+            scripts = ['/app.js','/motion.js']
+            if inner:
+                styles.append('/gc-inner-v4.css')
+                scripts.append('/gc-inner-v4.js')
+            styles.append('/footer.css')
+            if page.styles != styles: errors.append(f'{rel}: CSS order')
+            if [s.get('src') for s in page.scripts] != scripts or not all('defer' in s for s in page.scripts):
+                errors.append(f'{rel}: scripts')
             if len(page.alternates)!=2: errors.append(f'{rel}: language alternates')
             for a in page.alternates:
                 if not target(DIST/urlsplit(a['href']).path.lstrip('/')).is_file(): errors.append(f'{rel}: alternate missing')

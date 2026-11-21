@@ -10,15 +10,10 @@
     if (!document.body.classList.contains('maximal')) return;
 
     const html = document.documentElement;
-    const zh = /^zh(?:-|$)/i.test(html.lang);
-    const translate = (en, cn) => (zh ? cn : en);
     const clamp = (value, minimum = 0, maximum = 1) => Math.min(maximum, Math.max(minimum, value));
-    const preferenceKey = 'ellis.gold-coast.motion-paused';
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
     const desktop = window.matchMedia('(min-width: 1024px)');
-    const toggles = [...document.querySelectorAll('[data-motion-toggle]')];
-    const states = [...document.querySelectorAll('[data-motion-state]')];
     const progressBars = [...document.querySelectorAll('.scroll-progress')];
     const heroes = [...document.querySelectorAll('.hero-scroll')].map(section => ({
       section,
@@ -40,13 +35,6 @@
     const tiltableItems = [...document.querySelectorAll('[data-tilt]')];
     const magneticItems = [...document.querySelectorAll('[data-magnetic]')];
     const cursor = document.querySelector('.cursor-orb');
-
-    let userPaused = false;
-    try {
-      userPaused = window.localStorage.getItem(preferenceKey) === '1';
-    } catch {
-      // Motion remains available when browser storage is disabled.
-    }
 
     let paused = true;
     let frameId = 0;
@@ -117,26 +105,8 @@
     }
 
     function applyPreference() {
-      paused = userPaused || reducedMotion.matches;
+      paused = reducedMotion.matches;
       html.classList.toggle('motion-paused', paused);
-      const label = reducedMotion.matches
-        ? translate('Motion reduced by your system setting', '系统设置已减少动态效果')
-        : paused
-          ? translate('Enable motion', '开启动效')
-          : translate('Pause motion', '暂停动效');
-      const state = reducedMotion.matches
-        ? translate('Reduced motion', '减少动态效果')
-        : paused
-          ? translate('Motion paused', '动效已暂停')
-          : translate('Motion on', '动效已开启');
-      toggles.forEach(button => {
-        button.setAttribute('aria-pressed', String(paused));
-        button.setAttribute('aria-label', label);
-        button.setAttribute('aria-disabled', String(reducedMotion.matches));
-        button.title = label;
-        button.disabled = reducedMotion.matches;
-      });
-      states.forEach(element => { element.textContent = state; });
       if (paused) {
         if (frameId) window.cancelAnimationFrame(frameId);
         frameId = 0;
@@ -265,19 +235,6 @@
       if (updatePointerEffects()) dirty = true;
       if (dirty) scheduleFrame();
     }
-
-    toggles.forEach(button => {
-      button.addEventListener('click', () => {
-        if (reducedMotion.matches) return;
-        userPaused = !userPaused;
-        try {
-          window.localStorage.setItem(preferenceKey, userPaused ? '1' : '0');
-        } catch {
-          // The preference still works for the current page without storage.
-        }
-        applyPreference();
-      });
-    });
 
     // One capture listener observes document AND native horizontal scrolling.
     // A horizontal button/swipe never immediately gets mapped back to page Y.

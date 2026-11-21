@@ -192,8 +192,6 @@
     const notice = document.getElementById('enquiry-notice');
     const result = document.getElementById('enquiry-result');
     const summary = document.getElementById('enquiry-summary');
-    const photos = form.querySelector('input[name="photos"]');
-    const photoList = document.getElementById('photo-list');
     let draft = '';
 
     const draftStatus = t(
@@ -209,7 +207,7 @@
         : value(name);
     };
     const setNotice = (message, showInForm = false) => {
-      // Keep the original preview explanation intact when returning to edit.
+      // Keep the draft instructions intact when returning to edit.
       if (showInForm || !result) {
         let feedback = form.querySelector('[data-enquiry-feedback]');
         if (!feedback) {
@@ -236,59 +234,27 @@
         status.textContent = message;
       }
     };
-    const validatePhotos = (report = false) => {
-      if (!photos) return true;
-      const files = [...(photos.files || [])];
-      let message = '';
-      if (files.length > 5) {
-        message = t('Choose up to 5 photos.', '最多选择5张照片。');
-      } else if (files.some(file => file.size > 10 * 1024 * 1024)) {
-        message = t('Each photo must be 10 MB or smaller.', '每张照片不能超过10 MB。');
-      } else if (files.some(file => {
-        const typeValid = ['image/jpeg', 'image/png', 'image/webp'].includes(file.type);
-        const extensionValid = /\.(?:jpe?g|png|webp)$/i.test(file.name);
-        return file.type ? !typeValid : !extensionValid;
-      })) {
-        message = t('Choose JPEG, PNG or WebP photos.', '请选择JPEG、PNG或WebP格式的照片。');
+    const requested = new URLSearchParams(window.location.search);
+    for (const name of ['service', 'property', 'article']) {
+      const select = field(name);
+      const requestedValue = requested.get(name);
+      if (select instanceof HTMLSelectElement && requestedValue
+        && [...select.options].some(option => option.value === requestedValue)) {
+        select.value = requestedValue;
+        if (name === 'article') select.closest('[data-enquiry-article]').hidden = false;
       }
-      photos.setCustomValidity(message);
-      if (photoList) {
-        photoList.replaceChildren();
-        files.forEach(file => {
-          const entry = document.createElement(/^(UL|OL)$/.test(photoList.tagName) ? 'li' : 'p');
-          entry.textContent = `${file.name} · ${(file.size / (1024 * 1024)).toFixed(1)} MB`;
-          photoList.append(entry);
-        });
-        if (message) {
-          const error = document.createElement(/^(UL|OL)$/.test(photoList.tagName) ? 'li' : 'p');
-          error.className = 'field-error';
-          error.textContent = message;
-          photoList.append(error);
-        }
-      }
-      if (message && report) photos.reportValidity();
-      return !message;
-    };
-    photos?.addEventListener('change', () => validatePhotos(true));
-
-    const requestedService = new URLSearchParams(window.location.search).get('service');
-    const serviceField = field('service');
-    if (requestedService && serviceField instanceof HTMLSelectElement
-      && [...serviceField.options].some(option => option.value === requestedService)) {
-      serviceField.value = requestedService;
     }
 
     form.addEventListener('submit', event => {
       event.preventDefault();
-      if (!validatePhotos(true) || !form.reportValidity()) return;
+      if (!form.reportValidity()) return;
       if (!result || !summary) {
         setNotice(t(
-          'The draft preview is unavailable. Your enquiry has not been sent.',
+          'The draft could not be displayed. Your enquiry has not been sent.',
           '目前无法显示草稿，您的需求尚未发送。'
         ), true);
         return;
       }
-      const files = [...(photos?.files || [])];
       draft = [
         t('ELLIS — Gold Coast commercial maintenance', 'ELLIS — 黄金海岸商业维护'),
         draftStatus,
@@ -298,17 +264,11 @@
         `${t('Suburb', '地区')}: ${value('suburb')}`,
         `${t('Property type', '物业类型')}: ${selectedText('property')}`,
         `${t('Service', '服务项目')}: ${selectedText('service')}`,
+        ...(value('article') ? [`${t('Related guide', '相关指南')}: ${selectedText('article')}`] : []),
+        ...(value('access-window') ? [`${t('Preferred access window', '期望的进场时段')}: ${value('access-window')}`] : []),
         '',
         `${t('Work required', '需要处理的事项')}:`,
-        value('message'),
-        '',
-        `${t('Selected photo filenames', '选定照片的文件名')}:`,
-        files.length ? files.map(file => `• ${file.name}`).join('\n') : t('None selected', '未选择照片'),
-        '',
-        t(
-          'Photo filenames are included for reference only. Photo files are not attached or sent.',
-          '这里只记录照片文件名；照片文件尚未附加或发送。'
-        )
+        value('message')
       ].join('\n');
       if (summary instanceof HTMLInputElement || summary instanceof HTMLTextAreaElement) {
         summary.value = draft;
