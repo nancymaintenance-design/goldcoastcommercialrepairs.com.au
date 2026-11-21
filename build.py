@@ -1,10 +1,14 @@
 from pathlib import Path
 from html import escape
+from hashlib import sha256
 import json
-from src.inner_pages_v4 import KINDS, load_catalog, load_sources, render_detail
+from src.inner_pages_v4 import KINDS, load_catalog, render_detail
 
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / 'dist'
+INNER_STYLE = 'gc-inner-v4.css'
+INNER_SCRIPT = 'gc-inner-v4.js'
+INNER_VERSIONS = {name: sha256((OUT / name).read_bytes()).hexdigest()[:10] for name in (INNER_STYLE, INNER_SCRIPT, 'app.js')}
 DATA = json.loads((ROOT / 'src/content.json').read_text(encoding="utf-8"))
 ORIGIN = 'https://ellis-gold-coast-coastal.nancy-maintenance.chatgpt.site'
 
@@ -26,7 +30,10 @@ SERVICE_GROUPS = {
     'landscaping-irrigation':'outdoors','signage-wayfinding':'outdoors','facade-high-access-cleaning':'outdoors','cleaning-waste-hygiene':'outdoors','car-parks-external-works':'outdoors','fit-outs-make-good':'buildings'
 }
 INNER_CATALOG = load_catalog(ROOT / 'src/content.json')
-INNER_SOURCES = load_sources(ROOT / 'src/content.json')
+
+
+def wordmark(lang):
+    return f'''<a href="{url('/',lang)}" class="wordmark" aria-label="Ellis Gold Coast home"><span class="brand-sun" aria-hidden="true"></span><span><strong>ELLIS<span class="brand-dot">.</span></strong><small>GOLD COAST</small></span></a>'''
 
 
 def header(path, lang):
@@ -34,23 +41,25 @@ def header(path, lang):
     other = 'zh' if lang == 'en' else 'en'
     return f'''<a class="skip-link" href="#main">{tr('Skip to content','跳到正文',lang)}</a>
     <div class="topline"><span>{tr('GOLD COAST · QUEENSLAND','GOLD COAST · 黄金海岸',lang)}</span><span>{tr('Buildings. Systems. Outdoor spaces.','建筑 · 设备 · 室外空间',lang)}</span></div>
-    <header class="site-header"><a href="{url('/',lang)}" class="wordmark" aria-label="Ellis Gold Coast home"><span class="brand-sun" aria-hidden="true"></span><span><strong>ELLIS<span class="brand-dot">.</span></strong><small>GOLD COAST</small></span></a>
+    <header class="site-header">{wordmark(lang)}
     <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav">{tr('Menu','菜单',lang)}</button>
     <nav id="primary-nav" aria-label="{tr('Main navigation','主导航',lang)}">{nav}</nav>
     <a href="{url(path,other)}" class="lang-switch" lang="{tr('zh-CN','en-AU',lang)}" aria-label="{tr('切换中文','Switch to English',lang)}">中/EN</a></header>'''
 
-def footer(lang):
-    from src.footer_v3 import render_footer
+def footer(lang, compact=False):
+    from src.footer_v3 import render_footer, render_detail_footer
+    if compact:
+        return render_detail_footer(lang, tr, url, NAV, wordmark(lang))
     return render_footer(lang, tr, url, NAV)
 
-def page(path, lang, title, desc, body, cls='', *, inner=False):
+def page(path, lang, title, desc, body, cls='', *, inner=False, share_image='coast-hero.webp'):
     relpath=('zh/' if lang=='zh' else '')+(path.strip('/')+'/' if path!='/' else '')
     dest=OUT/relpath/'index.html'
     dest.parent.mkdir(parents=True,exist_ok=True)
     canonical=ORIGIN+url(path,lang)
-    inner_css = '<link rel="stylesheet" href="/gc-inner-v4.css">' if inner else ''
-    inner_js = '<script defer src="/gc-inner-v4.js"></script>' if inner else ''
-    doc=f'''<!doctype html><html lang="{tr('en-AU','zh-CN',lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FF642D"><title>{e(title)} | Ellis Gold Coast</title><meta name="description" content="{e(desc)}"><meta name="robots" content="noindex,nofollow"><link rel="canonical" href="{canonical}"><link rel="alternate" hreflang="en-AU" href="{ORIGIN+url(path,'en')}"><link rel="alternate" hreflang="zh-CN" href="{ORIGIN+url(path,'zh')}"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:image" content="{ORIGIN}/assets/coast-hero.webp"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/surf-font.css"><link rel="stylesheet" href="/chinese-font.css"><link rel="stylesheet" href="/maximal.css"><link rel="stylesheet" href="/interiors.css">{inner_css}<link rel="stylesheet" href="/footer.css"><script defer src="/app.js"></script><script defer src="/motion.js"></script>{inner_js}</head><body class="{cls} maximal"><div class="scroll-progress" aria-hidden="true"></div><div class="cursor-orb" aria-hidden="true"></div>{header(path,lang)}<main id="main">{body}</main>{footer(lang)}</body></html>'''
+    inner_css = f'<link rel="stylesheet" href="/{INNER_STYLE}?v={INNER_VERSIONS[INNER_STYLE]}">' if inner else ''
+    inner_js = f'<script defer src="/{INNER_SCRIPT}?v={INNER_VERSIONS[INNER_SCRIPT]}"></script>' if inner else ''
+    doc=f'''<!doctype html><html lang="{tr('en-AU','zh-CN',lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FF642D"><title>{e(title)} | Ellis Gold Coast</title><meta name="description" content="{e(desc)}"><meta name="robots" content="noindex,nofollow"><link rel="canonical" href="{canonical}"><link rel="alternate" hreflang="en-AU" href="{ORIGIN+url(path,'en')}"><link rel="alternate" hreflang="zh-CN" href="{ORIGIN+url(path,'zh')}"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:image" content="{ORIGIN}/assets/{e(share_image)}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/surf-font.css"><link rel="stylesheet" href="/chinese-font.css"><link rel="stylesheet" href="/maximal.css"><link rel="stylesheet" href="/interiors.css">{inner_css}<link rel="stylesheet" href="/footer.css"><script defer src="/app.js?v={INNER_VERSIONS['app.js']}"></script><script defer src="/motion.js"></script>{inner_js}</head><body class="{cls} maximal"><div class="scroll-progress" aria-hidden="true"></div><div class="cursor-orb" aria-hidden="true"></div>{header(path,lang)}<main id="main">{body}</main>{footer(lang, compact=inner)}</body></html>'''
     dest.write_text(doc, encoding="utf-8", newline="\n")
 
 def section_heading(kicker, title, text='', link=None, lang='en'):
@@ -76,11 +85,11 @@ def service_row(x, lang, i=0):
     return f'''<a href="{url('/services/'+x['slug']+'/',lang)}" class="service-row" data-filter-item data-tags="{SERVICE_GROUPS[x['slug']]}"><span class="service-mark mark-{i%4}" aria-hidden="true"></span><div><h3>{e(val(x,'title',lang))}</h3><p>{e(val(x,'short',lang))}</p></div><span class="row-view">{tr('Explore','查看',lang)}</span></a>'''
 
 def sector_card(x,lang,i,full=False):
-    return f'''<a href="{url('/sectors/'+x['slug']+'/',lang)}" class="sector-card color-{i%4}{' sector-full' if full else ''}" data-tilt data-filter-item data-tags="{e(x['slug'])}"><div class="sector-photo">{img(x['image'],val(x,'title',lang)+' — '+tr('illustrative property photograph','物业场景配图',lang))}</div><div class="sector-caption"><span class="eyebrow">{tr('PROPERTY CARE','商业物业维护',lang)}</span><h3>{e(val(x,'title',lang))}</h3><p>{e(val(x,'short',lang))}</p><span class="text-link">{tr('Explore this property type','查看对应维护内容',lang)}</span></div></a>'''
+    return f'''<a href="{url('/sectors/'+x['slug']+'/',lang)}" class="sector-card color-{i%4}{' sector-full' if full else ''}" data-tilt data-filter-item data-tags="{e(x['slug'])}"><div class="sector-photo">{img(x['image'],val(x,'title',lang)+' — '+tr('property scene','物业场景配图',lang))}</div><div class="sector-caption"><span class="eyebrow">{tr('PROPERTY CARE','商业物业维护',lang)}</span><h3>{e(val(x,'title',lang))}</h3><p>{e(val(x,'short',lang))}</p><span class="text-link">{tr('Explore this property type','查看对应维护内容',lang)}</span></div></a>'''
 
 def article_card(x,lang,i):
-    pic=x['image']
-    return f'''<article class="news-card" data-tilt data-filter-item data-tags="{e(x['tag'])}"><a href="{url('/news/'+x['slug']+'/',lang)}"><div class="news-photo">{img(pic,val(x,'title',lang)+' — '+tr('illustrative image','场景配图',lang))}<span class="tag">{e(val(x,'category',lang))}</span></div><div class="news-copy"><h3>{e(val(x,'title',lang))}</h3><p>{e(val(x,'summary',lang))}</p><span class="text-link">{tr('Read the story','阅读全文',lang)}</span></div></a></article>'''
+    pic=x['editorial']['cover']
+    return f'''<article class="news-card" data-tilt data-filter-item data-tags="{e(x['tag'])}"><a href="{url('/news/'+x['slug']+'/',lang)}"><div class="news-photo">{img(pic,val(x,'title',lang)+' — '+tr('site photograph','场景配图',lang))}<span class="tag">{e(val(x,'category',lang))}</span></div><div class="news-copy"><h3>{e(val(x,'title',lang))}</h3><p>{e(val(x,'summary',lang))}</p><span class="text-link">{tr('Read the story','阅读全文',lang)}</span></div></a></article>'''
 
 def process(lang):
     steps=[('Tell us what needs attention','说明维护事项','Send the property type, location, issue and useful photos.','提供物业类型、位置、问题描述及现场照片。'),('Agree the scope','确认范围与报价','We confirm the work, materials, access and quotation.','我们核对处理范围、材料、进场条件与报价。'),('Coordinate the visit','协调进场施工','We arrange the work around agreed operating and access times.','我们按确认的营业安排与通行时段组织施工。'),('Close out the work','核对完工交付','We record completed work and any items requiring follow-up.','我们整理完工记录，并说明需要后续跟进的项目。')]
@@ -93,7 +102,7 @@ def home(lang):
 
 
 def page_intro(kicker,title,desc,lang,tone='aqua',image=None):
-    return f'<section class="page-intro intro-{tone}"><div class="wrap intro-grid"><div><p class="eyebrow">{kicker}</p><h1>{title}</h1><p class="intro-lead">{desc}</p></div>'+('<div class="intro-photo">'+img(image,tr('Illustrative commercial property scene','商业物业场景配图',lang),'',True)+'</div>' if image else '<div class="intro-emblem" aria-hidden="true"><span class="sun-disc"></span><span>CARE<br>FOR THE<br>COAST.</span></div>')+'</div></section>'
+    return f'<section class="page-intro intro-{tone}"><div class="wrap intro-grid"><div><p class="eyebrow">{kicker}</p><h1>{title}</h1><p class="intro-lead">{desc}</p></div>'+('<div class="intro-photo">'+img(image,tr('Commercial property scene','商业物业场景配图',lang),'',True)+'</div>' if image else '<div class="intro-emblem" aria-hidden="true"><span class="sun-disc"></span><span>CARE<br>FOR THE<br>COAST.</span></div>')+'</div></section>'
 
 def services_page(lang):
     buttons=[('all','All services','全部服务'),('buildings','Buildings','建筑'),('systems','Systems','设备系统'),('outdoors','Outdoor spaces','室外与环境')]
@@ -110,12 +119,12 @@ def inner_detail(kind, x, lang):
     record = INNER_CATALOG[kind][slug]
     contact_path = '/contact/?' + kind.replace('sector', 'property') + '=' + slug
     body = render_detail(
-        record, lang, INNER_CATALOG, INNER_SOURCES,
+        record, lang, INNER_CATALOG,
         link=inner_link, asset=lambda filename: f'/assets/{filename}',
         contact_href=url(contact_path, lang), preview=False,
     )
     page(inner_link(kind, slug, 'en'), lang, val(record, 'title', lang),
-         val(record, 'metaDescription', lang), body + cta(lang), 'gc-v4-route', inner=True)
+         val(record, 'metaDescription', lang), body, 'gc-v4-route', inner=True, share_image=record['editorial']['cover'])
 
 
 def service_detail(x, lang):
@@ -155,18 +164,18 @@ def contact_page(lang):
     sector_options=''.join(f'<option value="{x["slug"]}">{e(val(x,"title",lang))}</option>' for x in DATA['sectors'])
     articles = ''.join(f'<option value="{e(x["slug"])}">{e(val(x,"title",lang))}</option>' for x in DATA['articles'])
     topic_markup = f'<div class="field-full" data-enquiry-article hidden><label for="article">{tr("Related guide", "相关指南", lang)}</label><select id="article" name="article"><option value="">{tr("No guide selected", "未选择指南", lang)}</option>{articles}</select></div>'
-    body=f'''<section class="contact-section wrap"><div class="contact-copy"><p class="eyebrow">{tr('GOLD COAST / LET’S TALK PROPERTY','黄金海岸 / 联系我们',lang)}</p><h1>{tr('Tell us what<br>needs a little<br><em>attention.</em>','说说你的物业，<br>有哪些需要<br><em>处理的问题。</em>',lang)}</h1><p class="intro-lead">{tr('Start with the property, the problem and the timing. We can build the scope from there.','从物业类型、具体问题和期望时间开始，梳理这次需要处理的工作。',lang)}</p><div class="contact-note"><h2>{tr('Useful details to include','可以一起提供的信息',lang)}</h2><ul><li>{tr('Property type and Gold Coast suburb','物业类型与黄金海岸所在区域',lang)}</li><li>{tr('Room, level or defect number, what changed, and when it happens','房号、楼层或缺陷编号，以及具体变化和发生时间',lang)}</li><li>{tr('Access hours, site contact, keys, approvals or any outage limits','可进场时段、现场联系人、钥匙、审批或停用限制',lang)}</li><li>{tr('Keep overview and close-up photos with your records for later discussion','保留现场全景和近照，便于后续沟通',lang)}</li></ul></div><div class="contact-photo">{img('coast-hero.webp',tr('Illustrative coastal setting','海岸场景设计配图',lang))}</div></div>
-    <div class="form-panel"><form id="enquiry-form"><p class="eyebrow">{tr('YOUR PROPERTY DETAILS','项目需求',lang)}</p><h2>{tr('Let’s make a plan.','把维护安排起来。',lang)}</h2><p id="enquiry-notice" class="form-note">{tr('Prepare an enquiry draft to copy or download. The form does not send it.','整理需求草稿后可复制或下载，表单不会发送草稿。',lang)}</p><div class="form-grid"><div><label for="name">{tr('Your name','姓名',lang)} <span>*</span></label><input id="name" name="name" autocomplete="name" required maxlength="100"></div><div><label for="email">{tr('Email address','邮箱',lang)} <span>*</span></label><input id="email" name="email" type="email" autocomplete="email" required maxlength="200"></div><div><label for="suburb">{tr('Property suburb','物业所在区域',lang)} <span>*</span></label><input id="suburb" name="suburb" autocomplete="address-level2" required maxlength="100" placeholder="{tr('e.g. Broadbeach','例如 Broadbeach',lang)}"></div><div><label for="property">{tr('Property type','物业类型',lang)} <span>*</span></label><select id="property" name="property" required><option value="">{tr('Select a property type','选择物业类型',lang)}</option>{sector_options}</select></div><div class="field-full"><label for="service">{tr('What kind of work?','需要哪类工作？',lang)}</label><select id="service" name="service"><option value="">{tr('Several jobs / not sure yet','多项工作 / 尚未确定',lang)}</option>{service_options}</select></div>{topic_markup}<div class="field-full"><label for="access-window">{tr('Preferred access window (optional)','期望的进场时段（选填）',lang)}</label><input id="access-window" name="access-window" maxlength="200" placeholder="{tr('e.g. Weekdays before opening','例如工作日营业前',lang)}"></div><div class="field-full"><label for="message">{tr('Tell us about the issue','描述需要处理的问题',lang)} <span>*</span></label><textarea id="message" name="message" required rows="5" maxlength="6000" placeholder="{tr('What needs attention? When can the property be accessed?','具体哪些部位需要处理？什么时间方便进场？',lang)}"></textarea></div></div><button class="button" type="submit">{tr('Prepare enquiry','生成需求草稿',lang)}</button></form><section id="enquiry-result" hidden tabindex="-1"><p class="eyebrow">{tr('YOUR ENQUIRY DRAFT','需求草稿',lang)}</p><h2>{tr('Details, brought together.','需求已经整理好。',lang)}</h2><p role="status" data-enquiry-status>{tr('Draft prepared in this browser. No enquiry has been sent.','需求草稿已在本浏览器生成，尚未发送。',lang)}</p><pre id="enquiry-summary"></pre><div class="button-row"><button type="button" id="download-enquiry" class="button">{tr('Download draft','下载草稿',lang)}</button><button type="button" id="copy-enquiry" class="button button-outline">{tr('Copy details','复制内容',lang)}</button><button type="button" id="edit-enquiry" class="text-button">{tr('Edit details','修改需求',lang)}</button></div></section></div></section>'''
+    body=f'''<section class="contact-section wrap"><div class="contact-copy"><p class="eyebrow">{tr('GOLD COAST / LET’S TALK PROPERTY','黄金海岸 / 联系我们',lang)}</p><h1>{tr('Tell us what<br>needs a little<br><em>attention.</em>','说说你的物业，<br>有哪些需要<br><em>处理的问题。</em>',lang)}</h1><p class="intro-lead">{tr('Start with the property, the problem and the timing. We can build the scope from there.','从物业类型、具体问题和期望时间开始，梳理这次需要处理的工作。',lang)}</p><div class="contact-note"><h2>{tr('Useful details to include','可以一起提供的信息',lang)}</h2><ul><li>{tr('Property type and Gold Coast suburb','物业类型与黄金海岸所在区域',lang)}</li><li>{tr('Room, level or defect number, what changed, and when it happens','房号、楼层或缺陷编号，以及具体变化和发生时间',lang)}</li><li>{tr('Access hours, site contact, keys, approvals or any outage limits','可进场时段、现场联系人、钥匙、审批或停用限制',lang)}</li><li>{tr('Keep overview and close-up photos with your records for later discussion','保留现场全景和近照，便于后续沟通',lang)}</li></ul></div><div class="contact-photo">{img('coast-hero.webp',tr('Gold Coast waterfront','海岸场景设计配图',lang))}</div></div>
+    <div class="form-panel"><form id="enquiry-form"><p class="eyebrow">{tr('YOUR PROPERTY DETAILS','项目需求',lang)}</p><h2>{tr('Let’s make a plan.','把维护安排起来。',lang)}</h2><div class="form-grid"><div><label for="name">{tr('Your name','姓名',lang)} <span>*</span></label><input id="name" name="name" autocomplete="name" required maxlength="100"></div><div><label for="email">{tr('Email address','邮箱',lang)} <span>*</span></label><input id="email" name="email" type="email" autocomplete="email" required maxlength="200"></div><div><label for="suburb">{tr('Property suburb','物业所在区域',lang)} <span>*</span></label><input id="suburb" name="suburb" autocomplete="address-level2" required maxlength="100" placeholder="{tr('e.g. Broadbeach','例如 Broadbeach',lang)}"></div><div><label for="property">{tr('Property type','物业类型',lang)} <span>*</span></label><select id="property" name="property" required><option value="">{tr('Select a property type','选择物业类型',lang)}</option>{sector_options}</select></div><div class="field-full"><label for="service">{tr('What kind of work?','需要哪类工作？',lang)}</label><select id="service" name="service"><option value="">{tr('Select a service (optional)','选择服务项目（选填）',lang)}</option>{service_options}</select></div>{topic_markup}<div class="field-full"><label for="access-window">{tr('Preferred access window (optional)','期望的进场时段（选填）',lang)}</label><input id="access-window" name="access-window" maxlength="200" placeholder="{tr('e.g. Weekdays before opening','例如工作日营业前',lang)}"></div><div class="field-full"><label for="message">{tr('Tell us about the issue','描述需要处理的问题',lang)} <span>*</span></label><textarea id="message" name="message" required rows="5" maxlength="6000" placeholder="{tr('What needs attention? When can the property be accessed?','具体哪些部位需要处理？什么时间方便进场？',lang)}"></textarea></div></div><button class="button" type="submit">{tr('View work summary','查看需求清单',lang)}</button></form><section id="enquiry-result" hidden tabindex="-1"><p class="eyebrow">{tr('PROPERTY WORK SUMMARY','物业需求清单',lang)}</p><h2>{tr('Your work summary','已整理的维修需求',lang)}</h2><p role="status" data-enquiry-status hidden></p><pre id="enquiry-summary"></pre><div class="button-row"><button type="button" id="download-enquiry" class="button">{tr('Download summary','下载清单',lang)}</button><button type="button" id="copy-enquiry" class="button button-outline">{tr('Copy details','复制内容',lang)}</button><button type="button" id="edit-enquiry" class="text-button">{tr('Edit details','修改需求',lang)}</button></div></section></div></section>'''
     page('/contact/',lang,tr('Contact · Plan commercial maintenance','联系我们 · 安排商业物业维护',lang),tr('Prepare a maintenance enquiry for your Gold Coast commercial property.','整理黄金海岸商业物业维修与维护需求。',lang),body,'page-contact')
 
 def credits(lang):
     sources=json.loads((ROOT/'src/assets-sources.json').read_text(encoding="utf-8")) if (ROOT/'src/assets-sources.json').exists() else {}
-    body=page_intro(tr('IMAGE CREDITS','图片说明',lang),tr('Scenes of<br><em>coastal life.</em>','关于这些<br><em>海岸场景。</em>',lang),tr('Images in this design are illustrative, not records of Ellis projects.','本设计中的图片用于展示场景，不作为 Ellis 完工项目记录。',lang),lang,'sand')
+    body=page_intro(tr('IMAGE CREDITS','图片说明',lang),tr('Scenes of<br><em>coastal life.</em>','关于这些<br><em>海岸场景。</em>',lang),tr('Photography and image credits for this website.','本站摄影与图像来源。',lang),lang,'sand')
     additional_credits = ' · '.join(
-        f'<a href="{e(photo["source_url"])}">{e(photo["photographer"])}</a>'
+        e(photo.get("photographer", photo.get("title", "Pexels")))
         for photo in sources if photo.get('provider') == 'Pexels'
     )
-    body+='<section class="section wrap prose"><h2>'+tr('Coastal hero image','首页海岸主视觉',lang)+'</h2><p>'+tr('Generated specifically for this design. The scene is illustrative and does not identify a real venue or client.','为本次设计生成的海岸场景，不代表特定场地或客户项目。',lang)+'</p><h2>'+tr('Property photography','物业场景摄影',lang)+'</h2><p>Nico Smit · Johan Mouchet · ANNIE HATUANH · Alesia Kazantceva · Mathias Reding / Unsplash</p><p>'+additional_credits+' / Pexels</p><p>'+tr('Property photography includes stock images and generated editorial scenes of a resort, a maintenance setting and a roof. These illustrate site conditions.','物业配图包括图库摄影，以及生成的度假场景、维护现场和屋面示意图。',lang)+'</p></section>'
+    body+='<section class="section wrap prose"><h2>'+tr('Coastal hero image','首页海岸主视觉',lang)+'</h2><p>'+tr('The Gold Coast hero uses generated imagery.','首页海岸主图为生成图像。',lang)+'</p><h2>'+tr('Property photography','物业场景摄影',lang)+'</h2><p>Nico Smit · Johan Mouchet · ANNIE HATUANH · Alesia Kazantceva · Mathias Reding / Unsplash</p><p>'+additional_credits+' / Pexels</p><p>'+tr('Property photography includes stock images and generated editorial scenes of a resort, a maintenance setting and a roof. ','物业图片来源包括图库摄影以及生成的度假、维修和屋面图像。',lang)+'</p></section>'
     page('/image-credits/',lang,tr('Image credits','图片说明',lang),tr('Image sources and design imagery.','海岸设计图片、图库摄影与来源说明。',lang),body)
 
 for lang in ['en','zh']:

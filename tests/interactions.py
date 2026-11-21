@@ -48,7 +48,7 @@ def run():
             check(lang+' access window in copied draft','Tuesday 7 to 9 am' in page.evaluate('navigator.clipboard.readText()'))
             with page.expect_download() as download:
                 page.locator('#download-enquiry').click()
-            check(lang+' draft download',download.value.suggested_filename=='gold-coast-enquiry-draft.txt' and 'Tuesday 7 to 9 am' in Path(download.value.path()).read_text(encoding='utf-8'))
+            check(lang+' draft download',download.value.suggested_filename=='gold-coast-work-summary.txt' and 'Tuesday 7 to 9 am' in Path(download.value.path()).read_text(encoding='utf-8'))
             page.locator('#edit-enquiry').click()
             check(lang+' edit retained',page.locator('#name').input_value()=='TEST local preview' and page.locator('#enquiry-result').is_hidden())
             page.set_viewport_size({'width':390,'height':844})

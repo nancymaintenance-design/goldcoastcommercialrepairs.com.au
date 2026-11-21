@@ -73,7 +73,7 @@ Wave silhouettes, parasol radial wedges, sunbursts, beach-towel stripes and bold
 
 ## Components
 
-Shared navigation, buttons, filters, disclosures and form states retain their existing behaviour. Add a persistent corner motion toggle. Do not add fake project statistics, customers, contact details or sending states.
+Shared navigation, buttons, filters, disclosures and form states retain their existing behaviour. The existing global motion state and operating-system reduced-motion preference also apply to details. Do not add fake project statistics, customers, contact details or sending states.
 
 Motion includes hero picture/title parallax, word entrances, crossing ribbons, rotating parasol graphics, photo masks, desktop horizontal scroll progression, photo tilt and magnetic CTA feedback. A single requestAnimationFrame controller updates scroll variables only when needed. No scroll blocking or autoplay audio.
 
@@ -87,3 +87,13 @@ System reduced-motion or explicit pause shows all content, stops continuous effe
 - Do not turn the design back into the Melbourne architecture/technology visual system.
 - Do not treat a generic change of colour as the redesign.
 - Do not add unrelated application workflows or claim live enquiry delivery.
+
+## Detail pages
+
+Service details use an angled full-height cover, the service number and a numbered sequence of photographic chapters. Scope comparisons are set in ink, with the preparation and access text directly below. The enquiry close combines a contextual photograph, handover copy and a checklist.
+
+Property details use a photographic cover and an aqua navigation bar. The editorial lead precedes a wide view of the property, followed by photographs inset with operational chapters. The aqua comparison includes short sequences by room, access route or work area.
+
+Coast Notes articles use a pink jacket, an article-only contents rail, a field note and a photographic spread. The comparison and next chapter share the cream reading surface. Illustration and short takeaways break up the article, and related guides include subject-specific thumbnails.
+
+All three share the main site navigation and a compact pink detail footer. The service and news opening buttons lead to the body. The enquiry action carries the corresponding service, property type or article. Professional references and source URLs remain in internal records.

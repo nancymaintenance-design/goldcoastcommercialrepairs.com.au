@@ -189,15 +189,10 @@
     // Enquiries are prepared locally. No network request or persistent storage.
     const form = document.getElementById('enquiry-form');
     if (!form) return;
-    const notice = document.getElementById('enquiry-notice');
     const result = document.getElementById('enquiry-result');
     const summary = document.getElementById('enquiry-summary');
     let draft = '';
 
-    const draftStatus = t(
-      'Draft prepared in this browser. No enquiry has been sent.',
-      '需求草稿已在本浏览器生成，尚未发送。'
-    );
     const field = name => form.elements.namedItem(name);
     const value = name => String(field(name)?.value || '').trim();
     const selectedText = name => {
@@ -207,7 +202,6 @@
         : value(name);
     };
     const setNotice = (message, showInForm = false) => {
-      // Keep the draft instructions intact when returning to edit.
       if (showInForm || !result) {
         let feedback = form.querySelector('[data-enquiry-feedback]');
         if (!feedback) {
@@ -216,8 +210,7 @@
           feedback.className = 'form-note';
           feedback.setAttribute('role', 'status');
           feedback.setAttribute('aria-live', 'polite');
-          if (notice) notice.after(feedback);
-          else form.prepend(feedback);
+          form.prepend(feedback);
         }
         feedback.textContent = message;
       }
@@ -232,6 +225,7 @@
           result.prepend(status);
         }
         status.textContent = message;
+        status.hidden = !message;
       }
     };
     const requested = new URLSearchParams(window.location.search);
@@ -250,20 +244,19 @@
       if (!form.reportValidity()) return;
       if (!result || !summary) {
         setNotice(t(
-          'The draft could not be displayed. Your enquiry has not been sent.',
-          '目前无法显示草稿，您的需求尚未发送。'
+          'Refresh the page and try opening the work summary again.',
+          '请刷新页面后重新查看需求清单。'
         ), true);
         return;
       }
       draft = [
         t('ELLIS — Gold Coast commercial maintenance', 'ELLIS — 黄金海岸商业维护'),
-        draftStatus,
         '',
         `${t('Name', '姓名')}: ${value('name')}`,
         `${t('Email', '邮箱')}: ${value('email')}`,
         `${t('Suburb', '地区')}: ${value('suburb')}`,
         `${t('Property type', '物业类型')}: ${selectedText('property')}`,
-        `${t('Service', '服务项目')}: ${selectedText('service')}`,
+        ...(value('service') ? [`${t('Service', '服务项目')}: ${selectedText('service')}`] : []),
         ...(value('article') ? [`${t('Related guide', '相关指南')}: ${selectedText('article')}`] : []),
         ...(value('access-window') ? [`${t('Preferred access window', '期望的进场时段')}: ${value('access-window')}`] : []),
         '',
@@ -275,7 +268,7 @@
       } else {
         summary.textContent = draft;
       }
-      setNotice(draftStatus);
+      setNotice('');
       result.hidden = false;
       result.setAttribute('tabindex', '-1');
       if (!form.contains(result)) form.hidden = true;
@@ -290,12 +283,12 @@
       const url = URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
-      link.download = 'gold-coast-enquiry-draft.txt';
+      link.download = 'gold-coast-work-summary.txt';
       document.body.append(link);
       link.click();
       link.remove();
       window.setTimeout(() => URL.revokeObjectURL(url), 1000);
-      setNotice(t('Draft downloaded. No enquiry has been sent.', '草稿已下载，需求尚未发送。'));
+      setNotice(t('Work summary downloaded.', '清单已下载。'));
     });
 
     document.getElementById('copy-enquiry')?.addEventListener('click', async event => {
@@ -304,7 +297,7 @@
       try {
         if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
         await navigator.clipboard.writeText(draft);
-        setNotice(t('Draft copied. No enquiry has been sent.', '草稿已复制，需求尚未发送。'));
+        setNotice(t('Work summary copied.', '清单已复制。'));
       } catch {
         if (summary instanceof HTMLInputElement || summary instanceof HTMLTextAreaElement) {
           summary.focus();
@@ -319,8 +312,8 @@
           selection?.addRange(range);
         }
         setNotice(t(
-          'Automatic copying is unavailable. Copy the selected draft text below. No enquiry has been sent.',
-          '无法自动复制，请复制下方已选中的草稿文字。需求尚未发送。'
+          'Copy the selected work summary.',
+          '请复制已选中的清单内容。'
         ));
       }
     });

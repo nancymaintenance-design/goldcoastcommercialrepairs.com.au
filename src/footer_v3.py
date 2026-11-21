@@ -23,7 +23,7 @@ def render_cta(lang, tr, url):
         <div class="coast-outro__scene">
           <div class="coast-outro__board" aria-hidden="true"><span>GOLD<br>COAST</span></div>
           <figure class="coast-outro__photo">
-            <img src="/assets/sector-hospitality.jpg" alt="{tr('Sunny outdoor hospitality terrace — illustrative photograph', '阳光下的露天餐饮空间，场景配图', lang)}" width="1080" height="720" loading="lazy" decoding="async">
+            <img src="/assets/sector-hospitality.jpg" alt="{tr('Sunny outdoor hospitality terrace', '阳光下的露天餐饮空间，场景配图', lang)}" width="1080" height="720" loading="lazy" decoding="async">
           </figure>
           <a class="coast-outro__contact" href="{url('/contact/', lang)}" data-magnetic aria-label="{tr('Let’s talk about your property', '联系我们，安排物业维护', lang)}">
             <span class="coast-outro__disc" data-tilt>
@@ -55,4 +55,15 @@ def render_footer(lang, tr, url, nav):
         <div class="shore-footer__legal"><span>© 2026 Ellis Services Group</span><a href="{url('/image-credits/', lang)}">{tr('Image credits', '图片说明', lang)}</a></div>
       </div>
       <div class="shore-footer__hem" aria-hidden="true"></div>
+    </footer>'''
+
+def render_detail_footer(lang, tr, url, nav, brand):
+    links = ''.join(f'<a href="{url(path, lang)}">{tr(en, zh, lang)}</a>' for path, en, zh in nav)
+    return f'''<footer class="gc-detail-footer" id="shore-footer">
+      <div class="gc-detail-footer__row">{brand}
+        <nav aria-label="{tr('Footer navigation', '页脚导航', lang)}">{links}</nav>
+      </div>
+      <div class="gc-detail-footer__legal"><span>© 2026 Ellis Services Group</span>
+        <a href="{url('/image-credits/', lang)}">{tr('Image credits', '图片说明', lang)}</a>
+      </div>
     </footer>'''

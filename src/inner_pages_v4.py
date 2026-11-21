@@ -36,64 +36,26 @@ def load_catalog(content_dir):
     }
 
 
-def load_sources(content_dir):
-    base = Path(content_dir)
-    if base.is_file():
-        records = json.loads(base.read_text(encoding='utf-8'))['referenceSources']
-    else:
-        records = json.loads((base / 'sources.json').read_text(encoding='utf-8'))
-    return {record['id']: record for record in records}
-
-
 def production_link(kind, slug, lang):
     return ('/zh' if lang == 'zh' else '') + '/' + KINDS[kind] + '/' + slug + '/'
 
 
-IMAGE_MAP = {
-    'building-maintenance': 'coastal-maintenance-editorial.png',
-    'roofing-waterproofing': 'coastal-roof-editorial.png',
-    'electrical-lighting': 'sector-office.jpg',
-    'plumbing-drainage-gas': 'sector-hospitality.jpg',
-    'hvac-building-systems': 'sector-office.jpg',
-    'fire-security-access': 'coastal-maintenance-editorial.png',
-    'landscaping-irrigation': 'sector-hospitality.jpg',
-    'signage-wayfinding': 'sector-hospitality.jpg',
-    'facade-high-access-cleaning': 'sector-hotel.jpg',
-    'cleaning-waste-hygiene': 'sector-office.jpg',
-    'car-parks-external-works': 'sector-industrial.jpg',
-    'fit-outs-make-good': 'coastal-maintenance-editorial.png',
-    'hotels-resorts': 'coastal-resort-editorial.png',
-    'apartments-body-corporate': 'sector-hotel.jpg',
-    'restaurants-cafes': 'sector-hospitality.jpg',
-    'retail-shopping-centres': 'coastal-maintenance-editorial.png',
-    'offices-mixed-use': 'sector-office.jpg',
-    'warehouses-logistics': 'sector-industrial.jpg',
-    'workshops-industrial': 'sector-workshop.jpg',
-    'education-healthcare-community': 'sector-healthcare.jpg',
-    'salt-air-coastal-building-maintenance': 'coast-hero.webp',
-    'storm-season-roofs-gutters': 'coastal-roof-editorial.png',
-    'hotel-maintenance-between-guest-stays': 'coastal-resort-editorial.png',
-    'body-corporate-common-area-repairs': 'coastal-maintenance-editorial.png',
-    'outdoor-dining-paving-drainage': 'sector-hospitality.jpg',
-    'tracking-commercial-water-ingress': 'sector-hotel.jpg',
+ASSET_DIMENSIONS = {
+    row['filename']: tuple(row['dimensions'])
+    for row in json.loads(Path(__file__).with_name('assets-sources.json').read_text(encoding='utf-8'))
+    if row.get('dimensions')
 }
 
 
 def image_dimensions(name):
+    if name in ASSET_DIMENSIONS:
+        return ASSET_DIMENSIONS[name]
     if name.startswith('sector-'):
         return (1080, 608 if name in {'sector-hotel.jpg', 'sector-retail.jpg'} else 720)
     return (1672, 941)
 
 
-def image(page, lang, asset, cls='', eager=False):
-    name = IMAGE_MAP[page['slug']]
-    width, height = image_dimensions(name)
-    alt = t(page['title'], lang) + bi(' — illustrative property scene', ' — 物业场景示意', lang)
-    return (f'<img class="{e(cls)}" src="{e(asset(name))}" alt="{e(alt)}" width="{width}" height="{height}" '
-            f'loading="{"eager" if eager else "lazy"}" decoding="async"' + (' fetchpriority="high"' if eager else '') + '>')
-
-
-def render_section(section, lang, index, kind):
+def render_section(section, lang, contextual_links="", media="", context="", *, heading="h2"):
     layout = section.get('layout', 'prose')
     if layout not in {'rows', 'split', 'steps', 'table', 'list', 'prose'}:
         raise ValueError('Unknown section layout: ' + layout)
@@ -122,29 +84,48 @@ def render_section(section, lang, index, kind):
         rows = ''.join(table_rows)
         paragraphs += (f'<div class="gc-table-wrap" role="region" tabindex="0" '
                        f'aria-label="{e(t(section["title"], lang))}"><table><thead><tr>{headings}</tr></thead><tbody>{rows}</tbody></table></div>')
-    return (f'<section class="gc-section gc-layout-{layout} gc-chapter-{index % 4}" id="{e(section["id"])}" data-gc-chapter>'
-            f'<div class="gc-section-heading" data-gc-reveal><p class="gc-kicker">'
-            + bi({'service': 'THE WORK', 'sector': 'PROPERTY IN USE', 'article': 'FIELD NOTES'}[kind],
-                 {'service': '工作内容', 'sector': '物业运营', 'article': '维护笔记'}[kind], lang)
-            + f'</p><h2>{e(t(section["title"], lang))}</h2></div>'
-            f'<div class="gc-section-copy" data-gc-reveal>{intro}{paragraphs}</div></section>')
+    return (
+        f'<section class="gc-section gc-layout-{layout}" id="{e(section["id"])}" data-gc-chapter>'
+        f'<div class="gc-section-heading" data-gc-reveal><{heading}>{e(t(section["title"],lang))}</{heading}>{context}</div>{media}'
+        f'<div class="gc-section-copy" data-gc-reveal>{intro}{paragraphs}{contextual_links}</div></section>'
+    )
 
 
-def related_block(page, lang, catalog, link):
+def related_block(page, lang, catalog, link, asset):
     links = []
+    promoted = []
+    editorial = page['editorial']
+    used_images = {editorial['cover'], *(photo['file'] for photo in editorial['features'])}
+    used_images.update(editorial[key]['file'] for key in ('fieldPhoto', 'storyPhoto') if key in editorial)
     for key, kind in [('services', 'service'), ('sectors', 'sector'), ('articles', 'article')]:
         label = {'service': bi('Service', '服务', lang), 'sector': bi('Property type', '商业类型', lang), 'article': bi('Guide', '维护指南', lang)}[kind]
         for slug in page.get('related', {}).get(key, []):
             if slug not in catalog[kind] or slug == page['slug']:
                 continue
             item = catalog[kind][slug]
-            links.append(f'<a class="gc-related-link" href="{e(link(kind, slug, lang))}"><span class="gc-kicker">{label}</span>'
-                         f'<strong>{e(t(item["title"], lang))}</strong><span class="gc-link-arrow" aria-hidden="true">↗</span></a>')
-    if not links:
+            href = e(link(kind, slug, lang))
+            title = e(t(item['title'], lang))
+            if page['kind'] == 'article' and kind == 'article' and len(promoted) < 2:
+                candidate = item['editorial']
+                options = [candidate['cover'], *(photo['file'] for photo in candidate['features'])]
+                filename = next((name for name in options if name not in used_images), None)
+            else:
+                filename = None
+            if filename:
+                used_images.add(filename)
+                cover = picture(filename, asset, '')
+                promoted.append(f'<a class="gc-related-link gc-related-feature" href="{href}">'
+                                f'<span aria-hidden="true">{len(promoted)+1:02d}</span>{cover}<strong>{title}</strong>'
+                                '<span aria-hidden="true" class="gc-link-arrow">↗</span></a>')
+            else:
+                links.append(f'<a class="gc-related-link" href="{href}"><span class="gc-kicker">{label}</span>'
+                             f'<strong>{title}</strong><span class="gc-link-arrow" aria-hidden="true">↗</span></a>')
+    if not (links or promoted):
         return ''
-    return (f'<section class="gc-related" id="related"><div class="gc-wrap"><div class="gc-related-heading">'
-            f'<p class="gc-kicker">{bi("FOLLOW THE WORK", "继续了解", lang)}</p><h2>{bi("Make the connections.", "把相关工作，一起看清。", lang)}</h2></div>'
-            f'<div class="gc-related-grid">{"".join(links)}</div></div></section>')
+    cards = f'<div class="gc-related-features">{"".join(promoted)}</div>' if promoted else ''
+    return (f'<section class="gc-related" id="related"><div class="gc-related-heading">'
+            f'<h2>{bi("Continue reading", "继续阅读", lang) if page["kind"] == "article" else bi("Related work", "相关维护内容", lang)}</h2></div>{cards}'
+            f'<div class="gc-related-grid">{"".join(links)}</div></section>')
 
 
 def enquiry_form(page, lang):
@@ -163,70 +144,224 @@ def enquiry_form(page, lang):
             f'<p class="gc-form-note">{bi("This preview prepares a local draft. It does not send an enquiry.", "此预览生成本地草稿，不会发送询价。", lang)}</p></form></div></section>')
 
 
-def render_detail(page, lang, catalog, sources, link=None, asset=None, contact_href=None, preview=False):
-    """Return scoped body HTML. Supply host link/asset callbacks; append the existing CTA/footer outside."""
+def picture(name, asset, alt, *, cls='', eager=False):
+    width, height = image_dimensions(name)
+    loading = 'eager' if eager else 'lazy'
+    priority = ' fetchpriority="high"' if eager else ''
+    return (f'<img class="{e(cls)}" src="{e(asset(name))}" alt="{e(alt)}" width="{width}" height="{height}" '
+            f'loading="{loading}" decoding="async"{priority}>')
+
+
+def editorial_links(entries, lang, catalog, link):
+    links = []
+    for kind, slug in entries:
+        record = catalog[kind][slug]
+        label = t(record.get('listingTitle', record['title']), lang)
+        links.append(f'<a href="{e(link(kind, slug, lang))}">{e(label)} <span aria-hidden="true">↗</span></a>')
+    return f'<div class="gc-context-links">{"".join(links)}</div>' if links else ''
+
+
+def scene_markup(photo, lang, asset, class_name=''):
+    caption = t(photo['caption'], lang)
+    points = ''.join(
+        f'<span class="gc-photo-point" style="--x:{int(point["x"])}%;--y:{int(point["y"])}%;">'
+        f'{e(t(point["label"], lang))}</span>'
+        for point in photo.get('points', [])
+    )
+    return (f'<figure class="gc-figure {class_name}" data-gc-reveal data-gc-photo>'
+            + picture(photo['file'], asset, caption) + points
+            + f'<figcaption>{e(caption)}</figcaption></figure>')
+
+
+def render_hero(page, lang, asset, contact_href, order):
+    kind = page['kind']
+    editorial = page['editorial']
+    title = t(page['title'], lang)
+    labels = {
+        'service': ('Services', '服务内容', 'View the scope', '查看维修范围', '#work'),
+        'sector': ('Property care', '商业物业维护', 'Prepare a property brief', '整理物业需求', contact_href),
+        'article': ('Coast Notes', '海岸维护观察', 'Start reading', '开始阅读', '#work'),
+    }
+    en, zh, action_en, action_zh, href = labels[kind]
+    if kind == 'sector' and lang == 'zh':
+        title += '维护'
+    number = f'<span class="gc-index" aria-hidden="true">{order:02d}</span>' if kind == 'service' else ''
+    cue = f'<span class="gc-hero-note">{e(t(editorial['strap'], lang))}</span>' if kind == 'service' else ''
+    lines = editorial.get('titleLinesZh') if lang == 'zh' else None
+    if kind == 'service':
+        category = f'<strong>{bi(en, zh, lang)}</strong> / {e(t(page["title"], "en"))}'
+    elif kind == 'article':
+        category = f'<strong>{en}</strong> / {zh if lang == "zh" else "GOLD COAST"}'
+    else:
+        category = f'<strong>{e(t(page["title"], "en"))}</strong> / GOLD COAST'
+    punctuation = '<span class="gc-dot" aria-hidden="true">。</span>' if lang == 'zh' else '<span class="gc-dot" aria-hidden="true">.</span>'
+    if lines:
+        title_markup = '<wbr>'.join(
+            f'<span class="gc-title-line">{e(line)}{punctuation if i == len(lines) - 1 else ""}</span>'
+            for i, line in enumerate(lines)
+        )
+    else:
+        title_markup = e(title) + punctuation
+    return (
+        '<header class="gc-hero"><div class="gc-hero-visual" data-gc-photo>'
+        + picture(editorial['cover'], asset, t(editorial['coverAlt'], lang), cls='gc-hero-image', eager=True)
+        + f'{number}{cue}</div>'
+          f'<div class="gc-wrap gc-hero-copy"><p class="gc-kicker">{category}</p><h1>{title_markup}</h1>'
+          f'<p class="gc-deck">{e(t(page["deck"], lang))}</p><div class="gc-hero-actions">'
+          f'<a class="gc-button" href="{e(href)}">{bi(action_en, action_zh, lang)} '
+          f'<span aria-hidden="true">{("↓" if kind == "article" else "↗")}</span></a></div></div></header>'
+    )
+
+
+def render_toc(sections, editorial, kind, lang):
+    labels = editorial.get('nav', {})
+    links = ''.join(
+        f'<a href="#{e(section["id"])}" data-gc-toc>{e(t(labels.get(section["id"], section["title"]), lang))}</a>'
+        for section in sections
+    )
+    label = bi('In this article', '本文导览', lang) if kind == 'article' else bi('On this page', '本页目录', lang)
+    return (f'<nav class="gc-topic-nav" aria-label="{label}"><div class="gc-read-progress" aria-hidden="true"></div>'
+            f'<div class="gc-toc-inner"><span class="gc-toc-label">{label}</span>'
+            f'<button type="button" class="gc-toc-arrow" data-gc-toc-prev aria-label="{bi("Previous headings", "前面的章节", lang)}">←</button>'
+            f'<div class="gc-toc-track">{links}</div>'
+            f'<button type="button" class="gc-toc-arrow" data-gc-toc-next aria-label="{bi("Next headings", "后面的章节", lang)}">→</button></div></nav>')
+
+
+def feature_chapter(section, photo, num, lang, asset, catalog, link, *, secondary=False, lead_media=False):
+    label = t(photo['caption'], lang)
+    links = editorial_links(photo.get('links', []), lang, catalog, link)
+    number = f'<div class="gc-chapter-index"><span aria-hidden="true">{num:02d} / </span>{e(label)}</div>'
+    media = scene_markup(photo, lang, asset)
+    if photo.get('companion'):
+        media = f'<div class="gc-feature-pair">{media}{scene_markup(photo["companion"], lang, asset)}</div>'
+    if lead_media:
+        return f'<div class="gc-feature gc-feature--lead">{number}{render_section(section, lang, links, media)}</div>'
+    style = ' gc-feature--secondary' if secondary else ''
+
+    return f'<div class="gc-feature{style}">{number}{media}{render_section(section, lang, links)}</div>'
+
+
+def compare_chapter(section, editorial, lang, catalog, link, methods=""):
+    links = editorial_links(editorial.get('compareLinks', []), lang, catalog, link)
+    rows = []
+    for row in editorial.get('workflow', []):
+        steps = ''.join(f'<li>{e(t(step, lang))}</li>' for step in row['steps'])
+        rows.append(f'<div class="gc-flow-row"><dt>{e(t(row["area"], lang))}</dt><dd><ol>{steps}</ol></dd></div>')
+    workflow = f'<dl class="gc-workflow">{"".join(rows)}</dl>' if rows else ''
+    return f'<div class="gc-compare"><div class="gc-wrap">{render_section(section, lang, links)}{methods}{workflow}</div></div>'
+
+
+def render_delivery(page, lang, asset, contact_href, closing_chapter='', brief=''):
+    editorial = page['editorial']
+    handover = editorial['handover']
+    photo = editorial.get('deliveryPhoto')
+    title = t(handover['title'], lang)
+    note = t(handover['note'], lang)
+    checklist = ''.join(f'<li>{e(t(item, lang))}</li>' for item in handover['checklist'])
+    action = bi('Prepare an enquiry', '整理维修需求', lang)
+    media = scene_markup(photo, lang, asset, 'gc-delivery-image') if photo else ''
+    prep = f'<div class="gc-delivery-prep">{media}{brief}</div>' if media or brief else ''
+    article = page['kind'] == 'article'
+    inline_chapter = '' if article else closing_chapter
+    return (f'<div class="gc-delivery"><div class="gc-wrap gc-delivery-inner">{prep}'
+            f'<div class="gc-delivery-copy">{closing_chapter if article else ""}<section id="next-step">'
+            f'<h2>{e(title)}</h2><p>{e(note)}</p>{inline_chapter}<ul class="gc-delivery-checks">{checklist}</ul>'
+            f'<a class="gc-button" href="{e(contact_href)}">{action} <span aria-hidden="true">↗</span></a>'
+            '</section></div></div></div>')
+
+
+def render_faq(page, lang):
+    faq = ''.join(
+        f'<details class="gc-faq-item"><summary>{e(t(q["q"], lang))}<span aria-hidden="true">+</span></summary>'
+        f'<div><p>{e(t(q["a"], lang))}</p></div></details>'
+        for q in page.get('faqs', [])
+    )
+    return f'<section class="gc-faq" id="questions"><h2>{bi("Common questions", "常见问题", lang)}</h2>{faq}</section>' if faq else ''
+
+
+def render_detail(page, lang, catalog, link=None, asset=None, contact_href=None, preview=False):
+    """Render the service, property or journal detail within the shared site shell."""
     if lang not in {'en', 'zh'}:
         raise ValueError('Supported locales: en, zh')
     link = link or production_link
     asset = asset or (lambda name: '/assets/' + name)
     contact_href = contact_href or ('/zh/contact/' if lang == 'zh' else '/contact/')
     kind = page['kind']
-    title, deck = e(t(page['title'], lang)), e(t(page['deck'], lang))
-    category = {'service': bi('COMMERCIAL SERVICES', '商业维护服务', lang),
-                'sector': bi('PROPERTY TYPES', '商业物业类型', lang),
-                'article': bi('THE COASTAL JOURNAL', '海岸维护杂志', lang)}[kind]
-    kicker = e(t(page['kicker'], lang))
-    action = bi('Plan this work', '安排这项工作', lang)
-    hero_photo = image(page, lang, asset, 'gc-hero-image', True)
-    photo_note = bi('Illustrative coastal / property imagery', '海岸与物业场景示意', lang)
-    if kind == 'service':
-        hero = (f'<header class="gc-hero gc-service-hero"><div class="gc-wrap gc-service-hero-grid"><div class="gc-hero-copy">'
-                f'<p class="gc-kicker">GOLD COAST / {category}</p><h1>{title}</h1><p class="gc-deck">{deck}</p>'
-                f'<div class="gc-hero-actions"><a class="gc-button" href="{e(contact_href)}">{action} <span aria-hidden="true">↗</span></a>'
-                f'<a class="gc-text-link" href="#work">{bi("Explore the scope", "查看工作内容", lang)} ↓</a></div></div>'
-                f'<figure class="gc-service-photo">{hero_photo}<figcaption>{photo_note}</figcaption>'
-                f'<div class="gc-photo-stamp" aria-hidden="true">COASTAL<br>CARE<span>✺</span></div></figure></div>'
-                f'<div class="gc-hero-foot"><span>{kicker}</span><span>{bi("ONE-OFF REPAIRS / COORDINATED WORK", "单项维修 / 协同维护", lang)}</span></div></header>')
-    elif kind == 'sector':
-        hero = (f'<header class="gc-hero gc-sector-hero"><div class="gc-sector-image">{hero_photo}</div><div class="gc-wrap gc-sector-hero-copy">'
-                f'<p class="gc-kicker">GOLD COAST / {category}</p><h1>{title}</h1><div class="gc-sector-intro"><p class="gc-deck">{deck}</p>'
-                f'<a class="gc-button" href="{e(contact_href)}">{action} <span aria-hidden="true">↗</span></a></div></div>'
-                f'<div class="gc-sector-caption"><span>{kicker}</span><small>{photo_note}</small></div></header>')
+    editorial = page['editorial']
+    sections = page['sections']
+    comparisons = [section for section in sections if section.get('table')]
+    prose = [section for section in sections if not section.get('table')]
+    photos = editorial['features']
+    photo_count = 1 if kind == 'article' else len(photos)
+    remaining = prose[photo_count:]
+    closing = ''
+    brief = ''
+    order = list(catalog[kind]).index(page['slug']) + 1
+    hero = render_hero(page, lang, asset, contact_href, order)
+    lead = f'<div class="gc-lead-copy"><h2>{e(t(editorial["leadTitle"], lang))}</h2><p>{e(t(page["lead"], lang))}</p></div>'
+    scenario = f'<p class="gc-scenario">{e(t(editorial["workingExample"], lang))}</p>'
+
+    if kind == 'article':
+        article_order = prose[:2] + comparisons + prose[2:]
+        toc = render_toc(article_order, editorial, kind, lang)
+        intro = render_section(prose[0], lang, editorial_links(photos[0].get('links', []), lang, catalog, link))
+        field_photo = editorial.get('fieldPhoto')
+        note = f'<aside class="gc-field-note">{scene_markup(field_photo, lang, asset)}</aside>' if field_photo else ''
+        gallery = ''.join(scene_markup(photo, lang, asset) for photo in photos if photo['file'] != (field_photo or {}).get('file'))
+        takeaway = t(editorial['takeaway'], lang)
+        second = (f'<div class="gc-article-spread"><span aria-hidden="true" class="gc-spread-number">02</span>'
+                  f'{render_section(prose[1], lang)}<aside class="gc-takeaway"><p>{e(takeaway)}</p></aside></div>')
+        comparison = ''.join(compare_chapter(s, editorial, lang, catalog, link) for s in comparisons)
+        closing = render_section(remaining[-1], lang)
+        story_image = scene_markup(editorial['storyPhoto'], lang, asset)
+        story_sections = ''.join(
+            render_section(section, lang, context=scenario if i == 0 else '')
+            for i, section in enumerate(remaining[1:-1])
+        )
+        story = f'<div class="gc-story-feature">{story_image}<div>{story_sections}</div></div>'
+        main = (f'<div class="gc-wrap gc-article-opening" id="work">{toc}<div>{lead}{intro}</div>{note}</div>'
+                f'<div class="gc-wrap gc-article-gallery">{gallery}</div><div class="gc-wrap">{second}</div>'
+                f'{comparison}<div class="gc-wrap gc-story">{story}</div>')
     else:
-        hero = (f'<header class="gc-hero gc-article-hero"><div class="gc-wrap"><div class="gc-journal-line"><p class="gc-kicker">{category}</p>'
-                f'<span>{bi("PROPERTY / PEOPLE / THE COAST", "建筑 / 日常 / 海岸", lang)}</span></div><h1>{title}</h1>'
-                f'<div class="gc-article-deck"><p>{deck}</p><span class="gc-journal-seal" aria-hidden="true">ELLIS<br>FIELD<br>NOTES</span></div>'
-                f'<figure class="gc-article-cover">{hero_photo}<figcaption>{photo_note}</figcaption></figure></div></header>')
-    toc_links = ''.join(f'<a href="#{e(s["id"])}" data-gc-toc>{e(t(s["title"],lang))}</a>' for s in page['sections'])
-    toc = (f'<nav class="gc-topic-nav" aria-label="{bi("On this page", "本页目录", lang)}"><div class="gc-read-progress" aria-hidden="true"></div>'
-           f'<span class="gc-toc-label">{bi("IN THIS GUIDE", "本页内容", lang)}</span><button type="button" class="gc-toc-arrow" data-gc-toc-prev aria-label="{bi("Previous headings", "前面的章节", lang)}">←</button>'
-           f'<div class="gc-toc-track">{toc_links}</div><button type="button" class="gc-toc-arrow" data-gc-toc-next aria-label="{bi("Next headings", "后面的章节", lang)}">→</button></nav>')
-    lead = (f'<section class="gc-lead gc-wrap" id="work"><p class="gc-kicker">{bi("THE BRIEF", "先把工作说清", lang)}</p>'
-            f'<p>{e(t(page["lead"],lang))}</p><span class="gc-lead-sun" aria-hidden="true">✺</span></section>')
-    blocks = []
-    for i, section in enumerate(page['sections']):
-        blocks.append(render_section(section, lang, i, kind))
-        if i == 1 and kind != 'article':
-            mood_name = {'building-maintenance':'sector-retail.jpg','hotels-resorts':'coastal-maintenance-editorial.png','roofing-waterproofing':'coastal-maintenance-editorial.png','fire-security-access':'sector-hotel.jpg','restaurants-cafes':'coastal-maintenance-editorial.png','landscaping-irrigation':'sector-hospitality.jpg','fit-outs-make-good':'sector-office.jpg'}.get(page['slug'],'coastal-roof-editorial.png' if 'industrial' in page['slug'] or 'warehouse' in page['slug'] else 'sector-hotel.jpg')
-            if mood_name == IMAGE_MAP[page['slug']]:
-                mood_name = 'coastal-maintenance-editorial.png'
-            width, height = image_dimensions(mood_name)
-            blocks.append(f'<figure class="gc-photo-break" data-gc-reveal><img src="{e(asset(mood_name))}" width="{width}" height="{height}" loading="lazy" decoding="async" alt="{photo_note}">'
-                          f'<figcaption><span>{bi("CARE FOR THE PLACE.<br>PLAN FOR THE PEOPLE.", "维护好场地，<br>安排好日常。", lang)}</span><small>{photo_note}</small></figcaption></figure>')
-    faq = ''.join(f'<details class="gc-faq-item"><summary>{e(t(q["q"],lang))}<span aria-hidden="true">+</span></summary><div><p>{e(t(q["a"],lang))}</p></div></details>' for q in page.get('faqs', []))
-    faq_block = (f'<section class="gc-faq gc-wrap" id="questions"><div><p class="gc-kicker">{bi("A FEW GOOD QUESTIONS", "常见问题", lang)}</p>'
-                 f'<h2>{bi("Good to know.", "把细节问清。", lang)}</h2></div><div>{faq}</div></section>') if faq else ''
-    source_links = []
-    for sid in page.get('sourceIds', []):
-        if sid in sources:
-            source = sources[sid]
-            label = t(source['label'], lang) if 'label' in source else f'{source["publisher"]} — {source["title"]}'
-            source_links.append(f'<li><a href="{e(source["url"])}" target="_blank" rel="noopener noreferrer">{e(label)}</a></li>')
-    source_block = (f'<aside class="gc-sources gc-wrap"><h2>{bi("Technical reading", "技术参考", lang)}</h2><ul>{"".join(source_links)}</ul></aside>') if source_links else ''
-    body = (hero + toc + lead + f'<div class="gc-chapters gc-wrap">{"".join(blocks)}</div>' + faq_block
-            + source_block + related_block(page,lang,catalog,link))
-    if kind == 'article' and not preview:
-        body += f'<div class="gc-wrap gc-article-next"><a class="gc-button" href="{e(contact_href)}">{action} <span aria-hidden="true">↗</span></a></div>'
+        ordered = prose[:photo_count] + comparisons + remaining
+        toc = render_toc(ordered, editorial, kind, lang)
+        features = ''.join(
+            feature_chapter(section, photo, i + 1, lang, asset, catalog, link, secondary=i % 2 == 1, lead_media=kind == "service" and i == 0)
+            for i, (section, photo) in enumerate(zip(prose, photos))
+        )
+        scene = editorial.get('scene')
+        wide = scene_markup(scene, lang, asset, 'gc-wide-scene') if scene else ''
+        lead_block = f'<section class="gc-wrap gc-lead" id="work">{lead}</section>'
+        if remaining and remaining[-1].get('layout') == 'prose':
+            closing = render_section(remaining[-1], lang, heading='h3')
+            remaining = remaining[:-1]
+        brief = render_section(remaining[-1], lang)
+        methods = ''.join(
+            render_section(section, lang, context=scenario if i == 0 else '')
+            for i, section in enumerate(remaining[:-1])
+        )
+        comparison = ''.join(
+            compare_chapter(section, editorial, lang, catalog, link, f'<div class="gc-method">{methods}</div>')
+            for section in comparisons
+        )
+        main = f'{toc}{lead_block}{wide}<div class="gc-wrap gc-features">{features}</div>{comparison}'
+
+    faq = render_faq(page, lang)
+    related = related_block(page, lang, catalog, link, asset)
+    delivery = render_delivery(page, lang, asset, contact_href, closing, brief)
+    resources = []
+    if faq:
+        label = bi('Common questions', '常见问题', lang)
+        resources.append(f'<details class="gc-resource"><summary>{label}</summary>{faq}</details>')
+    if kind == 'article':
+        body = hero + main + f'<div class="gc-wrap gc-journal-links">{related}</div>' + delivery
+    else:
+        if related:
+            label = bi('Related work', '相关维护内容', lang)
+            resources.append(f'<details class="gc-resource"><summary>{label}</summary>{related}</details>')
+        body = hero + main + delivery
+    if resources:
+        body += f'<div class="gc-wrap gc-resource-strip">{"".join(resources)}</div>'
     if preview:
-        body += enquiry_form(page,lang)
+        body += enquiry_form(page, lang)
     return f'<article class="gc-v4 gc-v4--{kind}" data-gc-v4 data-gc-lang="{lang}">{body}</article>'

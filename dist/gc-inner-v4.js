@@ -80,14 +80,34 @@
         state.root.style.setProperty('--gc-progress', percent);
         state.progress = percent;
       }
+      if (!paused()) {
+        for (const frame of state.photos) {
+          const box = frame.getBoundingClientRect();
+          if (box.bottom > 0 && box.top < window.innerHeight) {
+            const shift = clamp((window.innerHeight / 2 - box.top - box.height / 2) * 0.025, -10, 10);
+            frame.style.setProperty('--gc-image-shift', `${shift.toFixed(1)}px`);
+          }
+        }
+      }
       // Use the same resolved CSS offset as native hash navigation. The small
       // tolerance accounts for fractional layout and integer scroll rounding.
       const readLine = y + state.anchorOffset + 2;
-      let active = null;
+      let activeChapter = null;
       for (const chapter of state.chapters) {
-        if (chapter.top <= readLine) active = chapter.link;
-        else break;
+        if (chapter.top > readLine) break;
+        // Paired sections share a scroll position on wide screens.
+        if (!activeChapter || chapter.top > activeChapter.top + 2 || chapter.link.hash === window.location.hash) {
+          activeChapter = chapter;
+        }
       }
+      // The last anchors can be fully visible before they reach the reading line.
+      if (y + window.innerHeight >= html.scrollHeight - 2) {
+        const requested = state.chapters.find(chapter => chapter.link.hash === window.location.hash);
+        if (requested && requested.top >= y + state.headerHeight && requested.top < y + window.innerHeight) {
+          activeChapter = requested;
+        }
+      }
+      const active = activeChapter?.link ?? null;
       if (active !== state.activeLink) {
         state.links.forEach(link => {
           if (link === active) link.setAttribute('aria-current', 'true');
@@ -112,7 +132,8 @@
       const rootBounds = state.root.getBoundingClientRect();
       state.top = rootBounds.top + y;
       state.height = rootBounds.height;
-      state.navHeight = Math.max(0, Math.ceil(state.nav?.getBoundingClientRect().height || 0));
+      const pinned = state.nav && getComputedStyle(state.nav).position === 'sticky';
+      state.navHeight = pinned ? Math.ceil(state.nav.getBoundingClientRect().height) : 0;
       state.root.style.setProperty('--gc-toc-height', `${state.navHeight}px`);
       const anchorStyle = state.chapters[0]
         ? window.getComputedStyle(state.chapters[0].element)
@@ -164,7 +185,7 @@
       link.addEventListener('click', scheduleMeasure);
     });
     const state = {
-      root, nav, links, chapters, reveal: [...root.querySelectorAll('[data-gc-reveal]')],
+      root, nav, links, chapters, photos: [...root.querySelectorAll('[data-gc-photo]')], reveal: [...root.querySelectorAll('[data-gc-reveal]')],
       track: root.querySelector('.gc-toc-track'), previous: root.querySelector('[data-gc-toc-prev]'),
       next: root.querySelector('[data-gc-toc-next]'), observer: null, resizeObserver: null,
       headerHeight: 0, navHeight: 0, anchorOffset: 0, top: 0, height: 1, progress: null, activeLink: null

@@ -48,8 +48,8 @@ def run():
                 styles.append('/gc-inner-v4.css')
                 scripts.append('/gc-inner-v4.js')
             styles.append('/footer.css')
-            if page.styles != styles: errors.append(f'{rel}: CSS order')
-            if [s.get('src') for s in page.scripts] != scripts or not all('defer' in s for s in page.scripts):
+            if [urlsplit(href).path for href in page.styles] != styles: errors.append(f'{rel}: CSS order')
+            if [urlsplit(s.get('src', '')).path for s in page.scripts] != scripts or not all('defer' in s for s in page.scripts):
                 errors.append(f'{rel}: scripts')
             if len(page.alternates)!=2: errors.append(f'{rel}: language alternates')
             for a in page.alternates:

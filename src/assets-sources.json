@@ -152,5 +152,397 @@
       941
     ],
     "size_bytes": 2256429
+  },
+  {
+    "name": "hotel-door",
+    "title": "Elegant Hotel Room Key on Door Handle",
+    "url": "https://www.pexels.com/photo/elegant-hotel-room-key-on-door-handle-38850274/",
+    "id": "38850274",
+    "filename": "editorial-hotel-door.webp",
+    "dimensions": [
+      1600,
+      2400
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/elegant-hotel-room-key-on-door-handle-38850274/",
+    "size_bytes": 124034
+  },
+  {
+    "name": "roof-edge",
+    "title": "Modern Industrial Building with Metallic Roof Detail",
+    "url": "https://www.pexels.com/photo/modern-industrial-building-with-metallic-roof-detail-31342721/",
+    "id": "31342721",
+    "filename": "editorial-roof-edge.webp",
+    "dimensions": [
+      1600,
+      2400
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/modern-industrial-building-with-metallic-roof-detail-31342721/",
+    "size_bytes": 189486
+  },
+  {
+    "name": "lighting",
+    "title": "Man screwing light bulb into lamp",
+    "url": "https://www.pexels.com/photo/man-screwing-light-bulb-into-lamp-4792521/",
+    "id": "4792521",
+    "filename": "editorial-lighting.webp",
+    "dimensions": [
+      1600,
+      1068
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/man-screwing-light-bulb-into-lamp-4792521/",
+    "size_bytes": 44870
+  },
+  {
+    "name": "plumbing",
+    "title": "Close-up of Plumber Working with Copper Pipe",
+    "url": "https://www.pexels.com/photo/close-up-of-plumber-working-with-copper-pipe-39885416/",
+    "id": "39885416",
+    "filename": "editorial-plumbing.webp",
+    "dimensions": [
+      1600,
+      2399
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/close-up-of-plumber-working-with-copper-pipe-39885416/",
+    "size_bytes": 366412
+  },
+  {
+    "name": "hvac",
+    "title": "Industrial Rooftop with HVAC Unit and Ladder",
+    "url": "https://www.pexels.com/photo/industrial-rooftop-with-hvac-unit-and-ladder-30210086/",
+    "id": "30210086",
+    "filename": "editorial-hvac.webp",
+    "dimensions": [
+      1600,
+      1067
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/industrial-rooftop-with-hvac-unit-and-ladder-30210086/",
+    "size_bytes": 104410
+  },
+  {
+    "name": "access",
+    "title": "Man Hand Holding Access Card over Reader",
+    "url": "https://www.pexels.com/photo/man-hand-holding-access-card-over-reader-13657444/",
+    "id": "13657444",
+    "filename": "editorial-access.webp",
+    "dimensions": [
+      1600,
+      1068
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/man-hand-holding-access-card-over-reader-13657444/",
+    "size_bytes": 91160
+  },
+  {
+    "name": "grounds",
+    "title": "Sprinklers Watering Lawn at Palace",
+    "url": "https://www.pexels.com/photo/sprinklers-watering-lawn-at-palace-27443421/",
+    "id": "27443421",
+    "filename": "editorial-grounds.webp",
+    "dimensions": [
+      1600,
+      2134
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/sprinklers-watering-lawn-at-palace-27443421/",
+    "size_bytes": 915328
+  },
+  {
+    "name": "signage",
+    "title": "Close-Up Photo of Signage of a Building",
+    "url": "https://www.pexels.com/photo/close-up-photo-of-signage-of-a-building-10376535/",
+    "id": "10376535",
+    "filename": "editorial-signage.webp",
+    "dimensions": [
+      1600,
+      2400
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/close-up-photo-of-signage-of-a-building-10376535/",
+    "size_bytes": 141854
+  },
+  {
+    "name": "facade",
+    "title": "Window Cleaner on Modern Building Façade",
+    "url": "https://www.pexels.com/photo/window-cleaner-on-modern-building-facade-33728681/",
+    "id": "33728681",
+    "filename": "editorial-facade.webp",
+    "dimensions": [
+      1600,
+      1200
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/window-cleaner-on-modern-building-facade-33728681/",
+    "size_bytes": 175686
+  },
+  {
+    "name": "cleaning",
+    "title": "Person Cleaning a Tiled Floor",
+    "url": "https://www.pexels.com/photo/person-cleaning-a-tiled-floor-6197106/",
+    "id": "6197106",
+    "filename": "editorial-cleaning.webp",
+    "dimensions": [
+      1600,
+      2400
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/person-cleaning-a-tiled-floor-6197106/",
+    "size_bytes": 174640
+  },
+  {
+    "name": "parking",
+    "title": "Empty Multi-story Garage",
+    "url": "https://www.pexels.com/photo/empty-multi-story-garage-5735319/",
+    "id": "5735319",
+    "filename": "editorial-parking.webp",
+    "dimensions": [
+      1600,
+      900
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/empty-multi-story-garage-5735319/",
+    "size_bytes": 116354
+  },
+  {
+    "name": "fitout",
+    "title": "Repair in Modern Building Indoors",
+    "url": "https://www.pexels.com/photo/repair-in-modern-building-indoors-10346959/",
+    "id": "10346959",
+    "filename": "editorial-fitout.webp",
+    "dimensions": [
+      1600,
+      2133
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/repair-in-modern-building-indoors-10346959/",
+    "size_bytes": 408650
+  },
+  {
+    "name": "apartments",
+    "title": "Modern Apartment Building Exterior View",
+    "url": "https://www.pexels.com/photo/modern-apartment-building-exterior-view-35818904/",
+    "id": "35818904",
+    "filename": "editorial-apartments.webp",
+    "dimensions": [
+      1600,
+      1067
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/modern-apartment-building-exterior-view-35818904/",
+    "size_bytes": 89906
+  },
+  {
+    "name": "loading",
+    "title": "Warehouse with Delivery Truck Exiting the Loading Dock",
+    "url": "https://www.pexels.com/photo/warehouse-with-delivery-truck-exiting-the-loading-dock-29786116/",
+    "id": "29786116",
+    "filename": "editorial-loading.webp",
+    "dimensions": [
+      1600,
+      1067
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/warehouse-with-delivery-truck-exiting-the-loading-dock-29786116/",
+    "size_bytes": 77472
+  },
+  {
+    "name": "paving",
+    "title": "Outdoor Dining on a Paved Floor",
+    "url": "https://www.pexels.com/photo/outdoor-dining-on-a-paved-floor-12193139/",
+    "id": "12193139",
+    "filename": "editorial-paving.webp",
+    "dimensions": [
+      1600,
+      1241
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/outdoor-dining-on-a-paved-floor-12193139/",
+    "size_bytes": 208672
+  },
+  {
+    "name": "terrace",
+    "title": "Outdoor Cafe with Seating and Walking Path",
+    "url": "https://www.pexels.com/photo/outdoor-cafe-with-seating-and-walking-path-37170213/",
+    "id": "37170213",
+    "filename": "editorial-terrace.webp",
+    "dimensions": [
+      1600,
+      2135
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/outdoor-cafe-with-seating-and-walking-path-37170213/",
+    "size_bytes": 361294
+  },
+  {
+    "name": "watermark",
+    "title": "Stains on Ceiling in Bedroom",
+    "url": "https://www.pexels.com/photo/stains-on-ceiling-in-bedroom-8624464/",
+    "id": "8624464",
+    "filename": "editorial-watermark.webp",
+    "dimensions": [
+      1600,
+      2416
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/stains-on-ceiling-in-bedroom-8624464/",
+    "size_bytes": 404304
+  },
+  {
+    "name": "hotel-terrace",
+    "title": "Terrace of summer cafe located on seashore",
+    "photographer": "Asiama Junior",
+    "url": "https://www.pexels.com/photo/terrace-of-summer-cafe-located-on-seashore-6567347/",
+    "id": "6567347",
+    "filename": "editorial-hotel-terrace.webp",
+    "dimensions": [
+      1600,
+      1067
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/terrace-of-summer-cafe-located-on-seashore-6567347/",
+    "size_bytes": 180430
+  },
+  {
+    "name": "restaurant-counter",
+    "title": "Empty Counter in a Restaurant",
+    "photographer": "Team Picsfast",
+    "url": "https://www.pexels.com/photo/empty-counter-in-a-restaurant-8753815/",
+    "id": "8753815",
+    "filename": "editorial-restaurant-counter.webp",
+    "dimensions": [
+      1600,
+      1067
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/empty-counter-in-a-restaurant-8753815/",
+    "size_bytes": 245948
+  },
+  {
+    "name": "work-door",
+    "title": "Door handle in use",
+    "url": "https://www.pexels.com/photo/a-person-holding-a-door-handle-10211970/",
+    "id": "10211970",
+    "filename": "editorial-work-door.webp",
+    "dimensions": [
+      998,
+      1500
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/a-person-holding-a-door-handle-10211970/",
+    "size_bytes": 200004
+  },
+  {
+    "name": "work-paint",
+    "title": "Damaged painted wall surface",
+    "url": "https://www.pexels.com/photo/close-up-of-a-damaged-wall-surface-20537493/",
+    "id": "20537493",
+    "filename": "editorial-work-paint.webp",
+    "dimensions": [
+      1600,
+      1067
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/close-up-of-a-damaged-wall-surface-20537493/",
+    "size_bytes": 518916
+  },
+  {
+    "name": "property-lobby",
+    "title": "Hotel lobby and circulation space",
+    "url": "https://www.pexels.com/photo/interior-design-of-luxury-resort-hotel-6640056/",
+    "id": "6640056",
+    "filename": "editorial-property-lobby.webp",
+    "dimensions": [
+      1600,
+      1025
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/interior-design-of-luxury-resort-hotel-6640056/",
+    "size_bytes": 275026
+  },
+  {
+    "name": "coast-sunset",
+    "title": "Surfers Paradise sunset skyline",
+    "url": "https://www.pexels.com/photo/surfers-paradise-sunset-skyline-gold-coast-australia-33721745/",
+    "id": "33721745",
+    "filename": "editorial-coast-sunset.webp",
+    "dimensions": [
+      1600,
+      900
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/surfers-paradise-sunset-skyline-gold-coast-australia-33721745/",
+    "size_bytes": 79210
+  },
+  {
+    "name": "coast-balcony",
+    "title": "Coastal apartment balcony and exterior",
+    "url": "https://www.pexels.com/photo/modern-coastal-apartment-building-at-sunset-38714454/",
+    "id": "38714454",
+    "filename": "editorial-coast-balcony.webp",
+    "dimensions": [
+      844,
+      1500
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/modern-coastal-apartment-building-at-sunset-38714454/",
+    "size_bytes": 140360
+  },
+  {
+    "name": "editorial-door-hardware",
+    "title": "Wooden door with metal hardware",
+    "url": "https://www.pexels.com/photo/wooden-door-with-stainless-steel-door-knob-11001388/",
+    "id": "11001388",
+    "filename": "editorial-door-hardware.webp",
+    "dimensions": [
+      1600,
+      1047
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/wooden-door-with-stainless-steel-door-knob-11001388/",
+    "size_bytes": 224520
+  },
+  {
+    "name": "editorial-aluminium-frame",
+    "title": "Detail of an aluminium frame",
+    "url": "https://www.pexels.com/photo/a-person-holding-an-aluminum-frame-9729583/",
+    "id": "9729583",
+    "filename": "editorial-aluminium-frame.webp",
+    "dimensions": [
+      1600,
+      1067
+    ],
+    "provider": "Pexels",
+    "purpose": "Illustrative stock imagery; not an Ellis project.",
+    "source_url": "https://www.pexels.com/photo/a-person-holding-an-aluminum-frame-9729583/",
+    "size_bytes": 59536
   }
 ]

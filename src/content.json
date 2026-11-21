@@ -36,48 +36,52 @@
           "id": "find-the-defect",
           "layout": "rows",
           "title": {
-            "en": "Start with the defect, then check what sits around it",
-            "zh": "从缺陷本身，检查到周边构造"
+            "en": "A door works as an assembly.",
+            "zh": "一扇门，要看整套配合。"
           },
           "items": [
             {
               "title": {
-                "en": "A door rubs or will not latch",
-                "zh": "门扇擦碰或无法扣合"
+                "en": "What we check",
+                "zh": "检查哪些部位"
               },
               "text": {
-                "en": "We check the leaf, hinges, frame, latch and closer together. Loose hardware and a damaged fixing need a different repair from a distorted door or frame.",
-                "zh": "我们一起检查门扇、铰链、门框、锁舌和闭门器。五金松动、固定点损坏与门体或门框变形，需要不同的处理。"
+                "en": "We record where the door catches, whether the latch meets the strike and whether the hinges or frame move under use. That tells us which parts of the opening need attention.",
+                "zh": "我们记录门扇擦碰的位置、锁舌能否对准锁扣，以及使用中铰链或门框是否晃动，区分需要处理的部位。"
               }
             },
             {
               "title": {
-                "en": "A wall or ceiling is damaged",
-                "zh": "墙面或吊顶损坏"
+                "en": "What a local repair covers",
+                "zh": "局部修理的范围"
               },
               "text": {
-                "en": "We establish the affected area, board or surface condition and what must be removed. A water-stained ceiling also needs its moisture source addressed before the final finish is reinstated.",
-                "zh": "我们核对受影响面积、板材及表面状况，确定需要拆除的部分。存在水渍的吊顶还需处理进水来源，再安排最终饰面恢复。"
+                "en": "When the frame and fixing points are sound, we can plan an adjustment, local refixing or replacement of a compatible part. We check operation after refitting before confirming completion.",
+                "zh": "门框和固定点完好时，可以安排调整、局部重新固定或更换相容配件。重新安装后先核对开关和扣合，再确认完成。"
               }
             },
             {
               "title": {
-                "en": "Joinery or fittings are loose",
-                "zh": "木作或固定件松动"
+                "en": "What we scope separately",
+                "zh": "哪些情况另行安排"
               },
               "text": {
-                "en": "We inspect the fixing points, supporting material and matching parts. The scope distinguishes adjusting or securing an item from replacing damaged components.",
-                "zh": "我们检查固定点、支承材料和配件匹配情况，将调整、重新固定与受损部件更换分别列清。"
+                "en": "A distorted frame, damaged backing, unmatched hardware or work affecting a fire or smoke door requires its own scope and an agreed check before returning the opening to use.",
+                "zh": "门框变形、固定基层受损、配件无法匹配，或涉及防火门和防烟门时，需要另列工作范围，并在恢复使用前完成约定核查。"
               }
             }
-          ]
+          ],
+          "intro": {
+            "en": "We inspect the door leaf, hinges, frame, strike and closer as an assembly. Where a door rubs or fails to latch, we check movement through the closing arc and look for looseness or damage at the fixings before agreeing a repair.",
+            "zh": "我们把门扇、铰链、门框、锁扣和闭门器作为一套检查。门扇擦碰或无法扣合时，先核对关门过程中哪里受阻，再检查固定点有无松动或损坏，据此确定维修范围。"
+          }
         },
         {
           "id": "one-item-or-a-list",
           "layout": "table",
           "title": {
-            "en": "One repair, a grouped visit or a larger refresh",
-            "zh": "单项维修、集中处理或较大翻新"
+            "en": "How much needs repair?",
+            "zh": "维修范围，怎么定？"
           },
           "table": {
             "headers": [
@@ -144,10 +148,30 @@
           "id": "finish-and-materials",
           "layout": "split",
           "title": {
-            "en": "Match the repair to the existing building",
-            "zh": "让修复衔接原有建筑"
+            "en": "Read the surface before refinishing.",
+            "zh": "墙面反复起泡，先看基层。"
           },
           "items": [
+            {
+              "title": {
+                "en": "A wall or ceiling is damaged",
+                "zh": "墙面或吊顶损坏"
+              },
+              "text": {
+                "en": "We establish the affected area, board or surface condition and what must be removed. A water-stained ceiling also needs its moisture source addressed before the final finish is reinstated.",
+                "zh": "我们核对受影响面积、板材及表面状况，确定需要拆除的部分。存在水渍的吊顶还需处理进水来源，再安排最终饰面恢复。"
+              }
+            },
+            {
+              "title": {
+                "en": "Joinery or fittings are loose",
+                "zh": "木作或固定件松动"
+              },
+              "text": {
+                "en": "We inspect the fixing points, supporting material and matching parts. The scope distinguishes adjusting or securing an item from replacing damaged components.",
+                "zh": "我们检查固定点、支承材料和配件匹配情况，将调整、重新固定与受损部件更换分别列清。"
+              }
+            },
             {
               "title": {
                 "en": "Boards, timber and substrate",
@@ -171,8 +195,16 @@
           ],
           "paragraphs": [
             {
-              "en": "We check hinge and lock patterns, board type, finish colour and sheen. Matching an aged surface, ordering uncommon hardware or opening up concealed backing can change the quote. We confirm these items before allowing for patching, joint treatment and finishing.",
-              "zh": "我们核对合页和锁具规格、板材种类、颜色与光泽。旧饰面配色、特殊五金订货或打开隐蔽基层都可能改变报价。确认后再安排修补、接缝处理和饰面恢复。"
+              "en": "We quote against hardware, boards, finish matching, special orders and access to backing before scheduling repair.",
+              "zh": "报价列明五金、板材、饰面匹配、特殊订货和基层检查，再安排维修。"
+            },
+            {
+              "en": "Check door clearance, the strike and the frame together. For wall damage, distinguish marks, broken edges and loose backing before specifying the finish.",
+              "zh": "一并检查门扇间隙、锁扣和门框。墙面损坏先区分漆面痕迹、板边破损和基层松动，再确定修补与饰面。"
+            },
+            {
+              "en": "Door action and wall finishes should be recorded separately even when the two defects are in the same room. For a dragging door, we note where it catches and whether it still latches. For repeated bubbling on adjoining walls, we identify the wet boundary and decide which finish can safely be retained.",
+              "zh": "即使两处缺陷出现在同一间房，我们也会分开记录门扇运行和墙面状况。门扇拖擦时标出擦碰位置和能否扣合；相邻墙角反复起泡时，先标记受潮范围，再判断哪些饰面可以保留。"
             }
           ]
         },
@@ -225,8 +257,8 @@
           },
           "paragraphs": [
             {
-              "en": "We agree keys, room access, noise and dust-producing tasks with your representative. Shared corridors need a usable route, while a painted or repaired surface may need time before furniture returns. These arrangements belong in the work plan, alongside any return visit.",
-              "zh": "我们与负责人确认钥匙、房间进出、噪音及扬尘工序。公共走廊需安排通行路线，修复或刷漆后的表面需结合材料条件恢复家具使用；这些内容与再次进场需求一并写入计划。"
+              "en": "The work plan records keys, access, noise, dust, shared routes, surface drying before furniture returns and return visits.",
+              "zh": "工作计划列明钥匙、进场、噪音、扬尘、公共通行、饰面干燥后的家具复位及再次进场安排。"
             }
           ]
         },
@@ -282,8 +314,8 @@
             "zh": "门扇卡住一定要更换整扇门吗？"
           },
           "a": {
-            "en": "No. We first check alignment, hinges, fixings, latch and closer. Adjustment or hardware repair may address the issue; damaged door construction or frame conditions can require a different scope.",
-            "zh": "不一定。我们先检查门的对位、铰链、固定点、锁舌与闭门器，区分可以调整或维修的五金问题，以及需要处理门体或门框的情况。"
+            "en": "Check alignment, hinges, fixings, latch and closer to distinguish hardware adjustment from work to a damaged leaf or frame.",
+            "zh": "检查对位、铰链、固定点、锁舌与闭门器，区分五金调整与门体、门框维修。"
           }
         },
         {
@@ -335,6 +367,119 @@
       "detailTitle": {
         "en": "Building & general maintenance",
         "zh": "建筑与日常维护"
+      },
+      "editorial": {
+        "cover": "coastal-maintenance-editorial.png",
+        "coverAlt": {
+          "en": "Commercial entry and building finishes",
+          "zh": "商业入口与建筑饰面"
+        },
+        "strap": {
+          "en": "Doors · walls · joinery",
+          "zh": "门五金 · 墙面 · 固定木作"
+        },
+        "leadTitle": {
+          "en": "Make each defect a defined repair.",
+          "zh": "按部位明确每一项维修。"
+        },
+        "features": [
+          {
+            "file": "editorial-door-hardware.webp",
+            "caption": {
+              "en": "Doors and hardware",
+              "zh": "门与五金"
+            },
+            "links": [
+              [
+                "service",
+                "fire-security-access"
+              ]
+            ],
+            "points": [
+              {
+                "x": 73,
+                "y": 37,
+                "label": {
+                  "en": "Lock and key cylinder",
+                  "zh": "锁具与锁芯"
+                }
+              },
+              {
+                "x": 31,
+                "y": 61,
+                "label": {
+                  "en": "Door leaf",
+                  "zh": "门扇"
+                }
+              }
+            ]
+          },
+          {
+            "file": "editorial-work-paint.webp",
+            "caption": {
+              "en": "Walls and ceilings",
+              "zh": "墙面与吊顶"
+            },
+            "links": [
+              [
+                "service",
+                "fit-outs-make-good"
+              ]
+            ],
+            "companion": {
+              "file": "editorial-fitout.webp",
+              "caption": {
+                "en": "Existing walls and joinery",
+                "zh": "原有墙面与木作"
+              }
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "service",
+            "fire-security-access"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Record by opening or room.",
+            "zh": "按门洞或房间交付。"
+          },
+          "note": {
+            "en": "We check operation and the finish against the original defect list. Where a stain or loose fixing points to a separate cause, we record what must be resolved before finishing.",
+            "zh": "我们按原缺陷清单核对操作和饰面。若水渍或松动固定件指向其他原因，记录应先解决的问题，再安排恢复。"
+          },
+          "checklist": [
+            {
+              "en": "Door or room number",
+              "zh": "门洞或房号"
+            },
+            {
+              "en": "Operation and finish checks",
+              "zh": "操作与饰面检查"
+            },
+            {
+              "en": "Backing and moisture checks",
+              "zh": "基层与潮湿检查"
+            }
+          ]
+        },
+        "deliveryPhoto": {
+          "file": "editorial-access.webp",
+          "caption": {
+            "en": "Door controls and operation check",
+            "zh": "门禁与操作检查"
+          }
+        },
+        "titleLinesZh": [
+          "建筑与",
+          "日常维护"
+        ],
+        "workingExample": {
+          "en": "A dragging door and a damaged wall beside it can share a work area without sharing a cause. Keep the door’s closing check separate from the wall repair and agree when the route can reopen after each.",
+          "zh": "门扇拖擦和旁边墙面破损可以在同一区域处理，但需要分别检查原因。单独记录门的关合检查与墙面修补，明确每道工序完成后通道何时能重新开放。"
+        }
       }
     },
     {
@@ -393,8 +538,8 @@
                 "zh": "靠近设备或交接处"
               },
               "text": {
-                "en": "We check penetrations, flashings, adjoining sheets and fixings together. A patch applied to one joint may leave neighbouring deterioration or a different water path unresolved.",
-                "zh": "我们一起检查穿屋面节点、泛水、相邻板材和固定件，避免只处理一条接缝而遗漏邻近损耗或其他进水路径。"
+                "en": "Inspect penetrations, flashings, adjoining sheets and fixings together to account for neighbouring deterioration and connected water paths.",
+                "zh": "一并检查穿屋面节点、泛水、相邻板材和固定件，将邻近损耗及相连水路纳入范围。"
               }
             },
             {
@@ -406,6 +551,16 @@
                 "en": "We distinguish roof drainage from balcony or terrace waterproofing. Outlets, surface falls, joints and the existing waterproofing build-up inform the investigation scope.",
                 "zh": "我们区分屋面排水与阳台、露台防水问题，结合出水口、表面坡度、接缝和现有防水构造确定检查范围。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "Compare the timing and position of a ceiling mark with the roof junctions upwind and the outlets downhill. Allow separately for clearing restricted flow, repairing a known failed flashing, and opening any concealed wet substrate. A new bead of sealant is not a scope for the whole route.",
+              "zh": "把水渍出现的时间和位置，与迎风一侧的屋面节点及下游出水口对照。分别列明疏通、修复已知失效的泛水及打开隐蔽受潮基层的工作。只补一条密封胶不能覆盖整条水路。"
+            },
+            {
+              "en": "We start with the location and time of the indoor mark, the last weather event and the areas served by the nearest outlets. We record a visible defect, a suspected water route and a confirmed repair separately, so a patch does not close out an unresolved leak.",
+              "zh": "我们从室内水迹的位置、出现时间、最近一次降雨，以及邻近出水口所服务的区域开始核对。可见缺陷、推测的进水路径和已确认的维修范围分别记录，避免局部修补后遗漏仍待排查的漏点。"
             }
           ]
         },
@@ -423,8 +578,8 @@
                 "zh": "处理选择"
               },
               {
-                "en": "Where it may fit",
-                "zh": "适用判断"
+                "en": "Selection criteria",
+                "zh": "选用条件"
               },
               {
                 "en": "Scope to confirm",
@@ -599,8 +754,8 @@
             "zh": "为什么打胶后仍然漏水？"
           },
           "a": {
-            "en": "The earlier patch may not address the entry point, adjoining defects, drainage or the condition beneath it. We review the previous work and the leak pattern before defining a further repair.",
-            "zh": "原修补可能未处理真正进水点、相邻缺陷、排水或下方现状。我们核对既往处理和漏水条件，再确定后续修复。"
+            "en": "Check the earlier patch against the entry point, adjoining components, drains and substrate before defining the repair.",
+            "zh": "对照进水点、相邻构件、排水和基层核查原修补，再确定维修范围。"
           }
         },
         {
@@ -659,6 +814,88 @@
       "detailTitle": {
         "en": "Roofing & waterproofing",
         "zh": "屋顶与防水"
+      },
+      "editorial": {
+        "cover": "coastal-roof-editorial.png",
+        "coverAlt": {
+          "en": "Commercial metal roof, gutter and rooftop plant",
+          "zh": "商业金属屋面、天沟与屋面设备"
+        },
+        "strap": {
+          "en": "Roof · outlets · junctions",
+          "zh": "屋面 · 出水口 · 节点"
+        },
+        "leadTitle": {
+          "en": "Trace the water route before choosing a repair.",
+          "zh": "沿水路排查，再确定修复范围。"
+        },
+        "features": [
+          {
+            "file": "editorial-roof-edge.webp",
+            "caption": {
+              "en": "Metal roof edge and cladding junction",
+              "zh": "金属屋面边缘及墙体交接"
+            },
+            "links": [
+              [
+                "service",
+                "plumbing-drainage-gas"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-watermark.webp",
+            "caption": {
+              "en": "Interior signs of water entry",
+              "zh": "室内进水痕迹"
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "service",
+            "plumbing-drainage-gas"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Record the point repaired and what remains to check.",
+            "zh": "记录修复点位与后续观察。"
+          },
+          "note": {
+            "en": "We identify the sections attended and agree the next rainfall observation before deciding when to reinstate sensitive interior finishes.",
+            "zh": "我们标明已处理区段，并约定下次降雨时的观察项，再决定何时恢复对潮湿敏感的室内饰面。"
+          },
+          "checklist": [
+            {
+              "en": "Leak history and weather",
+              "zh": "降雨与漏水记录"
+            },
+            {
+              "en": "Outlet and repair locations",
+              "zh": "出水口与修复位置"
+            },
+            {
+              "en": "Follow-up before reinstatement",
+              "zh": "饰面恢复前的观察"
+            }
+          ]
+        },
+        "deliveryPhoto": {
+          "file": "editorial-facade.webp",
+          "caption": {
+            "en": "External junctions and visible finishes",
+            "zh": "外墙节点与可见饰面"
+          }
+        },
+        "titleLinesZh": [
+          "屋顶",
+          "与防水"
+        ],
+        "workingExample": {
+          "en": "If a ceiling mark grows during wind-driven rain, record the windward wall, the nearest roof junction and where the outlet discharges. Timing and location help narrow the inspection before any internal finish is reinstated.",
+          "zh": "如果吊顶水迹在风雨中扩大，记录迎风外墙、最近的屋面交接部位和出水口去向。用时间和位置缩小排查范围，再安排室内饰面恢复。"
+        }
       }
     },
     {
@@ -730,6 +967,16 @@
                 "en": "We check the mounting, enclosure condition and exposure of entry or car park lighting. Replacement selection follows the location and existing installation, not appearance alone.",
                 "zh": "我们检查入口或停车区灯具的固定、外壳和暴露条件，结合安装位置及现有结构选配件。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "If flickering happens only while dimming, capture the fitting and driver labels together with the control behaviour. If several fittings fail on the same schedule, document the affected group before specifying replacements. Keep making good of ceiling access separate from the electrical scope.",
+              "zh": "只在调光时闪烁，就一并记录灯具、驱动器标签及控制表现。多盏灯在同一时段失效时，先记录受影响分组再确定替换。吊顶检修口的恢复另列。"
+            },
+            {
+              "en": "We list which lights fail together, which controls serve them and what changes when occupancy or daylight changes. This helps separate a single fitting from a shared circuit or control issue and identifies when a tenant needs an agreed isolation window.",
+              "zh": "我们会列出哪些灯同时故障、由哪组控制器管理，以及人员活动或自然光变化时的表现，以区分单盏灯具问题、共用回路或控制故障，并明确租户需要的停用时段。"
             }
           ]
         },
@@ -899,6 +1146,12 @@
                 "zh": "我们确认登高设备、营业窗口、租户协调及电气工作周边所需吊顶或饰面恢复。"
               }
             }
+          ],
+          "paragraphs": [
+            {
+              "en": "Record fitting height, control type and shared circuits. Set access and control checks separately for single fittings and group replacements.",
+              "zh": "记录灯具高度、控制类型及共用回路。单盏更换和整组更新分别安排登高及控制检查。"
+            }
           ]
         },
         {
@@ -927,8 +1180,8 @@
             "zh": "LED 闪烁需要换整盏灯吗？"
           },
           "a": {
-            "en": "Not necessarily. We check the fitting, driver and controls in their installation context. The repair scope identifies the component or fitting work supported by that assessment.",
-            "zh": "不一定。我们结合实际安装核对灯具、驱动器和控制，再确定相应部件或灯具的处理范围。"
+            "en": "Check the installed fitting, driver and controls before specifying the component to repair.",
+            "zh": "先检查实际安装的灯具、驱动器和控制，再确定维修部件。"
           }
         },
         {
@@ -984,10 +1237,94 @@
           "body-corporate-common-area-repairs"
         ]
       },
-      "sourceIds": [],
+      "sourceIds": [
+        "eso-safe-equipment"
+      ],
       "detailTitle": {
         "en": "Electrical & lighting",
         "zh": "电气与照明"
+      },
+      "editorial": {
+        "cover": "editorial-lighting.webp",
+        "coverAlt": {
+          "en": "Light fitting being attended to",
+          "zh": "照明灯具作业"
+        },
+        "strap": {
+          "en": "Fittings · controls · access",
+          "zh": "灯具 · 控制 · 检修通道"
+        },
+        "leadTitle": {
+          "en": "Separate the fitting from the control fault.",
+          "zh": "分清灯具与控制问题。"
+        },
+        "features": [
+          {
+            "file": "editorial-access.webp",
+            "caption": {
+              "en": "Wall-mounted electronic reader as an access example",
+              "zh": "墙面电子读卡设备"
+            },
+            "links": [
+              [
+                "service",
+                "fire-security-access"
+              ]
+            ]
+          },
+          {
+            "file": "sector-office.jpg",
+            "caption": {
+              "en": "Lighting in an occupied workplace",
+              "zh": "办公场所照明"
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "service",
+            "fire-security-access"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Hand back by zone and control.",
+            "zh": "按分区和控制方式交付。"
+          },
+          "note": {
+            "en": "We record the fitting locations and the agreed on/off, dimming or sensor checks, alongside any zone left on a different schedule.",
+            "zh": "我们记录灯具位置、约定的开关、调光或感应检查，以及使用不同运行时段的区域。"
+          },
+          "checklist": [
+            {
+              "en": "Model and control details",
+              "zh": "型号与控制资料"
+            },
+            {
+              "en": "Access and isolation window",
+              "zh": "进场与停用窗口"
+            },
+            {
+              "en": "Checks by occupied zone",
+              "zh": "在用区域逐区检查"
+            }
+          ]
+        },
+        "deliveryPhoto": {
+          "file": "editorial-fitout.webp",
+          "caption": {
+            "en": "Ceiling and occupied interior",
+            "zh": "吊顶及在用室内区域"
+          }
+        },
+        "titleLinesZh": [
+          "电气",
+          "与照明"
+        ],
+        "workingExample": {
+          "en": "If multiple fittings go out together, list their locations and the controls serving them. If one fails on its own, record the fitting and access height first. Those briefs call for different checks and different work windows.",
+          "zh": "多盏灯同时熄灭时，记录位置和控制器；单盏出现故障时，先标记灯具与安装高度。这两类问题需要不同的检查和进场时段。"
+        }
       }
     },
     {
@@ -1059,6 +1396,16 @@
                 "en": "We identify whether the issue occurs at one fixture, several connected points or an external drainage area. Timing during rain or normal use helps direct the investigation.",
                 "zh": "我们确认问题发生于单个设施、多个连接点还是室外排水区域，并结合降雨或正常使用时点安排排查。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "Record whether water appears only when a particular fixture drains, during rain, or while the supply remains pressurised. Separate that evidence from the final repair scope. On occupied sites, agree who can confirm shut-off and restore each affected fixture or area.",
+              "zh": "记录水是在某个器具排水时、下雨时还是系统供水时出现，并把这些线索与最终修复范围分开。场所在使用时，明确谁确认停用并恢复受影响的器具或区域。"
+            },
+            {
+              "en": "For a recurring blockage, we ask which fixtures are affected, whether smells or slow discharge appear after particular activities and where inspection access can be provided. Supply shutdown, wastewater checks and any gas work are separately scoped with the responsible trade.",
+              "zh": "对反复堵塞，我们记录受影响的用水器具、异味或排水缓慢是否集中在特定使用时段，以及可从哪里检查。供水停用、污废水排查和涉及燃气的工作分别与对应工种核对范围。"
             }
           ]
         },
@@ -1198,6 +1545,12 @@
                 "zh": "我们按实际工作开展相应运行、漏水或排水检查，记录已恢复使用的部分。"
               }
             }
+          ],
+          "paragraphs": [
+            {
+              "en": "We record the branch or fixture affected, what other fixtures are served, and who can authorise an outage. We keep downstream drainage faults, water supply faults and gas work as separate entries so the appropriate trade can confirm its scope and any checks before the area reopens.",
+              "zh": "我们记录受影响的支管或器具、同一支路服务的其他器具，以及谁可以批准停用。下游排水、供水和燃气分别列项，由对应工种确认工作范围及恢复使用前的检查。"
+            }
           ]
         },
         {
@@ -1256,8 +1609,8 @@
             "zh": "反复堵塞能否只再疏通一次？"
           },
           "a": {
-            "en": "We review the recurrence, affected points and previous work first. The scope may need further investigation to establish why the problem returns before a lasting repair can be defined.",
-            "zh": "我们先核对复发情况、影响位置和既往工作；可能需要进一步调查原因，才能明确后续修复范围。"
+            "en": "Record where the fault recurs, what it affects and prior repair work. Define repairs against the findings.",
+            "zh": "记录故障复发位置、受影响部位及历次维修，再按检查结果列明维修范围。"
           }
         },
         {
@@ -1266,8 +1619,8 @@
             "zh": "调查与维修会分别报价吗？"
           },
           "a": {
-            "en": "Where the fault is concealed or not yet defined, we explain the investigation scope first. The repair is then confirmed against the findings, required parts, access and reinstatement.",
-            "zh": "故障隐藏或尚不明确时，我们先说明调查范围，再结合发现、配件、进场和恢复工作确认维修。"
+            "en": "For concealed faults, define the inspection scope first, then list parts, access and reinstatement based on the findings.",
+            "zh": "隐蔽故障先列出检查范围，再按结果安排配件、进场和复原。"
           }
         },
         {
@@ -1310,10 +1663,94 @@
           "storm-season-roofs-gutters"
         ]
       },
-      "sourceIds": [],
+      "sourceIds": [
+        "qbcc-trade-scope"
+      ],
       "detailTitle": {
         "en": "Plumbing, drainage & gas",
         "zh": "水管、排水与燃气"
+      },
+      "editorial": {
+        "cover": "editorial-plumbing.webp",
+        "coverAlt": {
+          "en": "Copper pipework being worked on",
+          "zh": "铜管作业"
+        },
+        "strap": {
+          "en": "Supply · discharge · isolation",
+          "zh": "供水 · 排放 · 停用"
+        },
+        "leadTitle": {
+          "en": "Identify which system is affected.",
+          "zh": "先分清受影响的系统。"
+        },
+        "features": [
+          {
+            "file": "editorial-paving.webp",
+            "caption": {
+              "en": "Outdoor paved area affected by drainage planning",
+              "zh": "涉及排水安排的室外铺装"
+            },
+            "links": [
+              [
+                "service",
+                "car-parks-external-works"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-restaurant-counter.webp",
+            "caption": {
+              "en": "Fixture access in a trading venue",
+              "zh": "营业场所用水区域"
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "service",
+            "car-parks-external-works"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Confirm what can go back into use.",
+            "zh": "确认哪些设施可以恢复使用。"
+          },
+          "note": {
+            "en": "We record the investigation points, agreed checks and any areas that need a further visit before wall or paving reinstatement.",
+            "zh": "我们记录调查点位、约定检查及墙面或铺装恢复前仍需再次进场的区域。"
+          },
+          "checklist": [
+            {
+              "en": "Affected fixture and timing",
+              "zh": "受影响器具与发生时间"
+            },
+            {
+              "en": "Agreed shut-off window",
+              "zh": "约定停用时段"
+            },
+            {
+              "en": "Checks and outstanding investigation",
+              "zh": "检查与待调查项目"
+            }
+          ]
+        },
+        "deliveryPhoto": {
+          "file": "editorial-watermark.webp",
+          "caption": {
+            "en": "Affected surfaces recorded before reinstatement",
+            "zh": "复原前记录的受影响表面"
+          }
+        },
+        "titleLinesZh": [
+          "水管、排水",
+          "与燃气"
+        ],
+        "workingExample": {
+          "en": "For example, a slow basin and water appearing at a floor waste are different observations. Record exactly which fixtures were being used and whether the floor was recently washed, then arrange access for the appropriate trade.",
+          "zh": "面盆排水慢与地漏冒水是两条不同的观察。记录当时使用的器具及地面是否刚清洗，再为对应工种安排检查入口。"
+        }
       }
     },
     {
@@ -1372,8 +1809,8 @@
                 "zh": "滴水"
               },
               "text": {
-                "en": "We review where and when water appears, including accessible condensate arrangements. A ceiling stain may also involve roofing or plumbing, so the investigation follows the observed conditions.",
-                "zh": "我们核对水出现的位置和时点，包括可检查的冷凝水排放；吊顶水渍也可能涉及屋面或水管，检查以实际情况为依据。"
+                "en": "Record water location and timing and inspect accessible condensate, roof and plumbing paths.",
+                "zh": "记录水迹位置与时点，对照检查冷凝水排水、屋面及水管路径。"
               }
             },
             {
@@ -1385,6 +1822,16 @@
                 "en": "We record how the issue changes during operation and which controls are involved. We check the equipment information before specifying a service task or replacement part.",
                 "zh": "我们记录问题随运行变化的情况和相关控制，并核对设备资料后确定维护项目或配件。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "Pair each reported symptom with the unit label, thermostat or control mode and the room or level served. A complaint limited to one meeting room is scoped differently from several rooms losing cooling at the same time. Agree whether the visit is planned service, fault investigation or a separate repair.",
+              "zh": "把每个故障表现与机组编号、控制模式及服务房间或楼层对应。单个会议室异常，与多个房间同步失冷的范围不同。先确认本次属于常规保养、故障调查还是另行维修。"
+            },
+            {
+              "en": "We match each symptom to a unit and the zone it serves. A room that stays warm, a drain that overflows and a unit that repeatedly stops need different observations. We confirm when equipment can be accessed or isolated without affecting neighbouring spaces.",
+              "zh": "我们把故障现象对应到机组和使用区域。房间持续偏热、冷凝水溢出和机组反复停机，需要不同记录。安排前确认何时能进入设备区域或暂停设备，以及是否影响相邻空间。"
             }
           ]
         },
@@ -1500,8 +1947,8 @@
                 "zh": "确认分区与通道"
               },
               "text": {
-                "en": "We identify indoor and rooftop equipment, access points and the spaces that may be affected by service or shutdown.",
-                "zh": "我们核对室内及屋顶设备、检修点和维护或停机影响的空间。"
+                "en": "Identify indoor and rooftop equipment, access points and the areas served by equipment scheduled for service or shutdown.",
+                "zh": "记录室内与屋顶设备、检修点，以及保养或停机设备服务的区域。"
               }
             },
             {
@@ -1578,8 +2025,8 @@
             "zh": "吊顶滴水一定是屋顶漏水吗？"
           },
           "a": {
-            "en": "No. We consider the timing, affected equipment and accessible condensate arrangements alongside other possible water paths. The investigation scope follows those observations.",
-            "zh": "不一定。我们结合发生时点、相关设备、可检查冷凝水排放及其他可能水路确定排查范围。"
+            "en": "Compare timing, affected equipment, condensate drains and adjacent water paths to identify the source.",
+            "zh": "对照水迹时点、设备、冷凝水排水及相邻水路查明来源。"
           }
         },
         {
@@ -1622,11 +2069,94 @@
       },
       "sourceIds": [
         "airah-maintenance-strategies",
-        "hvac-site-specific"
+        "hvac-site-specific",
+        "qbcc-trade-scope"
       ],
       "detailTitle": {
         "en": "HVAC & building systems",
         "zh": "空调与楼宇设备"
+      },
+      "editorial": {
+        "cover": "editorial-hvac.webp",
+        "coverAlt": {
+          "en": "Commercial rooftop HVAC unit and access",
+          "zh": "商业屋面空调设备与检修通道"
+        },
+        "strap": {
+          "en": "Units · zones · operating hours",
+          "zh": "机组 · 分区 · 使用时段"
+        },
+        "leadTitle": {
+          "en": "Plan work around each unit and its zone.",
+          "zh": "按机组及服务分区安排维护。"
+        },
+        "features": [
+          {
+            "file": "sector-office.jpg",
+            "caption": {
+              "en": "Occupied office served by building systems",
+              "zh": "楼宇设备服务的办公区域"
+            },
+            "links": [
+              [
+                "sector",
+                "offices-mixed-use"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-lighting.webp",
+            "caption": {
+              "en": "Access above occupied rooms",
+              "zh": "在用房间的顶面与检修空间"
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "sector",
+            "offices-mixed-use"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Keep the next visit traceable.",
+            "zh": "让后续维护有据可查。"
+          },
+          "note": {
+            "en": "We match the agreed tasks and checks to the unit register and state which items need parts, another visit or monitoring in operating conditions.",
+            "zh": "我们把约定工作和检查对应设备清单，注明哪些需要订件、再次进场或在运行条件下观察。"
+          },
+          "checklist": [
+            {
+              "en": "Unit label and served zone",
+              "zh": "机组编号与服务区"
+            },
+            {
+              "en": "Work and checks recorded",
+              "zh": "工作及检查记录"
+            },
+            {
+              "en": "Parts or observations to follow",
+              "zh": "待订件与观察项"
+            }
+          ]
+        },
+        "deliveryPhoto": {
+          "file": "editorial-plumbing.webp",
+          "caption": {
+            "en": "Building-service connections",
+            "zh": "楼宇设备连接"
+          }
+        },
+        "titleLinesZh": [
+          "空调与",
+          "楼宇设备"
+        ],
+        "workingExample": {
+          "en": "For a room that becomes warm at certain times, note the unit, the affected room and when the symptom starts. If water also appears below another unit, record it separately so the ventilation and drainage observations remain distinct.",
+          "zh": "房间在特定时段变热时，记录机组编号、受影响房间和开始时间。如果另一台设备下方也出现水迹，分开记录，便于分别核对送风与排水。"
+        }
       }
     },
     {
@@ -1654,7 +2184,7 @@
       },
       "lead": {
         "en": "We organise defined maintenance and rectification with the site manager and relevant service providers. We identify the door, equipment or system involved and review existing defect and service records. Inspection, repair, testing and certification remain separately identified parts of the agreed scope.",
-        "zh": "我们与现场负责人及相关服务方协调明确的维护和整改，核对门体、设备、系统及既有缺陷记录，并把检查、维修、测试与认证分别列明。"
+        "zh": "我们与现场负责人及相关服务方协调明确的维护和整改，核对门体、设备、系统及既有缺陷记录，并把检查、维修、检测与认证分别列明。"
       },
       "metaDescription": {
         "en": "Gold Coast fire door, access and security maintenance coordination, with defined equipment scopes, compatible hardware, temporary access and service records.",
@@ -1699,6 +2229,16 @@
                 "zh": "我们按场所明确设备和工作，范围需要相关服务方时，协调单独保养或进场。"
               }
             }
+          ],
+          "paragraphs": [
+            {
+              "en": "An intermittent reader, a frame movement issue and a closer that will not latch require different checks. List the opening, existing system details and required access during work. Identify fire-related items separately so the agreed repair and any formal inspection arrangements remain distinct.",
+              "zh": "读卡器间歇失灵、门框位移和闭门器不能锁闭需要分别核对。列出出入口、现有系统资料及作业期间的通行需求。涉及消防的事项单列，分清约定维修和正式检验安排。"
+            },
+            {
+              "en": "We record the opening ID, how the door closes, the point at which it fails to latch and any controller indication. A housekeeping obstruction, a mechanical defect and a fault reported by a control panel are separate work items.",
+              "zh": "我们记录门洞编号、关门动作、无法扣合的位置和控制器提示。通道被物品占用、门体机械损坏和控制面板报告的故障，分别列入工作范围。"
+            }
           ]
         },
         {
@@ -1715,8 +2255,8 @@
                 "zh": "对位与运行"
               },
               "text": {
-                "en": "A door that does not close or latch may involve the leaf, frame, hinges, closer or fixing condition. We inspect how these parts work together before specifying hardware.",
-                "zh": "门无法关闭或扣合，可能涉及门扇、门框、铰链、闭门器和固定状态；我们整体核对后再选配件。"
+                "en": "Check the leaf, frame, hinges, closer and fixings together before specifying hardware.",
+                "zh": "整体核对门扇、门框、铰链、闭门器和固定状态，再选配件。"
               }
             },
             {
@@ -1864,7 +2404,7 @@
               },
               "text": {
                 "en": "The quotation identifies the agreed repair and any separately arranged inspection, servicing, testing or certification, including the relevant attendance.",
-                "zh": "报价列明维修，以及单独安排的检查、保养、测试或认证及相关进场。"
+                "zh": "报价列明维修，以及单独安排的检查、保养、检测或认证及相关进场。"
               }
             }
           ]
@@ -1878,8 +2418,12 @@
           },
           "paragraphs": [
             {
-              "en": "We link completed items to the door or equipment identifier. The record distinguishes the work performed, checks undertaken, documents supplied and items awaiting a further decision. Your manager can see which entrances are back in use, what records have been supplied and which items still need a separate visit.",
-              "zh": "我们把完成项目对应门或设备编号，分别记录施工、检查、已交资料和待确认事项。负责人可按入口核对恢复使用情况、已交资料及仍需另行进场的项目。"
+              "en": "Record repairs, checks, documents, reopened entrances and follow-up visits by door or equipment number.",
+              "zh": "按门或设备编号记录施工、检查、已交文件、开放入口和后续进场。"
+            },
+            {
+              "en": "Where a door forms part of a fire or smoke separation, we record the door identification and separate the door leaf, closer and latching defect from access-control faults. We agree the return-to-service checks with the property contact and the trade responsible for that system.",
+              "zh": "如果门属于防火或防烟分隔，我们记录门的编号，将门扇、闭门器和锁舌问题与门禁控制故障分别记录。我们与物业联系人及负责该系统的工种确认恢复使用前的检查。"
             }
           ]
         }
@@ -1912,7 +2456,7 @@
           },
           "a": {
             "en": "They serve different purposes. We identify the repair record and any separate inspection, test or certification required for the agreed work, with the relevant service attendance clearly stated.",
-            "zh": "两者用途不同。我们列明维修记录，以及约定工作涉及的单独检查、测试或认证和对应服务安排。"
+            "zh": "两者用途不同。我们列明维修记录，以及约定工作涉及的单独检查、检测或认证和对应服务安排。"
           }
         },
         {
@@ -1944,11 +2488,95 @@
         ]
       },
       "sourceIds": [
-        "assa-hardware-care"
+        "assa-hardware-care",
+        "qbcc-trade-scope",
+        "qfes-fire-door"
       ],
       "detailTitle": {
         "en": "Fire, security & access",
         "zh": "消防、安防与门禁"
+      },
+      "editorial": {
+        "cover": "editorial-access.webp",
+        "coverAlt": {
+          "en": "Access card and entry reader",
+          "zh": "门禁卡与入口读卡器"
+        },
+        "strap": {
+          "en": "Openings · credentials · access",
+          "zh": "门洞 · 权限 · 通行"
+        },
+        "leadTitle": {
+          "en": "Keep access arrangements tied to each opening.",
+          "zh": "逐个出入口明确作业和通行。"
+        },
+        "features": [
+          {
+            "file": "editorial-hotel-door.webp",
+            "caption": {
+              "en": "Door leaf and entry hardware",
+              "zh": "门扇与入口五金"
+            },
+            "links": [
+              [
+                "service",
+                "building-maintenance"
+              ]
+            ]
+          },
+          {
+            "file": "coastal-maintenance-editorial.png",
+            "caption": {
+              "en": "Commercial door and its opening",
+              "zh": "商业入口与门洞"
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "service",
+            "building-maintenance"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Record the point and operating check.",
+            "zh": "记录点位与约定操作检查。"
+          },
+          "note": {
+            "en": "Record the repaired entrance, function checks and removal of temporary access arrangements.",
+            "zh": "记录已维修的入口、功能检测及临时通行安排的解除。"
+          },
+          "checklist": [
+            {
+              "en": "Opening and system details",
+              "zh": "出入口与系统资料"
+            },
+            {
+              "en": "Temporary entry route",
+              "zh": "临时进出路线"
+            },
+            {
+              "en": "Checks or separate inspections",
+              "zh": "操作检查或另行检验"
+            }
+          ]
+        },
+        "deliveryPhoto": {
+          "file": "editorial-work-door.webp",
+          "caption": {
+            "en": "Door handle and opening in use",
+            "zh": "门把手与门洞"
+          }
+        },
+        "titleLinesZh": [
+          "消防、安防",
+          "与门禁"
+        ],
+        "workingExample": {
+          "en": "Under the same door ID, log failure to latch and reader release faults separately for mechanical and electronic checks.",
+          "zh": "按同一门洞编号分别记录门扇无法扣合和读卡器无法解锁，供机械与电子系统检查。"
+        }
       }
     },
     {
@@ -2020,6 +2648,16 @@
                 "en": "We record leaking points, uneven coverage and spray reaching paths or neighbouring surfaces. Existing zones and accessible components help define the investigation and repair list.",
                 "zh": "我们记录漏水、覆盖不均和喷洒影响步道或邻近表面的情况，结合分区及可检修部件确认排查维修。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "Where paving stays wet, note whether spray reaches the path or water gathers after the sprinkler stops. Check if the affected controller station is known and map it against entries and deliveries. Allow separately for a damaged head, a suspect valve and drainage that remains poor after watering.",
+              "zh": "铺装持续潮湿时，记录是喷洒直接到达通道，还是停灌后积水。核对受影响控制分区，并与出入口和送货路线对照。损坏喷头、疑似阀门故障和浇灌后持续排水不畅要分别列项。"
+            },
+            {
+              "en": "We inspect the edge between planting and paved access, where overspray or root movement can affect pedestrian routes. A blocked or displaced emitter, uneven coverage and a defect underneath paving need separate scope and return checks.",
+              "zh": "我们检查种植带与铺装通道交界，核对喷洒溢出或根系位移是否影响通行。滴头堵塞或移位、覆盖不均和铺装下方的缺陷，分别确认处理和复查范围。"
             }
           ]
         },
@@ -2105,8 +2743,8 @@
                 "zh": "灌溉部件"
               },
               "text": {
-                "en": "We identify the existing arrangement and accessible components before selecting replacements. A changed spray pattern or repeated leak may require checking neighbouring parts and the zone operation.",
-                "zh": "我们核对现有布置和可检查部件再选更换件；喷洒变化或反复漏水还需核对相邻部件与分区运行。"
+                "en": "Check the existing layout before selecting replacements. For spray changes or repeated leaks, inspect neighbouring parts and zone operation.",
+                "zh": "先核对现有布置再选更换件；喷洒变化或反复漏水时检查相邻部件及分区运行。"
               }
             },
             {
@@ -2245,8 +2883,8 @@
             "zh": "为什么浇灌后铺装一直湿？"
           },
           "a": {
-            "en": "Overspray, poor drainage or a leak can each contribute. Record the affected zone and when the surface becomes wet.",
-            "zh": "喷洒外溢、排水不畅或漏点都可能有关。请记录受到影响的分区与表面变湿的时间。"
+            "en": "Check overspray, drainage and leaks. Record where and when the surface gets wet.",
+            "zh": "核对喷洒范围、排水和漏点，并记录积水分区及出现时间。"
           }
         }
       ],
@@ -2272,6 +2910,88 @@
       "detailTitle": {
         "en": "Landscaping & irrigation",
         "zh": "园林绿化与灌溉"
+      },
+      "editorial": {
+        "cover": "editorial-grounds.webp",
+        "coverAlt": {
+          "en": "Sprinklers operating over maintained grounds",
+          "zh": "使用喷灌的绿地"
+        },
+        "strap": {
+          "en": "Planting · irrigation · pathways",
+          "zh": "绿化 · 灌溉 · 通道"
+        },
+        "leadTitle": {
+          "en": "Plan planting and irrigation by zone.",
+          "zh": "按分区安排绿化与灌溉。"
+        },
+        "features": [
+          {
+            "file": "editorial-terrace.webp",
+            "caption": {
+              "en": "Outdoor planting beside a customer route",
+              "zh": "顾客通道旁的绿化"
+            },
+            "links": [
+              [
+                "sector",
+                "restaurants-cafes"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-paving.webp",
+            "caption": {
+              "en": "Planting beds and paved circulation",
+              "zh": "种植区域与铺装通行"
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "sector",
+            "restaurants-cafes"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Hand back clear paths and checked zones.",
+            "zh": "交还清理后的通道和已核对分区。"
+          },
+          "note": {
+            "en": "We record agreed irrigation checks, any surface reinstatement and the follow-up needed if ponding persists.",
+            "zh": "我们记录约定的灌溉检查、地面恢复，以及仍积水时的后续事项。"
+          },
+          "checklist": [
+            {
+              "en": "Affected planting and zone",
+              "zh": "绿化与受影响分区"
+            },
+            {
+              "en": "Paving and access restrictions",
+              "zh": "铺装与通行限制"
+            },
+            {
+              "en": "Controller checks and follow-up",
+              "zh": "控制检查及跟进"
+            }
+          ]
+        },
+        "deliveryPhoto": {
+          "file": "editorial-parking.webp",
+          "caption": {
+            "en": "Exterior surface alongside access",
+            "zh": "通道旁的室外表面"
+          }
+        },
+        "titleLinesZh": [
+          "园林绿化",
+          "与灌溉"
+        ],
+        "workingExample": {
+          "en": "Where irrigation wets a shared path, record the affected zone, when the path is busiest and which surfaces remain wet. Those details help coordinate a watering-system check with safe access and any surface repair.",
+          "zh": "灌溉打湿公共步道时，记录受影响分区、通行高峰和持续潮湿的地面。将灌溉检查与通行安排、地面维修一并考虑。"
+        }
       }
     },
     {
@@ -2336,13 +3056,23 @@
             },
             {
               "title": {
-                "en": "Visitors or deliveries miss the route",
-                "zh": "访客或送货路线不清楚"
+                "en": "Wayfinding for visitors and deliveries",
+                "zh": "访客与送货导向"
               },
               "text": {
-                "en": "We review the intended approach, destination and existing signs with your manager. The work may involve a coordinated update to several signs rather than changing one isolated arrow.",
-                "zh": "我们与负责人核对到达方向、目的地和现有标识；需求可能涉及多块标识协同更新。"
+                "en": "Review approaches, destinations and existing signs together to define the locations covered by the update.",
+                "zh": "一并核对到达方向、目的地与现有标识，列明本次更新的点位。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "Retain sound compatible frames. When tenant routes change, check entrance, directory and lift signs together.",
+              "zh": "保留完好且适配的框架；租户路线调整时，一并核对入口、目录牌与电梯标识。"
+            },
+            {
+              "en": "Check readability from visitor and delivery approaches, including junctions. Record viewing direction, fixings and lighting before artwork or quotation.",
+              "zh": "从访客和送货路线检查各岔口标识的可读性。制图和报价前记录观察方向、固定点及照明。"
             }
           ]
         },
@@ -2495,6 +3225,10 @@
             {
               "en": "Entry signs and loading directions often sit beside busy routes. We discuss installation height, access equipment, pedestrian movement, deliveries and any temporary change to the route. The agreed schedule identifies when old signage is removed and the new information becomes available.",
               "zh": "入口和装卸标识常位于繁忙路线旁。我们确认安装高度、设备、行人、送货和临时路线变化，并明确旧标识拆除与新信息启用的安排。"
+            },
+            {
+              "en": "Record sign visibility, projections above paths, lighting, face size and fixings. Check approval requirements against the proposed changes.",
+              "zh": "报价前记录标识可见范围、步道上方位置、照明、版面面积和固定方式，并按改动核对审批要求。"
             }
           ]
         },
@@ -2588,10 +3322,94 @@
           "outdoor-dining-paving-drainage"
         ]
       },
-      "sourceIds": [],
+      "sourceIds": [
+        "gc-signage"
+      ],
       "detailTitle": {
         "en": "Signage & wayfinding",
         "zh": "标识与导向"
+      },
+      "editorial": {
+        "cover": "editorial-signage.webp",
+        "coverAlt": {
+          "en": "Exterior building sign and fixing surface",
+          "zh": "建筑外部标识及其安装表面"
+        },
+        "strap": {
+          "en": "Signs · sightlines · fixings",
+          "zh": "标识 · 视线 · 固定件"
+        },
+        "leadTitle": {
+          "en": "Check the route the sign serves.",
+          "zh": "先核对标识所服务的通行路线。"
+        },
+        "features": [
+          {
+            "file": "sector-retail.jpg",
+            "caption": {
+              "en": "Storefront and street approach",
+              "zh": "店面与街道接近方向"
+            },
+            "links": [
+              [
+                "sector",
+                "retail-shopping-centres"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-loading.webp",
+            "caption": {
+              "en": "Arrival routes and delivery access",
+              "zh": "到场路线与装卸入口"
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "sector",
+            "retail-shopping-centres"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Check signs in the order visitors see them.",
+            "zh": "按访客所见顺序核对标识。"
+          },
+          "note": {
+            "en": "We record installed positions, directions from approaches and any existing sign or fixing left for further work.",
+            "zh": "我们记录安装点位、从接近方向看到的指引，以及仍需处理的原标识或固定件。"
+          },
+          "checklist": [
+            {
+              "en": "Approved artwork and locations",
+              "zh": "已确认图稿与点位"
+            },
+            {
+              "en": "Frame and substrate condition",
+              "zh": "框架与基面状态"
+            },
+            {
+              "en": "Visibility at visitor approaches",
+              "zh": "访客接近方向的可视性"
+            }
+          ]
+        },
+        "deliveryPhoto": {
+          "file": "editorial-apartments.webp",
+          "caption": {
+            "en": "Approach to a property",
+            "zh": "物业入口与接近方向"
+          }
+        },
+        "titleLinesZh": [
+          "标识",
+          "与导向"
+        ],
+        "workingExample": {
+          "en": "Photograph the sign from the direction people arrive, then record its fixings, lighting and any route that must stay open. A single fixture issue and a changed tenant directory can be planned separately.",
+          "zh": "从使用者到达的方向拍摄标识，再记录固定点、照明和需保持开放的通道。单个固定件故障与租户导向版面更新可分别安排。"
+        }
       }
     },
     {
@@ -2605,8 +3423,8 @@
         "zh": "安排外立面及不易到达部位的清洁。"
       },
       "intro": {
-        "en": "We plan façade and high-access cleaning around the building material, soiling and access method. We assess adjacent windows, coatings, landscaping and pedestrian routes before agreeing the cleaning approach. On coastal buildings, sheltered surfaces can need particular attention because normal rainfall may not wash them.",
-        "zh": "我们根据建筑材料、污渍和到达方式安排外立面与高位清洁，先核对周边玻璃、涂层、绿化及人行路线，再确认清洁方案。海边建筑中雨水难以冲洗的遮蔽部位，会纳入重点检查。"
+        "en": "Plan façade cleaning around materials, soiling and pedestrian routes. Pay attention to sheltered coastal surfaces beyond the reach of normal rainfall.",
+        "zh": "按材料、污渍和人行路线安排外立面清洁，重点检查雨水冲洗不到的沿海遮蔽部位。"
       },
       "kind": "service",
       "kicker": {
@@ -2663,6 +3481,16 @@
                 "en": "We check accessible joints and neighbouring materials before work. Their condition affects protection and the suitability of a cleaning approach near openings or sensitive finishes.",
                 "zh": "我们在清洁前核对可检查接缝及邻近材料，结合其状态安排开口和敏感饰面保护。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "Map glass, coated metal and masonry separately and note flaking, existing cracks or sealant damage before washing. Where an agreed trial is appropriate, assess the result and runoff at a representative section before extending it to more elevations. Account for people below the work and openings that must remain usable.",
+              "zh": "分别标注玻璃、涂层金属和砌体，清洁前记录剥落、裂缝或密封损伤。适合试洗时，先在代表性部位核对效果与废水去向，再扩大范围，同时考虑下方通行和必须使用的出入口。"
+            },
+            {
+              "en": "We look at how adjacent materials meet, especially coated metal, glass, sealants and painted surfaces. A useful access plan covers the work face, the area beneath it and the route for water and equipment, with the cleaning method matched to the actual finish.",
+              "zh": "我们核对相邻材料如何衔接，重点留意涂层金属、玻璃、密封胶及涂装面。登高安排同时覆盖清洁面、其下方区域以及设备与用水路线，并以实际饰面确定方法。"
             }
           ]
         },
@@ -2856,8 +3684,8 @@
             "zh": "所有外立面都适合高压清洗吗？"
           },
           "a": {
-            "en": "No. We check the substrate, coating, joints and existing damage before agreeing the method. A trial area and material-specific product guidance may be needed.",
-            "zh": "不一定。我们先检查基材、涂层、接缝和既有损伤，再确定方法；必要时试洗并核对对应材料说明。"
+            "en": "Check substrate, coating, joints and existing damage before setting the method. Base trial cleaning on guidance for the material.",
+            "zh": "检查基材、涂层、接缝及既有损伤后确定方法，按材料说明安排试洗。"
           }
         },
         {
@@ -2904,6 +3732,88 @@
       "detailTitle": {
         "en": "Façade & high-access cleaning",
         "zh": "外立面与高位清洁"
+      },
+      "editorial": {
+        "cover": "editorial-facade.webp",
+        "coverAlt": {
+          "en": "Glazed commercial facade with exterior cleaning",
+          "zh": "正在进行外部清洁的玻璃立面"
+        },
+        "strap": {
+          "en": "Surfaces · access · runoff",
+          "zh": "表面 · 高位作业 · 废水"
+        },
+        "leadTitle": {
+          "en": "Match cleaning to the facade material.",
+          "zh": "按立面材质确定清洁范围。"
+        },
+        "features": [
+          {
+            "file": "editorial-roof-edge.webp",
+            "caption": {
+              "en": "Sheltered metal cladding junction",
+              "zh": "避雨的金属覆层节点"
+            },
+            "links": [
+              [
+                "article",
+                "salt-air-coastal-building-maintenance"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-apartments.webp",
+            "caption": {
+              "en": "Facade elevations and access below",
+              "zh": "建筑立面与下方通行"
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "article",
+            "salt-air-coastal-building-maintenance"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Close out cleaning and defects separately.",
+            "zh": "分开交付清洁和既有缺陷。"
+          },
+          "note": {
+            "en": "We identify cleaned areas, existing damage and any repair item that was outside the washing scope.",
+            "zh": "我们标明已清洁位置、既有损伤及不属于清洗范围的维修事项。"
+          },
+          "checklist": [
+            {
+              "en": "Materials and existing defects",
+              "zh": "材质与既有缺陷"
+            },
+            {
+              "en": "Access and runoff plan",
+              "zh": "进场和废水安排"
+            },
+            {
+              "en": "Cleaned areas and repair notes",
+              "zh": "清洁区域与维修备注"
+            }
+          ]
+        },
+        "deliveryPhoto": {
+          "file": "editorial-coast-balcony.webp",
+          "caption": {
+            "en": "Facade interfaces and balconies",
+            "zh": "外墙交界与阳台"
+          }
+        },
+        "titleLinesZh": [
+          "外立面与",
+          "高位清洁"
+        ],
+        "workingExample": {
+          "en": "Before scheduling a shopfront elevation, mark coating transitions and the paths below. The work brief should identify where the public can pass, where equipment can stand and which surfaces need a separate test or assessment.",
+          "zh": "安排店面立面清洁前，标记不同涂层的交界和下方路径。清单写明顾客通行、设备摆放和需要单独检测或评估的表面。"
+        }
       }
     },
     {
@@ -2975,6 +3885,16 @@
                 "en": "We define the agreed work-area clean-up and removal of related waste. Wider premises cleaning, retained stock and unrelated materials are identified separately.",
                 "zh": "我们明确施工区域清场及相关废物清运，其他物业区域、保留物品和无关材料分别确认。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "Routine cleaning can target the agreed high-use surfaces. Post-work cleaning first needs a list of dust, protective films, packaging and trade debris, with collection and specialist exclusions identified. Divide work by finish where methods or drying conditions differ.",
+              "zh": "例行清洁可覆盖约定的高使用率表面。施工后清洁应先列粉尘、保护膜、包装和施工残料，明确收集及需另行专业处理的内容。方法或干燥条件不同时，按饰面划分作业。"
+            },
+            {
+              "en": "Set cleaning frequencies by source and usage for recurring water marks, grit and back-of-house waste. Record surfaces requiring repair separately.",
+              "zh": "按来源与使用时段为反复水迹、砂砾和后场废物安排清洁，另列需维修的表面。"
             }
           ]
         },
@@ -3070,8 +3990,8 @@
                 "zh": "用水与废物"
               },
               "text": {
-                "en": "We agree the site arrangements for cleaning water and waste handling. Special or uncertain waste types are identified before removal, rather than treated as ordinary general waste.",
-                "zh": "我们确认清洁水和废物的现场处理安排，特殊或不明类别在清运前核对，不混作普通废物。"
+                "en": "Agree water handling and classify each waste stream before collection.",
+                "zh": "确认清洁用水处理，并在清运前完成废物分类。"
               }
             }
           ]
@@ -3188,8 +4108,8 @@
             "zh": "报价包含废物运输和处置吗？"
           },
           "a": {
-            "en": "We identify the waste type, expected quantity and access, then state the agreed collection, transport and disposal allowance. Unidentified or different waste is confirmed before removal.",
-            "zh": "我们核对废物类型、预计数量和进场，再列明约定收集、运输与处置；不明或不同类别先确认再清运。"
+            "en": "Record waste categories, quantities and access, then specify collection, transport and disposal by category.",
+            "zh": "记录废物分类、数量与进场条件，再分列收集、运输和处置安排。"
           }
         }
       ],
@@ -3210,11 +4130,94 @@
         ]
       },
       "sourceIds": [
-        "gc-pollution"
+        "gc-pollution",
+        "eso-safe-equipment"
       ],
       "detailTitle": {
         "en": "Cleaning, waste & hygiene",
         "zh": "清洁、废物与卫生"
+      },
+      "editorial": {
+        "cover": "editorial-cleaning.webp",
+        "coverAlt": {
+          "en": "Cleaning work on tiled floor",
+          "zh": "瓷砖地面清洁作业"
+        },
+        "strap": {
+          "en": "Surfaces · waste · reopening",
+          "zh": "表面 · 废物 · 恢复使用"
+        },
+        "leadTitle": {
+          "en": "Set the cleaning scope by area and residue.",
+          "zh": "按区域及残留情况明确清洁范围。"
+        },
+        "features": [
+          {
+            "file": "sector-healthcare.jpg",
+            "caption": {
+              "en": "Shared waiting area with hard floor finishes",
+              "zh": "带硬质地面的公共候诊区域"
+            },
+            "links": [
+              [
+                "sector",
+                "education-healthcare-community"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-restaurant-counter.webp",
+            "caption": {
+              "en": "Surfaces in frequently used areas",
+              "zh": "高频使用区域的表面"
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "sector",
+            "education-healthcare-community"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Check which areas are ready for use.",
+            "zh": "核对哪些区域可以恢复使用。"
+          },
+          "note": {
+            "en": "We record completed cleaning, agreed waste handling and areas that still need drying or further work.",
+            "zh": "我们记录已清洁区域、约定的废物处理及仍需干燥或后续工作的区域。"
+          },
+          "checklist": [
+            {
+              "en": "Surface and residue list",
+              "zh": "表面与残留清单"
+            },
+            {
+              "en": "Waste inclusions and location",
+              "zh": "废物包含项与收集点"
+            },
+            {
+              "en": "Drying and use conditions",
+              "zh": "干燥与使用条件"
+            }
+          ]
+        },
+        "deliveryPhoto": {
+          "file": "editorial-terrace.webp",
+          "caption": {
+            "en": "Shared areas to check before reopening",
+            "zh": "恢复使用前需核对的公共区域"
+          }
+        },
+        "titleLinesZh": [
+          "清洁、废物",
+          "与卫生"
+        ],
+        "workingExample": {
+          "en": "Where grit reappears on a busy entry floor, note its source and the busiest crossing times. That record helps distinguish regular removal from work on damaged finishes or changes to waste handling.",
+          "zh": "入口地面反复出现砂砾时，记录来源和通行最密集的时间。这有助于区分常规清除、饰面损伤处理和废物搬运安排的调整。"
+        }
       }
     },
     {
@@ -3286,6 +4289,16 @@
                 "en": "We inspect agreed bollards, wheel stops and their fixing areas. The condition of the surrounding surface informs whether securing or replacing the item also needs local surface work.",
                 "zh": "我们检查确认的防撞柱、挡块及固定位置，并结合周边表面确定是否需要局部修复。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "Separate loose surface material from movement in the support layer, and mark whether ponding reaches an entry or loading turn. Compare a small isolated patch with staged work that requires a revised pedestrian route and agreed release of completed bays.",
+              "zh": "区分面层松散与基层移动，标注积水是否延伸到入口或装卸转弯处。小范围修补可单独评估；分区施工则要调整人行路线，并约定完成车位交还。"
+            },
+            {
+              "en": "We mark damage against bays, access aisles and delivery routes, and check whether water repeatedly crosses the same low point. The plan should show how people and vehicles pass each work stage, including where sections can reopen before later work.",
+              "zh": "我们按车位、通行道和送货路线标记损坏，并核对雨水是否反复经过同一低点。施工安排明确各阶段的人车路线，以及哪些分区可先交还使用。"
             }
           ]
         },
@@ -3489,8 +4502,8 @@
             "zh": "清理后为什么仍反复积水？"
           },
           "a": {
-            "en": "Debris may be only one factor. We review surface falls, accessible outlets and connected drainage to define whether cleaning, repair or a wider change needs to be considered.",
-            "zh": "积屑可能只是其中一个因素；我们核对坡度、出水口和连接排水，确定清理、修复或较大改动范围。"
+            "en": "Check debris, falls, outlets and connected drainage together before specifying cleaning or repairs.",
+            "zh": "检查积屑、坡度、出水口和连接排水后，再确定清理及维修范围。"
           }
         },
         {
@@ -3527,6 +4540,88 @@
       "detailTitle": {
         "en": "Car parks & external works",
         "zh": "停车场与室外工程"
+      },
+      "editorial": {
+        "cover": "editorial-parking.webp",
+        "coverAlt": {
+          "en": "Marked circulation lanes in a parking structure",
+          "zh": "停车区内有标线的通行路线"
+        },
+        "strap": {
+          "en": "Surface · drainage · circulation",
+          "zh": "面层 · 排水 · 通行"
+        },
+        "leadTitle": {
+          "en": "Define the work around circulation and drainage.",
+          "zh": "结合通行与排水明确施工范围。"
+        },
+        "features": [
+          {
+            "file": "editorial-loading.webp",
+            "caption": {
+              "en": "Vehicle entry at a commercial loading area",
+              "zh": "商业装卸区车辆入口"
+            },
+            "links": [
+              [
+                "sector",
+                "warehouses-logistics"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-paving.webp",
+            "caption": {
+              "en": "Paving joints and grade transitions",
+              "zh": "铺装接缝与坡度过渡"
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "sector",
+            "warehouses-logistics"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Release traffic by area.",
+            "zh": "按区域恢复通行。"
+          },
+          "note": {
+            "en": "We record the repair area, agreed surface checks and any restriction or curing condition before a bay or path reopens.",
+            "zh": "我们记录维修区域、约定面层检查及车位或通道开放前的限制与养护条件。"
+          },
+          "checklist": [
+            {
+              "en": "Location and drainage evidence",
+              "zh": "位置与排水记录"
+            },
+            {
+              "en": "Temporary traffic route",
+              "zh": "临时通行路线"
+            },
+            {
+              "en": "Release conditions by area",
+              "zh": "逐区开放条件"
+            }
+          ]
+        },
+        "deliveryPhoto": {
+          "file": "sector-industrial.jpg",
+          "caption": {
+            "en": "Building access and hardstand",
+            "zh": "建筑通行与室外硬化地面"
+          }
+        },
+        "titleLinesZh": [
+          "停车场与",
+          "室外工程"
+        ],
+        "workingExample": {
+          "en": "Mark damaged bays and low spots on delivery routes separately. Agree alternate routes and reopening checks for each stage.",
+          "zh": "分开标记破损车位与送货通道低点，逐阶段确认替代路线与开放前检查。"
+        }
       }
     },
     {
@@ -3653,8 +4748,8 @@
                 "zh": "油漆、饰面与固定木作"
               },
               "text": {
-                "en": "We agree the preparation and finish boundaries, matching requirements and retained items. A local patch may need a wider finishing area depending on the agreed appearance.",
-                "zh": "我们确认基层处理、饰面边界、匹配和保留项目，结合约定外观判断局部修补是否需扩大饰面范围。"
+                "en": "Set substrate preparation, retained finishes and the patch boundary against the agreed appearance.",
+                "zh": "按约定外观确定基层处理、保留饰面和修补边界。"
               }
             },
             {
@@ -3666,6 +4761,16 @@
                 "en": "We map removal, making good around former fixtures, material movement and waste. Items outside the brief remain visible as separate decisions rather than being silently assumed.",
                 "zh": "我们明确拆除、原固定件周边恢复、材料运输及废物，超出需求的项目另行确认。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "Put the agreed handback list next to a room plan. Mark fixtures to retain, remove or make good and where a patch has to meet an adjoining finish. Sequence access, removal, repairs, finishing and cleaning so changed scope can be approved before it is covered by the next trade.",
+              "zh": "把约定的交还清单与平面图一起核对，标出保留、拆除及恢复的设施，以及局部修补与相邻饰面的交接。安排进场、拆除、修复、饰面及清洁顺序，便于变更在下一工种覆盖前确认。"
+            },
+            {
+              "en": "We compare the signed scope, the items that remain and the areas where services or fixings will be exposed after removal. Recording this before stripping out makes it easier to agree patching limits, retained finishes and the condition expected at handover.",
+              "zh": "拆除前，我们对照已确认范围和保留物，核对移除后会露出的设备接口与固定点。提前记录这些条件，便于明确修补边界、保留饰面和交还标准。"
             }
           ]
         },
@@ -3693,8 +4798,8 @@
                 "zh": "材料与饰面决定"
               },
               "text": {
-                "en": "We confirm specified materials, colours, sheen and matching expectations before ordering. Availability and retained surfaces can affect the work boundary and stage sequence.",
-                "zh": "订料前确认材料、颜色、光泽和匹配要求；供应及保留表面可能影响边界和施工顺序。"
+                "en": "Confirm material, colour and sheen before ordering. Set work order and finish boundaries around supply and retained surfaces.",
+                "zh": "订料前确认材料、颜色与光泽，再按供货及保留饰面确定工序和施工边界。"
               }
             }
           ]
@@ -3839,6 +4944,88 @@
       "detailTitle": {
         "en": "Fit-outs & make-good",
         "zh": "装修改造与退租恢复"
+      },
+      "editorial": {
+        "cover": "editorial-fitout.webp",
+        "coverAlt": {
+          "en": "Interior lining and repair work",
+          "zh": "室内墙面与修复作业"
+        },
+        "strap": {
+          "en": "Retain · remove · reinstate",
+          "zh": "保留 · 拆除 · 恢复"
+        },
+        "leadTitle": {
+          "en": "Mark the retained and reinstated work clearly.",
+          "zh": "清楚标出保留和恢复内容。"
+        },
+        "features": [
+          {
+            "file": "sector-office.jpg",
+            "caption": {
+              "en": "Office area before tenancy handback",
+              "zh": "租区交还涉及的办公区域"
+            },
+            "links": [
+              [
+                "sector",
+                "offices-mixed-use"
+              ]
+            ]
+          },
+          {
+            "file": "coastal-maintenance-editorial.png",
+            "caption": {
+              "en": "Joinery and existing finishes at an opening",
+              "zh": "入口木作与原有饰面"
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "sector",
+            "offices-mixed-use"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Check the work against the handback list.",
+            "zh": "对照交还清单核对完工。"
+          },
+          "note": {
+            "en": "We record what is complete by room or tenancy area, along with approved changes and any unfinished item awaiting review.",
+            "zh": "我们按房间或租区记录完成内容、已批准变更和仍待复核的事项。"
+          },
+          "checklist": [
+            {
+              "en": "Agreed handback scope",
+              "zh": "约定的交还范围"
+            },
+            {
+              "en": "Materials and finish match",
+              "zh": "材料与饰面匹配"
+            },
+            {
+              "en": "Close-out by room or tenancy",
+              "zh": "逐房间或租区销项"
+            }
+          ]
+        },
+        "deliveryPhoto": {
+          "file": "editorial-work-paint.webp",
+          "caption": {
+            "en": "Existing finish condition",
+            "zh": "原有饰面状况"
+          }
+        },
+        "titleLinesZh": [
+          "装修改造",
+          "与退租恢复"
+        ],
+        "workingExample": {
+          "en": "Photograph retained finishes before removal work and mark where joinery, partitioning or services meet surfaces that stay. That record gives the team a shared basis for checking repairs at handover.",
+          "zh": "拆除前拍摄保留饰面，并标记木作、隔墙或设备接口与保留面的交界。交接时以这份记录共同核对修补边界。"
+        }
       }
     }
   ],
@@ -3913,6 +5100,12 @@
                 "en": "We connect agreed roof, drainage, lighting and air-conditioning work with the spaces affected below. Gardens, terraces and pool-surround paving are scoped by area and material.",
                 "zh": "我们将已确认的屋面、排水、照明和空调工作与下方受影响区域衔接，按区域和材料划分园林、露台及泳池周边铺装工作。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "Make three work lists before booking a visit: guest rooms by room number, public areas by route or level, and food and beverage areas by trading window. A loose handle can use a vacant room slot. A bathroom joint needs a dry-out and cure allowance. Terrace work also depends on keeping a suitable guest route open.",
+              "zh": "进场前分三份清单：客房按房号，公共区域按路线或楼层，餐饮区域按营业窗口。松动把手可利用空房时段，浴室节点维修需要留出干燥与固化时间。露台施工还需确认客人可用通道。"
             }
           ]
         },
@@ -3998,8 +5191,8 @@
                 "zh": "确认房间交出"
               },
               "text": {
-                "en": "We agree who provides keys, which adjacent spaces remain occupied and when power, water or air conditioning may be interrupted.",
-                "zh": "我们确认钥匙联系人、相邻空间入住状态，以及电、水或空调可以暂停的时间。"
+                "en": "Agree who provides keys, occupancy of nearby rooms and interruptions to power, water or cooling.",
+                "zh": "确认钥匙联系人、相邻空间使用安排及水电空调停用时段。"
               }
             },
             {
@@ -4085,8 +5278,12 @@
               "zh": "我们按客房或区域列明已完成项目、仍需配件和约定的下一次进场。交付记录清楚区分已完成工作，以及仍等待材料条件或进一步调查的区域。"
             },
             {
-              "en": "We hand rooms and public areas back by agreed stage, recording what was checked, any cleaning or drying outstanding and who confirms release to guests.",
-              "zh": "我们按约定阶段交还客房及公共区域，记录检查事项、尚待清洁或干燥的部分，以及谁确认可重新接待客人。"
+              "en": "Hand rooms and public areas back in stages. Record cleaning, drying, checks and responsibility for reopening.",
+              "zh": "按阶段交还客房和公共区域，记录清洁、干燥、检查及开放负责人。"
+            },
+            {
+              "en": "We separate rooms ready to release, rooms waiting on parts and areas that still need drying or a final function check. At reception, that distinction makes the handover usable: staff can see which rooms can go back into inventory and which access window to hold.",
+              "zh": "我们分开标记可交回的客房、等待配件的客房，以及仍需干燥或功能复查的区域。前台据此确认哪些客房可以重新安排入住，哪些仍需保留维修时段。"
             }
           ]
         }
@@ -4098,8 +5295,8 @@
             "zh": "所有维修都能安排在退房和入住之间吗？"
           },
           "a": {
-            "en": "We assess the task and materials before agreeing that window. Hardware adjustments may have different requirements from coatings, sealants or work that interrupts shared services. We set out the room-release conditions before booking attendance.",
-            "zh": "我们先核对任务和材料，再确认能否使用这一窗口。五金调整与涂层、密封材料或影响公共系统的工作，要求各不相同；安排进场前会列明客房交出条件。"
+            "en": "Agree room release requirements before scheduling hardware, coatings, sealants or shared-service work.",
+            "zh": "按五金、涂层、密封处理或共用设施作业确认交房条件，再安排进场。"
           }
         },
         {
@@ -4137,6 +5334,215 @@
       "detailTitle": {
         "en": "Hotels & resorts",
         "zh": "酒店与度假村"
+      },
+      "editorial": {
+        "cover": "coastal-resort-editorial.png",
+        "coverAlt": {
+          "en": "Sunlit resort pool and guest areas",
+          "zh": "阳光下的度假村泳池与客用区域"
+        },
+        "strap": {
+          "en": "Rooms · shared areas · terraces",
+          "zh": "客房 · 公共空间 · 餐饮露台"
+        },
+        "leadTitle": {
+          "en": "One property, different work windows.",
+          "zh": "同一座物业，不同的工作安排。"
+        },
+        "features": [
+          {
+            "file": "editorial-hotel-door.webp",
+            "caption": {
+              "en": "Guest-room entry hardware",
+              "zh": "客房门五金"
+            },
+            "links": [
+              [
+                "service",
+                "building-maintenance"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-hotel-terrace.webp",
+            "caption": {
+              "en": "Outdoor hospitality terrace",
+              "zh": "餐饮与户外露台"
+            },
+            "links": [
+              [
+                "article",
+                "outdoor-dining-paving-drainage"
+              ]
+            ]
+          }
+        ],
+        "compareLinks": [
+          [
+            "service",
+            "building-maintenance"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Release by room and area.",
+            "zh": "按房号与区域交付。"
+          },
+          "note": {
+            "en": "We record what has been checked, where cleaning or drying is still needed, and who releases each space back to reception or the duty manager.",
+            "zh": "我们记录已检查内容、仍需清洁或干燥的部位，以及由谁向前台或值班经理确认空间重新开放。"
+          },
+          "checklist": [
+            {
+              "en": "Completed rooms and areas",
+              "zh": "已完成房号与区域"
+            },
+            {
+              "en": "Function checks and agreed photos",
+              "zh": "功能检查及约定照片"
+            },
+            {
+              "en": "Rooms on hold and release conditions",
+              "zh": "暂缓开放与交还条件"
+            }
+          ]
+        },
+        "scene": {
+          "file": "editorial-property-lobby.webp",
+          "caption": {
+            "en": "Hotel lobby finishes and circulation",
+            "zh": "酒店大堂饰面和通行空间"
+          },
+          "points": [
+            {
+              "x": 17,
+              "y": 61,
+              "label": {
+                "en": "Entry and circulation",
+                "zh": "入口与通行"
+              }
+            },
+            {
+              "x": 58,
+              "y": 72,
+              "label": {
+                "en": "Shared floor finish",
+                "zh": "公共地面饰面"
+              }
+            },
+            {
+              "x": 83,
+              "y": 40,
+              "label": {
+                "en": "Wall openings",
+                "zh": "墙面开口"
+              }
+            }
+          ]
+        },
+        "deliveryPhoto": {
+          "file": "editorial-coast-sunset.webp",
+          "caption": {
+            "en": "Surfers Paradise at sunset",
+            "zh": "日落时的冲浪者天堂"
+          }
+        },
+        "nav": {
+          "where-we-work": {
+            "en": "Rooms & shared areas",
+            "zh": "客房与公共区域"
+          },
+          "access-sequence": {
+            "en": "Occupied areas",
+            "zh": "在用区域"
+          },
+          "choose-the-work-package": {
+            "en": "Work by area",
+            "zh": "分区维护"
+          },
+          "parts-and-finishes": {
+            "en": "Materials & finishes",
+            "zh": "配件与饰面"
+          },
+          "prepare-the-brief": {
+            "en": "Access checklist",
+            "zh": "进场清单"
+          },
+          "handover": {
+            "en": "Room handover",
+            "zh": "按房号交付"
+          }
+        },
+        "workflow": [
+          {
+            "area": {
+              "en": "Guest rooms",
+              "zh": "客房"
+            },
+            "steps": [
+              {
+                "en": "Check room availability",
+                "zh": "确认房态"
+              },
+              {
+                "en": "Work by room",
+                "zh": "分房施工"
+              },
+              {
+                "en": "Check and release",
+                "zh": "检查与交回"
+              }
+            ]
+          },
+          {
+            "area": {
+              "en": "Shared areas",
+              "zh": "公共区域"
+            },
+            "steps": [
+              {
+                "en": "Confirm routes",
+                "zh": "确认通行"
+              },
+              {
+                "en": "Work by zone",
+                "zh": "分区处理"
+              },
+              {
+                "en": "Reopen access",
+                "zh": "恢复使用"
+              }
+            ]
+          },
+          {
+            "area": {
+              "en": "Dining terrace",
+              "zh": "餐饮露台"
+            },
+            "steps": [
+              {
+                "en": "Confirm trading window",
+                "zh": "确认营业窗口"
+              },
+              {
+                "en": "Protect and repair",
+                "zh": "防护与维修"
+              },
+              {
+                "en": "Clear and recheck",
+                "zh": "清场与复查"
+              }
+            ]
+          }
+        ],
+        "titleLinesZh": [
+          "酒店与",
+          "度假村维护"
+        ],
+        "workingExample": {
+          "en": "Schedule hardware adjustments in an agreed booking gap. Record drying time and release checks for finish repairs by room number.",
+          "zh": "五金调整安排在约定的订房间隙，饰面修补按房号记录干燥及放房检查。"
+        }
       }
     },
     {
@@ -4153,7 +5559,7 @@
         "en": "We work to the scope approved by your body corporate or property representative. We coordinate common-area access, resident notices and contractor attendance, then document what was completed. We identify the relevant building areas and boundaries when defining the job.",
         "zh": "我们按业主委员会或物业代表确认的范围施工，协调公共区域进场、住户通知及施工人员安排，并记录完工内容。确认项目时，我们核对相关建筑区域及工作边界。"
       },
-      "image": "coast-hero.webp",
+      "image": "editorial-apartments.webp",
       "kind": "sector",
       "kicker": {
         "en": "SHARED SPACES. CLEAR SCOPE.",
@@ -4199,6 +5605,12 @@
                 "en": "Reported roof, balcony, façade, paving and drainage issues are separated by building element. Access above, below and through occupied areas is recorded with the defect.",
                 "zh": "屋顶、阳台、立面、铺装和排水问题按建筑构件区分，缺陷记录同时说明上方、下方及使用中区域的进出条件。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "On a common-area list, keep the address, level, side and defect number on each row. Identify which issues need a committee decision, a lot owner’s access or a manager’s approval. Check the applicable plan and agreed work boundary before combining a private defect with corridor repairs.",
+              "zh": "公共区清单的每一项写明地址、楼层、方位与缺陷编号，标出需要委员会决定、业主配合进场或管理方批准的事项。把专有区域缺陷与走廊维修合并前，先核对适用的物业计划和已批准范围。"
             }
           ]
         },
@@ -4361,8 +5773,12 @@
           },
           "paragraphs": [
             {
-              "en": "We match completion notes and photographs to the agreed defect list. Outstanding parts, additional decisions and follow-up observation remain clearly marked, so the property representative can see which items are complete and what still needs action.",
-              "zh": "我们将完工说明和照片对应到已确认缺陷清单。未到配件、待定事项与后续观察明确标记，让物业代表清楚哪些项目已完成、哪些仍需推进。"
+              "en": "Match completion notes and photos to the approved defect list. Record parts orders and follow-up checks separately.",
+              "zh": "将完工说明和照片对应到缺陷清单，另列配件订货与复查。"
+            },
+            {
+              "en": "A location written as level, entry and element is easier to verify than a general request for the building. We match each item to the approved common-area scope, record who provides access and preserve a route past work where residents still need to use the building.",
+              "zh": "用楼层、入口和部件记录位置，比只写楼名更容易复核。我们将每项工作对应到已批准的公共区域范围，记录进场联系人，并为仍在使用建筑的住户保留可行通道。"
             }
           ]
         }
@@ -4424,6 +5840,143 @@
       "detailTitle": {
         "en": "Apartments & body corporate",
         "zh": "公寓与共同物业"
+      },
+      "editorial": {
+        "cover": "editorial-apartments.webp",
+        "coverAlt": {
+          "en": "Apartment facade with shared circulation and balconies",
+          "zh": "带共享通行空间与阳台的公寓建筑"
+        },
+        "strap": {
+          "en": "Shared areas · approvals · access",
+          "zh": "公共区域 · 审批 · 通行"
+        },
+        "leadTitle": {
+          "en": "Organise defects before scheduling access.",
+          "zh": "先把缺陷和通行范围分清。"
+        },
+        "features": [
+          {
+            "file": "editorial-access.webp",
+            "caption": {
+              "en": "Access control at an entrance",
+              "zh": "入口通行控制"
+            },
+            "links": [
+              [
+                "service",
+                "fire-security-access"
+              ]
+            ]
+          },
+          {
+            "file": "coastal-maintenance-editorial.png",
+            "caption": {
+              "en": "Shared property entry and finishes",
+              "zh": "共同物业入口与饰面"
+            },
+            "links": [
+              [
+                "article",
+                "body-corporate-common-area-repairs"
+              ]
+            ]
+          }
+        ],
+        "compareLinks": [
+          [
+            "service",
+            "fire-security-access"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Close out against the approved list.",
+            "zh": "逐项核对已批准的工作。"
+          },
+          "note": {
+            "en": "We keep completed work and matters awaiting a resident, manager or committee decision against the same location numbers.",
+            "zh": "我们沿用同一组点位编号，区分已完成工作和仍待住户、管理方或委员会确认的事项。"
+          },
+          "checklist": [
+            {
+              "en": "Numbered locations and marked plan",
+              "zh": "带编号的点位与标注图"
+            },
+            {
+              "en": "Approval and notice contact",
+              "zh": "审批与通知联系人"
+            },
+            {
+              "en": "Open items by location",
+              "zh": "逐点位跟进事项"
+            }
+          ]
+        },
+        "scene": {
+          "file": "editorial-paving.webp",
+          "caption": {
+            "en": "Shared exterior paving and access",
+            "zh": "共同物业室外铺装与通行"
+          }
+        },
+        "workflow": [
+          {
+            "area": {
+              "en": "Entry",
+              "zh": "入口"
+            },
+            "steps": [
+              {
+                "en": "Confirm approval",
+                "zh": "核对批准范围"
+              },
+              {
+                "en": "Keep a route open",
+                "zh": "保持通行"
+              },
+              {
+                "en": "Check door and finishes",
+                "zh": "检查门扇与饰面"
+              }
+            ]
+          },
+          {
+            "area": {
+              "en": "Outdoor common areas",
+              "zh": "室外公共区域"
+            },
+            "steps": [
+              {
+                "en": "Confirm boundaries",
+                "zh": "确认边界"
+              },
+              {
+                "en": "Work in zones",
+                "zh": "按区施工"
+              },
+              {
+                "en": "Reopen to residents",
+                "zh": "恢复住户使用"
+              }
+            ]
+          }
+        ],
+        "deliveryPhoto": {
+          "file": "sector-hotel.jpg",
+          "caption": {
+            "en": "Shared outdoor amenities",
+            "zh": "共用室外设施"
+          }
+        },
+        "titleLinesZh": [
+          "公寓与",
+          "共同物业维护"
+        ],
+        "workingExample": {
+          "en": "For several defects along a shared corridor, match each item to its location and approved scope. Agree the route residents will use during the work and who verifies the area before barriers are removed.",
+          "zh": "公共走廊有多处缺陷时，逐项对应位置与批准范围。先确认施工期间住户如何通行，以及撤除隔挡前由谁核对。"
+        }
       }
     },
     {
@@ -4440,7 +5993,7 @@
         "en": "We plan maintenance for dining areas, amenities, entrances and back-of-house spaces around the way your venue operates. We confirm work zones, services affected and clean-up requirements before attendance, and separate routine repairs from larger changes to the premises.",
         "zh": "我们按门店运营方式安排用餐区、卫生间、入口及后勤空间维护，进场前确认施工区域、受影响系统和清场要求，并区分日常维修与较大场所改造。"
       },
-      "image": "sector-hospitality.jpg",
+      "image": "editorial-restaurant-counter.webp",
       "kind": "sector",
       "kicker": {
         "en": "SERVICE HOURS. SORTED WORK.",
@@ -4496,6 +6049,12 @@
                 "en": "We review the agreed paving, entrance, fixed items and drainage points with tables, deliveries and pedestrian movement in mind.",
                 "zh": "我们结合桌椅、送货与行人路线，核对已确认的铺装、入口、固定设施和排水点。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "Distinguish a loose threshold on the customer route from a leaking fixture or slow drain in the back of house. Reserve enough time for clean-up and returning equipment before service. If dining occupies public land, check the approved layout before moving seating or narrowing the pedestrian route.",
+              "zh": "区分顾客通道上松动的门槛，和后场用水器具漏水或排水缓慢。开餐前留够清洁和设备复位时间。室外餐位如位于公共用地，移动座位或调整人行通道前核对已批准布置。"
             }
           ]
         },
@@ -4650,6 +6209,10 @@
             {
               "en": "We provide a record of completed items, the checks actually carried out and any agreed follow-up. Clean-up is confirmed against the work area, with remaining reopening conditions made clear to your manager.",
               "zh": "我们记录完成项目、实际检查及约定后续工作，按施工区域确认清场，并向负责人明确尚存的重新开放条件。"
+            },
+            {
+              "en": "Set protection, drying and clearing times separately for service counter and terrace work.",
+              "zh": "按服务台与露台各自受影响区域确定防护、干燥和清场时段。"
             }
           ]
         }
@@ -4699,6 +6262,143 @@
       "detailTitle": {
         "en": "Restaurants & cafés",
         "zh": "餐厅与咖啡馆"
+      },
+      "editorial": {
+        "cover": "editorial-restaurant-counter.webp",
+        "coverAlt": {
+          "en": "Restaurant service counter and dining room",
+          "zh": "餐饮场所的服务台与用餐区"
+        },
+        "strap": {
+          "en": "Front · back · outdoor service",
+          "zh": "前场 · 后场 · 户外营业"
+        },
+        "leadTitle": {
+          "en": "Plan each area around its service window.",
+          "zh": "分别按营业窗口安排前后场。"
+        },
+        "features": [
+          {
+            "file": "editorial-paving.webp",
+            "caption": {
+              "en": "Paving beside outdoor seating",
+              "zh": "户外餐位旁的铺装"
+            },
+            "links": [
+              [
+                "article",
+                "outdoor-dining-paving-drainage"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-plumbing.webp",
+            "caption": {
+              "en": "Pipework at a wet-area work point",
+              "zh": "用水区域的管线作业"
+            },
+            "links": [
+              [
+                "service",
+                "plumbing-drainage-gas"
+              ]
+            ]
+          }
+        ],
+        "compareLinks": [
+          [
+            "article",
+            "outdoor-dining-paving-drainage"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Hand back by trading area.",
+            "zh": "按营业区域交还。"
+          },
+          "note": {
+            "en": "We record the areas available for service, the routes in use and any outstanding drying or cleaning requirement.",
+            "zh": "我们记录可营业区域、可通行路线及仍需干燥或清洁的事项。"
+          },
+          "checklist": [
+            {
+              "en": "Trading and delivery windows",
+              "zh": "营业与送货窗口"
+            },
+            {
+              "en": "Routes and protection",
+              "zh": "路线与保护措施"
+            },
+            {
+              "en": "Area release checks",
+              "zh": "恢复营业检查"
+            }
+          ]
+        },
+        "scene": {
+          "file": "editorial-hotel-terrace.webp",
+          "caption": {
+            "en": "Outdoor dining circulation",
+            "zh": "露天餐饮通行区域"
+          }
+        },
+        "workflow": [
+          {
+            "area": {
+              "en": "Service counter",
+              "zh": "服务台"
+            },
+            "steps": [
+              {
+                "en": "Check trading window",
+                "zh": "确认营业时段"
+              },
+              {
+                "en": "Protect service surfaces",
+                "zh": "保护服务表面"
+              },
+              {
+                "en": "Clean and reopen",
+                "zh": "清洁后开放"
+              }
+            ]
+          },
+          {
+            "area": {
+              "en": "Outdoor dining",
+              "zh": "户外餐区"
+            },
+            "steps": [
+              {
+                "en": "Mark table and access routes",
+                "zh": "标记桌位及通行"
+              },
+              {
+                "en": "Work on surface and drainage",
+                "zh": "处理地面与排水"
+              },
+              {
+                "en": "Check before seating",
+                "zh": "复查后摆台"
+              }
+            ]
+          }
+        ],
+        "deliveryPhoto": {
+          "file": "editorial-terrace.webp",
+          "caption": {
+            "en": "Dining area before reopening",
+            "zh": "恢复使用前的餐饮区域"
+          }
+        },
+        "titleLinesZh": [
+          "餐厅与",
+          "咖啡馆维护"
+        ],
+        "workingExample": {
+          "en": "Map terrace tables, staff paths and shared delivery routes. Record when the surface is available for setting tables again.",
+          "zh": "标明露台桌位、送餐及共用送货路线，记录恢复摆台时间。"
+        }
       }
     },
     {
@@ -4712,8 +6412,8 @@
         "zh": "配合营业时段和装卸进场安排店面维修。"
       },
       "intro": {
-        "en": "We coordinate retail maintenance with shop operators and centre management. We establish the repair area, delivery access and any trading restrictions, then organise work to shopfronts, fittings, signs and shared areas. Handover records identify the completed items and any outstanding decisions.",
-        "zh": "我们与店铺经营者及商场管理方协调维护，明确维修区域、材料进场及营业限制，再安排店面、配件、招牌和公共区域工作。交付记录列明完工项目及尚待确认事项。"
+        "en": "Coordinate shopfronts, fittings, signs and common areas with shop operators and centre management. Record completed work by area.",
+        "zh": "与店铺经营者和商场管理方协调店面、配件、招牌及公共区域维修，按区域记录完工。"
       },
       "image": "sector-retail.jpg",
       "kind": "sector",
@@ -4771,6 +6471,12 @@
                 "en": "Agreed directories, common-area fittings, external surfaces and access points are scoped with centre management and the relevant work boundaries.",
                 "zh": "约定目录、公共配件、室外表面和出入口，与商场管理方核对后确定工作边界。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "List the frontage, trading floor, back-of-house and common areas separately. Confirm centre approval for noisy work and loading dock use before combining more than one shop. If a display or fitting stays in place, identify the protection and reinstatement allowance in the scope.",
+              "zh": "分别列出店面、营业区、后场和公共区域。合并多间店铺施工前，确认商场批准噪声作业和卸货区使用。展示设施或固定装置保留时，把保护及恢复项目写入范围。"
             }
           ]
         },
@@ -4939,12 +6645,16 @@
           },
           "paragraphs": [
             {
-              "en": "We record completed items by tenancy or common area, check the operation or finish included in the scope and list remaining parts or decisions. For make-good work, completion is matched to the agreed itemised brief.",
-              "zh": "我们按租区或公共区域记录完成项目，复核约定功能或饰面，并列明未到配件或待定事项。退租恢复按双方确认的逐项清单交付。"
+              "en": "Record work and finish checks by tenancy or common area. Match make-good handover to the agreed itemised brief.",
+              "zh": "按租区或公共区域记录完工与饰面检查，按约定清单交付退租恢复。"
             },
             {
               "en": "Confirm centre approval, stock protection, customer paths, loading dock and goods lift access. Establish when noisy work or temporary closures are possible.",
               "zh": "确认商场批准、商品保护、顾客路线、卸货区及货梯安排，并明确可进行噪声作业或临时封闭的时段。"
+            },
+            {
+              "en": "We keep storefront, leased area and centre common area as separate entries, with their own contacts and access windows. Where work moves between a customer-facing area and the loading side, we record the temporary route and the order in which each area can reopen.",
+              "zh": "我们分列店面、租区和商场公共区域，对应各自负责人和进场时段。施工如横跨顾客区域与装卸侧，我们会记录临时通行路线和各区恢复使用的顺序。"
             }
           ]
         }
@@ -4966,8 +6676,8 @@
             "zh": "可以按房东的退租清单报价吗？"
           },
           "a": {
-            "en": "We use the list with the tenancy condition and retained items to define the work. Any unclear finish, removal or service requirement is identified before the final scope is agreed.",
-            "zh": "我们结合清单、租区现状和保留项目定义工作；最终确认范围前，会列出尚不明确的饰面、拆除或设施要求。"
+            "en": "Use tenancy condition and retained items to agree finishes, removal and building-service work.",
+            "zh": "按租区现状和保留项目明确饰面、拆除及设施工作范围。"
           }
         },
         {
@@ -5002,11 +6712,149 @@
       },
       "sourceIds": [
         "assa-hardware-care",
-        "gyprock-maintenance"
+        "gyprock-maintenance",
+        "gc-signage"
       ],
       "detailTitle": {
         "en": "Retail & shopping centres",
         "zh": "零售与购物中心"
+      },
+      "editorial": {
+        "cover": "sector-retail.jpg",
+        "coverAlt": {
+          "en": "Retail frontage and customer approach",
+          "zh": "零售店面与顾客接近路线"
+        },
+        "strap": {
+          "en": "Shopfront · tenancy · customers",
+          "zh": "店面 · 租区 · 顾客通行"
+        },
+        "leadTitle": {
+          "en": "Separate tenancy work from shared routes.",
+          "zh": "分清租区与公共通道的工作。"
+        },
+        "features": [
+          {
+            "file": "editorial-signage.webp",
+            "caption": {
+              "en": "Building sign and storefront fixing points",
+              "zh": "建筑标识及店面固定点"
+            },
+            "links": [
+              [
+                "service",
+                "signage-wayfinding"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-fitout.webp",
+            "caption": {
+              "en": "Interior work before returning a tenancy",
+              "zh": "租区交还前的室内作业"
+            },
+            "links": [
+              [
+                "service",
+                "fit-outs-make-good"
+              ]
+            ]
+          }
+        ],
+        "compareLinks": [
+          [
+            "service",
+            "signage-wayfinding"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Return each area to the operator.",
+            "zh": "逐区域交还给经营方。"
+          },
+          "note": {
+            "en": "We check completed work against the agreed tenancy boundary and record any restrictions or make-good items needing another visit.",
+            "zh": "我们按约定租区边界核对已完工内容，记录仍有限制或需再进场的恢复事项。"
+          },
+          "checklist": [
+            {
+              "en": "Unit and boundary",
+              "zh": "单元和范围边界"
+            },
+            {
+              "en": "Access and loading book-in",
+              "zh": "进场及装卸预约"
+            },
+            {
+              "en": "Release by tenancy",
+              "zh": "按租区交还"
+            }
+          ]
+        },
+        "scene": {
+          "file": "editorial-loading.webp",
+          "caption": {
+            "en": "Delivery-side access and staging",
+            "zh": "后场装卸与分区安排"
+          }
+        },
+        "workflow": [
+          {
+            "area": {
+              "en": "Shopfront",
+              "zh": "店面"
+            },
+            "steps": [
+              {
+                "en": "Set customer route",
+                "zh": "确定顾客路线"
+              },
+              {
+                "en": "Work outside peak periods",
+                "zh": "避开高峰施工"
+              },
+              {
+                "en": "Reopen frontage",
+                "zh": "恢复店面使用"
+              }
+            ]
+          },
+          {
+            "area": {
+              "en": "Loading and back of house",
+              "zh": "装卸与后场"
+            },
+            "steps": [
+              {
+                "en": "Confirm deliveries",
+                "zh": "确认送货"
+              },
+              {
+                "en": "Protect stock and access",
+                "zh": "保护货物与通道"
+              },
+              {
+                "en": "Return the service route",
+                "zh": "交回后场通道"
+              }
+            ]
+          }
+        ],
+        "deliveryPhoto": {
+          "file": "editorial-work-door.webp",
+          "caption": {
+            "en": "Door and finish condition",
+            "zh": "门扇与饰面状况"
+          }
+        },
+        "titleLinesZh": [
+          "零售与",
+          "购物中心维护"
+        ],
+        "workingExample": {
+          "en": "Distinguish the area controlled by the retailer from the centre’s shared frontage and delivery side. Confirm who opens each area and when customer or delivery traffic can use it again.",
+          "zh": "区分商家管理的店内区域、商场共用店前区域和装卸侧。逐区确认由谁开放，以及顾客或送货人员何时恢复通行。"
+        }
       }
     },
     {
@@ -5079,6 +6927,12 @@
                 "en": "For local alterations and make-good, we distinguish retained fittings, removals, service coordination and final finishes against the agreed brief.",
                 "zh": "局部改造与退租恢复按需求清单，分别列明保留配件、拆除、设施协调及最终饰面。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "Match meeting-room defects, corridor finishes and shared amenities to different release windows. When work crosses several floors, confirm which areas can be isolated and whether a notice must reach staff, visitors or more than one tenant. Identify who has keys and who confirms return to use.",
+              "zh": "会议室缺陷、走廊饰面和共用配套设施，各自对应不同交还窗口。跨楼层作业先确定哪些区域可隔离，并确认是否要通知员工、访客或多个租户。明确谁持钥匙、谁确认恢复使用。"
             }
           ]
         },
@@ -5231,8 +7085,12 @@
           },
           "paragraphs": [
             {
-              "en": "We list completed work by room or zone, record the checks relevant to the task and identify any outstanding decision. A shared-area repair and a tenant-specific item remain separately traceable in the handover.",
-              "zh": "我们按房间或区域列明完工内容、相关检查与待定事项，交付时分别保留公共区域维修和租户专项工作的对应记录。"
+              "en": "List completed work and checks by room or zone. Keep shared-area repairs and tenant work separately traceable.",
+              "zh": "按房间或区域记录完工与检查，分别保留公共区和租区维修记录。"
+            },
+            {
+              "en": "We mark public, shared and tenant-controlled spaces alongside the booking schedule. This makes it possible to group quiet checks, disruptive work and final cleaning without giving every tenancy the same shutdown or access arrangement.",
+              "zh": "我们在使用时段表中区分公共、共享和租户管理空间，便于分别安排安静检查、影响使用的工序和最后清洁，各租区按实际需要确定停用或进场时间。"
             }
           ]
         }
@@ -5282,6 +7140,143 @@
       "detailTitle": {
         "en": "Offices & mixed-use buildings",
         "zh": "办公室与综合商业楼"
+      },
+      "editorial": {
+        "cover": "sector-office.jpg",
+        "coverAlt": {
+          "en": "Office workstations and shared workplace",
+          "zh": "办公工位与共享办公空间"
+        },
+        "strap": {
+          "en": "Rooms · floors · tenants",
+          "zh": "房间 · 楼层 · 租户"
+        },
+        "leadTitle": {
+          "en": "Keep work in step with building use.",
+          "zh": "按办公楼使用安排施工。"
+        },
+        "features": [
+          {
+            "file": "editorial-lighting.webp",
+            "caption": {
+              "en": "Lighting work at an occupied building fitting",
+              "zh": "在用建筑灯具作业"
+            },
+            "links": [
+              [
+                "service",
+                "electrical-lighting"
+              ]
+            ]
+          },
+          {
+            "file": "coastal-maintenance-editorial.png",
+            "caption": {
+              "en": "Commercial entry and built finishes",
+              "zh": "办公楼入口及建筑饰面"
+            },
+            "links": [
+              [
+                "service",
+                "building-maintenance"
+              ]
+            ]
+          }
+        ],
+        "compareLinks": [
+          [
+            "service",
+            "electrical-lighting"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Record completion by floor.",
+            "zh": "按楼层记录交付。"
+          },
+          "note": {
+            "en": "We note the rooms released and agreed checks, and list any fixture, finish or service that still needs follow-up.",
+            "zh": "我们注明交还房间及约定检查，并逐项记录仍待跟进的固定装置、饰面或设备。"
+          },
+          "checklist": [
+            {
+              "en": "Room and tenant list",
+              "zh": "房间和租户清单"
+            },
+            {
+              "en": "Keys and quiet hours",
+              "zh": "钥匙与安静时段"
+            },
+            {
+              "en": "Agreed functional checks",
+              "zh": "约定的功能核对"
+            }
+          ]
+        },
+        "scene": {
+          "file": "editorial-fitout.webp",
+          "caption": {
+            "en": "Shared office fit-out and circulation",
+            "zh": "办公公共饰面与通行"
+          }
+        },
+        "workflow": [
+          {
+            "area": {
+              "en": "Tenancy",
+              "zh": "租区"
+            },
+            "steps": [
+              {
+                "en": "Confirm occupancy",
+                "zh": "确认使用情况"
+              },
+              {
+                "en": "Separate disruptive work",
+                "zh": "分开影响使用的工序"
+              },
+              {
+                "en": "Return rooms in stages",
+                "zh": "分批交还房间"
+              }
+            ]
+          },
+          {
+            "area": {
+              "en": "Shared facilities",
+              "zh": "共享设施"
+            },
+            "steps": [
+              {
+                "en": "Keep circulation",
+                "zh": "保留通行"
+              },
+              {
+                "en": "Stage the work",
+                "zh": "分阶段作业"
+              },
+              {
+                "en": "Check public areas",
+                "zh": "核对公共区域"
+              }
+            ]
+          }
+        ],
+        "deliveryPhoto": {
+          "file": "editorial-access.webp",
+          "caption": {
+            "en": "Controlled entry and door hardware",
+            "zh": "受控入口与门五金"
+          }
+        },
+        "titleLinesZh": [
+          "办公室与",
+          "综合商业楼维护"
+        ],
+        "workingExample": {
+          "en": "Group repairs by the people who use each room. A quick check in a booked meeting room and a disruptive repair beside a shared reception need different access conditions and handback checks.",
+          "zh": "按房间的使用人群组织维修。已预订会议室里的快速检查，与共享前台旁会影响办公的工序，需要不同的进入条件和交还检查。"
+        }
       }
     },
     {
@@ -5354,6 +7349,12 @@
                 "en": "We scope local paving, concrete, drainage and fixed access-item defects with delivery, loading and pedestrian movements in view.",
                 "zh": "我们结合送货、装卸与行人移动，确认局部铺装、混凝土、排水和固定通行设施的缺陷范围。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "A leaking roof above stock, a damaged dock door and a failed pavement patch have different impacts. Mark delivery slots and forklift routes together with the affected zone. If a bay closes, agree a replacement route, storage protection and the conditions for vehicles to return.",
+              "zh": "存货上方屋面漏水、装卸门损坏和局部铺装破损影响各不相同。把送货时段、叉车路线和受影响区域一起标注。若装卸口停用，约定替代路线、库存保护和车辆恢复条件。"
             }
           ]
         },
@@ -5458,8 +7459,8 @@
           },
           "paragraphs": [
             {
-              "en": "A damaged fitting can be priced as a local repair once its condition and access are defined. Repeated roof, drainage or surface issues may need a grouped inspection and staged scope rather than separate visits to disconnected symptoms.",
-              "zh": "部件现状与进场条件明确后，可按局部维修报价。重复屋面、排水或地面问题，可通过集中检查和分区范围安排，使关联现象得到一并核对。"
+              "en": "Price single fittings after checking condition and access. Review recurring roof, drain or surface defects together and plan by zone.",
+              "zh": "核对现状和进场后列出局部维修报价。反复屋面、排水或地面问题集中检查并分区安排。"
             },
             {
               "en": "Materials, installation height, the condition below the surface, equipment access and operating restrictions influence the work package. We identify investigation separately where the cause is concealed.",
@@ -5508,6 +7509,10 @@
             {
               "en": "We tie completion photographs and notes to the defined zone and repaired item. Where the problem depends on rainfall or operating conditions, any agreed follow-up observation is recorded with the original history.",
               "zh": "我们将完工照片和说明对应到施工区与修复项目。问题与降雨或运营条件有关时，约定的后续观察会与原始经过一同保留。"
+            },
+            {
+              "en": "We record which bays are active, which doors form part of vehicle routes and where stock can be moved. A surface repair near a dock requires an agreed protection plan and a release point that warehouse staff can verify before resuming movements.",
+              "zh": "我们记录正在使用的装卸位、车辆路线上的门口和可腾挪存货的区域。码头附近的表面维修要确认现场防护与通行恢复条件，再由仓库人员核对后恢复使用。"
             }
           ]
         }
@@ -5519,8 +7524,8 @@
             "zh": "屋面施工时下方货物可以保留吗？"
           },
           "a": {
-            "en": "We assess the work, access and potential effect on the area below before agreeing the plan. Stock protection or a released zone may be needed, and those requirements are included in the scope.",
-            "zh": "我们先核对工作、到达方式及对下方区域的影响，再确认安排；所需货品保护或区域交出条件会写入范围。"
+            "en": "Check the work area and the space below. Include stock protection and zone release conditions in the brief.",
+            "zh": "检查作业区及下方区域，在清单中列明货品保护和分区交还条件。"
           }
         },
         {
@@ -5570,6 +7575,143 @@
       "detailTitle": {
         "en": "Warehouses & logistics",
         "zh": "仓库与物流场所"
+      },
+      "editorial": {
+        "cover": "editorial-loading.webp",
+        "coverAlt": {
+          "en": "Truck and warehouse loading dock",
+          "zh": "货车与仓库装卸口"
+        },
+        "strap": {
+          "en": "Docks · stock · vehicle routes",
+          "zh": "装卸 · 存货 · 车辆路线"
+        },
+        "leadTitle": {
+          "en": "Stage the work around live loading.",
+          "zh": "结合在用装卸口分段作业。"
+        },
+        "features": [
+          {
+            "file": "sector-industrial.jpg",
+            "caption": {
+              "en": "Warehouse exterior and traffic approach",
+              "zh": "仓库外部与车辆接近路线"
+            },
+            "links": [
+              [
+                "article",
+                "storm-season-roofs-gutters"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-parking.webp",
+            "caption": {
+              "en": "Marked vehicle and pedestrian circulation surface",
+              "zh": "有标线的人车通行面"
+            },
+            "links": [
+              [
+                "service",
+                "car-parks-external-works"
+              ]
+            ]
+          }
+        ],
+        "compareLinks": [
+          [
+            "article",
+            "storm-season-roofs-gutters"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Release bays one stage at a time.",
+            "zh": "分阶段交还装卸区。"
+          },
+          "note": {
+            "en": "We identify usable bays, remaining restrictions and observations after rain or traffic where agreed.",
+            "zh": "我们标明可用装卸区、剩余限制，以及约定在下雨或通车后观察的事项。"
+          },
+          "checklist": [
+            {
+              "en": "Dock and traffic plan",
+              "zh": "装卸与交通图"
+            },
+            {
+              "en": "Stock protection and bay staging",
+              "zh": "库存保护与分区"
+            },
+            {
+              "en": "Restrictions and release",
+              "zh": "限制及开放"
+            }
+          ]
+        },
+        "workflow": [
+          {
+            "area": {
+              "en": "Loading bay",
+              "zh": "装卸位"
+            },
+            "steps": [
+              {
+                "en": "Review vehicle movements",
+                "zh": "核对车辆作业"
+              },
+              {
+                "en": "Separate the work zone",
+                "zh": "隔开施工区"
+              },
+              {
+                "en": "Release bay to operations",
+                "zh": "交回装卸位"
+              }
+            ]
+          },
+          {
+            "area": {
+              "en": "Vehicle yard",
+              "zh": "车辆作业区"
+            },
+            "steps": [
+              {
+                "en": "Confirm alternate route",
+                "zh": "确认替代路线"
+              },
+              {
+                "en": "Repair by section",
+                "zh": "分段修复"
+              },
+              {
+                "en": "Check entry and surface",
+                "zh": "检查入口与地面"
+              }
+            ]
+          }
+        ],
+        "deliveryPhoto": {
+          "file": "editorial-signage.webp",
+          "caption": {
+            "en": "Marking locations for handover",
+            "zh": "交付时可识别的位置"
+          }
+        },
+        "scene": {
+          "file": "editorial-hvac.webp",
+          "caption": {
+            "en": "Building equipment in a commercial facility",
+            "zh": "商业设施楼宇设备"
+          }
+        },
+        "titleLinesZh": [
+          "仓库与",
+          "物流场所维护"
+        ],
+        "workingExample": {
+          "en": "A damaged threshold at an active bay affects loading as well as the building. Record the vehicle route, available alternate bay and the check the warehouse team needs before reopening the lane.",
+          "zh": "在用装卸位的门槛破损同时影响建筑与装卸。记录车辆路线、可替代的装卸位，以及仓库团队重新开放通道前需要的检查。"
+        }
       }
     },
     {
@@ -5642,6 +7784,12 @@
                 "en": "We record external surface defects, drainage points and fixed access items alongside traffic, deliveries and material movement.",
                 "zh": "我们结合交通、送货和材料搬运，记录室外地面缺陷、排水点和固定通行设施。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "Map pedestrian and forklift routes at the boundary of building and production work. Agree access, separation and release by bay.",
+              "zh": "在建筑作业与生产区交界标明人行及叉车路线，逐工位确认进场、隔离和交还安排。"
             }
           ]
         },
@@ -5800,6 +7948,10 @@
             {
               "en": "Send photos and a site sketch, traffic routes, hot or noisy work restrictions, contact details and any required induction information.",
               "zh": "提供照片与场地图，说明交通路线、热作或噪声限制、联系人及需要的入场说明。"
+            },
+            {
+              "en": "We identify where building maintenance meets production equipment or a controlled work zone. The property brief records which work can happen beside normal operations, which area needs to be cleared and who confirms that production-side interfaces are ready.",
+              "zh": "我们标出建筑维修与生产设备或受控作业区的交界。在清单中记录哪些工作可配合正常作业开展、哪些区域需要清空，以及由谁确认与生产有关的接口条件。"
             }
           ]
         }
@@ -5850,6 +8002,143 @@
       "detailTitle": {
         "en": "Workshops & industrial properties",
         "zh": "工场与工业物业"
+      },
+      "editorial": {
+        "cover": "sector-workshop.jpg",
+        "coverAlt": {
+          "en": "Industrial workshop with machines and work aisles",
+          "zh": "设有设备和作业通道的工业车间"
+        },
+        "strap": {
+          "en": "Bays · building fabric · shutdowns",
+          "zh": "工位 · 建筑设施 · 停用窗口"
+        },
+        "leadTitle": {
+          "en": "Fit the property work around the production plan.",
+          "zh": "配合生产安排物业维修。"
+        },
+        "features": [
+          {
+            "file": "editorial-hvac.webp",
+            "caption": {
+              "en": "Plant and access on a roof",
+              "zh": "屋面设备与进场条件"
+            },
+            "links": [
+              [
+                "service",
+                "hvac-building-systems"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-fitout.webp",
+            "caption": {
+              "en": "Interior building work and materials",
+              "zh": "室内建筑作业与材料"
+            },
+            "links": [
+              [
+                "service",
+                "fit-outs-make-good"
+              ]
+            ]
+          }
+        ],
+        "compareLinks": [
+          [
+            "service",
+            "hvac-building-systems"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Hand back each work bay with clear boundaries.",
+            "zh": "明确交还各作业工位。"
+          },
+          "note": {
+            "en": "We identify building items checked and conditions the operator must confirm before reopening the affected area.",
+            "zh": "我们标明已检查的建筑设施，以及经营方重新启用区域前需确认的条件。"
+          },
+          "checklist": [
+            {
+              "en": "Building scope and production boundary",
+              "zh": "建筑范围与生产边界"
+            },
+            {
+              "en": "Induction and restricted times",
+              "zh": "入场和限制时段"
+            },
+            {
+              "en": "Area release responsibility",
+              "zh": "区域交还负责人"
+            }
+          ]
+        },
+        "scene": {
+          "file": "sector-industrial.jpg",
+          "caption": {
+            "en": "Industrial building approach",
+            "zh": "工业物业建筑入口"
+          }
+        },
+        "workflow": [
+          {
+            "area": {
+              "en": "Building and production interface",
+              "zh": "建筑与生产交界"
+            },
+            "steps": [
+              {
+                "en": "Agree work boundaries",
+                "zh": "确认作业边界"
+              },
+              {
+                "en": "Clear the affected zone",
+                "zh": "清空受影响区域"
+              },
+              {
+                "en": "Check with site contact",
+                "zh": "与现场负责人复核"
+              }
+            ]
+          },
+          {
+            "area": {
+              "en": "External access",
+              "zh": "外部通行"
+            },
+            "steps": [
+              {
+                "en": "Confirm deliveries",
+                "zh": "确认送货安排"
+              },
+              {
+                "en": "Separate plant and pedestrian routes",
+                "zh": "分隔设备与人员路线"
+              },
+              {
+                "en": "Release the work zone",
+                "zh": "交回作业区"
+              }
+            ]
+          }
+        ],
+        "deliveryPhoto": {
+          "file": "editorial-parking.webp",
+          "caption": {
+            "en": "Exterior route and finished surface",
+            "zh": "室外路线与完工表面"
+          }
+        },
+        "titleLinesZh": [
+          "工场与",
+          "工业物业维护"
+        ],
+        "workingExample": {
+          "en": "Where the work meets a production area, identify which equipment and routes are controlled by the site team. Agree the scope and who confirms the affected section can return to use.",
+          "zh": "维修接近生产区域时，标记由现场团队管理的设备和通行路线。确认维修范围，以及由谁确认受影响分区可恢复使用。"
+        }
       }
     },
     {
@@ -5975,6 +8264,12 @@
                 "zh": "园林、步道、花园和约定室外设施，同时考虑公众通行及材料进场。"
               }
             }
+          ],
+          "paragraphs": [
+            {
+              "en": "A classroom repair needs a teaching gap, clinic waiting-area work needs appointment and hygiene coordination, and a hall repair depends on bookings. Record the alternate accessible route and the staff member who can release the space back to use. Keep medical equipment and other specialist systems out of the property scope.",
+              "zh": "教室维修需要避开教学，候诊区工作要协调预约与卫生要求，社区大厅则按预订时段安排。记录替代无障碍通道及确认重新开放的工作人员。医疗设备和其他专业系统与物业范围分开。"
+            }
           ]
         },
         {
@@ -6074,8 +8369,12 @@
           },
           "paragraphs": [
             {
-              "en": "We identify completed work by location and retain any outstanding material, decision or follow-up as a separate item. The facility manager can then confirm the next use of each area against the recorded work and reopening conditions.",
-              "zh": "我们按位置列明完成工作，并将未到材料、待定事项或后续工作分别记录，方便设施负责人根据工作记录与重新开放条件安排区域下一次使用。"
+              "en": "Record completed work, material orders, follow-up visits and reopening checks by location.",
+              "zh": "按位置记录完工、材料订货、后续进场与开放前检查。"
+            },
+            {
+              "en": "We record the room use, the next session or appointment and the entrance people must keep using. The work list separates function checks from cleaning and reopening, so the contact on duty can verify when the room is suitable to receive people again.",
+              "zh": "我们记录房间用途、下一场活动或预约，以及必须保持开放的入口。工作清单分列功能检查、清洁和重新开放，便于值班人员核对何时可以恢复接待。"
             }
           ]
         }
@@ -6120,11 +8419,149 @@
         ]
       },
       "sourceIds": [
-        "qld-condition-assessment"
+        "qld-condition-assessment",
+        "qfes-fire-door"
       ],
       "detailTitle": {
         "en": "Education, healthcare & community",
         "zh": "教育、医疗与社区设施"
+      },
+      "editorial": {
+        "cover": "sector-healthcare.jpg",
+        "coverAlt": {
+          "en": "Clinic reception and waiting area",
+          "zh": "诊所前台与候诊区"
+        },
+        "strap": {
+          "en": "Timetables · access · handover",
+          "zh": "日程 · 通行 · 交还"
+        },
+        "leadTitle": {
+          "en": "Schedule work around the people using the space.",
+          "zh": "结合使用人群安排工作时段。"
+        },
+        "features": [
+          {
+            "file": "editorial-access.webp",
+            "caption": {
+              "en": "Door entry reader and user access",
+              "zh": "入口读卡设备及人员通行"
+            },
+            "links": [
+              [
+                "service",
+                "fire-security-access"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-cleaning.webp",
+            "caption": {
+              "en": "Hard floor cleaning before public use",
+              "zh": "公众使用前的硬质地面清洁"
+            },
+            "links": [
+              [
+                "service",
+                "cleaning-waste-hygiene"
+              ]
+            ]
+          }
+        ],
+        "compareLinks": [
+          [
+            "service",
+            "fire-security-access"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Reopen rooms only after agreed checks.",
+            "zh": "按约定检查后交还房间。"
+          },
+          "note": {
+            "en": "We record completed rooms, cleaned areas, restrictions and the person told about release.",
+            "zh": "我们记录已完成房间、已清洁区域、剩余限制及接收交还通知的人员。"
+          },
+          "checklist": [
+            {
+              "en": "Timetable and alternate route",
+              "zh": "日程与替代通道"
+            },
+            {
+              "en": "Area and hygiene conditions",
+              "zh": "作业区与卫生条件"
+            },
+            {
+              "en": "Release contact and records",
+              "zh": "开放联系人和记录"
+            }
+          ]
+        },
+        "workflow": [
+          {
+            "area": {
+              "en": "Active rooms",
+              "zh": "在用房间"
+            },
+            "steps": [
+              {
+                "en": "Check sessions or appointments",
+                "zh": "核对活动或预约"
+              },
+              {
+                "en": "Isolate affected work",
+                "zh": "隔离施工"
+              },
+              {
+                "en": "Clean and return room",
+                "zh": "清洁并交回房间"
+              }
+            ]
+          },
+          {
+            "area": {
+              "en": "Public paths",
+              "zh": "公共通道"
+            },
+            "steps": [
+              {
+                "en": "Agree alternative entrance",
+                "zh": "确认替代入口"
+              },
+              {
+                "en": "Work by area",
+                "zh": "按区域施工"
+              },
+              {
+                "en": "Confirm access is restored",
+                "zh": "确认恢复通行"
+              }
+            ]
+          }
+        ],
+        "deliveryPhoto": {
+          "file": "editorial-fitout.webp",
+          "caption": {
+            "en": "Shared indoor finishes to check at handback",
+            "zh": "交还前核对的公共室内饰面"
+          }
+        },
+        "scene": {
+          "file": "sector-office.jpg",
+          "caption": {
+            "en": "Shared interiors and circulation space",
+            "zh": "共享室内空间与通行"
+          }
+        },
+        "titleLinesZh": [
+          "教育、医疗",
+          "与社区设施维护"
+        ],
+        "workingExample": {
+          "en": "At a clinic, a room can be made available between appointments while the main entry stays in use. Record the room, allowed access, protected circulation and who checks cleaning and reopens it. For classrooms or halls, use the next lesson or booking as the equivalent handback point.",
+          "zh": "以诊所为例，维修可在两次预约之间进入指定房间，主入口仍需正常通行。把房间、进场时段、需保护的路线及清洁复核负责人写进同一份安排。教室与活动厅则分别以下一堂课或下一场预订为交还节点。"
+        }
       }
     }
   ],
@@ -6161,6 +8598,10 @@
             {
               "en": "COLORBOND maintenance guidance distinguishes rain-washed surfaces from areas that rain does not wash effectively, and addresses marine salt exposure. We apply the instructions for the installed product. Other metals, coatings, glass and hardware need their own care requirements checked.",
               "zh": "COLORBOND 维护资料区分雨水能有效冲洗和难以冲洗的表面，并说明海盐暴露条件。我们采用现场对应产品的要求；其他金属、涂层、玻璃和五金分别核对适用维护资料。"
+            },
+            {
+              "en": "Compare rain-washed and sheltered surfaces. Clean deposits on intact coatings with a compatible method. Separately inspect bubbling, exposed metal and recurrent fixing damage.",
+              "zh": "对照雨淋面和遮蔽面。完整涂层的沉积物采用相容方式清洁，单独检查起泡、露出金属及反复损伤的固定点。"
             }
           ]
         },
@@ -6270,6 +8711,12 @@
                 "zh": "更换结合部件状况、兼容性和使用功能确定；影响结果的相邻固定件、衔接部位与饰面一并纳入。"
               }
             }
+          ],
+          "paragraphs": [
+            {
+              "en": "Compare a rain-washed surface with a sheltered fixing on the same elevation. A surface deposit, a failing finish and a stiff opening tell us different things. Keeping separate observations makes it easier to agree cleaning, a local repair or a closer inspection.",
+              "zh": "比较同一立面上受雨水冲洗的表面与遮蔽处的固定件。表面沉积、饰层失效和门窗发涩代表不同问题，分开记录后，才容易确定清洁、局部修理或进一步检查的范围。"
+            }
           ]
         },
         {
@@ -6281,8 +8728,8 @@
           },
           "paragraphs": [
             {
-              "en": "ASSA ABLOY care guidance considers hardware in the context of the complete door or window assembly. We therefore record alignment, hinges, frame and moving parts when investigating a coastal door fault. A difficult latch can involve more than the visible lock.",
-              "zh": "ASSA ABLOY 维护资料将五金放在完整门窗组合中考虑。因此，排查沿海门问题时，我们记录对位、铰链、门框与活动部件；锁舌操作困难可能涉及可见锁具以外的部分。"
+              "en": "Inspect alignment, hinges, frame, latch and moving parts as an assembly before defining a repair.",
+              "zh": "把对位、铰链、门框、锁舌及活动部件作为一套核对后确定维修。"
             },
             {
               "en": "Existing model details and photographs help us check replacement compatibility. We keep part selection, surface treatment and any broader door or frame work separate in the quotation.",
@@ -6343,8 +8790,8 @@
               "zh": "我们结合产品要求、观察到的状况和实际暴露环境定义后续维护，分别确定不同构件的安排。位置记录有助于识别积存或损耗是否发生变化。"
             },
             {
-              "en": "The handover identifies areas cleaned, repairs completed, parts changed and items still requiring a decision. Keep the original photographs, material details and completed work together so the next inspection starts with useful information.",
-              "zh": "交付列明已清洁区域、已完成维修、更换配件及待定项目。原始照片、材料资料和完工内容共同保留，让后续检查有明确起点。"
+              "en": "Keep cleaned areas, repairs, replacement parts and follow-up visits together with photographs and material records.",
+              "zh": "将清洁区域、维修、更换配件与后续进场同照片及材料资料一并记录。"
             }
           ]
         }
@@ -6373,8 +8820,8 @@
             "zh": "沿海物业所有部位都按同一周期维护吗？"
           },
           "a": {
-            "en": "We set the scope around the installed product, its condition, exposure and use. A sheltered metal surface, moving door hardware and a drainage point can require different tasks and review arrangements.",
-            "zh": "我们依据安装产品、状况、暴露和使用条件安排工作。遮蔽金属表面、活动门五金与排水点，可能需要不同任务和复查安排。"
+            "en": "Set site-specific cleaning and review schedules for sheltered metal, moving hardware and drainage points.",
+            "zh": "按产品、暴露和使用情况为遮蔽金属、活动五金及排水点分别安排清洁与复查。"
           }
         },
         {
@@ -6412,6 +8859,125 @@
       "detailTitle": {
         "en": "Salt air and coastal building maintenance",
         "zh": "海盐环境下的商业建筑维护"
+      },
+      "editorial": {
+        "cover": "editorial-coast-balcony.webp",
+        "coverAlt": {
+          "en": "Balconies and openings on a coastal building",
+          "zh": "沿海建筑的阳台与外部门窗"
+        },
+        "strap": {
+          "en": "Exposure · surfaces · fixings",
+          "zh": "暴露位置 · 表面 · 固定件"
+        },
+        "leadTitle": {
+          "en": "Read the exposure before choosing a repair.",
+          "zh": "判断暴露条件，再决定处理方式。"
+        },
+        "features": [
+          {
+            "file": "coastal-roof-editorial.png",
+            "caption": {
+              "en": "Exposed metal roof and junctions",
+              "zh": "外露金属屋面与节点"
+            },
+            "links": [
+              [
+                "service",
+                "roofing-waterproofing"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-aluminium-frame.webp",
+            "caption": {
+              "en": "Profile and joints of an aluminium frame",
+              "zh": "铝合金框体与连接部位"
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "service",
+            "roofing-waterproofing"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Turn observations into a brief.",
+            "zh": "把现场观察整理成清单。"
+          },
+          "note": {
+            "en": "Send one wide photograph per elevation and close-ups of joints or fixings. Include the material or coating if known and which areas are usually sheltered from rain.",
+            "zh": "每面立面提供一张全景，并拍摄节点或固定件近照。注明已知材料或涂层，以及平时难被雨水冲洗的位置。"
+          },
+          "checklist": [
+            {
+              "en": "Exposure and location notes",
+              "zh": "暴露条件与位置"
+            },
+            {
+              "en": "Surface and fixing photographs",
+              "zh": "表面和固定件照片"
+            },
+            {
+              "en": "Cleaning, repair or review items",
+              "zh": "清洁、维修或复核事项"
+            }
+          ]
+        },
+        "takeaway": {
+          "en": "Read the surface and the moving parts separately.",
+          "zh": "表面变化和开关不顺，要分开查。"
+        },
+        "fieldPhoto": {
+          "file": "editorial-roof-edge.webp",
+          "caption": {
+            "en": "Sheltered metal cladding and roof edge",
+            "zh": "遮蔽处的金属覆层和屋面边缘"
+          }
+        },
+        "nav": {
+          "record-the-exposure": {
+            "en": "Exposure",
+            "zh": "暴露位置"
+          },
+          "clean-repair-replace": {
+            "en": "Surface & function",
+            "zh": "表面与功能"
+          },
+          "condition-record": {
+            "en": "Condition record",
+            "zh": "维护记录"
+          },
+          "hardware-as-an-assembly": {
+            "en": "Door and window assemblies",
+            "zh": "门窗组合"
+          },
+          "access-water-and-surrounds": {
+            "en": "Access & protection",
+            "zh": "进场与防护"
+          },
+          "set-a-property-specific-plan": {
+            "en": "Work brief",
+            "zh": "整理维护需求"
+          }
+        },
+        "storyPhoto": {
+          "file": "editorial-work-door.webp",
+          "caption": {
+            "en": "Exposed door hardware and worn finish",
+            "zh": "外露门五金与磨损饰面"
+          }
+        },
+        "titleLinesZh": [
+          "海盐环境下的",
+          "商业建筑维护"
+        ],
+        "workingExample": {
+          "en": "Compare a sheltered door fitting with a nearby exposed surface. If the fitting is stiff and the finish only shows deposits, record both separately before deciding whether cleaning, adjustment or closer inspection is appropriate.",
+          "zh": "把遮蔽处的门五金与旁边露天饰面分别检查。五金发涩而饰面只是附着沉积物时，先分开记录，再决定清洁、调整或进一步检查。"
+        }
       }
     },
     {
@@ -6440,12 +9006,16 @@
           },
           "paragraphs": [
             {
-              "en": "A useful report records the location, the weather or operating conditions, when water became visible and how long the effect lasted. We also ask whether more than one room, bay or frontage was affected. These details help connect the interior report with possible external routes.",
-              "zh": "实用记录包括位置、天气或运营条件、何时出现可见水迹，以及影响持续多久。我们也会了解是否涉及多个房间、仓位或立面，以便将室内现象与可能的外部水路联系。"
+              "en": "Record location, weather, timing and duration, and match affected rooms, bays or elevations to the external drainage routes.",
+              "zh": "记录位置、天气、出现时间及持续时长，将受影响的房间、仓位或立面与外部排水路径对应。"
             },
             {
               "en": "Photographs of an earlier patch, replaced outlet or water-stained ceiling are valuable context. We keep the history with the defect record so that the next attendance does not begin with an isolated description of “a roof leak”.",
               "zh": "既有补漏、更换出水口或水渍吊顶的照片，是有用背景。我们将经过与缺陷记录一起保留，使下次进场能够针对具体部位接续核对。"
+            },
+            {
+              "en": "Check blocked outlets even when roof sheets are intact. Record where water first appears and reaches the ground; scope clearing, joint repairs and downstream work separately.",
+              "zh": "屋面板完好也要检查出水口堵塞。记录最先出水点及水到达地面的位置，分列清理、接头维修及下游排水工作。"
             }
           ]
         },
@@ -6487,6 +9057,12 @@
                 "zh": "现象涉及下游时，我们核对承接落水管和可到达排水路径；屋面清理与地面排水修复分别列项。"
               }
             }
+          ],
+          "paragraphs": [
+            {
+              "en": "Compare an indoor mark’s timing and position with wind and rain, then map roof falls, gutter outlets and obstructions.",
+              "zh": "把室内水迹的位置和时点与风雨对照，标记屋面坡向、天沟出水口和沿途障碍。"
+            }
           ]
         },
         {
@@ -6507,8 +9083,8 @@
                 "zh": "核对重点"
               },
               {
-                "en": "Possible scope",
-                "zh": "可能范围"
+                "en": "Work scope",
+                "zh": "工作范围"
               }
             ],
             "rows": [
@@ -6658,8 +9234,8 @@
             "zh": "建筑以前漏过水，只清天沟够吗？"
           },
           "a": {
-            "en": "We review the leak history and condition of the relevant components. Cleaning may be one item in the scope; damaged joints, roof details or downstream drainage may require separate work.",
-            "zh": "我们会核对漏水经过和相关构件现状。清理可能是其中一项；损坏接缝、屋面节点或下游排水可能还需分别处理。"
+            "en": "Review the leak history and list affected outlets, joints, roof details and downstream drains as separate work items.",
+            "zh": "核对漏水经过，分列受影响的出水口、接缝、屋面节点及下游排水项目。"
           }
         },
         {
@@ -6700,6 +9276,100 @@
       "detailTitle": {
         "en": "Preparing commercial roofs and gutters for heavy rain",
         "zh": "商业屋面与天沟：强降雨前怎样安排维护"
+      },
+      "editorial": {
+        "cover": "sector-industrial.jpg",
+        "coverAlt": {
+          "en": "Commercial warehouse roof and frontage",
+          "zh": "商业仓库屋面与外部通道"
+        },
+        "strap": {
+          "en": "Roof · gutter · ground drainage",
+          "zh": "屋面 · 天沟 · 地面排水"
+        },
+        "leadTitle": {
+          "en": "Follow the route water actually takes.",
+          "zh": "沿实际水路逐段核对。"
+        },
+        "features": [
+          {
+            "file": "coastal-roof-editorial.png",
+            "caption": {
+              "en": "Roof edges and external drainage path",
+              "zh": "屋面边缘及室外排水路径"
+            },
+            "links": [
+              [
+                "service",
+                "roofing-waterproofing"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-roof-edge.webp",
+            "caption": {
+              "en": "Roof edge and drainage transition",
+              "zh": "屋面边缘与排水衔接"
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "service",
+            "roofing-waterproofing"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Bring the roof history into the next visit.",
+            "zh": "把以往降雨记录带入下次维护。"
+          },
+          "note": {
+            "en": "Mark affected roof and ground locations and the indoor areas requiring protection. Keep suspected faults distinct from completed checks.",
+            "zh": "标注受影响的屋面与地面位置，以及需要保护的室内区域。将疑似故障和已完成检查分开记录。"
+          },
+          "checklist": [
+            {
+              "en": "Past leak dates and conditions",
+              "zh": "以往漏水日期与条件"
+            },
+            {
+              "en": "Roof and ground locations",
+              "zh": "屋面与地面点位"
+            },
+            {
+              "en": "Observations after the next rain",
+              "zh": "下次降雨观察项"
+            }
+          ]
+        },
+        "takeaway": {
+          "en": "Follow the water route before deciding where to repair.",
+          "zh": "先追排水路径，再定维修位置。"
+        },
+        "fieldPhoto": {
+          "file": "editorial-watermark.webp",
+          "caption": {
+            "en": "Interior marks to log alongside rainfall",
+            "zh": "需与降雨一并记录的室内水迹"
+          }
+        },
+        "storyPhoto": {
+          "file": "editorial-facade.webp",
+          "caption": {
+            "en": "Junctions between walls, glazing and roof details",
+            "zh": "墙面、玻璃与屋面细部交界"
+          }
+        },
+        "titleLinesZh": [
+          "商业屋面与天沟：",
+          "强降雨前怎样",
+          "安排维护"
+        ],
+        "workingExample": {
+          "en": "An indoor stain and the closest outlet are two useful observations, but also record what happened upstream. The route from roof to outlet to ground can explain why the mark appears only in certain storms.",
+          "zh": "室内水迹与最近的出水口都是有用线索，也要记录上游情况。沿屋面、出水口到地面追查，才能判断水迹为何只在某些暴雨中出现。"
+        }
       }
     },
     {
@@ -6728,12 +9398,16 @@
           },
           "paragraphs": [
             {
-              "en": "For each item, we record the room or shared area, the symptom, relevant photographs and any known part or finish information. We also ask whether the fault is intermittent, whether earlier repairs were attempted and which connected services could be affected.",
-              "zh": "每项记录房号或公共区域、问题表现、相关照片，以及已知配件或饰面资料，并了解是否间歇出现、是否尝试过维修、可能影响哪些关联设施。"
+              "en": "Record room or area, visible signs, photographs, material details, recurrence, previous repairs and affected facilities.",
+              "zh": "记录房号或公共区、问题表现、照片、材料资料、复发情况、历次维修及受影响设施。"
             },
             {
-              "en": "Repeated defects can then be grouped without losing room-level detail. Similar-looking hardware may use different models, and a surface mark in one room may need different treatment from damaged plasterboard in another. We check these differences before ordering parts or allocating attendance.",
-              "zh": "重复缺陷可以归并，同时保留房间明细。外观类似的五金可能型号不同；一间房的表面痕迹，与另一间房的石膏板损坏，可能需要不同处理。订购配件或排期前先核对差别。"
+              "en": "Group repeated defects while keeping room numbers. Check hardware models and distinguish surface marks from plasterboard damage before ordering parts and scheduling work.",
+              "zh": "归并重复缺陷并保留房号。订货排期前核对五金型号，区分饰面痕迹与石膏板损伤。"
+            },
+            {
+              "en": "Use a vacancy for definite tasks such as an identified hardware adjustment. Keep a room on hold when the finish needs to dry or a leak is still being investigated. For shared corridors, plan a guest route, noise window and cleaning check separately from the accommodation schedule.",
+              "zh": "明确的五金调整可以利用空房时段。饰面需干燥或漏水仍在排查时，应暂缓安排入住。共用走廊则单独确认客人动线、噪声窗口及清洁检查，不混用客房时间表。"
             }
           ]
         },
@@ -6834,6 +9508,10 @@
             {
               "en": "For door faults, we consider the door, frame and related hardware together. ASSA ABLOY care guidance supports checking the complete assembly. Replacement parts and any surrounding finish repair are recorded separately from adjustment work.",
               "zh": "门故障会连同门体、门框和相关五金核对；ASSA ABLOY 维护资料也考虑完整组合。替换配件、周边饰面恢复和调整工作分别列明。"
+            },
+            {
+              "en": "Record next occupancy, work position and release contact. Set separate release times for hardware checks and finish drying.",
+              "zh": "记录下次入住、维修部位和放房负责人，分别安排五金复核及饰面干燥后的放房时间。"
             }
           ]
         },
@@ -6886,8 +9564,8 @@
           },
           "paragraphs": [
             {
-              "en": "Water, power or air-conditioning work may serve more than the room where the fault is reported. We identify the affected zone with the manager and confirm who coordinates any interruption. Adjacent occupancy, cleaning and noise-sensitive periods also form part of the attendance plan.",
-              "zh": "水、电或空调工作可能影响报告故障客房以外的区域。我们与负责人核对受影响范围和停用协调人，并将邻近入住、清洁及对噪声敏感的时段纳入进场安排。"
+              "en": "Map areas served by equipment and agree who coordinates interruptions, nearby occupancy, cleaning and noise-sensitive periods.",
+              "zh": "标明设备服务区域，明确停用协调人、邻近入住、清洁和对噪声敏感的时段。"
             },
             {
               "en": "AIRAH maintenance guidance stresses equipment information and defined maintenance tasks. Existing asset details and operation or maintenance records help us distinguish a routine service, a fault investigation and a parts-dependent repair.",
@@ -6974,8 +9652,8 @@
             "zh": "表面工作结束后就可以重新售房吗？"
           },
           "a": {
-            "en": "We confirm the work and material conditions before handback. Drying, curing, operation checks or a connected service task may still affect the room, and those conditions are recorded for your manager.",
-            "zh": "交还前会核对工作和材料条件。干燥、固化、功能检查或关联设施任务可能仍影响使用，这些条件会记录给负责人。"
+            "en": "Record drying, curing, operation checks and connected services against room release conditions.",
+            "zh": "按房间恢复使用的要求记录干燥、固化、功能检查和配套设施状态。"
           }
         }
       ],
@@ -7003,6 +9681,100 @@
       "detailTitle": {
         "en": "Planning hotel maintenance between guest stays",
         "zh": "住客之间的酒店维护怎样排得更清楚"
+      },
+      "editorial": {
+        "cover": "editorial-hotel-door.webp",
+        "coverAlt": {
+          "en": "Close-up of a hotel room door and key",
+          "zh": "客房门锁与钥匙近景"
+        },
+        "strap": {
+          "en": "Room lists · release · guest routes",
+          "zh": "房号清单 · 交房 · 客人路线"
+        },
+        "leadTitle": {
+          "en": "Match the task to the room release window.",
+          "zh": "把任务放进可用交房窗口。"
+        },
+        "features": [
+          {
+            "file": "coastal-resort-editorial.png",
+            "caption": {
+              "en": "Guest circulation beside a resort pool",
+              "zh": "度假村泳池旁的客人通行区"
+            },
+            "links": [
+              [
+                "sector",
+                "hotels-resorts"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-hotel-terrace.webp",
+            "caption": {
+              "en": "Other guest areas with separate access windows",
+              "zh": "需另行确认进场时段的住客区域"
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "sector",
+            "hotels-resorts"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Give reception one release record.",
+            "zh": "让前台查同一份交房记录。"
+          },
+          "note": {
+            "en": "Record who checks the work, who returns the keys and the conditions still outstanding before a room goes back into inventory.",
+            "zh": "记录谁检查完工、谁交回钥匙，以及重新排房前仍待满足的条件。"
+          },
+          "checklist": [
+            {
+              "en": "Rooms and key contact",
+              "zh": "房号和钥匙联系人"
+            },
+            {
+              "en": "Work and drying window",
+              "zh": "施工与干燥窗口"
+            },
+            {
+              "en": "Room release or hold status",
+              "zh": "交房或暂缓状态"
+            }
+          ]
+        },
+        "takeaway": {
+          "en": "A room is ready when its release checks are complete.",
+          "zh": "完成交房检查后，客房才可重新使用。"
+        },
+        "fieldPhoto": {
+          "file": "editorial-access.webp",
+          "caption": {
+            "en": "Entry points to include on the room list",
+            "zh": "应列入客房清单的入口部位"
+          }
+        },
+        "storyPhoto": {
+          "file": "editorial-work-paint.webp",
+          "caption": {
+            "en": "A damaged finish to assess before reopening",
+            "zh": "恢复使用前需核对的受损饰面"
+          }
+        },
+        "titleLinesZh": [
+          "住客之间的酒店",
+          "维护怎样排得",
+          "更清楚"
+        ],
+        "workingExample": {
+          "en": "Separate time on site from release conditions. Record function checks after replacing fittings and drying time after finish repairs.",
+          "zh": "分别记录施工用时和放房条件。配件更换后记录功能检查，饰面修补后记录干燥时段。"
+        }
       }
     },
     {
@@ -7037,6 +9809,10 @@
             {
               "en": "Queensland guidance explains maintenance responsibilities through the relevant plan and boundaries. We use the scheme information and approved brief supplied for the property when defining work; we do not treat a description such as “balcony” as a complete statement of scope or responsibility.",
               "zh": "昆士兰资料根据相关物业计划与边界说明维护责任。我们依据该物业提供的计划信息及批准需求定义工作，具体核对阳台等部位所涉及的构件、范围和责任资料。"
+            },
+            {
+              "en": "Give each item an identifier, floor, exact position, symptom and photo. An observed ceiling stain can be logged and approved as an investigation while existing door hardware can be assessed as a separate repair. This keeps approvals traceable when an opening reveals damage beyond the initial list.",
+              "zh": "每项记录编号、楼层、具体位置、现象和照片。吊顶水渍可先作为调查事项审批，已有门五金故障可单项安排维修。拆开后发现清单外损伤时，可据此追溯批准范围。"
             }
           ]
         },
@@ -7160,8 +9936,8 @@
                 "zh": "进一步调查"
               },
               "text": {
-                "en": "Recurring water or concealed damage may need a separate inspection, test or agreed opening-up scope. We record what needs to be established before a final repair can be defined.",
-                "zh": "反复水问题或隐蔽损坏，可能需单独确认检查、测试或局部打开范围；我们列明确定最终维修前需要查清的事项。"
+                "en": "For recurring water or concealed damage, specify inspection, diagnostics and approved opening-up before defining repairs.",
+                "zh": "反复渗水或隐蔽损坏先明确检查、检测和获批的局部打开范围，再确定维修。"
               }
             },
             {
@@ -7173,6 +9949,12 @@
                 "en": "A wider finish refresh, changed layout or upgraded fitting has its own brief. We separate it from the immediate defect so the representative can review the additional work clearly.",
                 "zh": "较大饰面更新、布局改变或配件升级有各自需求；我们与当前缺陷分别列项，方便代表明确审核追加工作。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "Record location, photographs and agreed ownership boundaries for doors, balcony edges and fittings before defining work.",
+              "zh": "记录门口、阳台边缘和连接件的位置、照片及约定责任边界，再确定维修范围。"
             }
           ]
         },
@@ -7189,8 +9971,8 @@
               "zh": "昆士兰卫生系统状况评估资料以结构化信息记录资产、状态和所需工作。我们借鉴这一记录方法整理商业缺陷清单：关联任务可以共用进场安排，同时保留各项编号和完成状态。"
             },
             {
-              "en": "Repeated door hardware, paint finishes or external cleaning areas may be reviewed together. Materials, height, resident access, protection and waste still need to be defined for the relevant building areas.",
-              "zh": "重复门五金、油漆饰面或外部清洁区域可以集中核对，但材料、高度、住户通行、保护与废物安排，仍按相应建筑区域确认。"
+              "en": "Group repeated hardware, paintwork and exterior cleaning items. Set material, height, access, protection and waste requirements by area.",
+              "zh": "集中核对重复五金、油漆和外部清洁项目，再按区确认材料、高度、通行、防护和废物安排。"
             }
           ]
         },
@@ -7263,8 +10045,8 @@
         "zh": "我们按位置、所需工作和批准范围整理公共区域缺陷，让报价与完工记录对应同一清单。"
       },
       "lead": {
-        "en": "A photograph of a damaged area is a useful start. A practical work list also identifies the building element, the symptom, access and the decision needed. We use those details to separate defined repairs, investigation and proposed improvements before the work is approved.",
-        "zh": "损坏照片是有用起点。一份能执行的清单还需明确建筑构件、问题表现、进场及待定事项。我们据此区分明确维修、调查和拟议改善，供确认工作范围。"
+        "en": "Use photos, building components, visible defects and access to distinguish repair, investigation and improvements on the approved work list.",
+        "zh": "在工作清单中写明照片、建筑构件、现场现象和进场条件，分列维修、检查及改善项目。"
       },
       "metaDescription": {
         "en": "We organise common-area defects by location, required work and approval, so the quotation and completion record follow the same list.",
@@ -7316,6 +10098,100 @@
       "detailTitle": {
         "en": "A clear scope for body corporate repairs",
         "zh": "共同物业维修：从缺陷清单到明确交付"
+      },
+      "editorial": {
+        "cover": "sector-hotel.jpg",
+        "coverAlt": {
+          "en": "Shared amenity deck and finishes",
+          "zh": "共享设施平台与饰面"
+        },
+        "strap": {
+          "en": "Defects · approvals · resident access",
+          "zh": "缺陷 · 审批 · 住户通行"
+        },
+        "leadTitle": {
+          "en": "Turn observations into a quoteable list.",
+          "zh": "把现场问题整理成可报价的清单。"
+        },
+        "features": [
+          {
+            "file": "editorial-coast-balcony.webp",
+            "caption": {
+              "en": "Balcony and facade boundaries",
+              "zh": "阳台与外墙交界"
+            },
+            "links": [
+              [
+                "sector",
+                "apartments-body-corporate"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-access.webp",
+            "caption": {
+              "en": "Shared entrance fittings",
+              "zh": "公共入口固定部件"
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "sector",
+            "apartments-body-corporate"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Close the original list, item by item.",
+            "zh": "沿用原清单逐项销项。"
+          },
+          "note": {
+            "en": "Record the party approving variations and separate closed items from those awaiting access, parts or monitoring.",
+            "zh": "记录变更审批方，区分已销项与仍等待进场、部件或观察的事项。"
+          },
+          "checklist": [
+            {
+              "en": "Marked plan and numbered defects",
+              "zh": "标注图与缺陷编号"
+            },
+            {
+              "en": "Approval and resident notice",
+              "zh": "审批和住户通知"
+            },
+            {
+              "en": "Remaining actions by location",
+              "zh": "逐点位后续行动"
+            }
+          ]
+        },
+        "takeaway": {
+          "en": "Confirm the approved area before ordering work.",
+          "zh": "先对清批准范围，再安排施工。"
+        },
+        "fieldPhoto": {
+          "file": "editorial-paving.webp",
+          "caption": {
+            "en": "Surface conditions in a shared access area",
+            "zh": "共同通行区域的表面状况"
+          }
+        },
+        "storyPhoto": {
+          "file": "editorial-apartments.webp",
+          "caption": {
+            "en": "Boundary between building frontage and common access",
+            "zh": "建筑临街面与公共通行交界"
+          }
+        },
+        "titleLinesZh": [
+          "共同物业维修：",
+          "从缺陷清单到",
+          "明确交付"
+        ],
+        "workingExample": {
+          "en": "A numbered defect on the shared entrance list should carry its exact location, approval and access plan. An adjacent item can stay separate until the scope is confirmed, even if it appears in the same photo.",
+          "zh": "共同入口清单上的编号缺陷，应附上确切位置、批准事项及通行安排。即使同一张照片拍到了旁边的另一处缺陷，也应等范围确认后再归入。"
+        }
       }
     },
     {
@@ -7344,12 +10220,16 @@
           },
           "paragraphs": [
             {
-              "en": "We record the agreed paving, doorway, fixed items and drainage points, along with table layouts and customer or delivery routes. Photographs include the affected spot and the surrounding surface, because a local puddle or movement can relate to conditions beyond the visible mark.",
-              "zh": "我们记录约定铺装、门口、固定设施和排水点，以及桌椅、顾客与送货路线。照片覆盖问题部位及周边地面，因为局部积水或位移可能与可见痕迹以外的条件有关。"
+              "en": "Photograph paving, thresholds, fittings and outlets alongside customer, table and delivery routes. Include adjacent surfaces when recording pooling or movement.",
+              "zh": "关联拍摄铺装、门口、固定件、排水点及餐桌、顾客与送货路线。记录积水或位移时纳入相邻地面。"
             },
             {
               "en": "The history matters: whether water appears after washing or rain, whether the same area settles again and whether an earlier repair changed the surface. These observations help us decide which parts of the accessible route and substrate need further assessment.",
               "zh": "经过同样重要：水是在清洗还是下雨后出现、同一区域是否再次沉陷、以前维修是否改变过表面。这些观察帮助我们确定哪些可到达水路和基层需要进一步核对。"
+            },
+            {
+              "en": "Where water remains near planters or low door thresholds, note the surface fall and whether it follows rain, washing or a blocked outlet. Cleaning can remove debris, but re-seating loose paving or correcting drainage calls for a separate work scope. Mark how furniture, deliveries and customers will move before agreeing barriers.",
+              "zh": "花箱或低门槛附近积水时，记录坡向，并注明问题跟随降雨、清洗还是出水口堵塞出现。清洁可去杂物，但重新安放松动铺砖或调整排水要另行核定。约定围挡前先标出桌椅移位、送货和顾客路线。"
             }
           ]
         },
@@ -7435,8 +10315,8 @@
                 "zh": "清洁"
               },
               "text": {
-                "en": "We confirm the surface and method, include surrounding protection and define where cleaning water will go. A clean surface may expose a defect that needs separate repair.",
-                "zh": "我们核对表面和方法、周边保护及清洁水去向；清洁后显现的缺陷再分别确认维修。"
+                "en": "Confirm surface, cleaning method, protection and water handling. Record defects revealed after cleaning as separate repairs.",
+                "zh": "确认表面、清洁方法、防护和用水去向，单列清洁后暴露的缺陷维修。"
               }
             },
             {
@@ -7458,6 +10338,12 @@
                 "en": "Where the findings support drainage or surface alterations, we separate investigation, design or approval information needed and the physical work to be quoted.",
                 "zh": "调查支持排水或地面改变时，我们分别列明进一步调查、所需设计或批准资料，以及待报价实体工程。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "Record rainfall and cleaning water separately. Check each source and outlet before defining cleaning, local adjustment or drainage inspection.",
+              "zh": "分开记录雨水与清洁用水，分别核对水源及出口，再确定清洁、局部调整或排水检查范围。"
             }
           ]
         },
@@ -7566,8 +10452,8 @@
             "zh": "铺装修好后能立即重新摆桌吗？"
           },
           "a": {
-            "en": "We confirm the repair material and its requirements against the intended use. Cleaning, curing, stability checks or further work may affect the reopening arrangement, and those conditions are identified before handback.",
-            "zh": "我们结合实际用途核对修补材料及要求。清洁、固化、稳定性检查或后续工作可能影响开放安排，交还前会明确这些条件。"
+            "en": "Plan reopening around how the area is used and the material requirements for cleaning, curing and stability checks.",
+            "zh": "按场地用途和材料的清洁、固化及稳定性检查要求安排开放。"
           }
         },
         {
@@ -7607,6 +10493,100 @@
       "detailTitle": {
         "en": "Maintaining outdoor dining areas",
         "zh": "户外餐饮区：铺装、排水与通行一起安排"
+      },
+      "editorial": {
+        "cover": "editorial-paving.webp",
+        "coverAlt": {
+          "en": "Outdoor dining furniture beside paved circulation",
+          "zh": "铺装通道旁的户外餐位"
+        },
+        "strap": {
+          "en": "Surface · water · trading routes",
+          "zh": "铺装 · 水路 · 营业路线"
+        },
+        "leadTitle": {
+          "en": "Decide whether the surface or the water route needs work.",
+          "zh": "先判断是铺装还是排水需要处理。"
+        },
+        "features": [
+          {
+            "file": "editorial-terrace.webp",
+            "caption": {
+              "en": "Table layout and pedestrian path",
+              "zh": "桌椅布置与人行通道"
+            },
+            "links": [
+              [
+                "sector",
+                "restaurants-cafes"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-hotel-terrace.webp",
+            "caption": {
+              "en": "Floor surfaces between outdoor tables and access",
+              "zh": "室外座位与通行之间的地面"
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "sector",
+            "restaurants-cafes"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Agree the conditions for reopening.",
+            "zh": "约定餐位重新开放的条件。"
+          },
+          "note": {
+            "en": "Check public-land arrangements where applicable and list curing, cleaning and runoff protection before reopening.",
+            "zh": "如涉及公共用地，核对适用安排，并列明重新开放前的养护、清洁与废水保护。"
+          },
+          "checklist": [
+            {
+              "en": "Puddles and damaged paving",
+              "zh": "积水与铺装损伤"
+            },
+            {
+              "en": "Trading and pedestrian route",
+              "zh": "营业和行人通道"
+            },
+            {
+              "en": "Cure and clean-up check",
+              "zh": "养护与清场核对"
+            }
+          ]
+        },
+        "takeaway": {
+          "en": "Record the low point and where the water should go.",
+          "zh": "积水点和排水去向，都要记录。"
+        },
+        "fieldPhoto": {
+          "file": "editorial-plumbing.webp",
+          "caption": {
+            "en": "Plumbing connections to consider separately from rainwater",
+            "zh": "应与雨水路径区分的管道连接"
+          }
+        },
+        "storyPhoto": {
+          "file": "editorial-restaurant-counter.webp",
+          "caption": {
+            "en": "Internal service and trading area",
+            "zh": "餐饮内部服务与营业区"
+          }
+        },
+        "titleLinesZh": [
+          "户外餐饮区：",
+          "铺装、排水与",
+          "通行一起安排"
+        ],
+        "workingExample": {
+          "en": "Observe the paving during a rain event and during normal cleaning. Note where runoff collects and whether the low point lies on the staff route or beside a table, then choose a suitable work window.",
+          "zh": "分别观察下雨和日常清洁时的铺装。记录积水位置，判断低点位于员工通道还是桌位旁，再选择合适的施工时间。"
+        }
       }
     },
     {
@@ -7641,6 +10621,10 @@
             {
               "en": "The record distinguishes a single event from a recurring pattern. We also note whether water remains visible after the reported trigger has stopped. That history guides the inspection; it is not used by itself to assign a confirmed cause.",
               "zh": "记录会区分单次事件与反复规律，也注明相关条件停止后是否仍有可见水迹。这些资料用于安排检查，原因则结合现场发现进一步确定。"
+            },
+            {
+              "en": "Compare water marks against wind-driven rain, fixture use and cooling. Check upstream junctions, outlets, supply pipes and condensate drains.",
+              "zh": "将水迹与风雨、器具用水和制冷运行对照，检查上游外部节点、出水口、供水管与冷凝水排水。"
             }
           ]
         },
@@ -7711,8 +10695,8 @@
               ],
               [
                 {
-                  "en": "Cause remains unclear",
-                  "zh": "原因尚不明确"
+                  "en": "Source investigation required",
+                  "zh": "安排源头检查"
                 },
                 {
                   "en": "Connected building elements and an agreed investigation area",
@@ -7747,11 +10731,11 @@
             {
               "title": {
                 "en": "Set any further test or access scope",
-                "zh": "明确进一步测试或进场"
+                "zh": "明确进一步检测或进场"
               },
               "text": {
                 "en": "Where the cause is concealed, we explain the proposed inspection, opening-up or test, the affected area and the associated protection or reinstatement.",
-                "zh": "原因隐蔽时，我们说明拟进行的检查、局部打开或测试，以及受影响区域、保护和恢复工作。"
+                "zh": "原因隐蔽时，我们说明拟进行的检查、局部打开或检测，以及受影响区域、保护和恢复工作。"
               }
             },
             {
@@ -7760,9 +10744,15 @@
                 "zh": "依据发现确定修复"
               },
               "text": {
-                "en": "The repair location, materials and extent follow the findings. Additional unknowns remain clearly identified for the next agreed decision.",
-                "zh": "修复位置、材料和范围依据发现确定；仍未明确的事项清楚列出，供下一步确认。"
+                "en": "The repair location, materials and extent follow the findings. Record repair boundaries and the next inspection points.",
+                "zh": "修复位置、材料和范围依据发现确定；记录维修边界与后续检查点位。"
               }
+            }
+          ],
+          "paragraphs": [
+            {
+              "en": "Log whether the mark changed in rain, after fixture use or during cooling. Use timing and location to trace the water route before repairs.",
+              "zh": "记录水迹变化发生在降雨、用水后还是制冷运行期间，维修前按时点和位置追查水路。"
             }
           ]
         },
@@ -7817,7 +10807,7 @@
               },
               "text": {
                 "en": "Access, height, concealed conditions, the test or opening-up scope, material compatibility, finish restoration and further attendance are identified where relevant.",
-                "zh": "按实际需要明确进场、高度、隐蔽状况、测试或局部打开范围、材料兼容、饰面恢复及再次进场。"
+                "zh": "按实际需要明确进场、高度、隐蔽状况、检测或局部打开范围、材料兼容、饰面恢复及再次进场。"
               }
             },
             {
@@ -7855,8 +10845,8 @@
               "zh": "提供物业类型、受影响位置、发生时点和既有工作。损坏区域及周边照片有助于我们组织调查范围，并明确需要纳入的建筑或设施部位。"
             },
             {
-              "en": "Compare the timing with nearby fixture use or the operation of air-conditioning. Supply pipes and condensate drains may need separate checks if the pattern points to building services.",
-              "zh": "比对出水与附近用水或空调运行的时间。若发生规律指向设备系统，可能需要分别检查供水管与冷凝水排水。"
+              "en": "Compare water appearance with equipment operation. Inspect supply pipes and condensate drainage as separate work items.",
+              "zh": "将出水时点与设备运行对照，分项检查供水管及冷凝水排水。"
             }
           ]
         }
@@ -7872,7 +10862,7 @@
       },
       "lead": {
         "en": "A stain shows where a problem became visible. We use its timing, pattern and surrounding building information to plan the investigation. The first scope should explain what will be checked, what access is needed and how any opening-up or testing will be agreed before a repair is specified.",
-        "zh": "水渍显示问题出现的可见位置。我们结合发生时点、规律和周边建筑资料安排调查。初始范围会说明检查内容、所需进场，以及局部打开或测试如何确认，再确定修复。"
+        "zh": "水渍显示问题出现的可见位置。我们结合发生时点、规律和周边建筑资料安排调查。初始范围会说明检查内容、所需进场，以及局部打开或检测如何确认，再确定修复。"
       },
       "metaDescription": {
         "en": "We connect the location and timing of a water report with relevant roof, façade, plumbing and air-conditioning details before defining the repair.",
@@ -7885,14 +10875,14 @@
             "zh": "天花板水渍一定是屋顶漏水吗？"
           },
           "a": {
-            "en": "We compare the timing and location with the relevant building and equipment details. Roof, plumbing, façade and condensate routes may need different investigation, and the observed stain alone does not establish the source.",
-            "zh": "我们将时点和位置与相关建筑及设备资料对照。屋面、水管、外立面和冷凝水路径可能需要不同调查，可见水渍本身不足以确定源头。"
+            "en": "Compare timing and location with roof, plumbing, façade and condensate routes to establish the source.",
+            "zh": "结合时点与位置，对照屋面、水管、外立面及冷凝水路径查明来源。"
           }
         },
         {
           "q": {
-            "en": "Can you quote a final repair before the cause is known?",
-            "zh": "原因未明确前能直接确定最终维修报价吗？"
+            "en": "What information defines the repair quotation?",
+            "zh": "维修报价依据哪些检查结果？"
           },
           "a": {
             "en": "We can define the initial investigation and access needed. Once the findings establish the relevant defect and extent, we set out the repair and any finish restoration as the next scope.",
@@ -7928,6 +10918,100 @@
       "detailTitle": {
         "en": "Tracking water ingress in commercial buildings",
         "zh": "商业渗水排查：从现象到修复范围"
+      },
+      "editorial": {
+        "cover": "editorial-watermark.webp",
+        "coverAlt": {
+          "en": "Water marks visible on an interior ceiling",
+          "zh": "室内吊顶的可见水渍"
+        },
+        "strap": {
+          "en": "Timing · paths · source checks",
+          "zh": "发生条件 · 水路 · 源头排查"
+        },
+        "leadTitle": {
+          "en": "Start with conditions, not the stain alone.",
+          "zh": "从发生条件入手，别只看水渍。"
+        },
+        "features": [
+          {
+            "file": "coastal-roof-editorial.png",
+            "caption": {
+              "en": "External water route around roof junctions",
+              "zh": "屋面交接处的外部水路"
+            },
+            "links": [
+              [
+                "service",
+                "roofing-waterproofing"
+              ]
+            ]
+          },
+          {
+            "file": "editorial-plumbing.webp",
+            "caption": {
+              "en": "Building service connections to rule in or out",
+              "zh": "排查时需核对的设备连接"
+            }
+          }
+        ],
+        "compareLinks": [
+          [
+            "service",
+            "roofing-waterproofing"
+          ]
+        ],
+        "handover": {
+          "title": {
+            "en": "Keep the repair decision separate from drying and finishes.",
+            "zh": "把修复决定与干燥和饰面恢复分开。"
+          },
+          "note": {
+            "en": "We label checks completed and the next conditions to observe before reinstating finishes or removing controls.",
+            "zh": "我们标明已完成的检查，以及恢复饰面或解除保护前仍需观察的条件。"
+          },
+          "checklist": [
+            {
+              "en": "History and first affected location",
+              "zh": "发生记录和最先受影响位置"
+            },
+            {
+              "en": "Agreed investigation and access",
+              "zh": "约定调查与进场"
+            },
+            {
+              "en": "Monitoring before making good",
+              "zh": "恢复饰面前的观察"
+            }
+          ]
+        },
+        "takeaway": {
+          "en": "A dry surface alone does not confirm the source has been addressed.",
+          "zh": "表面干了，还要核对进水来源。"
+        },
+        "fieldPhoto": {
+          "file": "editorial-roof-edge.webp",
+          "caption": {
+            "en": "Sheltered roof and wall transitions",
+            "zh": "遮蔽处的屋面与墙面衔接"
+          }
+        },
+        "storyPhoto": {
+          "file": "editorial-facade.webp",
+          "caption": {
+            "en": "External openings and interfaces",
+            "zh": "外部门窗洞口与构造交界"
+          }
+        },
+        "titleLinesZh": [
+          "商业渗水排查：",
+          "从现象到",
+          "修复范围"
+        ],
+        "workingExample": {
+          "en": "Log changes in water marks against rain, fixture use and cooling operation to prioritise the inspection.",
+          "zh": "把水迹变化与降雨、用水和制冷运行时点对应，排定检查顺序。"
+        }
       }
     }
   ],
@@ -8072,8 +11156,8 @@
         "zh": "怎样选择单次维修或计划维护？"
       },
       "a": {
-        "en": "Start with the frequency and effect of the issue. A one-off defect may need one visit. Repeated problems can justify a condition review and a schedule based on the site and materials.",
-        "zh": "先看问题出现频率和影响。独立缺陷可能一次进场即可；反复出现的问题可先做状况核对，再按现场与材料制定计划。"
+        "en": "Use issue frequency and impact to plan attendance. Review recurring issues together and set work stages for the site and materials.",
+        "zh": "按发生频率与影响安排进场，集中核对反复问题，再结合现场及材料制定分阶段计划。"
       }
     },
     {
@@ -8084,8 +11168,8 @@
         "zh": "什么情况下照片足以初步确定范围？"
       },
       "a": {
-        "en": "An overview and close-up can locate visible defects and help identify access needs. Concealed damage, an uncertain leak path or inconsistent equipment behaviour may need a site check first.",
-        "zh": "全景和近照有助于定位可见缺陷及判断进场条件。隐蔽损伤、不明漏水路径或设备间歇故障，可能需要先到现场核对。"
+        "en": "Photograph the overall area and close-up to locate defects and access. Arrange an on-site check for concealed damage, leak paths and intermittent equipment faults.",
+        "zh": "用全景和近照记录缺陷及进场条件，安排现场核对隐蔽损伤、漏水路径和设备间歇故障。"
       }
     },
     {
@@ -8128,12 +11212,12 @@
       "id": "material-match",
       "category": "scope",
       "q": {
-        "en": "What happens if a matching material is unavailable?",
-        "zh": "找不到匹配材料时怎么办？"
+        "en": "How do you select replacement materials?",
+        "zh": "如何选择更换材料？"
       },
       "a": {
-        "en": "We identify the mismatch and discuss compatible alternatives, an agreed change in appearance or ordering the original item if available. Confirm the choice before work proceeds.",
-        "zh": "我们指出差异，讨论兼容替代、可接受的外观变化或订购可取得的原件，确认选择后再继续。"
+        "en": "We compare the original and compatible materials, explain finish differences and agree the material choice before carrying out the work.",
+        "zh": "我们对照原有材料与相容替代品，说明饰面差异，确认选材后再施工。"
       }
     },
     {
@@ -8537,6 +11621,67 @@
         "en": "Bureau of Meteorology — Gold Coast Seaway climate statistics",
         "zh": "澳洲气象局黄金海岸气候资料"
       }
+    },
+    {
+      "id": "eso-safe-equipment",
+      "title": "Testing and tagging of electrical equipment",
+      "publisher": "WorkSafe Queensland",
+      "url": "https://www.worksafe.qld.gov.au/safety-and-prevention/hazards/electricity/electrical-products-and-equipment/testing-and-tagging-electrical-equipment",
+      "accessed": "2026-11-21",
+      "label": {
+        "en": "Electrical equipment testing and tagging",
+        "zh": "工作场所电气设备检查与标签"
+      },
+      "appliesTo": [
+        "electrical-lighting",
+        "cleaning-waste-hygiene"
+      ]
+    },
+    {
+      "id": "qbcc-trade-scope",
+      "title": "When you need a licence",
+      "publisher": "Queensland Building and Construction Commission",
+      "url": "https://www.qbcc.qld.gov.au/ta/node/91",
+      "accessed": "2026-11-21",
+      "label": {
+        "en": "When a QBCC licence is needed",
+        "zh": "昆士兰建筑及专业工种许可范围"
+      },
+      "appliesTo": [
+        "plumbing-drainage-gas",
+        "hvac-building-systems",
+        "fire-security-access"
+      ]
+    },
+    {
+      "id": "qfes-fire-door",
+      "title": "Fire Safety Management Tool Advisory Notes",
+      "publisher": "Queensland Fire and Emergency Services",
+      "url": "https://www.qfes.qld.gov.au/sites/default/files/2024-03/FSMT-Advisory-Notes.pdf",
+      "accessed": "2026-11-21",
+      "label": {
+        "en": "Fire and smoke doors in the Fire Safety Management Tool",
+        "zh": "消防及防烟门管理说明"
+      },
+      "appliesTo": [
+        "fire-security-access",
+        "education-healthcare-community"
+      ]
+    },
+    {
+      "id": "gc-signage",
+      "title": "Advertising sign licence",
+      "publisher": "City of Gold Coast",
+      "url": "https://www.goldcoast.qld.gov.au/Services/Report-pay-apply/Permits-licensing/Advertising-sign-licence",
+      "accessed": "2026-11-21",
+      "label": {
+        "en": "Advertising sign licence",
+        "zh": "黄金海岸广告招牌许可"
+      },
+      "appliesTo": [
+        "signage-wayfinding",
+        "retail-shopping-centres"
+      ]
     }
   ]
 }
