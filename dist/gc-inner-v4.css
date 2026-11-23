@@ -132,6 +132,10 @@ html[lang="zh-CN"] .gc-v4 :is(h1,h2,h3) { font-family: "Noto Sans SC", sans-seri
 .gc-v4 table { width: 100%; min-width: 560px; border-collapse: collapse; table-layout: fixed; font-size: .95rem; line-height: 1.45; }
 .gc-v4 :is(th,td) { text-align: start; vertical-align: top; border-bottom: 1px solid currentColor; padding: .65em .75em; }
 .gc-v4 tr > :first-child { width: 24%; font-weight: 850; }
+@media (max-width: 600px) {
+  .gc-v4 table { min-width: 0; font-size: .875rem; }
+  .gc-v4 :is(th,td) { overflow-wrap: anywhere; padding-inline: .45em; }
+}
 .gc-v4--service .gc-compare { background: var(--gc-ink); color: var(--gc-paper); }
 .gc-v4--service .gc-compare > .gc-wrap > .gc-section { display: grid; grid-template-columns: minmax(0,.95fr) minmax(0,1.65fr); gap: clamp(20px,4vw,75px); align-items: start; }
 .gc-v4--service .gc-compare > .gc-wrap > .gc-section > .gc-section-heading { color: #ff774a; border-right: 1px solid var(--gc-paper); padding-inline-end: 22px; }
@@ -182,7 +186,6 @@ html[lang="zh-CN"] .gc-v4 :is(h1,h2,h3) { font-family: "Noto Sans SC", sans-seri
 
 .gc-v4 .gc-delivery { padding-block: clamp(26px,4vw,58px); border-block: 2px solid var(--gc-ink); }
 .gc-v4 .gc-delivery-inner { display: grid; grid-template-columns: minmax(0,1fr); gap: clamp(18px,4vw,60px); align-items: center; }
-.gc-v4 .gc-delivery-inner:has(figure) { grid-template-columns: minmax(0,1.1fr) minmax(0,1fr); }
 .gc-v4 .gc-delivery-image { min-height: clamp(210px,27vw,390px); }
 .gc-v4 .gc-delivery h2 { font-size: clamp(29px,3.65vw,58px); margin-bottom: 10px; text-wrap: pretty; }
 .gc-v4 .gc-delivery p { max-width: 70ch; }
@@ -233,7 +236,7 @@ html.motion-paused .gc-v4 *, .gc-v4.gc-motion-paused * { animation: none !import
   .gc-v4--article .gc-toc-arrow { display: block; }
   .gc-v4 .gc-feature,.gc-v4 .gc-feature--secondary,.gc-v4--sector .gc-lead-copy,
   .gc-v4--service .gc-compare > .gc-wrap > .gc-section,.gc-v4 .gc-article-opening,
-  .gc-v4 .gc-related-grid,.gc-v4 .gc-related-features,.gc-v4 .gc-delivery-inner:has(figure),
+  .gc-v4 .gc-related-grid,.gc-v4 .gc-related-features,
   .gc-v4 .gc-delivery > .gc-wrap > .gc-section { grid-template-columns: minmax(0,1fr); }
   .gc-v4 .gc-feature { gap: 9px; }
   .gc-v4 .gc-feature > .gc-figure, .gc-v4 .gc-feature--secondary > .gc-figure { grid-column: 1; grid-row: 2; min-height: 0; aspect-ratio: 1.35; }
@@ -275,7 +278,6 @@ html.motion-paused .gc-v4 *, .gc-v4.gc-motion-paused * { animation: none !import
 .gc-v4--service .gc-feature--secondary > .gc-feature-pair { grid-column: 2; grid-row: 2; border-left: 10px solid var(--gc-pink); }
 .gc-v4 .gc-story-feature { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1.25fr); gap: clamp(20px,4vw,55px); margin-block: 18px 28px; }
 .gc-v4 .gc-story-feature > .gc-figure { min-height: clamp(230px,24vw,335px); }
-.gc-v4 .gc-story-feature > .gc-section { align-self: center; }
 .gc-v4 .gc-article-opening .gc-lead-copy h2 { margin-bottom: 12px; }
 .gc-v4 .gc-article-opening .gc-lead-copy p { margin-block: 0; }
 .gc-v4 .gc-field-note::before { content: "FIELD NOTE"; display: block; margin-bottom: .65em; font-weight: 900; font-size: .8rem; letter-spacing: .07em; color: #a93212; }
@@ -283,7 +285,6 @@ html.motion-paused .gc-v4 *, .gc-v4.gc-motion-paused * { animation: none !import
 .gc-v4 .gc-hero-image[src$="editorial-coast-balcony.webp"] { object-position: 47% 53%; }
 .gc-v4--article .gc-delivery { padding-block: clamp(20px,2.8vw,40px); }
 .gc-v4--article .gc-delivery h2 { font-size: clamp(26px,2.9vw,42px); }
-.gc-v4--article .gc-delivery ul { display: flex; flex-wrap: wrap; gap: 3px 34px; }
 @media (max-width: 760px) {
   .gc-v4--service .gc-feature--secondary > .gc-feature-pair { grid-column: 1; grid-row: 2; min-height: 0; aspect-ratio: 1.4; }
   .gc-v4 .gc-story-feature { grid-template-columns: minmax(0,1fr); gap: 0; }
@@ -361,16 +362,24 @@ html.motion-paused .gc-v4 *, .gc-v4.gc-motion-paused * { animation: none !import
 .gc-v4--sector .gc-method { background: var(--gc-paper); border: 0; padding: 0 clamp(17px,3.3vw,45px) clamp(16px,2.4vw,31px); }
 .gc-v4--sector .gc-method .gc-section-heading h2 { max-width: 23ch; }
 .gc-v4 .gc-story-feature { align-items: start; padding-block: 6px clamp(13px,2.5vw,35px); }
-.gc-v4 .gc-story-feature > div { min-width: 0; }
 .gc-v4 .gc-story-feature .gc-section { padding: 0 0 15px; }
-.gc-v4 .gc-story-feature .gc-section + .gc-section { padding: 17px 0 0; border-top: 1px solid var(--gc-ink); }
-.gc-v4 .gc-story-feature .gc-section + .gc-section h2 { font-size: clamp(22px,2.2vw,33px); }
 .gc-v4 .gc-story-feature img { object-position: center; }
 
 .gc-v4 .gc-delivery { border-block: 0; border-top: 1px solid var(--gc-ink); padding-block: clamp(24px,3.5vw,48px); }
 .gc-v4 .gc-delivery-inner { align-items: start; }
-.gc-v4 .gc-delivery-inner:has(figure) { grid-template-columns: minmax(0,1.04fr) minmax(0,1fr); }
-.gc-v4 .gc-delivery-prep > .gc-section { padding: 15px 0 0; }
+.gc-v4 .gc-delivery-prep {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1.18fr);
+  align-items: start;
+  gap: clamp(16px,4vw,55px);
+}
+.gc-v4 .gc-delivery-prep > .gc-section { padding: 0; }
+.gc-v4:is(.gc-v4--service,.gc-v4--sector) #next-step {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,.8fr);
+  align-items: start;
+  gap: clamp(16px,4vw,55px);
+}
 .gc-v4 .gc-delivery-prep .gc-work-list { margin-top: 7px; }
 .gc-v4 .gc-delivery-prep .gc-work-item { padding-block: 7px; }
 .gc-v4 .gc-delivery-prep .gc-work-item h3 { font-size: clamp(17px,1.45vw,22px); }
@@ -398,7 +407,6 @@ html.motion-paused .gc-v4 *, .gc-v4.gc-motion-paused * { animation: none !import
 .gc-v4 .gc-journal-links h2 { font-size: clamp(23px,2.45vw,38px); }
 @media (max-width: 760px) {
   .gc-v4 .gc-method > .gc-section,
-  .gc-v4 .gc-delivery-inner:has(figure),
   .gc-v4--article .gc-delivery-copy,
   .gc-v4 .gc-resource-strip { grid-template-columns: minmax(0,1fr); }
   .gc-v4 .gc-method > .gc-section { gap: 12px; }
@@ -407,14 +415,36 @@ html.motion-paused .gc-v4 *, .gc-v4.gc-motion-paused * { animation: none !import
   .gc-v4 .gc-delivery-image { aspect-ratio: 1.65; }
 }
 
-.gc-v4 #next-step > .gc-section { padding-block: 15px 3px; }
-.gc-v4 #next-step > .gc-section .gc-section-heading { margin-bottom: 7px; }
-.gc-v4 #next-step > .gc-section h3 { font-size: clamp(17px,1.5vw,23px); }
+.gc-v4 .gc-delivery-brief > .gc-section { padding-block: 15px 3px; }
+.gc-v4 .gc-delivery-brief > .gc-section .gc-section-heading { margin-bottom: 7px; }
+.gc-v4 .gc-delivery-brief > .gc-section h3 { font-size: clamp(17px,1.5vw,23px); }
 @media (min-width: 1000px) {
-  .gc-v4--sector .gc-delivery-inner:has(figure) { grid-template-columns: minmax(0,1.22fr) minmax(0,1fr); gap: 22px clamp(22px,4vw,57px); }
-  .gc-v4--sector .gc-delivery-prep { display: contents; }
-  .gc-v4--sector .gc-delivery-image { grid-column: 2; grid-row: 1 / span 2; align-self: stretch; aspect-ratio: auto; }
-  .gc-v4--sector .gc-delivery-prep > .gc-section { grid-column: 1; grid-row: 1; padding: 0; }
-  .gc-v4--sector .gc-delivery-copy { grid-column: 1; grid-row: 2; padding-inline-start: clamp(14px,1.8vw,25px); }
   .gc-v4--sector .gc-delivery h2 { font-size: clamp(26px,3.15vw,49px); }
+}
+
+/* A photo belongs to its own chapter. Long reading resumes on a new row. */
+.gc-v4 .gc-story-flow > .gc-section {
+  border-top: 1px solid var(--gc-ink);
+  padding-block: clamp(24px,4vw,52px);
+}
+.gc-v4 .gc-story-flow > .gc-section > :is(.gc-section-heading,.gc-section-copy) {
+  max-width: 74ch;
+  margin-inline: auto;
+}
+.gc-v4 .gc-story-feature > .gc-section { align-self: start; }
+.gc-v4 .gc-delivery--handover { background: #fff2a5; }
+.gc-v4 .gc-delivery--handover > .gc-wrap > .gc-section {
+  margin: 0;
+  padding-bottom: clamp(14px,2.5vw,28px);
+  align-items: start;
+}
+@media (max-width: 880px) {
+  .gc-v4 .gc-story-feature,
+  .gc-v4 .gc-delivery-prep,
+  .gc-v4:is(.gc-v4--service,.gc-v4--sector) #next-step,
+  .gc-v4 .gc-delivery--handover > .gc-wrap > .gc-section {
+    grid-template-columns: minmax(0,1fr);
+  }
+  .gc-v4 .gc-story-feature { gap: 16px; }
+  .gc-v4 .gc-story-feature > .gc-figure { min-height: 0; aspect-ratio: 1.65; }
 }

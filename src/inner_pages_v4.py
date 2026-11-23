@@ -154,7 +154,7 @@ def picture(name, asset, alt, *, cls='', eager=False):
 
 def editorial_links(entries, lang, catalog, link):
     links = []
-    for kind, slug in entries:
+    for kind, slug in dict.fromkeys(tuple(target) for target in entries):
         record = catalog[kind][slug]
         label = t(record.get('listingTitle', record['title']), lang)
         links.append(f'<a href="{e(link(kind, slug, lang))}">{e(label)} <span aria-hidden="true">↗</span></a>')
@@ -229,7 +229,8 @@ def render_toc(sections, editorial, kind, lang):
 
 def feature_chapter(section, photo, num, lang, asset, catalog, link, *, secondary=False, lead_media=False):
     label = t(photo['caption'], lang)
-    links = editorial_links(photo.get('links', []), lang, catalog, link)
+    targets = photo.get('links', []) + section.get('links', [])
+    links = editorial_links(targets, lang, catalog, link)
     number = f'<div class="gc-chapter-index"><span aria-hidden="true">{num:02d} / </span>{e(label)}</div>'
     media = scene_markup(photo, lang, asset)
     if photo.get('companion'):
@@ -242,7 +243,8 @@ def feature_chapter(section, photo, num, lang, asset, catalog, link, *, secondar
 
 
 def compare_chapter(section, editorial, lang, catalog, link, methods=""):
-    links = editorial_links(editorial.get('compareLinks', []), lang, catalog, link)
+    targets = editorial.get('compareLinks', []) + section.get('links', [])
+    links = editorial_links(targets, lang, catalog, link)
     rows = []
     for row in editorial.get('workflow', []):
         steps = ''.join(f'<li>{e(t(step, lang))}</li>' for step in row['steps'])
@@ -251,7 +253,7 @@ def compare_chapter(section, editorial, lang, catalog, link, methods=""):
     return f'<div class="gc-compare"><div class="gc-wrap">{render_section(section, lang, links)}{methods}{workflow}</div></div>'
 
 
-def render_delivery(page, lang, asset, contact_href, closing_chapter='', brief=''):
+def render_delivery(page, lang, asset, contact_href, closing_chapter='', brief='', handover_chapter=''):
     editorial = page['editorial']
     handover = editorial['handover']
     photo = editorial.get('deliveryPhoto')
@@ -262,12 +264,18 @@ def render_delivery(page, lang, asset, contact_href, closing_chapter='', brief='
     media = scene_markup(photo, lang, asset, 'gc-delivery-image') if photo else ''
     prep = f'<div class="gc-delivery-prep">{media}{brief}</div>' if media or brief else ''
     article = page['kind'] == 'article'
-    inline_chapter = '' if article else closing_chapter
-    return (f'<div class="gc-delivery"><div class="gc-wrap gc-delivery-inner">{prep}'
-            f'<div class="gc-delivery-copy">{closing_chapter if article else ""}<section id="next-step">'
-            f'<h2>{e(title)}</h2><p>{e(note)}</p>{inline_chapter}<ul class="gc-delivery-checks">{checklist}</ul>'
-            f'<a class="gc-button" href="{e(contact_href)}">{action} <span aria-hidden="true">↗</span></a>'
-            '</section></div></div></div>')
+    summary = (
+        f'<div class="gc-delivery-brief"><h2>{e(title)}</h2><p>{e(note)}</p>'
+        f'{"" if article else closing_chapter}</div>'
+    )
+    contact = (
+        f'<div class="gc-delivery-contact"><ul class="gc-delivery-checks">{checklist}</ul>'
+        f'<a class="gc-button" href="{e(contact_href)}">{action} <span aria-hidden="true">↗</span></a></div>'
+    )
+    handover_style = ' gc-delivery--handover' if handover_chapter else ''
+    return (f'<div class="gc-delivery{handover_style}"><div class="gc-wrap gc-delivery-inner">{prep}{handover_chapter}'
+            f'<div class="gc-delivery-copy">{closing_chapter if article else ""}'
+            f'<section id="next-step">{summary}{contact}</section></div></div></div>')
 
 
 def render_faq(page, lang):
@@ -296,29 +304,38 @@ def render_detail(page, lang, catalog, link=None, asset=None, contact_href=None,
     remaining = prose[photo_count:]
     closing = ''
     brief = ''
+    handover_chapter = ''
     order = list(catalog[kind]).index(page['slug']) + 1
     hero = render_hero(page, lang, asset, contact_href, order)
     lead = f'<div class="gc-lead-copy"><h2>{e(t(editorial["leadTitle"], lang))}</h2><p>{e(t(page["lead"], lang))}</p></div>'
     scenario = f'<p class="gc-scenario">{e(t(editorial["workingExample"], lang))}</p>'
 
+    def chapter(section, extra_links=(), **kwargs):
+        targets = list(extra_links) + section.get('links', [])
+        links = editorial_links(targets, lang, catalog, link)
+        return render_section(section, lang, links, **kwargs)
+
     if kind == 'article':
         article_order = prose[:2] + comparisons + prose[2:]
         toc = render_toc(article_order, editorial, kind, lang)
-        intro = render_section(prose[0], lang, editorial_links(photos[0].get('links', []), lang, catalog, link))
+        intro = chapter(prose[0], photos[0].get('links', []))
         field_photo = editorial.get('fieldPhoto')
         note = f'<aside class="gc-field-note">{scene_markup(field_photo, lang, asset)}</aside>' if field_photo else ''
         gallery = ''.join(scene_markup(photo, lang, asset) for photo in photos if photo['file'] != (field_photo or {}).get('file'))
         takeaway = t(editorial['takeaway'], lang)
         second = (f'<div class="gc-article-spread"><span aria-hidden="true" class="gc-spread-number">02</span>'
-                  f'{render_section(prose[1], lang)}<aside class="gc-takeaway"><p>{e(takeaway)}</p></aside></div>')
+                  f'{chapter(prose[1])}<aside class="gc-takeaway"><p>{e(takeaway)}</p></aside></div>')
         comparison = ''.join(compare_chapter(s, editorial, lang, catalog, link) for s in comparisons)
-        closing = render_section(remaining[-1], lang)
+        closing = chapter(remaining[-1])
         story_image = scene_markup(editorial['storyPhoto'], lang, asset)
-        story_sections = ''.join(
-            render_section(section, lang, context=scenario if i == 0 else '')
-            for i, section in enumerate(remaining[1:-1])
-        )
-        story = f'<div class="gc-story-feature">{story_image}<div>{story_sections}</div></div>'
+        story_chapters = remaining[1:-1]
+        first, *follow_up = story_chapters
+        story = f'<div class="gc-story-feature">{story_image}{chapter(first, context=scenario)}</div>'
+        if follow_up:
+            handover_chapter = chapter(follow_up[-1])
+        flow = ''.join(chapter(section) for section in follow_up[:-1])
+        if flow:
+            story += f'<div class="gc-story-flow">{flow}</div>'
         main = (f'<div class="gc-wrap gc-article-opening" id="work">{toc}<div>{lead}{intro}</div>{note}</div>'
                 f'<div class="gc-wrap gc-article-gallery">{gallery}</div><div class="gc-wrap">{second}</div>'
                 f'{comparison}<div class="gc-wrap gc-story">{story}</div>')
@@ -333,11 +350,11 @@ def render_detail(page, lang, catalog, link=None, asset=None, contact_href=None,
         wide = scene_markup(scene, lang, asset, 'gc-wide-scene') if scene else ''
         lead_block = f'<section class="gc-wrap gc-lead" id="work">{lead}</section>'
         if remaining and remaining[-1].get('layout') == 'prose':
-            closing = render_section(remaining[-1], lang, heading='h3')
+            closing = chapter(remaining[-1], heading='h3')
             remaining = remaining[:-1]
-        brief = render_section(remaining[-1], lang)
+        brief = chapter(remaining[-1])
         methods = ''.join(
-            render_section(section, lang, context=scenario if i == 0 else '')
+            chapter(section, context=scenario if i == 0 else '')
             for i, section in enumerate(remaining[:-1])
         )
         comparison = ''.join(
@@ -348,13 +365,14 @@ def render_detail(page, lang, catalog, link=None, asset=None, contact_href=None,
 
     faq = render_faq(page, lang)
     related = related_block(page, lang, catalog, link, asset)
-    delivery = render_delivery(page, lang, asset, contact_href, closing, brief)
+    delivery = render_delivery(page, lang, asset, contact_href, closing, brief, handover_chapter)
     resources = []
     if faq:
         label = bi('Common questions', '常见问题', lang)
         resources.append(f'<details class="gc-resource"><summary>{label}</summary>{faq}</details>')
     if kind == 'article':
-        body = hero + main + f'<div class="gc-wrap gc-journal-links">{related}</div>' + delivery
+        journal_links = f'<div class="gc-wrap gc-journal-links">{related}</div>'
+        body = hero + main + delivery + journal_links
     else:
         if related:
             label = bi('Related work', '相关维护内容', lang)

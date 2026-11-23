@@ -10,7 +10,7 @@ INNER_STYLE = 'gc-inner-v4.css'
 INNER_SCRIPT = 'gc-inner-v4.js'
 INNER_VERSIONS = {name: sha256((OUT / name).read_bytes()).hexdigest()[:10] for name in (INNER_STYLE, INNER_SCRIPT, 'app.js')}
 DATA = json.loads((ROOT / 'src/content.json').read_text(encoding="utf-8"))
-ORIGIN = 'https://ellis-gold-coast-coastal.nancy-maintenance.chatgpt.site'
+ORIGIN = 'https://goldcoastcommercialrepairscomau.vercel.app'
 
 def e(x): return escape(str(x), quote=True)
 def tr(en, zh, lang): return en if lang == 'en' else zh
@@ -74,10 +74,12 @@ def faq_items(items, lang):
     for item in items:
         anchor = f' id="{e(item["id"])}"' if item.get('id') else ''
         category = e(item.get('category', 'planning'))
+        target = item.get('link')
+        guidance = f'<p>{a(target[0], target[1][lang], lang, "text-link")}</p>' if target else ''
         entries.append(
             f'<details{anchor} data-faq data-filter-item data-tags="{category}">'
             f'<summary>{e(val(item,"q",lang))}<span aria-hidden="true">+</span></summary>'
-            f'<div class="faq-answer"><p>{e(val(item,"a",lang))}</p></div></details>'
+            f'<div class="faq-answer"><p>{e(val(item,"a",lang))}</p>{guidance}</div></details>'
         )
     return ''.join(entries)
 
