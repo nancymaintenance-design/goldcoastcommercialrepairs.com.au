@@ -94,10 +94,17 @@ def render_section(section, lang, contextual_links="", media="", context="", *, 
 def related_block(page, lang, catalog, link, asset):
     links = []
     promoted = []
+    groups = []
+    is_article = page['kind'] == 'article'
     editorial = page['editorial']
     used_images = {editorial['cover'], *(photo['file'] for photo in editorial['features'])}
     used_images.update(editorial[key]['file'] for key in ('fieldPhoto', 'storyPhoto') if key in editorial)
-    for key, kind in [('services', 'service'), ('sectors', 'sector'), ('articles', 'article')]:
+    for key, kind, group_title in [
+        ('services', 'service', bi('Services', '服务内容', lang)),
+        ('sectors', 'sector', bi('Property types', '商业类型', lang)),
+        ('articles', 'article', bi('Maintenance guides', '维护指南', lang)),
+    ]:
+        group_links = []
         label = {'service': bi('Service', '服务', lang), 'sector': bi('Property type', '商业类型', lang), 'article': bi('Guide', '维护指南', lang)}[kind]
         for slug in page.get('related', {}).get(key, []):
             if slug not in catalog[kind] or slug == page['slug']:
@@ -105,7 +112,7 @@ def related_block(page, lang, catalog, link, asset):
             item = catalog[kind][slug]
             href = e(link(kind, slug, lang))
             title = e(t(item['title'], lang))
-            if page['kind'] == 'article' and kind == 'article' and len(promoted) < 2:
+            if is_article and kind == 'article' and len(promoted) < 2:
                 candidate = item['editorial']
                 options = [candidate['cover'], *(photo['file'] for photo in candidate['features'])]
                 filename = next((name for name in options if name not in used_images), None)
@@ -118,14 +125,21 @@ def related_block(page, lang, catalog, link, asset):
                                 f'<span aria-hidden="true">{len(promoted)+1:02d}</span>{cover}<strong>{title}</strong>'
                                 '<span aria-hidden="true" class="gc-link-arrow">↗</span></a>')
             else:
-                links.append(f'<a class="gc-related-link" href="{href}"><span class="gc-kicker">{label}</span>'
-                             f'<strong>{title}</strong><span class="gc-link-arrow" aria-hidden="true">↗</span></a>')
-    if not (links or promoted):
+                category = f'<span class="gc-kicker">{label}</span>' if is_article else ''
+                group_links.append(f'<a class="gc-related-link" href="{href}">{category}'
+                                   f'<strong>{title}</strong><span class="gc-link-arrow" aria-hidden="true">↗</span></a>')
+        if is_article:
+            links.extend(group_links)
+        elif group_links:
+            groups.append(f'<div class="gc-related-group gc-related-group--{kind}">'
+                          f'<h3>{group_title}</h3>{"".join(group_links)}</div>')
+    if not (links or promoted or groups):
         return ''
     cards = f'<div class="gc-related-features">{"".join(promoted)}</div>' if promoted else ''
+    grid_class = 'gc-related-grid' if is_article else 'gc-related-groups'
     return (f'<section class="gc-related" id="related"><div class="gc-related-heading">'
-            f'<h2>{bi("Continue reading", "继续阅读", lang) if page["kind"] == "article" else bi("Related work", "相关维护内容", lang)}</h2></div>{cards}'
-            f'<div class="gc-related-grid">{"".join(links)}</div></section>')
+            f'<h2>{bi("Continue reading", "继续阅读", lang) if is_article else bi("Related work", "相关维护内容", lang)}</h2></div>{cards}'
+            f'<div class="{grid_class}">{"".join(links or groups)}</div></section>')
 
 
 def enquiry_form(page, lang):
@@ -280,11 +294,11 @@ def render_delivery(page, lang, asset, contact_href, closing_chapter='', brief='
 
 def render_faq(page, lang):
     faq = ''.join(
-        f'<details class="gc-faq-item"><summary>{e(t(q["q"], lang))}<span aria-hidden="true">+</span></summary>'
-        f'<div><p>{e(t(q["a"], lang))}</p></div></details>'
+        f'<div class="gc-faq-item"><dt>{e(t(q["q"], lang))}</dt>'
+        f'<dd>{e(t(q["a"], lang))}</dd></div>'
         for q in page.get('faqs', [])
     )
-    return f'<section class="gc-faq" id="questions"><h2>{bi("Common questions", "常见问题", lang)}</h2>{faq}</section>' if faq else ''
+    return f'<section class="gc-faq" id="questions"><h2>{bi("Common questions", "常见问题", lang)}</h2><dl>{faq}</dl></section>' if faq else ''
 
 
 def render_detail(page, lang, catalog, link=None, asset=None, contact_href=None, preview=False):
@@ -366,20 +380,12 @@ def render_detail(page, lang, catalog, link=None, asset=None, contact_href=None,
     faq = render_faq(page, lang)
     related = related_block(page, lang, catalog, link, asset)
     delivery = render_delivery(page, lang, asset, contact_href, closing, brief, handover_chapter)
-    resources = []
-    if faq:
-        label = bi('Common questions', '常见问题', lang)
-        resources.append(f'<details class="gc-resource"><summary>{label}</summary>{faq}</details>')
-    if kind == 'article':
-        journal_links = f'<div class="gc-wrap gc-journal-links">{related}</div>'
-        body = hero + main + delivery + journal_links
-    else:
-        if related:
-            label = bi('Related work', '相关维护内容', lang)
-            resources.append(f'<details class="gc-resource"><summary>{label}</summary>{related}</details>')
-        body = hero + main + delivery
+    body = hero + main + delivery
+    if kind == 'article' and related:
+        body += f'<div class="gc-wrap gc-journal-links">{related}</div>'
+    resources = faq + (related if kind != 'article' else '')
     if resources:
-        body += f'<div class="gc-wrap gc-resource-strip">{"".join(resources)}</div>'
+        body += f'<div class="gc-wrap gc-resource-strip">{resources}</div>'
     if preview:
         body += enquiry_form(page, lang)
     return f'<article class="gc-v4 gc-v4--{kind}" data-gc-v4 data-gc-lang="{lang}">{body}</article>'

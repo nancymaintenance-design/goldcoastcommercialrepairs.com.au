@@ -171,11 +171,9 @@ html[lang="zh-CN"] .gc-v4 :is(h1,h2,h3) { font-family: "Noto Sans SC", sans-seri
 .gc-v4 .gc-support { padding-block: 10px clamp(24px,4vw,58px); }
 .gc-v4 .gc-faq, .gc-v4 .gc-related { margin-top: 27px; }
 .gc-v4 .gc-support h2 { font-size: clamp(24px,2.4vw,39px); margin-bottom: 12px; }
-.gc-v4 .gc-faq-item { border-top: 1px solid var(--gc-ink); }
-.gc-v4 .gc-faq-item summary { display: flex; justify-content: space-between; gap: 14px; padding: 12px 0; cursor: pointer; font-weight: 800; list-style: none; }
-.gc-v4 .gc-faq-item summary::-webkit-details-marker { display: none; }
-.gc-v4 .gc-faq-item[open] summary span { transform: rotate(45deg); }
-.gc-v4 .gc-faq-item > div { padding-bottom: 15px; max-width: 74ch; }
+.gc-v4 .gc-faq dl { margin: 0; }
+.gc-v4 .gc-faq-item dt { font-weight: 800; }
+.gc-v4 .gc-faq-item dd { margin: 4px 0 0; max-width: 74ch; }
 .gc-v4 .gc-related-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 8px 22px; }
 .gc-v4 .gc-related-link { display: flex; gap: 7px; align-items: baseline; border-bottom: 1px solid currentColor; padding: 6px 0; text-decoration: none; }
 .gc-v4 .gc-related-link:hover { background: var(--gc-pink); }
@@ -316,19 +314,6 @@ html.motion-paused .gc-v4 *, .gc-v4.gc-motion-paused * { animation: none !import
   .gc-v4 .gc-feature--lead .gc-section-heading { margin-bottom: 0; }
   .gc-v4 .gc-feature--lead .gc-figure { position: relative; min-height: 0; aspect-ratio: 1.28; }
 }
-.gc-detail-footer { background: var(--gc-pink); color: var(--gc-ink); }
-.gc-detail-footer__row,.gc-detail-footer__legal { width: min(1320px,calc(100% - 96px)); margin-inline: auto; }
-.gc-detail-footer__row { display: grid; grid-template-columns: minmax(175px,.75fr) minmax(0,2fr); gap: clamp(20px,4vw,65px); align-items: center; padding-block: 25px; }
-.gc-detail-footer__row nav { display: flex; flex-wrap: wrap; gap: 2px clamp(14px,2.4vw,38px); border-inline-start: 1px solid var(--gc-ink); padding-inline-start: clamp(18px,3vw,45px); }
-.gc-detail-footer a { color: inherit; }
-.gc-detail-footer__row nav a { display: inline-flex; align-items: center; min-height: 44px; font-size: .85rem; font-weight: 800; text-decoration: none; }
-.gc-detail-footer a:is(:hover,:focus-visible) { text-decoration: underline; text-underline-offset: .25em; }
-.gc-detail-footer__legal { display: flex; justify-content: space-between; gap: 10px; font-size: .75rem; padding-block: 9px 14px; border-top: 1px solid var(--gc-ink); }
-@media (max-width: 760px) {
-  .gc-detail-footer__row,.gc-detail-footer__legal { width: calc(100% - 36px); }
-  .gc-detail-footer__row { grid-template-columns: minmax(0,1fr); gap: 12px; padding-block: 20px 12px; }
-  .gc-detail-footer__row nav { border-inline-start: 0; padding-inline-start: 0; }
-}
 .gc-v4 .gc-photo-point { position: absolute; left: var(--x); top: var(--y); z-index: 1; transform: translate(-50%,-100%); color: var(--gc-ink); background: var(--gc-paper); border: 1px solid var(--gc-ink); padding: .3em .6em; font-weight: 850; font-size: clamp(.68rem,1.05vw,.9rem); white-space: nowrap; }
 .gc-v4 .gc-photo-point::after { content: ""; position: absolute; width: 1px; height: 20px; background: var(--gc-ink); left: 50%; top: 100%; }
 @media (max-width: 560px) {
@@ -394,24 +379,47 @@ html.motion-paused .gc-v4 *, .gc-v4.gc-motion-paused * { animation: none !import
 .gc-v4--article .gc-delivery .gc-delivery-checks { display: block; }
 
 .gc-v4 .gc-resource-strip {
-  display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); align-items: start; gap: 0 24px;
-  border-top: 1px solid var(--gc-ink); padding-block: 0 12px;
+  border-top: 1px solid var(--gc-ink);
+  padding-block: clamp(24px,4vw,54px);
 }
-.gc-v4 .gc-resource:only-child { grid-column: 1 / -1; }
-.gc-v4 .gc-resource > summary { cursor: pointer; font-size: .92rem; font-weight: 800; padding-block: 11px; }
-.gc-v4 .gc-resource :is(.gc-faq,.gc-related) { margin: 0 0 16px; }
-.gc-v4 .gc-resource :is(.gc-faq,.gc-related) h2 { font-size: clamp(22px,2.15vw,33px); margin-bottom: 7px; }
-.gc-v4 .gc-resource .gc-related-grid { grid-template-columns: minmax(0,1fr); }
+.gc-v4 .gc-resource-strip > :is(.gc-faq,.gc-related) { margin: 0; }
+.gc-v4 .gc-resource-strip > .gc-faq + .gc-related { margin-top: clamp(28px,4vw,56px); }
+.gc-v4 .gc-resource-strip h2 { font-size: clamp(24px,2.45vw,38px); margin-bottom: 14px; }
+.gc-v4 .gc-faq dl, .gc-v4 .gc-related-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(min(100%,260px),1fr));
+  gap: clamp(12px,2vw,24px);
+}
+.gc-v4 .gc-faq-item {
+  border: 1px solid var(--gc-ink);
+  border-top: 4px solid var(--gc-orange);
+  padding: clamp(14px,1.7vw,23px);
+}
+.gc-v4 .gc-related-group {
+  min-width: 0;
+  border: 1px solid var(--gc-ink);
+  padding: 0 clamp(14px,1.7vw,22px) 9px;
+}
+.gc-v4 .gc-related-group h3 {
+  margin: 0 calc(-1 * clamp(14px,1.7vw,22px)) 5px;
+  padding: 10px clamp(14px,1.7vw,22px);
+  border-bottom: 1px solid var(--gc-ink);
+  font-size: 1rem;
+  background: var(--gc-sun);
+}
+.gc-v4 .gc-related-group--sector h3 { background: var(--gc-aqua); }
+.gc-v4 .gc-related-group--article h3 { background: var(--gc-pink); }
+.gc-v4 .gc-related-group a { justify-content: space-between; gap: 12px; padding-block: 9px; }
+.gc-v4 .gc-related-group a:last-child { border-bottom: 0; }
+.gc-v4 .gc-related-group a:focus-visible { background: var(--gc-sun); }
 .gc-v4 .gc-journal-links { border-top: 1px solid var(--gc-ink); padding-block: 12px clamp(21px,3vw,35px); }
 .gc-v4 .gc-journal-links .gc-related { margin: 0; }
 .gc-v4 .gc-journal-links h2 { font-size: clamp(23px,2.45vw,38px); }
 @media (max-width: 760px) {
   .gc-v4 .gc-method > .gc-section,
-  .gc-v4--article .gc-delivery-copy,
-  .gc-v4 .gc-resource-strip { grid-template-columns: minmax(0,1fr); }
+  .gc-v4--article .gc-delivery-copy { grid-template-columns: minmax(0,1fr); }
   .gc-v4 .gc-method > .gc-section { gap: 12px; }
   .gc-v4 .gc-delivery-copy, .gc-v4--article .gc-delivery-copy > #next-step { padding-inline-start: 12px; border-inline-start: 2px solid var(--gc-orange); }
-  .gc-v4 .gc-resource + .gc-resource { border-top: 1px solid var(--gc-ink); }
   .gc-v4 .gc-delivery-image { aspect-ratio: 1.65; }
 }
 

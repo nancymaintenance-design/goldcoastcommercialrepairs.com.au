@@ -56,14 +56,3 @@ def render_footer(lang, tr, url, nav):
       </div>
       <div class="shore-footer__hem" aria-hidden="true"></div>
     </footer>'''
-
-def render_detail_footer(lang, tr, url, nav, brand):
-    links = ''.join(f'<a href="{url(path, lang)}">{tr(en, zh, lang)}</a>' for path, en, zh in nav)
-    return f'''<footer class="gc-detail-footer" id="shore-footer">
-      <div class="gc-detail-footer__row">{brand}
-        <nav aria-label="{tr('Footer navigation', '页脚导航', lang)}">{links}</nav>
-      </div>
-      <div class="gc-detail-footer__legal"><span>© 2026 Ellis Services Group</span>
-        <a href="{url('/image-credits/', lang)}">{tr('Image credits', '图片说明', lang)}</a>
-      </div>
-    </footer>'''

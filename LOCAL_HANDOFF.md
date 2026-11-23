@@ -56,7 +56,15 @@ python tests/interactions.py
 
 在原目标的预览部署验证：目录式路径、无斜杠至有斜杠规范化、嵌套页面直接打开和刷新、不存在路径返回自定义 404 且 HTTP 状态为 404。正式域名确定前保持 noindex 和 robots 禁抓；本轮保留原预览 canonical/hreflang。
 
-正式发布前，在生成器统一 ORIGIN、canonical、对应 hreflang（含适用的 x-default）、社交图片绝对 URL，生成仅含可索引规范路径的 sitemap.xml，更新 robots 并移除预览 noindex，核对 HTTPS 和单一域名重定向。结构化数据仅使用已确认公司资料；当前未添加未经确认的 LocalBusiness、电话、营业时间、评价或地址。
+正式候选输出使用独立目录。当前 `dist` 继续作为本地和 Vercel 演示站的预览产物。
+
+```powershell
+python build.py --production-dir artifacts/gold-coast-production
+```
+
+选一个尚未存在的输出目录。候选目录包含页面和静态资源。正式页面的 canonical、双向 hreflang、x-default 和社交图片使用 `https://goldcoastcommercialrepairs.com.au`，sitemap 由构建时的规范路径生成并在 robots 中声明。正式内容页允许索引，404 保留 noindex。日常运行 `python build.py` 时，`dist` 继续禁止抓取和索引。
+
+正式启用前验证域名 DNS、HTTPS、生产构建路径、站点地图及未知路径的 404 状态。结构化数据使用已确认的公司资料。
 
 真实表单需要经确认的服务器接收端和接收邮箱。实现并实测正常、输入错误、服务端失败、重复点击、照片上传以及实际到达邮箱；只有服务器确认成功且链路经过送达验证后启用“已发送”文案。域名、邮箱和后端尚未提供，不能在当前纯静态草稿中完成真实发送验证。
 

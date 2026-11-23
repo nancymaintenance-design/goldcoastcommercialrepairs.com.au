@@ -1,16 +1,24 @@
+from argparse import ArgumentParser
 from pathlib import Path
+from shutil import copy2, copytree
+from xml.etree import ElementTree as ET
 from html import escape
 from hashlib import sha256
 import json
 from src.inner_pages_v4 import KINDS, load_catalog, render_detail
 
 ROOT = Path(__file__).resolve().parent
-OUT = ROOT / 'dist'
+DIST = ROOT / 'dist'
+OUT = DIST
 INNER_STYLE = 'gc-inner-v4.css'
 INNER_SCRIPT = 'gc-inner-v4.js'
-INNER_VERSIONS = {name: sha256((OUT / name).read_bytes()).hexdigest()[:10] for name in (INNER_STYLE, INNER_SCRIPT, 'app.js')}
+INNER_VERSIONS = {name: sha256((DIST / name).read_bytes()).hexdigest()[:10] for name in (INNER_STYLE, INNER_SCRIPT, 'app.js')}
 DATA = json.loads((ROOT / 'src/content.json').read_text(encoding="utf-8"))
-ORIGIN = 'https://goldcoastcommercialrepairscomau.vercel.app'
+PREVIEW_ORIGIN = 'https://goldcoastcommercialrepairscomau.vercel.app'
+PRODUCTION_ORIGIN = 'https://goldcoastcommercialrepairs.com.au'
+ORIGIN = PREVIEW_ORIGIN
+PRODUCTION = False
+CANONICAL_URLS = []
 
 def e(x): return escape(str(x), quote=True)
 def tr(en, zh, lang): return en if lang == 'en' else zh
@@ -46,10 +54,8 @@ def header(path, lang):
     <nav id="primary-nav" aria-label="{tr('Main navigation','主导航',lang)}">{nav}</nav>
     <a href="{url(path,other)}" class="lang-switch" lang="{tr('zh-CN','en-AU',lang)}" aria-label="{tr('切换中文','Switch to English',lang)}">中/EN</a></header>'''
 
-def footer(lang, compact=False):
-    from src.footer_v3 import render_footer, render_detail_footer
-    if compact:
-        return render_detail_footer(lang, tr, url, NAV, wordmark(lang))
+def footer(lang):
+    from src.footer_v3 import render_footer
     return render_footer(lang, tr, url, NAV)
 
 def page(path, lang, title, desc, body, cls='', *, inner=False, share_image='coast-hero.webp'):
@@ -57,9 +63,12 @@ def page(path, lang, title, desc, body, cls='', *, inner=False, share_image='coa
     dest=OUT/relpath/'index.html'
     dest.parent.mkdir(parents=True,exist_ok=True)
     canonical=ORIGIN+url(path,lang)
+    CANONICAL_URLS.append(canonical)
+    robots_meta = '' if PRODUCTION else '<meta name="robots" content="noindex,nofollow">'
+    default_alternate = f'<link rel="alternate" hreflang="x-default" href="{ORIGIN+url(path,"en")}">' if PRODUCTION else ''
     inner_css = f'<link rel="stylesheet" href="/{INNER_STYLE}?v={INNER_VERSIONS[INNER_STYLE]}">' if inner else ''
     inner_js = f'<script defer src="/{INNER_SCRIPT}?v={INNER_VERSIONS[INNER_SCRIPT]}"></script>' if inner else ''
-    doc=f'''<!doctype html><html lang="{tr('en-AU','zh-CN',lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FF642D"><title>{e(title)} | Ellis Gold Coast</title><meta name="description" content="{e(desc)}"><meta name="robots" content="noindex,nofollow"><link rel="canonical" href="{canonical}"><link rel="alternate" hreflang="en-AU" href="{ORIGIN+url(path,'en')}"><link rel="alternate" hreflang="zh-CN" href="{ORIGIN+url(path,'zh')}"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:image" content="{ORIGIN}/assets/{e(share_image)}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/surf-font.css"><link rel="stylesheet" href="/chinese-font.css"><link rel="stylesheet" href="/maximal.css"><link rel="stylesheet" href="/interiors.css">{inner_css}<link rel="stylesheet" href="/footer.css"><script defer src="/app.js?v={INNER_VERSIONS['app.js']}"></script><script defer src="/motion.js"></script>{inner_js}</head><body class="{cls} maximal"><div class="scroll-progress" aria-hidden="true"></div><div class="cursor-orb" aria-hidden="true"></div>{header(path,lang)}<main id="main">{body}</main>{footer(lang, compact=inner)}</body></html>'''
+    doc=f'''<!doctype html><html lang="{tr('en-AU','zh-CN',lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FF642D"><title>{e(title)} | Ellis Gold Coast</title><meta name="description" content="{e(desc)}">{robots_meta}<link rel="canonical" href="{canonical}"><link rel="alternate" hreflang="en-AU" href="{ORIGIN+url(path,'en')}"><link rel="alternate" hreflang="zh-CN" href="{ORIGIN+url(path,'zh')}">{default_alternate}<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:image" content="{ORIGIN}/assets/{e(share_image)}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/surf-font.css"><link rel="stylesheet" href="/chinese-font.css"><link rel="stylesheet" href="/maximal.css"><link rel="stylesheet" href="/interiors.css">{inner_css}<link rel="stylesheet" href="/footer.css"><script defer src="/app.js?v={INNER_VERSIONS['app.js']}"></script><script defer src="/motion.js"></script>{inner_js}</head><body class="{cls} maximal"><div class="scroll-progress" aria-hidden="true"></div><div class="cursor-orb" aria-hidden="true"></div>{header(path,lang)}<main id="main">{body}</main>{footer(lang)}</body></html>'''
     dest.write_text(doc, encoding="utf-8", newline="\n")
 
 def section_heading(kicker, title, text='', link=None, lang='en'):
@@ -180,13 +189,49 @@ def credits(lang):
     body+='<section class="section wrap prose"><h2>'+tr('Coastal hero image','首页海岸主视觉',lang)+'</h2><p>'+tr('The Gold Coast hero uses generated imagery.','首页海岸主图为生成图像。',lang)+'</p><h2>'+tr('Property photography','物业场景摄影',lang)+'</h2><p>Nico Smit · Johan Mouchet · ANNIE HATUANH · Alesia Kazantceva · Mathias Reding / Unsplash</p><p>'+additional_credits+' / Pexels</p><p>'+tr('Property photography includes stock images and generated editorial scenes of a resort, a maintenance setting and a roof. ','物业图片来源包括图库摄影以及生成的度假、维修和屋面图像。',lang)+'</p></section>'
     page('/image-credits/',lang,tr('Image credits','图片说明',lang),tr('Image sources and design imagery.','海岸设计图片、图库摄影与来源说明。',lang),body)
 
-for lang in ['en','zh']:
-    home(lang); services_page(lang); sectors_page(lang); news_page(lang); faq_page(lang); about_page(lang); contact_page(lang); credits(lang)
-    for x in DATA['services']: service_detail(x,lang)
-    for x in DATA['sectors']: sector_detail(x,lang)
-    for x in DATA['articles']: article_detail(x,lang)
+def write_crawl_files():
+    robots = OUT / 'robots.txt'
+    sitemap = OUT / 'sitemap.xml'
+    if PRODUCTION:
+        urlset = ET.Element('urlset', xmlns='http://www.sitemaps.org/schemas/sitemap/0.9')
+        for canonical in sorted(CANONICAL_URLS):
+            ET.SubElement(ET.SubElement(urlset, 'url'), 'loc').text = canonical
+        ET.indent(urlset)
+        ET.ElementTree(urlset).write(sitemap, encoding='utf-8', xml_declaration=True)
+        rules = f'User-agent: *\nDisallow:\nSitemap: {ORIGIN}/sitemap.xml\n'
+    else:
+        sitemap.unlink(missing_ok=True)
+        rules = 'User-agent: *\nDisallow: /\n'
+    robots.write_text(rules, encoding='utf-8', newline='\n')
 
-(OUT/'404.html').write_text('''<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page not found | Ellis Gold Coast</title><meta name="description" content="This page is not available. Return to Ellis Gold Coast commercial property maintenance."><meta name="robots" content="noindex"><meta name="theme-color" content="#FF642D"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/surf-font.css"><link rel="stylesheet" href="/chinese-font.css"><link rel="stylesheet" href="/maximal.css"><style>body.page-not-found{min-height:100svh;display:grid;place-items:center;padding:35px 22px;background:var(--gc-orange)}body.page-not-found .not-found{width:min(900px,100%);margin:0;padding:clamp(30px,7vw,90px);background:var(--gc-sun);border:3px solid var(--gc-ink);box-shadow:12px 12px 0 var(--gc-ink);text-align:left}body.page-not-found .error-code{display:inline-block;background:var(--gc-pink);border:2px solid var(--gc-ink);padding:7px 20px;font-family:var(--gc-display);font-size:2rem;transform:rotate(-4deg);margin-bottom:28px}body.page-not-found h1{font-size:clamp(2.3rem,8vw,5.6rem);line-height:1.06;overflow-wrap:break-word}body.page-not-found .error-actions{display:flex;align-items:center;flex-wrap:wrap;gap:22px;margin-top:30px}body.page-not-found .button{background:var(--gc-aqua);color:var(--gc-ink)}body.page-not-found .button:hover{background:var(--gc-pink)}</style></head><body class="maximal page-not-found"><main id="main" class="not-found"><p class="eyebrow">ELLIS / GOLD COAST</p><span class="error-code" aria-label="Error 404">404</span><h1>This path<br>ends here.</h1><p>The page you are looking for is not available.</p><div class="error-actions"><a class="button" href="/">Back to home</a><a class="text-link" href="/zh/" lang="zh-CN">返回中文首页</a></div></main></body></html>''', encoding="utf-8", newline="\n")
-(OUT/'robots.txt').write_text('User-agent: *\nDisallow: /\n', encoding="utf-8", newline="\n")
-(OUT/'assets/favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="18" fill="#FFE34D"/><circle cx="32" cy="32" r="15" fill="#241611"/><path d="M32 7v5M32 52v5M7 32h5M52 32h5M14 14l4 4M46 46l4 4M14 50l4-4M46 18l4-4" stroke="#241611" stroke-width="4"/></svg>', encoding="utf-8", newline="\n")
-print(json.dumps({'html_pages':len(list(OUT.rglob('*.html'))),'services':len(DATA['services']),'sectors':len(DATA['sectors']),'articles':len(DATA['articles'])}))
+
+def build():
+    for lang in ['en','zh']:
+        home(lang); services_page(lang); sectors_page(lang); news_page(lang); faq_page(lang); about_page(lang); contact_page(lang); credits(lang)
+        for x in DATA['services']: service_detail(x,lang)
+        for x in DATA['sectors']: sector_detail(x,lang)
+        for x in DATA['articles']: article_detail(x,lang)
+
+    (OUT/'404.html').write_text('''<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Page not found | Ellis Gold Coast</title><meta name="description" content="This page is not available. Return to Ellis Gold Coast commercial property maintenance."><meta name="robots" content="noindex"><meta name="theme-color" content="#FF642D"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/surf-font.css"><link rel="stylesheet" href="/chinese-font.css"><link rel="stylesheet" href="/maximal.css"><style>body.page-not-found{min-height:100svh;display:grid;place-items:center;padding:35px 22px;background:var(--gc-orange)}body.page-not-found .not-found{width:min(900px,100%);margin:0;padding:clamp(30px,7vw,90px);background:var(--gc-sun);border:3px solid var(--gc-ink);box-shadow:12px 12px 0 var(--gc-ink);text-align:left}body.page-not-found .error-code{display:inline-block;background:var(--gc-pink);border:2px solid var(--gc-ink);padding:7px 20px;font-family:var(--gc-display);font-size:2rem;transform:rotate(-4deg);margin-bottom:28px}body.page-not-found h1{font-size:clamp(2.3rem,8vw,5.6rem);line-height:1.06;overflow-wrap:break-word}body.page-not-found .error-actions{display:flex;align-items:center;flex-wrap:wrap;gap:22px;margin-top:30px}body.page-not-found .button{background:var(--gc-aqua);color:var(--gc-ink)}body.page-not-found .button:hover{background:var(--gc-pink)}</style></head><body class="maximal page-not-found"><main id="main" class="not-found"><p class="eyebrow">ELLIS / GOLD COAST</p><span class="error-code" aria-label="Error 404">404</span><h1>This path<br>ends here.</h1><p>The page you are looking for is not available.</p><div class="error-actions"><a class="button" href="/">Back to home</a><a class="text-link" href="/zh/" lang="zh-CN">返回中文首页</a></div></main></body></html>''', encoding="utf-8", newline="\n")
+    write_crawl_files()
+    (OUT/'assets/favicon.svg').write_text('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="18" fill="#FFE34D"/><circle cx="32" cy="32" r="15" fill="#241611"/><path d="M32 7v5M32 52v5M7 32h5M52 32h5M14 14l4 4M46 46l4 4M14 50l4-4M46 18l4-4" stroke="#241611" stroke-width="4"/></svg>', encoding="utf-8", newline="\n")
+    print(json.dumps({'html_pages':len(list(OUT.rglob('*.html'))),'services':len(DATA['services']),'sectors':len(DATA['sectors']),'articles':len(DATA['articles'])}))
+
+
+if __name__ == '__main__':
+    parser = ArgumentParser(description='Build the Gold Coast static site')
+    parser.add_argument('--production-dir', type=Path, metavar='DIRECTORY',
+                        help='Write indexable output to a new directory outside dist')
+    args = parser.parse_args()
+    if args.production_dir is not None:
+        OUT = args.production_dir.resolve()
+        if OUT.exists() or OUT.is_relative_to(DIST):
+            parser.error('--production-dir must be a new directory outside dist')
+        OUT.mkdir(parents=True)
+        copytree(DIST / 'assets', OUT / 'assets')
+        for pattern in ('*.css', '*.js'):
+            for asset in DIST.glob(pattern):
+                copy2(asset, OUT / asset.name)
+        ORIGIN = PRODUCTION_ORIGIN
+        PRODUCTION = True
+    build()
