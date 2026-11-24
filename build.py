@@ -58,17 +58,48 @@ def footer(lang):
     from src.footer_v3 import render_footer
     return render_footer(lang, tr, url, NAV)
 
+def breadcrumbs(path, lang, title):
+    if path == '/':
+        return '', ''
+
+    labels = {route: tr(en, zh, lang) for route, en, zh in NAV}
+    parts = path.strip('/').split('/')
+    trail = [('/', labels['/'])]
+    for depth in range(1, len(parts)):
+        parent = '/' + '/'.join(parts[:depth]) + '/'
+        trail.append((parent, labels[parent]))
+    trail.append((path, labels.get(path, title)))
+
+    items = ''.join(
+        f'<li><a href="{e(url(route, lang))}">{e(label)}</a></li>'
+        for route, label in trail[:-1]
+    )
+    nav = (f'<nav class="site-breadcrumbs" aria-label="{tr("Breadcrumb", "面包屑导航", lang)}">'
+           f'<ol>{items}<li aria-current="page">{e(trail[-1][1])}</li></ol></nav>')
+    schema = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        'itemListElement': [
+            {'@type': 'ListItem', 'position': index, 'name': label, 'item': ORIGIN + url(route, lang)}
+            for index, (route, label) in enumerate(trail, 1)
+        ],
+    }
+    payload = json.dumps(schema, ensure_ascii=False).replace('<', r'\u003c')
+    return nav, f'<script type="application/ld+json">{payload}</script>'
+
+
 def page(path, lang, title, desc, body, cls='', *, inner=False, share_image='coast-hero.webp'):
     relpath=('zh/' if lang=='zh' else '')+(path.strip('/')+'/' if path!='/' else '')
     dest=OUT/relpath/'index.html'
     dest.parent.mkdir(parents=True,exist_ok=True)
     canonical=ORIGIN+url(path,lang)
+    crumb_nav, crumb_schema = breadcrumbs(path, lang, title)
     CANONICAL_URLS.append(canonical)
     robots_meta = '' if PRODUCTION else '<meta name="robots" content="noindex,nofollow">'
     default_alternate = f'<link rel="alternate" hreflang="x-default" href="{ORIGIN+url(path,"en")}">' if PRODUCTION else ''
     inner_css = f'<link rel="stylesheet" href="/{INNER_STYLE}?v={INNER_VERSIONS[INNER_STYLE]}">' if inner else ''
     inner_js = f'<script defer src="/{INNER_SCRIPT}?v={INNER_VERSIONS[INNER_SCRIPT]}"></script>' if inner else ''
-    doc=f'''<!doctype html><html lang="{tr('en-AU','zh-CN',lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FF642D"><title>{e(title)} | Ellis Gold Coast</title><meta name="description" content="{e(desc)}">{robots_meta}<link rel="canonical" href="{canonical}"><link rel="alternate" hreflang="en-AU" href="{ORIGIN+url(path,'en')}"><link rel="alternate" hreflang="zh-CN" href="{ORIGIN+url(path,'zh')}">{default_alternate}<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:image" content="{ORIGIN}/assets/{e(share_image)}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/surf-font.css"><link rel="stylesheet" href="/chinese-font.css"><link rel="stylesheet" href="/maximal.css"><link rel="stylesheet" href="/interiors.css">{inner_css}<link rel="stylesheet" href="/footer.css"><script defer src="/app.js?v={INNER_VERSIONS['app.js']}"></script><script defer src="/motion.js"></script>{inner_js}</head><body class="{cls} maximal"><div class="scroll-progress" aria-hidden="true"></div><div class="cursor-orb" aria-hidden="true"></div>{header(path,lang)}<main id="main">{body}</main>{footer(lang)}</body></html>'''
+    doc=f'''<!doctype html><html lang="{tr('en-AU','zh-CN',lang)}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#FF642D"><title>{e(title)} | Ellis Gold Coast</title><meta name="description" content="{e(desc)}">{robots_meta}<link rel="canonical" href="{canonical}"><link rel="alternate" hreflang="en-AU" href="{ORIGIN+url(path,'en')}"><link rel="alternate" hreflang="zh-CN" href="{ORIGIN+url(path,'zh')}">{default_alternate}<meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:image" content="{ORIGIN}/assets/{e(share_image)}"><link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/surf-font.css"><link rel="stylesheet" href="/chinese-font.css"><link rel="stylesheet" href="/maximal.css"><link rel="stylesheet" href="/interiors.css">{inner_css}<link rel="stylesheet" href="/footer.css"><script defer src="/app.js?v={INNER_VERSIONS['app.js']}"></script><script defer src="/motion.js"></script>{inner_js}{crumb_schema}</head><body class="{cls} maximal"><div class="scroll-progress" aria-hidden="true"></div><div class="cursor-orb" aria-hidden="true"></div>{header(path,lang)}<main id="main">{crumb_nav}{body}</main>{footer(lang)}</body></html>'''
     dest.write_text(doc, encoding="utf-8", newline="\n")
 
 def section_heading(kicker, title, text='', link=None, lang='en'):

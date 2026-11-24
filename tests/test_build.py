@@ -1,5 +1,7 @@
 """Regressions for bilingual build encoding and environment-specific indexing."""
+import json
 import os
+import re
 from pathlib import Path
 import subprocess
 import sys
@@ -63,6 +65,22 @@ runpy.run_path('build.py', run_name='__main__')
                 self.assertIn(f'hreflang="x-default" href="{origin + en_route}"', html)
                 self.assertIn(f'property="og:image" content="{origin}/assets/', html)
                 self.assertNotIn('<meta name="robots"', html)
+                match = re.search(r'<script type="application/ld\+json">(.*?)</script>', html)
+                if en_route == '/':
+                    self.assertIsNone(match)
+                    self.assertNotIn('class="site-breadcrumbs"', html)
+                else:
+                    self.assertIsNotNone(match)
+                    schema = json.loads(match.group(1))
+                    self.assertEqual(schema['@type'], 'BreadcrumbList')
+                    crumbs = schema['itemListElement']
+                    self.assertEqual([item['position'] for item in crumbs], list(range(1, len(crumbs) + 1)))
+                    prefix = '/zh' if route.startswith('/zh/') else ''
+                    urls = [origin + prefix + '/']
+                    if len(en_parts) > 1:
+                        urls.append(origin + prefix + '/' + en_parts[0] + '/')
+                    self.assertEqual([item['item'] for item in crumbs], urls + [canonical])
+                    self.assertIn('<li aria-current="page">', html)
                 preview_html = (dist / page.relative_to(output)).read_text(encoding='utf-8')
                 self.assertEqual(html.split('</head>', 1)[1], preview_html.split('</head>', 1)[1])
             self.assertEqual(len(expected), 68)

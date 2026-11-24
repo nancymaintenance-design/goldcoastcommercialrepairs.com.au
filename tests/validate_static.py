@@ -23,7 +23,7 @@ class Page(HTMLParser):
         if tag == 'meta' and a.get('name') == 'robots': self.noindex = 'noindex' in a.get('content','')
         if tag == 'link' and a.get('rel') == 'alternate': self.alternates.append(a)
         if tag == 'link' and a.get('rel') == 'stylesheet': self.styles.append(a['href'])
-        if tag == 'script': self.scripts.append(a)
+        if tag == 'script' and a.get('type') != 'application/ld+json': self.scripts.append(a)
         for k in ['href','src']:
             if a.get(k): self.refs.append(a[k])
     def handle_endtag(self, tag):
