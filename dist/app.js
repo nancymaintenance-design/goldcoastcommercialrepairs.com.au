@@ -186,12 +186,19 @@
       applySearch();
     }
 
-    // Enquiries are prepared locally. No network request or persistent storage.
+    // Review enquiries locally before sending them through the same-origin endpoint.
     const form = document.getElementById('enquiry-form');
     if (!form) return;
     const result = document.getElementById('enquiry-result');
     const summary = document.getElementById('enquiry-summary');
+    const sendButton = document.getElementById('send-enquiry');
+    const sendStatus = result?.querySelector('[data-enquiry-send-status]');
+    const editButton = document.getElementById('edit-enquiry');
     let draft = '';
+    let reviewed = '';
+    let requestId = '';
+    let sentId = '';
+    let sending = false;
 
     const field = name => form.elements.namedItem(name);
     const value = name => String(field(name)?.value || '').trim();
@@ -268,12 +275,60 @@
       } else {
         summary.textContent = draft;
       }
+      const submission = JSON.stringify({
+        name: value('name'), email: value('email'), suburb: value('suburb'),
+        property: value('property'), service: value('service'), article: value('article'),
+        accessWindow: value('access-window'), message: value('message'), website: value('website'),
+        language: document.documentElement.lang.startsWith('zh') ? 'zh' : 'en'
+      });
+      if (submission !== reviewed) {
+        reviewed = submission;
+        requestId = window.crypto.randomUUID();
+      }
       setNotice('');
+      updateSendStatus(sentId === requestId
+        ? t('Enquiry submitted.', '需求已提交。') : '');
+      if (sendButton) sendButton.disabled = sentId === requestId;
       result.hidden = false;
       result.setAttribute('tabindex', '-1');
       if (!form.contains(result)) form.hidden = true;
       result.focus({ preventScroll: true });
       result.scrollIntoView({ behavior: scrollBehaviour(), block: 'start' });
+    });
+
+    function updateSendStatus(message) {
+      if (!sendStatus) return;
+      sendStatus.hidden = !message;
+      sendStatus.textContent = message;
+    }
+
+    sendButton?.addEventListener('click', async () => {
+      if (!reviewed || sending || sentId === requestId) return;
+      sending = true;
+      sendButton.disabled = true;
+      editButton.disabled = true;
+      updateSendStatus(t('Submitting your enquiry…', '正在提交需求…'));
+      try {
+        const response = await fetch('/api/enquiry', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Idempotency-Key': requestId },
+          body: reviewed,
+          signal: AbortSignal.timeout(15000)
+        });
+        const data = await response.json();
+        if (!response.ok || data.accepted !== true) throw new Error('Enquiry not accepted');
+        sentId = requestId;
+        updateSendStatus(t('Enquiry submitted.', '需求已提交。'));
+      } catch {
+        updateSendStatus(t(
+          'We could not confirm submission. Try again or use the phone or email on this page.',
+          '未能确认提交。请重试，或使用本页的电话或邮箱联系我们。'
+        ));
+      } finally {
+        sending = false;
+        sendButton.disabled = sentId === requestId;
+        editButton.disabled = false;
+      }
     });
 
     document.getElementById('download-enquiry')?.addEventListener('click', event => {
@@ -318,7 +373,7 @@
       }
     });
 
-    document.getElementById('edit-enquiry')?.addEventListener('click', event => {
+    editButton?.addEventListener('click', event => {
       event.preventDefault();
       if (result) result.hidden = true;
       form.hidden = false;

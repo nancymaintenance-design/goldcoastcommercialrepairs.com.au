@@ -1071,6 +1071,32 @@ body.maximal:not(.page-home) .contact-copy > .intro-lead {
   font-size: 1.05rem;
   max-width: 530px;
 }
+.contact-details {
+  margin-top: clamp(18px,3vw,32px);
+  padding: clamp(14px,2vw,24px);
+  border: 2px solid var(--gc-ink);
+  box-shadow: 4px 4px 0 var(--gc-ink);
+  background: var(--gc-sun);
+}
+body.maximal:not(.page-home) #main .contact-details h2 {
+  margin: 0 0 8px;
+  font-size: clamp(1.15rem,2vw,1.55rem);
+  line-height: 1.2;
+}
+.contact-details address { font-style: normal; }
+.contact-details dl { margin: 0; }
+.contact-details dl > div {
+  display: grid;
+  grid-template-columns: 6ch minmax(0,1fr);
+  gap: 10px;
+  padding-block: 8px;
+  border-top: 1px solid var(--gc-ink);
+}
+.contact-details dt { font-weight: 800; }
+.contact-details dd { margin: 0; overflow-wrap: anywhere; }
+.contact-details a { color: inherit; text-decoration: underline; text-underline-offset: .15em; }
+body.maximal #main .contact-details a:focus-visible { outline-offset: 2px; }
+
 body.maximal:not(.page-home) .contact-note {
   padding: 28px;
   margin-top: 38px;
